@@ -4,6 +4,290 @@
 <?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.profile" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
 <uml:Profile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation" xmi:id="_UkgtwKJ6EeW5avcys3g5sA" name="InfrastructureProfile" metamodelReference="_UkjxEaJ6EeW5avcys3g5sA">
   <eAnnotations xmi:id="_UkkYI6J6EeW5avcys3g5sA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_E2OykLuKEeWKppNvSnbUkg" name="InfrastructureProfile" nsURI="http:///schemas/InfrastructureProfile/_E2NkcLuKEeWKppNvSnbUkg/40" nsPrefix="InfrastructureProfile">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OykbuKEeWKppNvSnbUkg" name="InfrastructureUncertainty" eSuperTypes="_E2OyoruKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2OykruKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUknsKJ8EeW5avcys3g5sA"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2Oyk7uKEeWKppNvSnbUkg" name="nonfunctionalDimensionality" ordered="false" upperBound="-1" eType="_E2OypLuKEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2OylbuKEeWKppNvSnbUkg" name="cause" ordered="false" upperBound="-1" eType="_E2OypruKEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2Oyl7uKEeWKppNvSnbUkg" name="observationTime" ordered="false" upperBound="-1" eType="_E2OyqLuKEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2OymbuKEeWKppNvSnbUkg" name="effectPropagation" ordered="false" upperBound="-1" eType="_E2OyqruKEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2Oym7uKEeWKppNvSnbUkg" name="locality" ordered="false" upperBound="-1" eType="_E2OyrLuKEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2OynbuKEeWKppNvSnbUkg" name="functionalDimensionality" ordered="false" upperBound="-1" eType="_E2OyrruKEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2Oyn7uKEeWKppNvSnbUkg" name="temporalManifestation" ordered="false" upperBound="-1" eType="_E2OysLuKEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OyoruKEeWKppNvSnbUkg" name="Uncertainty">
+        <eAnnotations xmi:id="_E2Oyo7uKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1y420KJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OypLuKEeWKppNvSnbUkg" name="NonfunctionalDimensionality">
+        <eAnnotations xmi:id="_E2OypbuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Qf5hcKJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OypruKEeWKppNvSnbUkg" name="Cause">
+        <eAnnotations xmi:id="_E2Oyp7uKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Xx9Z0KJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OyqLuKEeWKppNvSnbUkg" name="ObservationTime">
+        <eAnnotations xmi:id="_E2OyqbuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_cmjKMKJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OyqruKEeWKppNvSnbUkg" name="EffectPropagation">
+        <eAnnotations xmi:id="_E2Oyq7uKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_iOfqIKJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OyrLuKEeWKppNvSnbUkg" name="Locality">
+        <eAnnotations xmi:id="_E2OyrbuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_mh6AEKJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OyrruKEeWKppNvSnbUkg" name="FunctionalDimensionality">
+        <eAnnotations xmi:id="_E2Oyr7uKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_p2VlQKJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OysLuKEeWKppNvSnbUkg" name="TemporalManifestation">
+        <eAnnotations xmi:id="_E2OysbuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_OxEBEKJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OysruKEeWKppNvSnbUkg" name="StorageUncertainty" abstract="true" eSuperTypes="_E2OykbuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2Oys7uKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUl10KJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OytbuKEeWKppNvSnbUkg" name="DataDeliveryUncertainty" abstract="true" eSuperTypes="_E2OykbuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2OytruKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUmc4KJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OyuLuKEeWKppNvSnbUkg" name="ActuationUncertainty" abstract="true" eSuperTypes="_E2OykbuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2OyubuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUnD8KJ8EeW5avcys3g5sA"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2OyuruKEeWKppNvSnbUkg" name="runtimeUncertainty" ordered="false" upperBound="-1" eType="_E2OyvbuKEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OyvbuKEeWKppNvSnbUkg" name="RuntimeExecutionUncertainty" eSuperTypes="_E2OywLuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2OyvruKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUr8cKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OywLuKEeWKppNvSnbUkg" name="ExecutionEnvironmentUncertainty" abstract="true" eSuperTypes="_E2OykbuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2OywbuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUnrCqJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2Oyw7uKEeWKppNvSnbUkg" name="ElasticityUncertainty" abstract="true" eSuperTypes="_E2OykbuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2OyxLuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUoSEKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OyxruKEeWKppNvSnbUkg" name="GovernanceUncertainty" abstract="true" eSuperTypes="_E2OykbuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2Oyx7uKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUoSEqJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OyybuKEeWKppNvSnbUkg" name="StorageDependabilityUncertainty" eSuperTypes="_E2OysruKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2OyyruKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUo5IKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OyzLuKEeWKppNvSnbUkg" name="StorageLegalComplienceUncertainty" eSuperTypes="_E2OysruKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2OyzbuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUo5JaJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2Oyz7uKEeWKppNvSnbUkg" name="StorageQualityUncertainty" eSuperTypes="_E2OysruKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2Oy0LuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUpgMKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2Oy0ruKEeWKppNvSnbUkg" name="DataDeliveryDependabilityUncertainty" eSuperTypes="_E2OytbuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2Oy07uKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUpgMqJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2Oy1buKEeWKppNvSnbUkg" name="DataQualityUncertainty" eSuperTypes="_E2OytbuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2Oy1ruKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUqHQKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2Oy2LuKEeWKppNvSnbUkg" name="DataDeliveryLegalComplienceUncertainty" eSuperTypes="_E2OytbuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2Oy2buKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUqHQqJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2Oy27uKEeWKppNvSnbUkg" name="ActuationLegalComplienceUncertainty" eSuperTypes="_E2OyuLuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2Oy3LuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUquUKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2Oy3ruKEeWKppNvSnbUkg" name="ActuationDependabilityUncertainty" eSuperTypes="_E2OyuLuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2Oy37uKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUquUqJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2Oy4buKEeWKppNvSnbUkg" name="ApplicationDependabilityUncertainty" eSuperTypes="_E2Oy3ruKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2Oy4ruKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUrVYKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2Oy5LuKEeWKppNvSnbUkg" name="EnvironmentDependabilityUncertainty" eSuperTypes="_E2Oy3ruKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2Oy5buKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUrVYqJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2Oy57uKEeWKppNvSnbUkg" name="DeploymentTimeUncertainty" eSuperTypes="_E2OywLuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2Oy6LuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUsjgKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2Oy6ruKEeWKppNvSnbUkg" name="GovernanceProcessExecutionUncertainty" eSuperTypes="_E2OyxruKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2Oy67uKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUsjgqJ8EeW5avcys3g5sA"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2Oy7LuKEeWKppNvSnbUkg" name="runtimeUncertainty" ordered="false" upperBound="-1" eType="_E2OyvbuKEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2Oy7ruKEeWKppNvSnbUkg" name="governanceProcessExecutionUncertainty" ordered="false" upperBound="-1" eType="_E2OyuLuKEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2Oy8LuKEeWKppNvSnbUkg" name="dataDeliveryUncertainty" ordered="false" upperBound="-1" eType="_E2OytbuKEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2Oy87uKEeWKppNvSnbUkg" name="MonitoringDataUncertainty" eSuperTypes="_E2Oyw7uKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2Oy9LuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUtKkKJ8EeW5avcys3g5sA"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2Oy9buKEeWKppNvSnbUkg" name="dataDeliveryUncertainty" ordered="false" upperBound="-1" eType="_E2OytbuKEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2Oy97uKEeWKppNvSnbUkg" name="storageDependabilityUncertainty" ordered="false" upperBound="-1" eType="_E2OyybuKEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2Oy-buKEeWKppNvSnbUkg" name="runtimeExecutionUncertainty" ordered="false" upperBound="-1" eType="_E2OyvbuKEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2Oy_LuKEeWKppNvSnbUkg" name="ActuationBehaviorUncertainty" eSuperTypes="_E2Oyw7uKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2Oy_buKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUtxoKJ8EeW5avcys3g5sA"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2Oy_ruKEeWKppNvSnbUkg" name="runtimeUncertainty" ordered="false" lowerBound="1" eType="_E2OyvbuKEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OzAbuKEeWKppNvSnbUkg" name="UnknownUncertainty" abstract="true" eSuperTypes="_E2OykbuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2OzAruKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUuYsKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OzBLuKEeWKppNvSnbUkg" name="BeliefStatement">
+        <eAnnotations xmi:id="_E2OzBbuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Dc4hoKJ-EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OzBruKEeWKppNvSnbUkg" name="InfrastructureBeliefStatement" eSuperTypes="_E2OzBLuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2OzB7uKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Ek4rgKJ-EeW5avcys3g5sA"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2OzCLuKEeWKppNvSnbUkg" name="infrastructureUncertainty" ordered="false" upperBound="-1" eType="_E2OykbuKEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OzC7uKEeWKppNvSnbUkg" name="InfrastructureBeliefStateMachine" eSuperTypes="_E2OzBruKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2OzDLuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_a0wDIKKCEeW5avcys3g5sA"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2OzDbuKEeWKppNvSnbUkg" name="base_StateMachine" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//StateMachine"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OzELuKEeWKppNvSnbUkg" name="Physical_Unit">
+        <eAnnotations xmi:id="_E2OzEbuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_KQB-QLuJEeWKppNvSnbUkg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2OzEruKEeWKppNvSnbUkg" name="capability" ordered="false" upperBound="-1" eType="_E2OzFruKEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2OzFLuKEeWKppNvSnbUkg" name="metric" ordered="false" upperBound="-1" eType="_E2OzGLuKEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OzFruKEeWKppNvSnbUkg" name="Capability">
+        <eAnnotations xmi:id="_E2OzF7uKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_UWIrkLuJEeWKppNvSnbUkg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OzGLuKEeWKppNvSnbUkg" name="Metric">
+        <eAnnotations xmi:id="_E2OzGbuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_phUP4LuJEeWKppNvSnbUkg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OzGruKEeWKppNvSnbUkg" name="Class1">
+        <eAnnotations xmi:id="_E2OzG7uKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_bqrQMLuJEeWKppNvSnbUkg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OzHLuKEeWKppNvSnbUkg" name="CPS">
+        <eAnnotations xmi:id="_E2OzHbuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1BV9gLuJEeWKppNvSnbUkg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_E2OzHruKEeWKppNvSnbUkg" name="physical_Unit" ordered="false" upperBound="-1" eType="_E2OzELuKEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OzILuKEeWKppNvSnbUkg" name="Sensor" eSuperTypes="_E2OzELuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2OzIbuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_9Ms1YLuJEeWKppNvSnbUkg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_E2OzI7uKEeWKppNvSnbUkg" name="Actuator" eSuperTypes="_E2OzELuKEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2OzJLuKEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_-IXMYLuJEeWKppNvSnbUkg"/>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_z93uULuJEeWKppNvSnbUkg" name="InfrastructureProfile" nsURI="http:///schemas/InfrastructureProfile/_z9y10LuJEeWKppNvSnbUkg/39" nsPrefix="InfrastructureProfile">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uUbuJEeWKppNvSnbUkg" name="InfrastructureUncertainty" eSuperTypes="_z93uYruJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93uUruJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUknsKJ8EeW5avcys3g5sA"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93uU7uJEeWKppNvSnbUkg" name="nonfunctionalDimensionality" ordered="false" upperBound="-1" eType="_z93uZLuJEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93uVbuJEeWKppNvSnbUkg" name="cause" ordered="false" upperBound="-1" eType="_z93uZruJEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93uV7uJEeWKppNvSnbUkg" name="observationTime" ordered="false" upperBound="-1" eType="_z93uaLuJEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93uWbuJEeWKppNvSnbUkg" name="effectPropagation" ordered="false" upperBound="-1" eType="_z93uaruJEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93uW7uJEeWKppNvSnbUkg" name="locality" ordered="false" upperBound="-1" eType="_z93ubLuJEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93uXbuJEeWKppNvSnbUkg" name="functionalDimensionality" ordered="false" upperBound="-1" eType="_z93ubruJEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93uX7uJEeWKppNvSnbUkg" name="temporalManifestation" ordered="false" upperBound="-1" eType="_z93ucLuJEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uYruJEeWKppNvSnbUkg" name="Uncertainty">
+        <eAnnotations xmi:id="_z93uY7uJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1y420KJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uZLuJEeWKppNvSnbUkg" name="NonfunctionalDimensionality">
+        <eAnnotations xmi:id="_z93uZbuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Qf5hcKJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uZruJEeWKppNvSnbUkg" name="Cause">
+        <eAnnotations xmi:id="_z93uZ7uJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Xx9Z0KJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uaLuJEeWKppNvSnbUkg" name="ObservationTime">
+        <eAnnotations xmi:id="_z93uabuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_cmjKMKJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uaruJEeWKppNvSnbUkg" name="EffectPropagation">
+        <eAnnotations xmi:id="_z93ua7uJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_iOfqIKJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93ubLuJEeWKppNvSnbUkg" name="Locality">
+        <eAnnotations xmi:id="_z93ubbuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_mh6AEKJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93ubruJEeWKppNvSnbUkg" name="FunctionalDimensionality">
+        <eAnnotations xmi:id="_z93ub7uJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_p2VlQKJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93ucLuJEeWKppNvSnbUkg" name="TemporalManifestation">
+        <eAnnotations xmi:id="_z93ucbuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_OxEBEKJ9EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93ucruJEeWKppNvSnbUkg" name="StorageUncertainty" abstract="true" eSuperTypes="_z93uUbuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93uc7uJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUl10KJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93udbuJEeWKppNvSnbUkg" name="DataDeliveryUncertainty" abstract="true" eSuperTypes="_z93uUbuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93udruJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUmc4KJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93ueLuJEeWKppNvSnbUkg" name="ActuationUncertainty" abstract="true" eSuperTypes="_z93uUbuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93uebuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUnD8KJ8EeW5avcys3g5sA"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93ueruJEeWKppNvSnbUkg" name="runtimeUncertainty" ordered="false" upperBound="-1" eType="_z93ufbuJEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93ufbuJEeWKppNvSnbUkg" name="RuntimeExecutionUncertainty" eSuperTypes="_z93ugLuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93ufruJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUr8cKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93ugLuJEeWKppNvSnbUkg" name="ExecutionEnvironmentUncertainty" abstract="true" eSuperTypes="_z93uUbuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93ugbuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUnrCqJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93ug7uJEeWKppNvSnbUkg" name="ElasticityUncertainty" abstract="true" eSuperTypes="_z93uUbuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93uhLuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUoSEKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uhruJEeWKppNvSnbUkg" name="GovernanceUncertainty" abstract="true" eSuperTypes="_z93uUbuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93uh7uJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUoSEqJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uibuJEeWKppNvSnbUkg" name="StorageDependabilityUncertainty" eSuperTypes="_z93ucruJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93uiruJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUo5IKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93ujLuJEeWKppNvSnbUkg" name="StorageLegalComplienceUncertainty" eSuperTypes="_z93ucruJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93ujbuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUo5JaJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uj7uJEeWKppNvSnbUkg" name="StorageQualityUncertainty" eSuperTypes="_z93ucruJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93ukLuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUpgMKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93ukruJEeWKppNvSnbUkg" name="DataDeliveryDependabilityUncertainty" eSuperTypes="_z93udbuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93uk7uJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUpgMqJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93ulbuJEeWKppNvSnbUkg" name="DataQualityUncertainty" eSuperTypes="_z93udbuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93ulruJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUqHQKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93umLuJEeWKppNvSnbUkg" name="DataDeliveryLegalComplienceUncertainty" eSuperTypes="_z93udbuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93umbuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUqHQqJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93um7uJEeWKppNvSnbUkg" name="ActuationLegalComplienceUncertainty" eSuperTypes="_z93ueLuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93unLuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUquUKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93unruJEeWKppNvSnbUkg" name="ActuationDependabilityUncertainty" eSuperTypes="_z93ueLuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93un7uJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUquUqJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uobuJEeWKppNvSnbUkg" name="ApplicationDependabilityUncertainty" eSuperTypes="_z93unruJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93uoruJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUrVYKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93upLuJEeWKppNvSnbUkg" name="EnvironmentDependabilityUncertainty" eSuperTypes="_z93unruJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93upbuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUrVYqJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93up7uJEeWKppNvSnbUkg" name="DeploymentTimeUncertainty" eSuperTypes="_z93ugLuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93uqLuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUsjgKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uqruJEeWKppNvSnbUkg" name="GovernanceProcessExecutionUncertainty" eSuperTypes="_z93uhruJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93uq7uJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUsjgqJ8EeW5avcys3g5sA"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93urLuJEeWKppNvSnbUkg" name="runtimeUncertainty" ordered="false" upperBound="-1" eType="_z93ufbuJEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93urruJEeWKppNvSnbUkg" name="governanceProcessExecutionUncertainty" ordered="false" upperBound="-1" eType="_z93ueLuJEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93usLuJEeWKppNvSnbUkg" name="dataDeliveryUncertainty" ordered="false" upperBound="-1" eType="_z93udbuJEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93us7uJEeWKppNvSnbUkg" name="MonitoringDataUncertainty" eSuperTypes="_z93ug7uJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93utLuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUtKkKJ8EeW5avcys3g5sA"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93utbuJEeWKppNvSnbUkg" name="dataDeliveryUncertainty" ordered="false" upperBound="-1" eType="_z93udbuJEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93ut7uJEeWKppNvSnbUkg" name="storageDependabilityUncertainty" ordered="false" upperBound="-1" eType="_z93uibuJEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93uubuJEeWKppNvSnbUkg" name="runtimeExecutionUncertainty" ordered="false" upperBound="-1" eType="_z93ufbuJEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uvLuJEeWKppNvSnbUkg" name="ActuationBehaviorUncertainty" eSuperTypes="_z93ug7uJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93uvbuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUtxoKJ8EeW5avcys3g5sA"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93uvruJEeWKppNvSnbUkg" name="runtimeUncertainty" ordered="false" lowerBound="1" eType="_z93ufbuJEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uwbuJEeWKppNvSnbUkg" name="UnknownUncertainty" abstract="true" eSuperTypes="_z93uUbuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93uwruJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUuYsKJ8EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uxLuJEeWKppNvSnbUkg" name="BeliefStatement">
+        <eAnnotations xmi:id="_z93uxbuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Dc4hoKJ-EeW5avcys3g5sA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uxruJEeWKppNvSnbUkg" name="InfrastructureBeliefStatement" eSuperTypes="_z93uxLuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93ux7uJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Ek4rgKJ-EeW5avcys3g5sA"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93uyLuJEeWKppNvSnbUkg" name="infrastructureUncertainty" ordered="false" upperBound="-1" eType="_z93uUbuJEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93uy7uJEeWKppNvSnbUkg" name="InfrastructureBeliefStateMachine" eSuperTypes="_z93uxruJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z93uzLuJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_a0wDIKKCEeW5avcys3g5sA"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93uzbuJEeWKppNvSnbUkg" name="base_StateMachine" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//StateMachine"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93u0LuJEeWKppNvSnbUkg" name="Physical_Unit">
+        <eAnnotations xmi:id="_z93u0buJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_KQB-QLuJEeWKppNvSnbUkg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93u0ruJEeWKppNvSnbUkg" name="capability" ordered="false" upperBound="-1" eType="_z93u1ruJEeWKppNvSnbUkg" containment="true"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z93u1LuJEeWKppNvSnbUkg" name="metric" ordered="false" upperBound="-1" eType="_z93u2LuJEeWKppNvSnbUkg" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93u1ruJEeWKppNvSnbUkg" name="Capability">
+        <eAnnotations xmi:id="_z93u17uJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_UWIrkLuJEeWKppNvSnbUkg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93u2LuJEeWKppNvSnbUkg" name="Metric">
+        <eAnnotations xmi:id="_z93u2buJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_phUP4LuJEeWKppNvSnbUkg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z93u2ruJEeWKppNvSnbUkg" name="Class1">
+        <eAnnotations xmi:id="_z93u27uJEeWKppNvSnbUkg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_bqrQMLuJEeWKppNvSnbUkg"/>
+      </eClassifiers>
+    </contents>
     <contents xmi:type="ecore:EPackage" xmi:id="_JfnocKM0EeWKq_0wYoihCQ" name="InfrastructureProfile" nsURI="http:///schemas/InfrastructureProfile/_JfnBYKM0EeWKq_0wYoihCQ/38" nsPrefix="InfrastructureProfile">
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_JfnocaM0EeWKq_0wYoihCQ" name="InfrastructureUncertainty" eSuperTypes="_JfnogqM0EeWKq_0wYoihCQ">
         <eAnnotations xmi:id="_JfnocqM0EeWKq_0wYoihCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eUknsKJ8EeW5avcys3g5sA"/>
@@ -5897,6 +6181,223 @@
         <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rqxlEaKCEeW5avcys3g5sA" points="[-6, 23, 49, -86]$[-16, 86, 39, -23]"/>
       </edges>
     </contents>
+    <contents xmi:type="umlnotation:UMLDiagram" xmi:id="__1S6MLuHEeWKppNvSnbUkg" type="Class" name="CPSInfrastructureDiagram">
+      <children xmi:type="umlnotation:UMLShape" xmi:id="_KQobMLuJEeWKppNvSnbUkg" element="_KQB-QLuJEeWKppNvSnbUkg" fontName=".Helvetica Neue DeskInterface" fontHeight="8" fillColor="10329501" transparency="80" lineColor="8224125" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_KQvv8LuJEeWKppNvSnbUkg" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_KQvv8buJEeWKppNvSnbUkg" width="1320" height="1320"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_KQw-ELuJEeWKppNvSnbUkg" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_KQxlILuJEeWKppNvSnbUkg" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_KQxlIbuJEeWKppNvSnbUkg" type="Parent"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_KQyzQLuJEeWKppNvSnbUkg" type="AttributeCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_KQyzQbuJEeWKppNvSnbUkg" visible="false" type="OperationCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_KQ79MLuJEeWKppNvSnbUkg" visible="false" type="SignalCompartment"/>
+        <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_KQ8kQLuJEeWKppNvSnbUkg" visible="false" type="StructureCompartment"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KQobMbuJEeWKppNvSnbUkg" x="17145" y="3527"/>
+      </children>
+      <children xmi:type="umlnotation:UMLShape" xmi:id="_UWTDoLuJEeWKppNvSnbUkg" element="_UWIrkLuJEeWKppNvSnbUkg" fontName=".Helvetica Neue DeskInterface" fontHeight="8" fillColor="10329501" transparency="80" lineColor="8224125" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_UWURwLuJEeWKppNvSnbUkg" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_UWURwbuJEeWKppNvSnbUkg" width="1320" height="1320"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_UWURwruJEeWKppNvSnbUkg" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_UWURw7uJEeWKppNvSnbUkg" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_UWU40LuJEeWKppNvSnbUkg" type="Parent"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_UWU40buJEeWKppNvSnbUkg" type="AttributeCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_UWU40ruJEeWKppNvSnbUkg" visible="false" type="OperationCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_UWVf4LuJEeWKppNvSnbUkg" visible="false" type="SignalCompartment"/>
+        <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_UWWG8LuJEeWKppNvSnbUkg" visible="false" type="StructureCompartment"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UWTDobuJEeWKppNvSnbUkg" x="24729" y="5820"/>
+      </children>
+      <children xmi:type="umlnotation:UMLShape" xmi:id="_phcywLuJEeWKppNvSnbUkg" element="_phUP4LuJEeWKppNvSnbUkg" fontName=".Helvetica Neue DeskInterface" fontHeight="8" fillColor="10329501" transparency="80" lineColor="8224125" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_phdZ0LuJEeWKppNvSnbUkg" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_phdZ0buJEeWKppNvSnbUkg" width="1320" height="1320"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_pheA4LuJEeWKppNvSnbUkg" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_pheA4buJEeWKppNvSnbUkg" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_pheA4ruJEeWKppNvSnbUkg" type="Parent"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_phen8LuJEeWKppNvSnbUkg" type="AttributeCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_phen8buJEeWKppNvSnbUkg" visible="false" type="OperationCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_phfPALuJEeWKppNvSnbUkg" visible="false" type="SignalCompartment"/>
+        <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_phfPAbuJEeWKppNvSnbUkg" visible="false" type="StructureCompartment"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_phcywbuJEeWKppNvSnbUkg" x="17921" y="7126"/>
+      </children>
+      <children xmi:type="umlnotation:UMLShape" xmi:id="_1CE9ULuJEeWKppNvSnbUkg" element="_1BV9gLuJEeWKppNvSnbUkg" fontName=".Helvetica Neue DeskInterface" fontHeight="8" fillColor="10329501" transparency="80" lineColor="8224125" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_1CGLcLuJEeWKppNvSnbUkg" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_1CGLcbuJEeWKppNvSnbUkg" width="1320" height="1320"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_1CGLcruJEeWKppNvSnbUkg" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_1CGygLuJEeWKppNvSnbUkg" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_1CGygbuJEeWKppNvSnbUkg" type="Parent"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_1CGygruJEeWKppNvSnbUkg" type="AttributeCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_1CGyg7uJEeWKppNvSnbUkg" visible="false" type="OperationCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_1CHZkLuJEeWKppNvSnbUkg" visible="false" type="SignalCompartment"/>
+        <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_1CHZkbuJEeWKppNvSnbUkg" visible="false" type="StructureCompartment"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1CE9UbuJEeWKppNvSnbUkg" x="5715" y="2998"/>
+      </children>
+      <children xmi:type="umlnotation:UMLShape" xmi:id="_9NKvcLuJEeWKppNvSnbUkg" element="_9Ms1YLuJEeWKppNvSnbUkg" fontName=".Helvetica Neue DeskInterface" fontHeight="8" fillColor="10329501" transparency="80" lineColor="8224125" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_9NL9kLuJEeWKppNvSnbUkg" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_9NL9kbuJEeWKppNvSnbUkg" width="1320" height="1320"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_9NL9kruJEeWKppNvSnbUkg" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_9NL9k7uJEeWKppNvSnbUkg" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_9NL9lLuJEeWKppNvSnbUkg" type="Parent"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_9NMkoLuJEeWKppNvSnbUkg" type="AttributeCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_9NMkobuJEeWKppNvSnbUkg" visible="false" type="OperationCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_9NMkoruJEeWKppNvSnbUkg" visible="false" type="SignalCompartment"/>
+        <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_9NNLsLuJEeWKppNvSnbUkg" visible="false" type="StructureCompartment"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9NKvcbuJEeWKppNvSnbUkg" x="14640" y="811"/>
+      </children>
+      <children xmi:type="umlnotation:UMLShape" xmi:id="_-I27oLuJEeWKppNvSnbUkg" element="_-IXMYLuJEeWKppNvSnbUkg" fontName=".Helvetica Neue DeskInterface" fontHeight="8" fillColor="10329501" transparency="80" lineColor="8224125" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_-I3isLuJEeWKppNvSnbUkg" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_-I3isbuJEeWKppNvSnbUkg" width="1320" height="1320"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_-I3isruJEeWKppNvSnbUkg" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_-I3is7uJEeWKppNvSnbUkg" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_-I4JwLuJEeWKppNvSnbUkg" type="Parent"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_-I4JwbuJEeWKppNvSnbUkg" visible="false" type="AttributeCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_-I4JwruJEeWKppNvSnbUkg" type="OperationCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_-I4w0LuJEeWKppNvSnbUkg" visible="false" type="SignalCompartment"/>
+        <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_-I4w0buJEeWKppNvSnbUkg" visible="false" type="StructureCompartment"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-I27obuJEeWKppNvSnbUkg" x="19050" y="1093"/>
+      </children>
+      <element xsi:nil="true"/>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_gtMu4LuJEeWKppNvSnbUkg" element="_gssYkLuJEeWKppNvSnbUkg" source="_KQobMLuJEeWKppNvSnbUkg" target="_UWTDoLuJEeWKppNvSnbUkg" fontName=".Helvetica Neue DeskInterface" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_gtRAULuJEeWKppNvSnbUkg" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_gtSOcLuJEeWKppNvSnbUkg" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_gtSOcbuJEeWKppNvSnbUkg" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gtRAUbuJEeWKppNvSnbUkg" y="-247"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_gtUqsLuJEeWKppNvSnbUkg" type="ToMultiplicityLabel" element="_gsztULuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_gtVRwLuJEeWKppNvSnbUkg" type="ToMultiplicity"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_gtUqsbuJEeWKppNvSnbUkg" y="529"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_gtVRwbuJEeWKppNvSnbUkg" visible="false" type="ToRoleLabel" element="_gsztULuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_gtWf4LuJEeWKppNvSnbUkg" type="ToRole"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_gtVRwruJEeWKppNvSnbUkg" y="-530"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_gtXG8LuJEeWKppNvSnbUkg" type="FromMultiplicityLabel" element="_gsuNwLuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_gtXG8ruJEeWKppNvSnbUkg" type="FromMultiplicity"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_gtXG8buJEeWKppNvSnbUkg" y="529"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_gtXuALuJEeWKppNvSnbUkg" visible="false" type="FromRoleLabel" element="_gsuNwLuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_gtYVELuJEeWKppNvSnbUkg" type="FromRole"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_gtXuAbuJEeWKppNvSnbUkg" y="-530"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_gtYVEbuJEeWKppNvSnbUkg" type="ToQualifierLabel" element="_gsztULuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_gtY8IbuJEeWKppNvSnbUkg" type="QualifierCompartment"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_gtY8ILuJEeWKppNvSnbUkg" y="-247"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_gtY8IruJEeWKppNvSnbUkg" type="FromQualifierLabel" element="_gsuNwLuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_gtZjMLuJEeWKppNvSnbUkg" type="QualifierCompartment"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_gtY8I7uJEeWKppNvSnbUkg" y="-247"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_gtZjMbuJEeWKppNvSnbUkg" type="ToConstraintLabel" element="_gsztULuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:ListCompartment" xmi:id="_gtaKQLuJEeWKppNvSnbUkg" type="ToConstraintCompartment"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_gtZjMruJEeWKppNvSnbUkg" y="1411"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_gtbYYLuJEeWKppNvSnbUkg" type="FromConstraintLabel" element="_gsuNwLuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:ListCompartment" xmi:id="_gtbYYruJEeWKppNvSnbUkg" type="FromConstraintCompartment"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_gtbYYbuJEeWKppNvSnbUkg" y="1411"/>
+        </children>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gtNV8LuJEeWKppNvSnbUkg" points="[37, 12, -171, -53]$[238, 68, 30, 3]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_tdYc0LuJEeWKppNvSnbUkg" element="_tdM2oLuJEeWKppNvSnbUkg" source="_KQobMLuJEeWKppNvSnbUkg" target="_phcywLuJEeWKppNvSnbUkg" fontName=".Helvetica Neue DeskInterface" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_tdZD4LuJEeWKppNvSnbUkg" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_tdZq8LuJEeWKppNvSnbUkg" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_tdZq8buJEeWKppNvSnbUkg" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tdZD4buJEeWKppNvSnbUkg" y="-247"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_tdZq8ruJEeWKppNvSnbUkg" type="ToMultiplicityLabel" element="_tdPS4LuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_tdaSALuJEeWKppNvSnbUkg" type="ToMultiplicity"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tdZq87uJEeWKppNvSnbUkg" y="529"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_tdaSAbuJEeWKppNvSnbUkg" visible="false" type="ToRoleLabel" element="_tdPS4LuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_tdaSA7uJEeWKppNvSnbUkg" type="ToRole"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tdaSAruJEeWKppNvSnbUkg" y="-530"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_tda5ELuJEeWKppNvSnbUkg" type="FromMultiplicityLabel" element="_tdOEwLuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_tda5EruJEeWKppNvSnbUkg" type="FromMultiplicity"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tda5EbuJEeWKppNvSnbUkg" y="529"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_tda5E7uJEeWKppNvSnbUkg" visible="false" type="FromRoleLabel" element="_tdOEwLuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_tdbgILuJEeWKppNvSnbUkg" type="FromRole"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tda5FLuJEeWKppNvSnbUkg" y="-530"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_tdbgIbuJEeWKppNvSnbUkg" type="ToQualifierLabel" element="_tdPS4LuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_tdbgI7uJEeWKppNvSnbUkg" type="QualifierCompartment"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tdbgIruJEeWKppNvSnbUkg" y="-247"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_tdbgJLuJEeWKppNvSnbUkg" type="FromQualifierLabel" element="_tdOEwLuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_tdcHMLuJEeWKppNvSnbUkg" type="QualifierCompartment"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tdbgJbuJEeWKppNvSnbUkg" y="-247"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_tdcHMbuJEeWKppNvSnbUkg" type="ToConstraintLabel" element="_tdPS4LuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:ListCompartment" xmi:id="_tdcHM7uJEeWKppNvSnbUkg" type="ToConstraintCompartment"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tdcHMruJEeWKppNvSnbUkg" y="1411"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_tdcuQLuJEeWKppNvSnbUkg" type="FromConstraintLabel" element="_tdOEwLuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:ListCompartment" xmi:id="_tdcuQruJEeWKppNvSnbUkg" type="FromConstraintCompartment"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tdcuQbuJEeWKppNvSnbUkg" y="1411"/>
+        </children>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tdYc0buJEeWKppNvSnbUkg" points="[2, 15, -6, -87]$[17, 117, 9, 15]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_4dOOgLuJEeWKppNvSnbUkg" element="_4cnxkLuJEeWKppNvSnbUkg" source="_1CE9ULuJEeWKppNvSnbUkg" target="_KQobMLuJEeWKppNvSnbUkg" fontName=".Helvetica Neue DeskInterface" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_4dO1kLuJEeWKppNvSnbUkg" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_4dO1kruJEeWKppNvSnbUkg" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_4dO1k7uJEeWKppNvSnbUkg" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4dO1kbuJEeWKppNvSnbUkg" y="-247"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_4dPcoLuJEeWKppNvSnbUkg" type="ToMultiplicityLabel" element="_4cq04LuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_4dPcoruJEeWKppNvSnbUkg" type="ToMultiplicity"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_4dPcobuJEeWKppNvSnbUkg" y="529"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_4dQDsLuJEeWKppNvSnbUkg" visible="false" type="ToRoleLabel" element="_4cq04LuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_4dQDsruJEeWKppNvSnbUkg" type="ToRole"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_4dQDsbuJEeWKppNvSnbUkg" y="-530"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_4dQDs7uJEeWKppNvSnbUkg" type="FromMultiplicityLabel" element="_4co_sLuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_4dQqwLuJEeWKppNvSnbUkg" type="FromMultiplicity"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_4dQDtLuJEeWKppNvSnbUkg" y="529"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_4dQqwbuJEeWKppNvSnbUkg" visible="false" type="FromRoleLabel" element="_4co_sLuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_4dQqw7uJEeWKppNvSnbUkg" type="FromRole"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_4dQqwruJEeWKppNvSnbUkg" y="-530"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_4dQqxLuJEeWKppNvSnbUkg" type="ToQualifierLabel" element="_4cq04LuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_4dRR0LuJEeWKppNvSnbUkg" type="QualifierCompartment"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_4dQqxbuJEeWKppNvSnbUkg" y="-247"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_4dRR0buJEeWKppNvSnbUkg" type="FromQualifierLabel" element="_4co_sLuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_4dRR07uJEeWKppNvSnbUkg" type="QualifierCompartment"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_4dRR0ruJEeWKppNvSnbUkg" y="-247"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_4dRR1LuJEeWKppNvSnbUkg" type="ToConstraintLabel" element="_4cq04LuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:ListCompartment" xmi:id="_4dR44LuJEeWKppNvSnbUkg" type="ToConstraintCompartment"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_4dRR1buJEeWKppNvSnbUkg" y="1411"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_4dR44buJEeWKppNvSnbUkg" type="FromConstraintLabel" element="_4co_sLuJEeWKppNvSnbUkg">
+          <children xmi:type="notation:ListCompartment" xmi:id="_4dR447uJEeWKppNvSnbUkg" type="FromConstraintCompartment"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_4dR44ruJEeWKppNvSnbUkg" y="1411"/>
+        </children>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4dOOgbuJEeWKppNvSnbUkg" points="[19, 1, -323, -14]$[305, 17, -37, 2]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_DrPmILuKEeWKppNvSnbUkg" element="_Dq95ULuKEeWKppNvSnbUkg" source="_9NKvcLuJEeWKppNvSnbUkg" target="_KQobMLuJEeWKppNvSnbUkg" fontName=".Helvetica Neue DeskInterface" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_DrQNMLuKEeWKppNvSnbUkg" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_DrQ0QLuKEeWKppNvSnbUkg" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_DrQ0QbuKEeWKppNvSnbUkg" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DrQNMbuKEeWKppNvSnbUkg" y="-247"/>
+        </children>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DrPmIbuKEeWKppNvSnbUkg" points="[15, 15, -69, -62]$[78, 92, -6, 15]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_EUVmcLuKEeWKppNvSnbUkg" element="_EUCEcLuKEeWKppNvSnbUkg" source="_-I27oLuJEeWKppNvSnbUkg" target="_KQobMLuJEeWKppNvSnbUkg" fontName=".Helvetica Neue DeskInterface" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_EUWNgbuKEeWKppNvSnbUkg" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_EUW0kLuKEeWKppNvSnbUkg" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_EUW0kbuKEeWKppNvSnbUkg" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EUWNgruKEeWKppNvSnbUkg" y="-247"/>
+        </children>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EUWNgLuKEeWKppNvSnbUkg" points="[-10, 15, 34, -54]$[-46, 54, -2, -15]"/>
+      </edges>
+    </contents>
   </eAnnotations>
   <packageImport xmi:id="_UkjxEKJ6EeW5avcys3g5sA">
     <eAnnotations xmi:id="_es0voKJ8EeW5avcys3g5sA" source="uml2.extensions">
@@ -6770,6 +7271,156 @@
         </eAnnotations>
       </lowerValue>
     </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KQB-QLuJEeWKppNvSnbUkg" name="Physical_Unit">
+    <eAnnotations xmi:id="_z9908LuJEeWKppNvSnbUkg" source="uml2.extensions">
+      <details xmi:id="_z9-cALuJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+    </eAnnotations>
+    <ownedAttribute xmi:id="_gsuNwLuJEeWKppNvSnbUkg" name="capability" visibility="private" type="_UWIrkLuJEeWKppNvSnbUkg" aggregation="composite" association="_gssYkLuJEeWKppNvSnbUkg">
+      <eAnnotations xmi:id="_z9-cAbuJEeWKppNvSnbUkg" source="uml2.extensions">
+        <details xmi:id="_z9_DELuJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+      </eAnnotations>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gsx4ILuJEeWKppNvSnbUkg" value="*">
+        <eAnnotations xmi:id="_z9_DEbuJEeWKppNvSnbUkg" source="uml2.extensions">
+          <details xmi:id="_z9_DEruJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+        </eAnnotations>
+      </upperValue>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gsxRELuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z9_DE7uJEeWKppNvSnbUkg" source="uml2.extensions">
+          <details xmi:id="_z9_DFLuJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+        </eAnnotations>
+      </lowerValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_tdOEwLuJEeWKppNvSnbUkg" name="metric" visibility="private" type="_phUP4LuJEeWKppNvSnbUkg" aggregation="composite" association="_tdM2oLuJEeWKppNvSnbUkg">
+      <eAnnotations xmi:id="_z9_DFbuJEeWKppNvSnbUkg" source="uml2.extensions">
+        <details xmi:id="_z9_DFruJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+      </eAnnotations>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tdOr0buJEeWKppNvSnbUkg" value="*">
+        <eAnnotations xmi:id="_z9_DF7uJEeWKppNvSnbUkg" source="uml2.extensions">
+          <details xmi:id="_z9_qILuJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+        </eAnnotations>
+      </upperValue>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tdOr0LuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_z9_qIbuJEeWKppNvSnbUkg" source="uml2.extensions">
+          <details xmi:id="_z9_qIruJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+        </eAnnotations>
+      </lowerValue>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_UWIrkLuJEeWKppNvSnbUkg" name="Capability">
+    <eAnnotations xmi:id="_z9_qI7uJEeWKppNvSnbUkg" source="uml2.extensions">
+      <details xmi:id="_z9_qJLuJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bqrQMLuJEeWKppNvSnbUkg" name="Class1">
+    <eAnnotations xmi:id="_z9_qJbuJEeWKppNvSnbUkg" source="uml2.extensions">
+      <details xmi:id="_z9_qJruJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gssYkLuJEeWKppNvSnbUkg" name="hasCapabilities" memberEnd="_gsuNwLuJEeWKppNvSnbUkg _gsztULuJEeWKppNvSnbUkg">
+    <eAnnotations xmi:id="_z9_qJ7uJEeWKppNvSnbUkg" source="uml2.extensions">
+      <details xmi:id="_z9_qKLuJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_gsztULuJEeWKppNvSnbUkg" name="physical_Unit" visibility="private" type="_KQB-QLuJEeWKppNvSnbUkg" association="_gssYkLuJEeWKppNvSnbUkg">
+      <eAnnotations xmi:id="_z9_qKbuJEeWKppNvSnbUkg" source="uml2.extensions">
+        <details xmi:id="_z9_qKruJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+      </eAnnotations>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gs1igbuJEeWKppNvSnbUkg" value="1">
+        <eAnnotations xmi:id="_z9_qK7uJEeWKppNvSnbUkg" source="uml2.extensions">
+          <details xmi:id="_z9_qLLuJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+        </eAnnotations>
+      </upperValue>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gs1igLuJEeWKppNvSnbUkg" value="1">
+        <eAnnotations xmi:id="_z-ARMLuJEeWKppNvSnbUkg" source="uml2.extensions">
+          <details xmi:id="_z-ARMbuJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+        </eAnnotations>
+      </lowerValue>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_phUP4LuJEeWKppNvSnbUkg" name="Metric">
+    <eAnnotations xmi:id="_z-ARMruJEeWKppNvSnbUkg" source="uml2.extensions">
+      <details xmi:id="_z-ARM7uJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_tdM2oLuJEeWKppNvSnbUkg" name="hasMetrics" memberEnd="_tdOEwLuJEeWKppNvSnbUkg _tdPS4LuJEeWKppNvSnbUkg">
+    <eAnnotations xmi:id="_z-ARNLuJEeWKppNvSnbUkg" source="uml2.extensions">
+      <details xmi:id="_z-ARNbuJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_tdPS4LuJEeWKppNvSnbUkg" name="physical_Unit" visibility="private" type="_KQB-QLuJEeWKppNvSnbUkg" association="_tdM2oLuJEeWKppNvSnbUkg">
+      <eAnnotations xmi:id="_z-ARNruJEeWKppNvSnbUkg" source="uml2.extensions">
+        <details xmi:id="_z-ARN7uJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+      </eAnnotations>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tdQhAbuJEeWKppNvSnbUkg" value="1">
+        <eAnnotations xmi:id="_z-AROLuJEeWKppNvSnbUkg" source="uml2.extensions">
+          <details xmi:id="_z-ARObuJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+        </eAnnotations>
+      </upperValue>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tdQhALuJEeWKppNvSnbUkg" value="1">
+        <eAnnotations xmi:id="_z-AROruJEeWKppNvSnbUkg" source="uml2.extensions">
+          <details xmi:id="_z-ARO7uJEeWKppNvSnbUkg" key="addedInVersion" value="39"/>
+        </eAnnotations>
+      </lowerValue>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1BV9gLuJEeWKppNvSnbUkg" name="CPS">
+    <eAnnotations xmi:id="_E2USILuKEeWKppNvSnbUkg" source="uml2.extensions">
+      <details xmi:id="_E2USIbuKEeWKppNvSnbUkg" key="addedInVersion" value="40"/>
+    </eAnnotations>
+    <ownedAttribute xmi:id="_4co_sLuJEeWKppNvSnbUkg" name="physical_Unit" visibility="private" type="_KQB-QLuJEeWKppNvSnbUkg" aggregation="composite" association="_4cnxkLuJEeWKppNvSnbUkg">
+      <eAnnotations xmi:id="_E2USIruKEeWKppNvSnbUkg" source="uml2.extensions">
+        <details xmi:id="_E2U5MLuKEeWKppNvSnbUkg" key="addedInVersion" value="40"/>
+      </eAnnotations>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4cqN0LuJEeWKppNvSnbUkg" value="*">
+        <eAnnotations xmi:id="_E2U5MbuKEeWKppNvSnbUkg" source="uml2.extensions">
+          <details xmi:id="_E2U5MruKEeWKppNvSnbUkg" key="addedInVersion" value="40"/>
+        </eAnnotations>
+      </upperValue>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4cpmwLuJEeWKppNvSnbUkg">
+        <eAnnotations xmi:id="_E2U5M7uKEeWKppNvSnbUkg" source="uml2.extensions">
+          <details xmi:id="_E2U5NLuKEeWKppNvSnbUkg" key="addedInVersion" value="40"/>
+        </eAnnotations>
+      </lowerValue>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_4cnxkLuJEeWKppNvSnbUkg" name="composedOf" memberEnd="_4co_sLuJEeWKppNvSnbUkg _4cq04LuJEeWKppNvSnbUkg">
+    <eAnnotations xmi:id="_E2U5NbuKEeWKppNvSnbUkg" source="uml2.extensions">
+      <details xmi:id="_E2U5NruKEeWKppNvSnbUkg" key="addedInVersion" value="40"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_4cq04LuJEeWKppNvSnbUkg" name="cPS" visibility="private" type="_1BV9gLuJEeWKppNvSnbUkg" association="_4cnxkLuJEeWKppNvSnbUkg">
+      <eAnnotations xmi:id="_E2U5N7uKEeWKppNvSnbUkg" source="uml2.extensions">
+        <details xmi:id="_E2U5OLuKEeWKppNvSnbUkg" key="addedInVersion" value="40"/>
+      </eAnnotations>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4csDAbuJEeWKppNvSnbUkg" value="1">
+        <eAnnotations xmi:id="_E2U5ObuKEeWKppNvSnbUkg" source="uml2.extensions">
+          <details xmi:id="_E2U5OruKEeWKppNvSnbUkg" key="addedInVersion" value="40"/>
+        </eAnnotations>
+      </upperValue>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4csDALuJEeWKppNvSnbUkg" value="1">
+        <eAnnotations xmi:id="_E2U5O7uKEeWKppNvSnbUkg" source="uml2.extensions">
+          <details xmi:id="_E2U5PLuKEeWKppNvSnbUkg" key="addedInVersion" value="40"/>
+        </eAnnotations>
+      </lowerValue>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9Ms1YLuJEeWKppNvSnbUkg" name="Sensor">
+    <eAnnotations xmi:id="_E2U5PbuKEeWKppNvSnbUkg" source="uml2.extensions">
+      <details xmi:id="_E2U5PruKEeWKppNvSnbUkg" key="addedInVersion" value="40"/>
+    </eAnnotations>
+    <generalization xmi:id="_Dq95ULuKEeWKppNvSnbUkg" general="_KQB-QLuJEeWKppNvSnbUkg">
+      <eAnnotations xmi:id="_E2U5P7uKEeWKppNvSnbUkg" source="uml2.extensions">
+        <details xmi:id="_E2U5QLuKEeWKppNvSnbUkg" key="addedInVersion" value="40"/>
+      </eAnnotations>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-IXMYLuJEeWKppNvSnbUkg" name="Actuator">
+    <eAnnotations xmi:id="_E2U5QbuKEeWKppNvSnbUkg" source="uml2.extensions">
+      <details xmi:id="_E2VgQLuKEeWKppNvSnbUkg" key="addedInVersion" value="40"/>
+    </eAnnotations>
+    <generalization xmi:id="_EUCEcLuKEeWKppNvSnbUkg" general="_KQB-QLuJEeWKppNvSnbUkg">
+      <eAnnotations xmi:id="_E2VgQbuKEeWKppNvSnbUkg" source="uml2.extensions">
+        <details xmi:id="_E2VgQruKEeWKppNvSnbUkg" key="addedInVersion" value="40"/>
+      </eAnnotations>
+    </generalization>
   </packagedElement>
   <profileApplication xmi:id="_UkkYIKJ6EeW5avcys3g5sA">
     <eAnnotations xmi:id="_UkkYIaJ6EeW5avcys3g5sA" source="http://www.eclipse.org/uml2/2.0.0/UML">
