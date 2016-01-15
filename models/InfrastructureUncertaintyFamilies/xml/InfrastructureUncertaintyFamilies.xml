@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConcreteInfrastructureUncertainty xmlns:RuntimeUncertainty="http://dsg.tuwien.ac.at/utest/RuntimeUncertainty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <StorageUncertainty>
+    <StorageQualityUncertainty/>
+    <StorageLegalComplienceUncertainty/>
+    <StorageDependabilityUncertainty/>
+  </StorageUncertainty>
+  <UnknownUncertainty/>
+  <ExecutionEnvironmentUncertainty>
+    <RuntimeUncertainty/>
+    <DeploymentTimeUncertainty/>	  
+  </ExecutionEnvironmentUncertainty>
+  <ElasticityUncertainty>
+    <ActuationBehaviorUncertainty/>
+    <MonitoringDataUncertainty/>
+  </ElasticityUncertainty>
+  <GovernanceUncertainty>
+    <GovernanceProcessExecutionUncertainty/>
+  </GovernanceUncertainty>
+  <DataDeliveryUncertainty>
+    <DataDeliveryLegalComplienceUncertainty/>
+    <DataQualityUncertainty/>
+    <DataDeliveryDependabilityUncertainty/>
+  </DataDeliveryUncertainty>
+  <ActuationUncertainty>
+    <ActuationDependabilityUncertainty>
+      <EnvironmentDependabilityUncertainty/>
+      <ApplicationDependabilityUncertainty/>
+    </ActuationDependabilityUncertainty>
+    <ActuationLegalComplienceUncertainty/>
+  </ActuationUncertainty>
+</ConcreteInfrastructureUncertainty>
