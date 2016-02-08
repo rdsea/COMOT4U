@@ -6232,7 +6232,7 @@
         <children xmi:type="notation:SemanticListCompartment" xmi:id="_1CGyg7uJEeWKppNvSnbUkg" visible="false" type="OperationCompartment"/>
         <children xmi:type="notation:SemanticListCompartment" xmi:id="_1CHZkLuJEeWKppNvSnbUkg" visible="false" type="SignalCompartment"/>
         <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_1CHZkbuJEeWKppNvSnbUkg" visible="false" type="StructureCompartment"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1CE9UbuJEeWKppNvSnbUkg" x="5715" y="2998"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1CE9UbuJEeWKppNvSnbUkg" x="8559" y="2853"/>
       </children>
       <children xmi:type="umlnotation:UMLShape" xmi:id="_9NKvcLuJEeWKppNvSnbUkg" element="_9Ms1YLuJEeWKppNvSnbUkg" fontName=".Helvetica Neue DeskInterface" fontHeight="8" fillColor="10329501" transparency="80" lineColor="8224125" lineWidth="1" showStereotype="Text">
         <children xmi:type="notation:DecorationNode" xmi:id="_9NL9kLuJEeWKppNvSnbUkg" type="ImageCompartment">
