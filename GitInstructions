@@ -1,0 +1,3 @@
+The RuntimeVerification folder is a git submodule pointing to https://github.com/tuwiendsg/RuntimeVerification. To update it, issue a "pull" from its directory.
+
+https://git-scm.com/book/en/v2/Git-Tools-Submodules
