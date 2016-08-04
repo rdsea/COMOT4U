@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.ibm.xtools.transform.core.transformationExtensions">
+       
+      <TransformationExtension
+            author="Daniel Moldovan"
+            description="Exports UML diagrams to Java classes, considering the stereotype attributes as class fields."
+            enabled="true"
+            id="ac.at.tuwien.dsg.uml2java.stereotype.export.transformation.extention"
+            name="TUW UML to Java Transformation Extension considering Stereotypes"
+            targetTransformation="com.ibm.xtools.transform.uml2.java.internal.UML2JavaTransform"
+            version="1.0.0">
+ 
+         <RuleDefinition
+         	name="Class With Stereotype Keyword Export Rule"
+         	class="ac.at.tuwien.dsg.uml2java.stereotype.export.ClassWithStereotypeExportRule"
+         	id="ac.at.tuwien.dsg.uml2java.stereotype.export.ClassWithStereotypeExportRule.id"/>
+
+         <ExtendTransform
+               id="ac.at.tuwien.dsg.uml2java.stereotype.export.transform"
+               name="TUW UML to Java Transform considering Stereotypes"
+               targetTransform="com.ibm.xtools.transform.uml2.java.internal.ClassTransform">
+            <AddRule id="ac.at.tuwien.dsg.uml2java.stereotype.export.ClassWithStereotypeExportRule.id"/>
+         </ExtendTransform>
+        
+         
+      </TransformationExtension>
+   </extension>
+
+</plugin>
