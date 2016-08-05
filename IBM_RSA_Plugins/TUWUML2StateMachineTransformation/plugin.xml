@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.ibm.xtools.transform.core.transformationProviders">
+      <TransformationProvider
+            class="ac.at.tuwien.dsg.uml.statemachine.export.transformation.provider.StateMachineTransformationProvider">
+         <Priority
+               name="Highest">
+         </Priority>
+         <Transformation
+               groupPath="ac.at.tuwien.dsg.uml.statemachine.export.transformation"
+               id="ac.at.tuwien.dsg.uml.statemachine.export.transformation.statemachinetransformation"
+               name="StateMachineTransformation"
+               sourceModelType="UML2"
+               targetModelType="resource"
+               version="1.0.0">
+            <Property
+                  id="system.transformation.property"
+                  name="system.transformation.property"
+                  readonly="true"
+                  value="ClassName=ac.at.tuwien.dsg.uml.statemachine.export.transformation.provider.StateMachineTransformation;IsUMLKind=true;">
+            </Property>
+         </Transformation>
+      </TransformationProvider>
+   </extension>
+
+</plugin>
