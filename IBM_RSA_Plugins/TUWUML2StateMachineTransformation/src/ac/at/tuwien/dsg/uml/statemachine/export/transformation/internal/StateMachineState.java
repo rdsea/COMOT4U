@@ -1,4 +1,4 @@
-package ac.at.tuwien.dsg.uml.statemachine.export.activator.transformation.internal;
+package ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,8 +8,14 @@ import org.eclipse.uml2.uml.Pseudostate;
 import org.eclipse.uml2.uml.Vertex;
 
 /**
- * Class to be used as intermediary in generating the state graph
+ *  Class capturing information about a state in a State Machine diagram, including the current state vertex and transitions to and from it 
+ * __author__ = "TU Wien, Distributed System's Group", http://www.infosys.tuwien.ac.at/
+ * __copyright__ = "Copyright 2016, TU Wien, Distributed Systems Group"
+ * __license__ = "Apache LICENSE V2.0"
+ * __maintainer__ = "Daniel Moldovan"
+ * __email__ = "d.moldovan@dsg.tuwien.ac.at"
  */
+ 
 
 public class StateMachineState{
 	

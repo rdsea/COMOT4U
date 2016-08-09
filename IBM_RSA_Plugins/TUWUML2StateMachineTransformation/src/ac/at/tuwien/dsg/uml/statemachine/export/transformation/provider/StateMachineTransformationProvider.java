@@ -20,8 +20,12 @@ import ac.at.tuwien.dsg.uml.statemachine.export.transformation.provider.StateMac
 /**
  * StateMachineTransformationProvider is registered in plugin.xml as a Transformation Provider.
  * 
- */
-/** 
+ * __author__ = "TU Wien, Distributed System's Group", http://www.infosys.tuwien.ac.at/
+ * __copyright__ = "Copyright 2016, TU Wien, Distributed Systems Group"
+ * __license__ = "Apache LICENSE V2.0"
+ * __maintainer__ = "Daniel Moldovan"
+ * __email__ = "d.moldovan@dsg.tuwien.ac.at"
+ * 
  * @see com.ibm.xtools.transform.core.AbstractTransformationProvider
  */
 public class StateMachineTransformationProvider

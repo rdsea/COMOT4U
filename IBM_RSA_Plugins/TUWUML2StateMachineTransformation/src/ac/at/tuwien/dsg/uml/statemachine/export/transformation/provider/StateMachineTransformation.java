@@ -18,6 +18,12 @@ import org.eclipse.uml2.uml.UMLPackage;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.statemachinetransformation.rules.StateMachineTransformationRule;
 
 /** 
+ * __author__ = "TU Wien, Distributed System's Group", http://www.infosys.tuwien.ac.at/
+ * __copyright__ = "Copyright 2016, TU Wien, Distributed Systems Group"
+ * __license__ = "Apache LICENSE V2.0"
+ * __maintainer__ = "Daniel Moldovan"
+ * __email__ = "d.moldovan@dsg.tuwien.ac.at"
+ *
  * @see com.ibm.xtools.transform.core.RootTransform
  */
 public class StateMachineTransformation extends RootTransform 

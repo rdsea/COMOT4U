@@ -14,6 +14,7 @@
                name="StateMachineTransformation"
                sourceModelType="UML2"
                targetModelType="resource"
+               transformGUI="ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui.StateMachineTransformationGUI"
                version="1.0.0">
             <Property
                   id="system.transformation.property"

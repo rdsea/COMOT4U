@@ -17,6 +17,7 @@ Require-Bundle: org.eclipse.ui,
  com.ibm.xtools.transform.uml2.java5;bundle-version="7.5.800",
  org.eclipse.gmf.runtime.common.core,
  com.ibm.xtools.uml.transform.core,
- org.eclipse.uml2.uml
+ org.eclipse.uml2.uml,
+ com.ibm.xtools.transform.ui;bundle-version="7.100.400"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy

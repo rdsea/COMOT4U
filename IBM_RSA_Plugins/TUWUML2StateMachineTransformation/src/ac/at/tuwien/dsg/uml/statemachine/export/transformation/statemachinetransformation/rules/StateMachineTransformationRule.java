@@ -1,41 +1,34 @@
-/*
- *+------------------------------------------------------------------------+
- *| Licensed Materials - Property of IBM                                   |
- *| (C) Copyright IBM Corp. 2004.  All Rights Reserved.                    |
- *|                                                                        |
- *| US Government Users Restricted Rights - Use, duplication or disclosure |
- *| restricted by GSA ADP Schedule Contract with IBM Corp.                 |
- *+------------------------------------------------------------------------+
- */
+
 package ac.at.tuwien.dsg.uml.statemachine.export.transformation.statemachinetransformation.rules;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Map;
 
-import org.eclipse.jdt.core.jdom.DOMFactory;
-import org.eclipse.jdt.core.jdom.IDOMField;
-import org.eclipse.jdt.core.jdom.IDOMMethod;
-import org.eclipse.jdt.core.jdom.IDOMType;
-import org.eclipse.uml2.uml.Constraint;
-import org.eclipse.uml2.uml.Element;
-import org.eclipse.uml2.uml.Event;
-import org.eclipse.uml2.uml.Operation;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.uml2.uml.Region;
+import org.eclipse.uml2.uml.StateMachine;
 import org.eclipse.uml2.uml.Transition;
-import org.eclipse.uml2.uml.Trigger;
 import org.eclipse.uml2.uml.Vertex;
-import org.eclipse.uml2.uml.internal.impl.CallEventImpl;
-import org.eclipse.uml2.uml.internal.impl.ClassImpl;
-import org.eclipse.uml2.uml.internal.impl.OpaqueExpressionImpl;
-import org.eclipse.uml2.uml.internal.impl.StateMachineImpl;
 
-import ac.at.tuwien.dsg.uml.statemachine.export.activator.transformation.internal.StateMachineState;
-import ac.at.tuwien.dsg.uml.statemachine.export.activator.transformation.internal.StateMachineStateTransition;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineState;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineStateGraph;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineStateTransition;
 
 import com.ibm.xtools.transform.core.ITransformContext;
 import com.ibm.xtools.transform.core.ModelRule;
+
+
+/**
+ * Class containing the method to convert an UML State Machine Diagram to Java Representation
+ * __author__ = "TU Wien, Distributed System's Group", http://www.infosys.tuwien.ac.at/
+ * __copyright__ = "Copyright 2016, TU Wien, Distributed Systems Group"
+ * __license__ = "Apache LICENSE V2.0"
+ * __maintainer__ = "Daniel Moldovan"
+ * __email__ = "d.moldovan@dsg.tuwien.ac.at"
+ */
 
 
 /*
@@ -68,24 +61,36 @@ public class StateMachineTransformationRule extends ModelRule {
 	 * @see com.ibm.xtools.transform.core.AbstractRule#createTarget(com.ibm.xtools.transform.core.ITransformContext)
 	 */
 	public Object createTarget(ITransformContext ruleContext) {
+		
+		StateMachine source = (StateMachine) ruleContext.getSource();
+		Object targetContainer = ruleContext.getTargetContainer();      
+		
+		if (!(targetContainer instanceof IResource)) {
+			System.err.println("Target must be Resource (folder/project)");
+		}
+	  
+		IResource res = (IResource) ruleContext.getTargetContainer(); 
+		IPath targetPath = res.getLocation();
+		
+		StateMachineStateGraph stateGraphc = new StateMachineStateGraph();
 
-		HashMap<StateMachineState, StateMachineState> statesMap = new LinkedHashMap<>();
+		Map<StateMachineState,StateMachineState> statesMap = stateGraphc.getStatesMap();
+		
+		
+		 
 
-		StateMachineImpl source = (StateMachineImpl) ruleContext.getSource();
-		ruleContext.getTarget();
-
-		DOMFactory domFactory = new DOMFactory();
-
-		IDOMType clas = domFactory.createClass();
-		clas.setName(source.getName());
-
-		IDOMType class2 = domFactory.createClass();
-		class2.setName("State");
-
-		IDOMField f = domFactory.createField();
-		IDOMMethod m = domFactory.createMethod();
-
-		clas.addChild(class2);
+//		DOMFactory domFactory = new DOMFactory();
+//
+//		IDOMType clas = domFactory.createClass();
+//		clas.setName(source.getName());
+//
+//		IDOMType class2 = domFactory.createClass();
+//		class2.setName("State");
+//
+//		IDOMField f = domFactory.createField();
+//		IDOMMethod m = domFactory.createMethod();
+//
+//		clas.addChild(class2);
 
 		for (Region re : source.getRegions()) {
 			for (Transition t : re.getTransitions()) {
@@ -120,68 +125,28 @@ public class StateMachineTransformationRule extends ModelRule {
 		// at this point we should go through our map and generate a transition
 		// graph
 
-		StateMachineState initialS = statesMap.keySet().iterator().next();
+		System.out.println(stateGraphc.toString());
+		System.out.println(stateGraphc.getStatesWithUncertainties());
 
-		List<StateMachineState> statesQueue = new ArrayList<>();
-		statesQueue.add(initialS);
+		
 
-		// BFS to process the state graph
-		//TODO: output state machine in Java/XML
-		while (!statesQueue.isEmpty()) {
-			StateMachineState state = statesQueue.remove(0);
-			System.out.println("State " + state.getName() + "->");
-			for (StateMachineStateTransition transition : state.getOutTransitions()) {
-				StateMachineState targetState = transition.getTargetState();
-				statesQueue.add(targetState);
-				System.out.println("	goes to " + targetState.getName());
-
-				List<Trigger> triggers  =  transition.getTransition().getTriggers();
-				if (!triggers.isEmpty()){
-					System.out.println("	with triggers:");
-				}
-
-				for (Trigger trigger :triggers) {
-					Event event = trigger.getEvent();
-					//if UML operation triggers event
-					if (event instanceof CallEventImpl){
-						CallEventImpl callEvent = (CallEventImpl) event;
-						Operation operation = callEvent.getOperation();
-						ClassImpl operationCLass = (ClassImpl) operation.eContainer();
-						System.out.println("		= Trigger Operation: " + operationCLass.getName() +"."+ operation.getName());
-					}
-					
-				}
-
-				Constraint guard = transition.getTransition().getGuard();
-				if (guard != null) {
-					System.out.println("	under Guard conditions ");
-					for (Element element : guard.allOwnedElements()) {
-						OpaqueExpressionImpl expression = (OpaqueExpressionImpl) element;
-						for (String body : expression.getBodies()) {
-							System.out.println("		Condition: " + body);
-						}
-					}
-				}
-
-			}
-		}
-
+    	
 		// System.out.println(clas.toString());
 		//
-		// String filename ="C:\\tmp\\TSTSTSTS.java";
-		// File myFile = new File(filename);
-		// FileWriter fw;
-		// try {
-		// fw = new FileWriter(myFile,true);
-		// fw.write(clas.getContents());
-		// fw.flush();
-		// fw.close();
-		// } catch (IOException e) {
-		// // TODO Auto-generated catch block
-		// e.printStackTrace();
-		// }
+		 String filename = targetPath.toOSString() + File.separatorChar + source.getName() + "_SM.xml";
+		 File myFile = new File(filename);
+		 FileWriter fw;
+		 try {
+		 fw = new FileWriter(myFile,true);
+		 fw.write(stateGraphc.toString());
+		 fw.flush();
+		 fw.close();
+		 } catch (IOException e) {
+		 // TODO Auto-generated catch block
+		 e.printStackTrace();
+		 }
 
-		return clas;
+		return stateGraphc.toString();
 	}
 
 }
