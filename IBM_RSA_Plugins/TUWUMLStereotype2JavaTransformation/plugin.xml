@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.ibm.xtools.transform.core.transformationProviders">
+      <TransformationProvider
+            class="ac.at.tuwien.dsg.uml.stereotype.export.transformation.providers.StereotypeTransformationProvider">
+         <Priority
+               name="Highest">
+         </Priority>
+         <Transformation
+               groupPath="ac.at.tuwien.dsg.uml.stereotype.export.transformation.Stereotype2JavaTransformation"
+               id="ac.at.tuwien.dsg.uml.stereotype.export.transformation.Stereotype2JavaTransformation.ID"
+               name="Stereotype2JavaTransformation"
+               sourceModelType="UML2"
+               targetModelType="resource"
+               version="1.0.0">
+            <Property
+                  id="system.transformation.property"
+                  name="system.transformation.property"
+                  readonly="true"
+                  value="ClassName=ac.at.tuwien.dsg.uml.stereotype.export.transformation.providers.Stereotype2JavaTransformation;IsUMLKind=true;">
+            </Property>
+         </Transformation>
+      </TransformationProvider>
+   </extension>
+
+</plugin>

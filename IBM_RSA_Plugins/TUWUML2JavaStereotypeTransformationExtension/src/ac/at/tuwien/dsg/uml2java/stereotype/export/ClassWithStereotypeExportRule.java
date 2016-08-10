@@ -11,6 +11,7 @@ package ac.at.tuwien.dsg.uml2java.stereotype.export;
  * __email__ = "d.moldovan@dsg.tuwien.ac.at"
  */
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -32,8 +33,13 @@ import org.eclipse.jdt.core.dom.TypeDeclaration;
 import org.eclipse.jdt.core.jdom.DOMFactory;
 import org.eclipse.jdt.core.jdom.IDOMCompilationUnit;
 import org.eclipse.jdt.core.jdom.IDOMField;
+import org.eclipse.jdt.core.jdom.IDOMImport;
 import org.eclipse.jdt.core.jdom.IDOMMethod;
 import org.eclipse.uml2.uml.Class;
+import org.eclipse.uml2.uml.Namespace;
+import org.eclipse.uml2.uml.Property;
+import org.eclipse.uml2.uml.Stereotype;
+import org.eclipse.uml2.uml.Type;
 
 import com.ibm.xtools.transform.core.ITransformContext;
 import com.ibm.xtools.transform.uml2.impl.internal.java5.ClassRule;
@@ -44,6 +50,9 @@ import org.eclipse.jdt.internal.core.jdom.DOMNode;
 
 public class ClassWithStereotypeExportRule extends ClassRule {
 
+	
+	//TODO; do not know why. currently does not export the stereotypes at all. So unsure what to do.
+	//Current version: it exports all properties coming from the stereotypes. But if a Property
 	protected Object createTarget(ITransformContext context) {
 		  
 	    /**
@@ -65,19 +74,28 @@ public class ClassWithStereotypeExportRule extends ClassRule {
 		 * We go through all applied stereotypes and for each we go through each attribute, and create a class field.
 		 */
 		
-		for (EObject stereotype:umlCls.getStereotypeApplications() ) {
-			/**
-			 * Get the stereotype class which contains all attributes			
-			 */
-			EClass eClass = ((EObject) stereotype).eClass();
+
+		for(Stereotype stereotype : umlCls.getAppliedStereotypes()){
 			
-			for (EAttribute attribute :  eClass.getEAllAttributes()) {
+			//get all properties
+			for (Property attribute :  stereotype.getAllAttributes()) {
+				
 				String name = attribute.getName();
-				EDataType type = attribute.getEAttributeType();
-				String typeName = type.getInstanceClassName();
+				Type type = attribute.getType();
+				String typeName = type.getName();
+			    
+				org.eclipse.uml2.uml.Package packageType = type.getPackage();
 				/**
 				 * Create Java field/class variable for each attribute 
 				 */
+				Namespace namespace = attribute.getNamespace();
+				 
+				//create import statement for each added field 
+//				IDOMImport importStatement = domFactory.createImport();
+//				importStatement.setName(packageType+"."+typeName);
+//				
+//				target.addChild(importStatement);
+				
 				IDOMField field = domFactory.createField();
 				field.setName(name);
 				field.setFlags(Flags.AccPrivate);
