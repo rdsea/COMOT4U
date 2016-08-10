@@ -9,7 +9,7 @@
                name="Highest">
          </Priority>
          <Transformation
-               groupPath="ac.at.tuwien.dsg.uml.stereotype.export.transformation.Stereotype2JavaTransformation"
+               groupPath="ac.at.tuwien.dsg.uml.stereotype.export.transformation"
                id="ac.at.tuwien.dsg.uml.stereotype.export.transformation.Stereotype2JavaTransformation.ID"
                name="Stereotype2JavaTransformation"
                sourceModelType="UML2"

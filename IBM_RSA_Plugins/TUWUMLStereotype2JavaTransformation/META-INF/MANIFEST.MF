@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: ac.at.tuwien.dsg.uml.stereotype.export.transformation.Stereotype2JavaTransformation
-Bundle-SymbolicName: ac.at.tuwien.dsg.uml.stereotype.export.transformation.Stereotype2JavaTransformation;singleton:=true
+Bundle-Name: Stereotype2JavaTransformation
+Bundle-SymbolicName: Stereotype2JavaTransformation;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: ac.at.tuwien.dsg.uml.stereotype.export.transformation.Activator
 Require-Bundle: org.eclipse.ui,
