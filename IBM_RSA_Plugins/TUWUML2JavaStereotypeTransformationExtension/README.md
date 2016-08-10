@@ -12,3 +12,8 @@ To use the plug-in
    - Choose transformation source a package containing UML diagrams
    - Choose transformation target any project
    - Run the transformation
+
+
+If the project has classes which have attributes of type Stereotype subclass, or have applied on them Stereotypes which in turn have Stereotype attributes, to obtain usable Java classes you must also convert the stereotypes to Java by following the following steps:
+ - 1. Apply this transform to convert classes/enums from project containing the stereotype
+ - 3. Apply the Stereotype2JavaTransformation to convert the Stereotypes in classes (https://github.com/tuwiendsg/COMOT4U/tree/master/IBM_RSA_Plugins/TUWUMLStereotype2JavaTransformation)
