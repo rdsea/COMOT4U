@@ -33,6 +33,7 @@ import org.eclipse.uml2.uml.Type;
  */
 
 public class StateMachineStateGraph {
+	private String stateMachineName;
     private Map<StateMachineState, StateMachineState> statesMap = new LinkedHashMap<StateMachineState, StateMachineState>();
 
 	public Map<StateMachineState, StateMachineState> getStatesMap() {
@@ -47,7 +48,15 @@ public class StateMachineStateGraph {
     	return statesMap.get(StateMachineState.FINAL_STATE);
     }
     
-    /**
+    public String getStateMachineName() {
+		return stateMachineName;
+	}
+
+	public void setStateMachineName(String stateMachineName) {
+		this.stateMachineName = stateMachineName;
+	}
+
+	/**
      * Method also good example on how one can iterate and extract information from the state graph
      */
     public String toString(){
@@ -87,8 +96,8 @@ public class StateMachineStateGraph {
 					if (event instanceof CallEvent){
 						CallEvent callEvent = (CallEvent) event;
 						Operation operation = callEvent.getOperation();
-						Class operationCLass = (Class) operation.eContainer();
-						description += "\n		= Trigger Operation: " + operationCLass.getName() +"."+ operation.getName();
+						Class operationClass = (Class) operation.eContainer();
+						description += "\n		= Trigger Operation: " + operationClass.getName() +"."+ operation.getName();
 					}
 					
 				}
@@ -111,6 +120,9 @@ public class StateMachineStateGraph {
 		}
 		return description;
     }
+    
+    //TODO: to generate tests, we need to determine what metric to test. And for metrics we have or not (in CPS) a test configuration. If we have, can test, if not, we test related or something else
+    
     
     /**
      * Method which iterates and returns the states which have uncertainty

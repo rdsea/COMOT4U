@@ -11,11 +11,13 @@
  *+------------------------------------------------------------------------+
  */
 package ac.at.tuwien.dsg.uml.statemachine.export.transformation.provider;
+import org.eclipse.uml2.uml.UMLPackage;
+
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.statemachinetransformation.rules.StateMachineTransformationRule;
+
+import com.ibm.xtools.transform.core.ITransformationDescriptor;
 import com.ibm.xtools.transform.core.RootTransform;
 import com.ibm.xtools.uml.transform.core.UMLKindTransform;
-import com.ibm.xtools.transform.core.ITransformationDescriptor;
-import org.eclipse.uml2.uml.UMLPackage;
-import ac.at.tuwien.dsg.uml.statemachine.export.transformation.statemachinetransformation.rules.StateMachineTransformationRule;
 
 /** 
  * __author__ = "TU Wien, Distributed System's Group", http://www.infosys.tuwien.ac.at/
@@ -85,8 +87,7 @@ public class StateMachineTransformation extends RootTransform
 	 */
 	private void addUMLRules(UMLKindTransform transform)
 	{
-		transform.addByKind(UMLPackage.eINSTANCE.getStateMachine(), new StateMachineTransformationRule("ac.at.tuwien.dsg.uml.statemachine.export.transformation.statemachinetransformation.rule", "StateMachineTransformationRule"));
-	
+		transform.addByKind(UMLPackage.eINSTANCE.getStateMachine(), new StateMachineTransformationRule("ac.at.tuwien.dsg.uml.statemachine.export.transformation.statemachinetransformation.rule", "StateMachineTransformationRule"));	
 	}
 
 }

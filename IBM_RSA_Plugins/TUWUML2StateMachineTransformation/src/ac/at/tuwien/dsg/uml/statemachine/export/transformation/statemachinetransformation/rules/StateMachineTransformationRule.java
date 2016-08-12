@@ -10,6 +10,7 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.uml2.uml.Region;
 import org.eclipse.uml2.uml.StateMachine;
+import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.Transition;
 import org.eclipse.uml2.uml.Vertex;
 
@@ -73,11 +74,9 @@ public class StateMachineTransformationRule extends ModelRule {
 		IPath targetPath = res.getLocation();
 		
 		StateMachineStateGraph stateGraphc = new StateMachineStateGraph();
+		stateGraphc.setStateMachineName(source.getName()); //TODO: check if name correct
 
 		Map<StateMachineState,StateMachineState> statesMap = stateGraphc.getStatesMap();
-		
-		
-		 
 
 //		DOMFactory domFactory = new DOMFactory();
 //
@@ -122,31 +121,32 @@ public class StateMachineTransformationRule extends ModelRule {
 			}
 		}
 
-		// at this point we should go through our map and generate a transition
-		// graph
-
 		System.out.println(stateGraphc.toString());
 		System.out.println(stateGraphc.getStatesWithUncertainties());
 
 		
-
+		//TODO: generate transformation output file
     	
-		// System.out.println(clas.toString());
-		//
 		 String filename = targetPath.toOSString() + File.separatorChar + source.getName() + "_SM.xml";
 		 File myFile = new File(filename);
 		 FileWriter fw;
 		 try {
-		 fw = new FileWriter(myFile,true);
-		 fw.write(stateGraphc.toString());
-		 fw.flush();
-		 fw.close();
+			 fw = new FileWriter(myFile,true);
+			 fw.write(stateGraphc.toString());
+			 fw.flush();
+			 fw.close();
 		 } catch (IOException e) {
-		 // TODO Auto-generated catch block
-		 e.printStackTrace();
+			 // TODO Auto-generated catch block
+			 e.printStackTrace();
 		 }
 
 		return stateGraphc.toString();
 	}
+	
+	
+	public boolean canAccept(ITransformContext context) {
+		return (context.getSource() instanceof StateMachine);
+	}
+	
 
 }
