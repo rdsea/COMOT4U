@@ -19,8 +19,8 @@ import org.eclipse.uml2.uml.Vertex;
 
 public class StateMachineState{
 	
-	public static final StateMachineState INITIAL_STATE = new StateMachineState(Pseudostate.class.getName());
-	public static final StateMachineState FINAL_STATE = new StateMachineState(FinalState.class.getName());
+	public static final StateMachineState INITIAL_STATE = new StateMachineState("InitialState");
+	public static final StateMachineState FINAL_STATE = new StateMachineState("FinalState");
 	
 	
 	private String name;
@@ -33,10 +33,11 @@ public class StateMachineState{
 		name = vertex.getName();
 		//initial and last states can have no name
 		if (name == null && vertex instanceof Pseudostate){
-			name = Pseudostate.class.getName();
+			name = INITIAL_STATE.name;
 		}else if (name == null && vertex instanceof FinalState){
-			name = FinalState.class.getName();
+			name = FINAL_STATE.name;
 		}
+		name = name.replaceAll("\\W", "_"); // remove all weird non-alphanumeric chars
 		
 		outTransitions = new ArrayList<StateMachineStateTransition>();
 		inTransitions = new ArrayList<StateMachineStateTransition>();
@@ -83,6 +84,11 @@ public class StateMachineState{
 		return inTransitions;
 	}
 	
-	
+	public boolean isInitialState(){
+		return this.equals(INITIAL_STATE);
+	}
+	public boolean isFinalState(){
+		return this.equals(FINAL_STATE);
+	}
 	
 }

@@ -53,7 +53,8 @@ public class StateMachineStateGraph {
 	}
 
 	public void setStateMachineName(String stateMachineName) {
-		this.stateMachineName = stateMachineName;
+		//ensure we do not add names with spaces or weird symbols
+		this.stateMachineName = stateMachineName.replaceAll("\\W", "");
 	}
 
 	/**

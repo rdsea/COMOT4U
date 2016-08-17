@@ -10,10 +10,11 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.uml2.uml.Region;
 import org.eclipse.uml2.uml.StateMachine;
-import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.Transition;
 import org.eclipse.uml2.uml.Vertex;
+import org.eclipse.jface.text.Document;
 
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.TransitionCorrectnessTestStrategy;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineState;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineStateGraph;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineStateTransition;
@@ -73,10 +74,10 @@ public class StateMachineTransformationRule extends ModelRule {
 		IResource res = (IResource) ruleContext.getTargetContainer(); 
 		IPath targetPath = res.getLocation();
 		
-		StateMachineStateGraph stateGraphc = new StateMachineStateGraph();
-		stateGraphc.setStateMachineName(source.getName()); //TODO: check if name correct
+		StateMachineStateGraph stateGraph = new StateMachineStateGraph();
+		stateGraph.setStateMachineName(source.getName()); //TODO: check if name correct
 
-		Map<StateMachineState,StateMachineState> statesMap = stateGraphc.getStatesMap();
+		Map<StateMachineState,StateMachineState> statesMap = stateGraph.getStatesMap();
 
 //		DOMFactory domFactory = new DOMFactory();
 //
@@ -121,18 +122,18 @@ public class StateMachineTransformationRule extends ModelRule {
 			}
 		}
 
-		System.out.println(stateGraphc.toString());
-		System.out.println(stateGraphc.getStatesWithUncertainties());
-
 		
-		//TODO: generate transformation output file
-    	
-		 String filename = targetPath.toOSString() + File.separatorChar + source.getName() + "_SM.xml";
+		//generate test plan
+		TransitionCorrectnessTestStrategy strategy= new TransitionCorrectnessTestStrategy();
+		Document plan = strategy.generateTestPlan(stateGraph);
+		
+		//save generated test plan as java class
+		 String filename = targetPath.toOSString() + File.separatorChar + (TransitionCorrectnessTestStrategy.TEST_PLAN_CLASS_LEADING + stateGraph.getStateMachineName()) + ".java";
 		 File myFile = new File(filename);
 		 FileWriter fw;
 		 try {
-			 fw = new FileWriter(myFile,true);
-			 fw.write(stateGraphc.toString());
+			 fw = new FileWriter(myFile);
+			 fw.write(plan.get());
 			 fw.flush();
 			 fw.close();
 		 } catch (IOException e) {
@@ -140,7 +141,8 @@ public class StateMachineTransformationRule extends ModelRule {
 			 e.printStackTrace();
 		 }
 
-		return stateGraphc.toString();
+		System.out.println(plan);
+		return plan;
 	}
 	
 	
