@@ -121,7 +121,8 @@ public class StateMachineTransformationRule extends ModelRule {
 				sTarget.getInTransitions().add(st);
 			}
 		}
-
+  
+		stateGraph.getStatesWithUncertainties(); //TODO: go deep in the properties.
 		
 		//generate test plan
 		TransitionCorrectnessTestStrategy strategy= new TransitionCorrectnessTestStrategy();

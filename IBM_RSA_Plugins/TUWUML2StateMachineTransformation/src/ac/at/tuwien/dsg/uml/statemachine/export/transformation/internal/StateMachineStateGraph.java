@@ -22,6 +22,8 @@ import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.Trigger;
 import org.eclipse.uml2.uml.Type;
 
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.exceptions.NoSuchStateException;
+
 /**
  * Class used to capture a State Machine diagram as a state transition graph
  * 
@@ -40,13 +42,29 @@ public class StateMachineStateGraph {
 		return statesMap;
 	}
     
-    public StateMachineState getInitialState(){
-    	return statesMap.get(StateMachineState.INITIAL_STATE);
+    public StateMachineState getInitialState() throws NoSuchStateException{
+    	//if we started from a no-name initial state
+    	if (statesMap.containsKey(StateMachineState.INITIAL_STATE)){
+    		return statesMap.get(StateMachineState.INITIAL_STATE);
+    	}else{
+    		
+    		//find out first state has no inward transitions,i.e. no transitions lead to it
+    		//this assumes we have one initial state per state machine
+    		for (StateMachineState state: statesMap.values()){
+    			if (state.getInTransitions().isEmpty()){
+    				return state;
+    			}
+    		}
+    		
+    	}
+    	
+    	//if we reach this point we have no such state exception
+    	throw new NoSuchStateException("State machine diagram \"" + stateMachineName + "\" has no  initial state");
     }
     
-    public StateMachineState getFinalState(){
-    	return statesMap.get(StateMachineState.FINAL_STATE);
-    }
+//    public StateMachineState getFinalState(){
+//    	return statesMap.get(StateMachineState.FINAL_STATE);
+//    }
     
     public String getStateMachineName() {
 		return stateMachineName;

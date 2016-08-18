@@ -20,7 +20,7 @@ import org.eclipse.uml2.uml.Vertex;
 public class StateMachineState{
 	
 	public static final StateMachineState INITIAL_STATE = new StateMachineState("InitialState");
-	public static final StateMachineState FINAL_STATE = new StateMachineState("FinalState");
+	private static final StateMachineState FINAL_STATE = new StateMachineState("FinalState");
 	
 	
 	private String name;

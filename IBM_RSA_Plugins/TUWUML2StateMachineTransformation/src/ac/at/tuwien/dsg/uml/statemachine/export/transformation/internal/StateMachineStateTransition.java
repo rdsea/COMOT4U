@@ -30,5 +30,38 @@ public class StateMachineStateTransition {
 		public Transition getTransition() {
 			return transition;
 		}
+		@Override
+		public int hashCode() {
+			final int prime = 31;
+			int result = 1;
+			result = prime * result
+					+ ((sourceState == null) ? 0 : sourceState.hashCode());
+			result = prime * result
+					+ ((targetState == null) ? 0 : targetState.hashCode());
+			return result;
+		}
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			StateMachineStateTransition other = (StateMachineStateTransition) obj;
+			if (sourceState == null) {
+				if (other.sourceState != null)
+					return false;
+			} else if (!sourceState.equals(other.sourceState))
+				return false;
+			if (targetState == null) {
+				if (other.targetState != null)
+					return false;
+			} else if (!targetState.equals(other.targetState))
+				return false;
+			return true;
+		}
+		
+		
 		
 	}
