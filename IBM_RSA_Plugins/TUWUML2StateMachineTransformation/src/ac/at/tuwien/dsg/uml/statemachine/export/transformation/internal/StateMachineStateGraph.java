@@ -162,6 +162,7 @@ public class StateMachineStateGraph {
     				
     				//iterate through all stereotype attributes
     				for (Property property :  stereotype.getAllAttributes()) {
+    					
     					String propertyName = property.getName();
     					Type type = property.getType();
     					
@@ -179,10 +180,18 @@ public class StateMachineStateGraph {
     							//only way I found out how to get the Object instance used as attribute value
     						    EcoreEList<EObject> valuesList = (EcoreEList<EObject>) state.getVertex().getValue(stereotype, propertyName);
     						    
-    						    if (!valuesList.isEmpty()){
+    						    //properties can be objects in turn, so also process them, currently as system out, but in future as decisions based on them
+    						    List<EObject> objectsToProcess = new ArrayList<>();
+    						    
+    						    for( EObject eObject : valuesList){
+    						    	objectsToProcess.add(eObject);
+    						    }
+    						    
+    						    
+    						   while (!objectsToProcess.isEmpty()){
     						    	//if multiplicity of properties is expected to be > 1, then we should iterate through all
     						    	//currently I assume multiplicity is 1
-    						    	DynamicEObjectImpl value = (DynamicEObjectImpl) valuesList.iterator().next();
+    						    	EObject value = objectsToProcess.remove(0);
     						    	System.out.println(state.getName() + " has uncertainty object property " + value.eClass().getName());
 
     						    	//now, from the value Object property we go and iterate through their attributes to extract their values
@@ -193,8 +202,24 @@ public class StateMachineStateGraph {
     							    		continue;
     							    	}
     							    	//get attribute/feature value
-    							    	Object featureValue = value.dynamicGet(feature.getFeatureID());
-    							    	System.out.println("uncertainty property has feature " + feature.getName() + " with value : " + featureValue);
+    							    	Object featureValue = value.eGet(feature);
+    							    	
+    							    	//attributes can be also classes, so handle them differently
+    							    	if(featureValue instanceof EcoreEList){
+    							    		EcoreEList list = (EcoreEList) featureValue;
+    							    		for (Object eObj : list){
+    							    			if(eObj instanceof EObject){
+    							    				objectsToProcess.add((EObject) eObj);
+    							    				System.out.println(value.eClass().getName() + " has feature " + feature.getName() + " with object of class : " + eObj);
+    							    			}else{
+    							    				System.out.println(value.eClass().getName() + " has feature " + feature.getName() + " has a value : " + eObj);
+    							    			}
+    							    		}
+    							    	}else{
+    							    		System.out.println(value.eClass().getName() + " has feature " + feature.getName() + " with value : " + featureValue);
+    							    	}
+    							    	
+    							    	
     							    }
     						    }
     						}
