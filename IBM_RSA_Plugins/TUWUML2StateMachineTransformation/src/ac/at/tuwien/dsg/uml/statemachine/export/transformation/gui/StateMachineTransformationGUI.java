@@ -1,9 +1,8 @@
 package ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui;
 
+import com.ibm.xtools.transform.core.ITransformContext;
 import com.ibm.xtools.transform.core.ITransformationDescriptor;
-import com.ibm.xtools.transform.core.extension.ITransformExtension;
 import com.ibm.xtools.transform.ui.AbstractTransformConfigTab;
-import com.ibm.xtools.transform.ui.AbstractTransformExtensionConfigTab;
 import com.ibm.xtools.transform.ui.AbstractTransformGUI;
 
 public class StateMachineTransformationGUI extends AbstractTransformGUI {
@@ -21,7 +20,6 @@ public class StateMachineTransformationGUI extends AbstractTransformGUI {
 		for (int i = 0; i < superTabs.length; i++) {
 			myTabs[i] = superTabs[i];
 		}
-		
 		myTabs[myTabs.length - 1] = new SelectCPSProfileTab(descriptor, "CPSSelectorTab", "Select CPS profile");
 		return myTabs;
 	}

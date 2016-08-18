@@ -1,12 +1,21 @@
 package ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.eclipse.jface.viewers.CheckboxTableViewer;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
-import ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui.viewer.MyTreeViewer;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.AbstractTestStrategy;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.PathWithUncertaintyTestStrategy;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.TransitionCorrectnessTestStrategy;
 
 import com.ibm.xtools.transform.core.ITransformContext;
 import com.ibm.xtools.transform.core.ITransformationDescriptor;
@@ -23,6 +32,19 @@ import com.ibm.xtools.transform.ui.AbstractTransformConfigTab;
  */
 
 public class SelectCPSProfileTab extends AbstractTransformConfigTab {
+	
+	public static final String SELECTED_STRATEGY_PROPERTY = "SelectedStrategyProperty";
+	
+	private ITransformContext context;
+	
+	//supported strategies
+	List<AbstractTestStrategy> strategies ;
+	
+	{
+		 strategies = new ArrayList<AbstractTestStrategy>();
+		 strategies.add(new TransitionCorrectnessTestStrategy());
+		 strategies.add(new PathWithUncertaintyTestStrategy());
+	}
 
 	public SelectCPSProfileTab(ITransformationDescriptor transDesc,
 			String tabId, String label) {
@@ -31,35 +53,42 @@ public class SelectCPSProfileTab extends AbstractTransformConfigTab {
 	}
 
 	private Text text;
-	private MyTreeViewer viewer;
-	 
+	private CheckboxTableViewer viewer;
+
+	
 	@Override
 	public Control createContents(Composite parent) {
 		Composite contents = new Composite(parent, SWT.None);
 		contents.setLayout(new GridLayout());
-		viewer = new MyTreeViewer();
-		viewer.createPartControl(contents); 
-//		text = new Text(contents, SWT.None);
-//		text.addModifyListener(new ModifyListener() {
-//			public void modifyText(ModifyEvent e) {
-//				setDirty();
-//			}
-//		});
+		viewer = CheckboxTableViewer.newCheckList(contents, SWT.BORDER | SWT.MULTI | SWT.FULL_SELECTION);
 		
+		viewer.getTable().addSelectionListener(new SelectionListener() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				//TODO: change mechanism. Each tab has its own context, can't send property to StateMachine rule
+				context.setPropertyValue(SELECTED_STRATEGY_PROPERTY, ((TableItem)e.item).getText());
+			}
+
+			@Override
+			public void widgetDefaultSelected(SelectionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		for (AbstractTestStrategy strategy :  strategies  ) {
+	      TableItem item = new TableItem(viewer.getTable(), SWT.NONE);
+	      item.setText(strategy.getClass().getCanonicalName());
+	    }
+		 
 		return contents;
 	}
 	
 	public void populateContext(ITransformContext context) {
-		context.setPropertyValue("SelectedPathForCPS", viewer.getTreeViewer().getSelection().toString());
+		this.context = context;
 	}
-
-	public void populateTab(ITransformContext context) {
-//		String newText = (String) context.getPropertyValue("MyPropertyId");
-//		if (newText == null) {
-//			newText = "";
-//		}
-//
-//		text.setText(newText);
-	}
+	
+	
+	
 
 }

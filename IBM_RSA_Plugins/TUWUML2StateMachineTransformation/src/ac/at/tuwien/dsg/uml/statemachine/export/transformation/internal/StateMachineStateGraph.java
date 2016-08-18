@@ -187,7 +187,6 @@ public class StateMachineStateGraph {
     						    	objectsToProcess.add(eObject);
     						    }
     						    
-    						    
     						   while (!objectsToProcess.isEmpty()){
     						    	//if multiplicity of properties is expected to be > 1, then we should iterate through all
     						    	//currently I assume multiplicity is 1

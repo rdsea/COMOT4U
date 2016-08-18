@@ -20,7 +20,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.uml2.uml,
  com.ibm.xtools.transform.ui;bundle-version="7.100.400",
  org.eclipse.text,
- org.eclipse.core.resources
+ org.eclipse.core.resources,
+ org.eclipse.jface
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Import-Package: org.eclipse.jface.text

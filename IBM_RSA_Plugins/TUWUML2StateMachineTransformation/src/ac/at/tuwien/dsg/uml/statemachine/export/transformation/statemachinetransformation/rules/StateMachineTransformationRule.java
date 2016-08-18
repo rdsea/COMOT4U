@@ -14,7 +14,9 @@ import org.eclipse.uml2.uml.Transition;
 import org.eclipse.uml2.uml.Vertex;
 import org.eclipse.jface.text.Document;
 
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.AbstractTestStrategy;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.TransitionCorrectnessTestStrategy;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui.SelectCPSProfileTab;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineState;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineStateGraph;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineStateTransition;
@@ -62,16 +64,16 @@ public class StateMachineTransformationRule extends ModelRule {
 	 * 
 	 * @see com.ibm.xtools.transform.core.AbstractRule#createTarget(com.ibm.xtools.transform.core.ITransformContext)
 	 */
-	public Object createTarget(ITransformContext ruleContext) {
+	public Object createTarget(ITransformContext context) {
 		
-		StateMachine source = (StateMachine) ruleContext.getSource();
-		Object targetContainer = ruleContext.getTargetContainer();      
+		StateMachine source = (StateMachine) context.getSource();
+		Object targetContainer = context.getTargetContainer();      
 		
 		if (!(targetContainer instanceof IResource)) {
 			System.err.println("Target must be Resource (folder/project)");
 		}
 	  
-		IResource res = (IResource) ruleContext.getTargetContainer(); 
+		IResource res = (IResource) context.getTargetContainer(); 
 		IPath targetPath = res.getLocation();
 		
 		StateMachineStateGraph stateGraph = new StateMachineStateGraph();
@@ -125,11 +127,16 @@ public class StateMachineTransformationRule extends ModelRule {
 		stateGraph.getStatesWithUncertainties(); //TODO: go deep in the properties.
 		
 		//generate test plan
-		TransitionCorrectnessTestStrategy strategy= new TransitionCorrectnessTestStrategy();
+		
+		Object selectedStrategy = context.getPropertyValue(SelectCPSProfileTab.SELECTED_STRATEGY_PROPERTY);
+		System.out.println(selectedStrategy);
+		//TODO: add code to instantiate strategy based in selection
+		
+		AbstractTestStrategy strategy= new TransitionCorrectnessTestStrategy();
 		Document plan = strategy.generateTestPlan(stateGraph);
 		
 		//save generated test plan as java class
-		 String filename = targetPath.toOSString() + File.separatorChar + (TransitionCorrectnessTestStrategy.TEST_PLAN_CLASS_LEADING + stateGraph.getStateMachineName()) + ".java";
+		 String filename = targetPath.toOSString() + File.separatorChar + (AbstractTestStrategy.TEST_PLAN_CLASS_LEADING + stateGraph.getStateMachineName()) + ".java";
 		 File myFile = new File(filename);
 		 FileWriter fw;
 		 try {

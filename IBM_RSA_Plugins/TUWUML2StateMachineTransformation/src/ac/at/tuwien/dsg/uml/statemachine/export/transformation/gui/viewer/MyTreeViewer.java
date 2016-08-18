@@ -33,9 +33,9 @@ public class MyTreeViewer extends ViewPart{
 	public static final String ID = "ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui.MyTreeView";
 
 	private TreeViewer treeViewer; 
+ 
 	private TreeSelection selection;
 
-	@Override
 	public void createPartControl(Composite parent) {
 		treeViewer = new TreeViewer(parent);
 		treeViewer.getTree().setLayoutData(new GridData(GridData.FILL_BOTH));
@@ -47,37 +47,7 @@ public class MyTreeViewer extends ViewPart{
 			public void selectionChanged(SelectionChangedEvent event) {
 				selection = (TreeSelection) event.getSelection();
 				TreePath[] selectedPaths = selection.getPaths();
-				IFile file = ((IFile)selectedPaths[0].getLastSegment());
-				
-				//coide below loads from aJar file all classes. be determined if we need it
-//				String pathToJar = file.getFullPath().toString();
-//				JarFile jarFile;
-//				try {
-//					jarFile = new JarFile(pathToJar);
-//				
-//				Enumeration<JarEntry> e = jarFile.entries();
-//
-//				URL[] urls = { new URL("jar:file:" + pathToJar+"!/") };
-//				URLClassLoader cl = URLClassLoader.newInstance(urls);
-//
-//				while (e.hasMoreElements()) {
-//				    JarEntry je = e.nextElement();
-//				    if(je.isDirectory() || !je.getName().endsWith(".class")){
-//				        continue;
-//				    }
-//				    // -6 because of .class
-//				    String className = je.getName().substring(0,je.getName().length()-6);
-//				    className = className.replace('/', '.');
-//				    Class c = cl.loadClass(className);
-//
-//				}
-//				} catch (IOException e1) {
-//					// TODO Auto-generated catch block
-//					e1.printStackTrace();
-//				} catch (ClassNotFoundException e1) {
-//					// TODO Auto-generated catch block
-//					e1.printStackTrace();
-//				}
+				String selected = selectedPaths[0].getLastSegment().toString();
 				
 				System.out.println(selection.toString());
 			}

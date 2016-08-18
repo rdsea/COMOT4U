@@ -43,6 +43,7 @@ import org.eclipse.uml2.uml.FinalState;
 import org.eclipse.uml2.uml.LiteralString;
 import org.eclipse.uml2.uml.OpaqueExpression;
 import org.eclipse.uml2.uml.Operation;
+import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.TimeEvent;
 import org.eclipse.uml2.uml.Trigger;
 
@@ -55,8 +56,7 @@ import ac.at.tuwien.dsg.uml.statemachine.export.transformation.util.StringFormat
 
 
 /**
- * Class used to generate a Test Plan which check correctness of state transitions by using a State Machine State Graph
- * obtained from parsing a State Machine diagram
+ * Class used to generate a Test Plan which check correctness of state transitions only for paths which have at least one uncertainty on at least one state.
  * 
  * When parsing the state machine graph to generate a test plan, it passes a state multiple times but each transition only once for a test path
  * Useful when different transitions use same intermediary state 
@@ -70,10 +70,10 @@ import ac.at.tuwien.dsg.uml.statemachine.export.transformation.util.StringFormat
  * __email__ = "d.moldovan@dsg.tuwien.ac.at"
  */
 
-public class TransitionCorrectnessTestStrategy extends AbstractTestStrategy{
+public class PathWithUncertaintyTestStrategy extends AbstractTestStrategy{
 	 
-	public TransitionCorrectnessTestStrategy(){
-		super("Strategy which considers all transitions and generates test plans which check transition corectness.");
+	public PathWithUncertaintyTestStrategy(){
+		super("Strategy which considers generates test plans which check transition corectness and have at least one uncertainty on at least one state.");
 	}
 
 	/**
@@ -414,7 +414,26 @@ public class TransitionCorrectnessTestStrategy extends AbstractTestStrategy{
 				 
 				 if (state.getVertex() instanceof FinalState){
 					//store generated method in methods
-					generatedPlans.put(planMethodDeclaration.getName().toString(), planMethodDeclaration);
+					//check and store only if there is at least one transition with an uncertain state 
+					boolean hasUncertainty = false;
+					for (StateMachineStateTransition transition: pathTransitions){
+						
+						//TODO: remove constant and make this efficient
+						
+						//check for all transitions only initial state for uncertainties
+						//as for next transition, the initial will be the target of this one (except for final state)
+						for(Stereotype stereotype : transition.getSourceState().getVertex().getAppliedStereotypes()){
+			    		   //check if the applied stereotype is InfrastructureLevelUncertainty
+			    	    	if (stereotype.getName().equals("InfrastructureLevelUncertainty")){
+			    	    		hasUncertainty = true;
+			    	    		break;
+			    	    	}
+						}
+					}
+					
+					if(hasUncertainty){
+						generatedPlans.put(planMethodDeclaration.getName().toString(), planMethodDeclaration);
+					}
 			     }
 				 
 				 //join on all children threads
