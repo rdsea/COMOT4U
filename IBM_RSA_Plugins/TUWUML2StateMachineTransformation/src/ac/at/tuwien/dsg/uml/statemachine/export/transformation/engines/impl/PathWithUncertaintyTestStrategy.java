@@ -107,6 +107,10 @@ public class PathWithUncertaintyTestStrategy extends AbstractTestStrategy{
         for (Map.Entry<String, MethodDeclaration> entry: generatedAbstractMethods.entrySet()){
      	   listRewrite.insertLast(entry.getValue(), null);
         }
+        
+        if (generatedPlans.isEmpty()){
+        	notifyUser("No test plans contianing uncertainty states could have been generated. 'n Please ensure selected state machine has at least one state with at least one uncertainty");
+        }
 
         int index  = 1;
         //add generated plan methods

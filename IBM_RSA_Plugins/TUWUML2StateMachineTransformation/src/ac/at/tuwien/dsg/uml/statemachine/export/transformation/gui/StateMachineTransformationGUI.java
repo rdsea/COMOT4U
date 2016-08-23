@@ -19,7 +19,7 @@ public class StateMachineTransformationGUI extends AbstractTransformGUI {
 		for (int i = 0; i < superTabs.length; i++) {
 			myTabs[i] = superTabs[i];
 		}
-		myTabs[myTabs.length - 1] = new SelectCPSProfileTab(descriptor, "CPSSelectorTab", "Select CPS profile");
+		myTabs[myTabs.length - 1] = new SelectTestGenerationStrategyTab(descriptor, "SelectTestGenerationStrategyTab", "Select Test Generation Strategy");
 		return myTabs;
 	}
 	

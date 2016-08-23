@@ -19,7 +19,7 @@ import ac.at.tuwien.dsg.uml.statemachine.export.transformation.communication.sha
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.AbstractTestStrategy;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.TestEngineFactory;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.exceptions.NoSuchEngineTypeException;
-import ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui.SelectCPSProfileTab;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui.SelectTestGenerationStrategyTab;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineState;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineStateGraph;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineStateTransition;
@@ -137,7 +137,7 @@ public class StateMachineTransformationRule extends ModelRule {
 		
 		//generate test plan
 		
-		Object selectedStrategy = sharedContext.getProperty(SelectCPSProfileTab.SELECTED_STRATEGY_PROPERTY);
+		Object selectedStrategy = sharedContext.getProperty(SelectTestGenerationStrategyTab.SELECTED_STRATEGY_PROPERTY);
 		
 		AbstractTestStrategy strategy;
 		try {

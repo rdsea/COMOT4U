@@ -107,6 +107,11 @@ public class TransitionCorrectnessTestStrategy extends AbstractTestStrategy{
        
         int index  = 1;
         //add generated plan methods
+        
+        if (generatedPlans.isEmpty()){
+        	notifyUser("No test plans could have been generated. \n Please ensure selected state machine has at least one complete path from  initial to final state.");
+        }
+        
         for (Map.Entry<String, MethodDeclaration> entry: generatedPlans.entrySet()){
     	   //rename to PLAN_METHOD_LEADING + plan index from PLAN_METHOD_LEADING + UUID
     	   MethodDeclaration method = entry.getValue();
