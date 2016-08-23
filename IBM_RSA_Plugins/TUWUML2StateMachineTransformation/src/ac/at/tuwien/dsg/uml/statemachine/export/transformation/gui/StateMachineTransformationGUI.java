@@ -1,6 +1,5 @@
 package ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui;
 
-import com.ibm.xtools.transform.core.ITransformContext;
 import com.ibm.xtools.transform.core.ITransformationDescriptor;
 import com.ibm.xtools.transform.ui.AbstractTransformConfigTab;
 import com.ibm.xtools.transform.ui.AbstractTransformGUI;

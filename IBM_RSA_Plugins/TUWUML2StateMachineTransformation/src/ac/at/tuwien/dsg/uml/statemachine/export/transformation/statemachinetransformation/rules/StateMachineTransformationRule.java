@@ -8,18 +8,17 @@ import java.util.Map;
 
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.IPath;
+import org.eclipse.jface.text.Document;
 import org.eclipse.uml2.uml.Region;
 import org.eclipse.uml2.uml.StateMachine;
 import org.eclipse.uml2.uml.Transition;
 import org.eclipse.uml2.uml.Vertex;
-import org.eclipse.jface.text.Document;
 
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.communication.sharedContext.SharedContext;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.communication.sharedContext.factories.impl.SingletonVolatileContextFactory;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.AbstractTestStrategy;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.TestEngineFactory;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.exceptions.NoSuchEngineTypeException;
-import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.impl.TransitionCorrectnessTestStrategy;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui.SelectCPSProfileTab;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineState;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineStateGraph;

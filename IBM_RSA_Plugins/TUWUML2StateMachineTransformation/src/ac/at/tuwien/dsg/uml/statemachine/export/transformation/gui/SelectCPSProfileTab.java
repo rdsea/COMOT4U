@@ -3,9 +3,6 @@ package ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.jface.text.Document;
-import org.eclipse.jface.text.IDocument;
-import org.eclipse.jface.text.TextViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
@@ -20,8 +17,8 @@ import org.eclipse.swt.widgets.Text;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.communication.sharedContext.SharedContext;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.communication.sharedContext.factories.impl.SingletonVolatileContextFactory;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.AbstractTestStrategy;
-import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.impl.PathWithUncertaintyTestStrategy;
-import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.impl.TransitionCorrectnessTestStrategy;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.TestEngineFactory;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.exceptions.NoSuchEngineTypeException;
 
 import com.ibm.xtools.transform.core.ITransformContext;
 import com.ibm.xtools.transform.core.ITransformationDescriptor;
@@ -53,9 +50,16 @@ public class SelectCPSProfileTab extends AbstractTransformConfigTab {
 	List<AbstractTestStrategy> strategies ;
 	
 	{
-		 strategies = new ArrayList<AbstractTestStrategy>();
-		 strategies.add(new TransitionCorrectnessTestStrategy());
-		 strategies.add(new PathWithUncertaintyTestStrategy());
+		strategies = new ArrayList<AbstractTestStrategy>();
+		
+		for(Class<? extends AbstractTestStrategy> strategyClass : TestEngineFactory.getSupportedStrategies()){
+			try {
+				strategies.add(TestEngineFactory.createTestEngine(strategyClass.getCanonicalName()));
+			} catch (NoSuchEngineTypeException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 
 	public SelectCPSProfileTab(ITransformationDescriptor transDesc,

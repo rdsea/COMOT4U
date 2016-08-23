@@ -13,27 +13,30 @@ public class TestEngineFactory {
 	
 	//enables engines
 	//supported strategies
-	static	Map<String,AbstractTestStrategy> strategies ;
+	static	Map<String,Class<? extends AbstractTestStrategy>> supportedStrategies ;
 		
+	/**
+	 * All supported strategies should be added here. 
+	 * THen they will automatically be queried and used in everything, including the ConfigurationTab to select strategy
+	 */
 	static{
-		 strategies = new HashMap<String,AbstractTestStrategy>();
-		 
-		 {
-			 AbstractTestStrategy strategy = new TransitionCorrectnessTestStrategy();
-			 strategies.put(strategy.getClass().getCanonicalName(),strategy);
-		 }
-		 
-		 {
-			 AbstractTestStrategy strategy = new PathWithUncertaintyTestStrategy();
-			 strategies.put(strategy.getClass().getCanonicalName(),strategy);
-		 }
-			 
+		 supportedStrategies = new HashMap<String,Class<? extends AbstractTestStrategy>>();
+		 supportedStrategies.put(TransitionCorrectnessTestStrategy.class.getCanonicalName(),TransitionCorrectnessTestStrategy.class);
+		 supportedStrategies.put(PathWithUncertaintyTestStrategy.class.getCanonicalName(),PathWithUncertaintyTestStrategy.class);
 		}
 	
 	
 	public static AbstractTestStrategy createTestEngine(String engineType) throws NoSuchEngineTypeException{
-		if (strategies.containsKey(engineType)){
-			return strategies.get(engineType);
+		if (supportedStrategies.containsKey(engineType)){
+			try {
+				return supportedStrategies.get(engineType).newInstance();
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+				return null;
+			} catch (InstantiationException e) {
+				e.printStackTrace();
+				return null;
+			}
 		}else{
 			throw new NoSuchEngineTypeException("Engine type \"" +engineType + "\" not recognized");
 		}
@@ -42,10 +45,10 @@ public class TestEngineFactory {
 	/*
 	 * returns a copy list of the supported strategy classes
 	 */
-	public static List<Class> getSupportedStrategies(){
-		List<Class> list= new ArrayList<Class>();
-		for(AbstractTestStrategy strategy: strategies.values()){
-			list.add(strategy.getClass());
+	public static List<Class<? extends AbstractTestStrategy>> getSupportedStrategies(){
+		List<Class<? extends AbstractTestStrategy>> list= new ArrayList<Class<? extends AbstractTestStrategy>>();
+		for(Class<? extends AbstractTestStrategy> strategyClass: supportedStrategies.values()){
+			list.add(strategyClass);
 		}
 		return list;
 	}

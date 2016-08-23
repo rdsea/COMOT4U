@@ -2,6 +2,11 @@ package ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.exceptio
 
 public class NoSuchEngineTypeException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5244668843739090122L;
+
 	public NoSuchEngineTypeException() {
 		super();
 		// TODO Auto-generated constructor stub

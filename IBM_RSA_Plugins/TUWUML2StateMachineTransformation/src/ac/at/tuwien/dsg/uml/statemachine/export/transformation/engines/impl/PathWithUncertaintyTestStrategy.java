@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
@@ -16,35 +15,22 @@ import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.AssertStatement;
 import org.eclipse.jdt.core.dom.Block;
 import org.eclipse.jdt.core.dom.CompilationUnit;
-import org.eclipse.jdt.core.dom.Javadoc;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.MethodInvocation;
 import org.eclipse.jdt.core.dom.Modifier;
 import org.eclipse.jdt.core.dom.PrimitiveType;
-import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
-import org.eclipse.jdt.core.dom.TagElement;
-import org.eclipse.jdt.core.dom.TextElement;
 import org.eclipse.jdt.core.dom.rewrite.ASTRewrite;
 import org.eclipse.jdt.core.dom.rewrite.ListRewrite;
-import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.text.BadLocationException;
 import org.eclipse.jface.text.Document;
-import org.eclipse.swt.widgets.Display;
 import org.eclipse.text.edits.MalformedTreeException;
 import org.eclipse.text.edits.TextEdit;
 import org.eclipse.text.edits.UndoEdit;
-import org.eclipse.uml2.uml.CallEvent;
-import org.eclipse.uml2.uml.ChangeEvent;
-import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Constraint;
 import org.eclipse.uml2.uml.Element;
-import org.eclipse.uml2.uml.Event;
 import org.eclipse.uml2.uml.FinalState;
-import org.eclipse.uml2.uml.LiteralString;
 import org.eclipse.uml2.uml.OpaqueExpression;
-import org.eclipse.uml2.uml.Operation;
 import org.eclipse.uml2.uml.Stereotype;
-import org.eclipse.uml2.uml.TimeEvent;
 import org.eclipse.uml2.uml.Trigger;
 
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.AbstractTestStrategy;
@@ -52,7 +38,6 @@ import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMac
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineStateGraph;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineStateTransition;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.exceptions.NoSuchStateException;
-import ac.at.tuwien.dsg.uml.statemachine.export.transformation.util.StringFormatter;
 
 
 
@@ -437,7 +422,7 @@ public class PathWithUncertaintyTestStrategy extends AbstractTestStrategy{
 					//if does not have any uncertainty on it, do not add it to generated plans
 					if(hasUncertainty){
 						generatedPlans.put(planMethodDeclaration.getName().toString(), planMethodDeclaration);
-					}
+					} 
 			     }
 				 
 				 //join on all children threads
