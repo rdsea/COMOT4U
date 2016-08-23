@@ -109,7 +109,7 @@ public class PathWithUncertaintyTestStrategy extends AbstractTestStrategy{
         }
         
         if (generatedPlans.isEmpty()){
-        	notifyUser("No test plans contianing uncertainty states could have been generated. 'n Please ensure selected state machine has at least one state with at least one uncertainty");
+        	notifyUser("No test plans contianing uncertainty states could have been generated. \n Please ensure selected state machine has at least one state with at least one uncertainty");
         }
 
         int index  = 1;

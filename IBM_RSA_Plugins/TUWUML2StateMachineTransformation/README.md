@@ -24,3 +24,7 @@ To use the plug-in
    - Test plan generated file will be named [TestStrategySimpleName]_TestPlanForStateMachine_[StateMachineName]
 
 
+To help with implementing the test plan, one can use the other TUW plug-ins to export as Java classes:
+ - Stereotypes: https://github.com/tuwiendsg/COMOT4U/tree/master/IBM_RSA_Plugins/TUWUML2JavaStereotypeTransformationExtension
+ - UML class diagrams containing entities with applied stereotypes: https://github.com/tuwiendsg/COMOT4U/tree/master/IBM_RSA_Plugins/TUWUMLStereotype2JavaTransformation
+
