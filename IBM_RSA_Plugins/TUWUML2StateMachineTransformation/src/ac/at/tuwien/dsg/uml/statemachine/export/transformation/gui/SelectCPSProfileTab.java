@@ -3,19 +3,25 @@ package ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.jface.viewers.CheckboxTableViewer;
+import org.eclipse.jface.text.Document;
+import org.eclipse.jface.text.IDocument;
+import org.eclipse.jface.text.TextViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.communication.sharedContext.SharedContext;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.communication.sharedContext.factories.impl.SingletonVolatileContextFactory;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.AbstractTestStrategy;
-import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.PathWithUncertaintyTestStrategy;
-import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.TransitionCorrectnessTestStrategy;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.impl.PathWithUncertaintyTestStrategy;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.impl.TransitionCorrectnessTestStrategy;
 
 import com.ibm.xtools.transform.core.ITransformContext;
 import com.ibm.xtools.transform.core.ITransformationDescriptor;
@@ -37,6 +43,12 @@ public class SelectCPSProfileTab extends AbstractTransformConfigTab {
 	
 	private ITransformContext context;
 	
+	private SharedContext sharedContext;
+	
+	{
+		sharedContext = new SingletonVolatileContextFactory().createSharedContext();
+	}
+	
 	//supported strategies
 	List<AbstractTestStrategy> strategies ;
 	
@@ -53,20 +65,30 @@ public class SelectCPSProfileTab extends AbstractTransformConfigTab {
 	}
 
 	private Text text;
-	private CheckboxTableViewer viewer;
+	private Table viewer;
 
 	
 	@Override
 	public Control createContents(Composite parent) {
 		Composite contents = new Composite(parent, SWT.None);
 		contents.setLayout(new GridLayout());
-		viewer = CheckboxTableViewer.newCheckList(contents, SWT.BORDER | SWT.MULTI | SWT.FULL_SELECTION);
 		
-		viewer.getTable().addSelectionListener(new SelectionListener() {
+		viewer = new Table(contents, SWT.BORDER | SWT.SINGLE | SWT.FULL_SELECTION);
+		
+		final Text textViewer = new Text(contents,  SWT.V_SCROLL | 
+				SWT.H_SCROLL | SWT.WRAP | SWT.MULTI );
+		{
+			GridData data =  new GridData();
+			data.horizontalAlignment = SWT.FILL;
+			data.grabExcessHorizontalSpace = true;
+			textViewer.setLayoutData(data);
+		}
+		
+		viewer.addSelectionListener(new SelectionListener() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				//TODO: change mechanism. Each tab has its own context, can't send property to StateMachine rule
-				context.setPropertyValue(SELECTED_STRATEGY_PROPERTY, ((TableItem)e.item).getText());
+				sharedContext.setProperty(SELECTED_STRATEGY_PROPERTY, ((TableItem)e.item).getText());
+				textViewer.setText(((TableItem)e.item).getData().toString());
 			}
 
 			@Override
@@ -77,10 +99,12 @@ public class SelectCPSProfileTab extends AbstractTransformConfigTab {
 		});
 		
 		for (AbstractTestStrategy strategy :  strategies  ) {
-	      TableItem item = new TableItem(viewer.getTable(), SWT.NONE);
+	      TableItem item = new TableItem(viewer, SWT.NONE);
 	      item.setText(strategy.getClass().getCanonicalName());
+	      item.setData(strategy.getDescription());
+	      
 	    }
-		 
+		
 		return contents;
 	}
 	
