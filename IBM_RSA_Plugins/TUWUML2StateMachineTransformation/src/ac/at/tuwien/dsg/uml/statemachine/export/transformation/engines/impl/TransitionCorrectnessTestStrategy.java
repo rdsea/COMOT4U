@@ -75,7 +75,7 @@ public class TransitionCorrectnessTestStrategy extends AbstractTestStrategy{
         ASTParser parser = ASTParser.newParser(AST.JLS8);
         parser.setSource(doc.get().toCharArray());
 	    CompilationUnit cu = (CompilationUnit) parser.createAST(null);
-	    cu.recordModifications();
+	    cu.recordModifications();  
 	    AST ast = cu.getAST();
 	    ASTRewrite rewriter = ASTRewrite.create(ast);
 	   
@@ -83,7 +83,7 @@ public class TransitionCorrectnessTestStrategy extends AbstractTestStrategy{
 	    MethodDeclaration testPlanMethodDeclaration = ast.newMethodDeclaration();
 	    testPlanMethodDeclaration.modifiers().add(ast.newModifier(Modifier.ModifierKeyword.PUBLIC_KEYWORD));
 	    testPlanMethodDeclaration.setName(ast.newSimpleName("testPlan"));
-	    testPlanMethodDeclaration.setReturnType2(ast.newPrimitiveType(PrimitiveType.BOOLEAN)); //return true if successful or false otherwise
+	    testPlanMethodDeclaration.setReturnType2(ast.newPrimitiveType(PrimitiveType.VOID)); //return true if successful or false otherwise
 	   
 	    //create method body
         Block testPlanMethodBody = ast.newBlock();
@@ -91,12 +91,11 @@ public class TransitionCorrectnessTestStrategy extends AbstractTestStrategy{
        
         //create recursively the test plan by parsing the state graph starting with initial state
         try {
-	        generatePlanForState(stateGraph.getInitialState(),rewriter, testPlanMethodDeclaration, new HashSet<StateMachineStateTransition>()).join();
-	    } catch (InterruptedException e1) {
-		    e1.printStackTrace();
-	    } catch (NoSuchStateException e) {
-		    e.printStackTrace();
-	    }
+			generatePlanForState(stateGraph.getInitialState(),rewriter, testPlanMethodDeclaration, new HashSet<StateMachineStateTransition>());
+		} catch (NoSuchStateException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
        
         ListRewrite listRewrite = rewriter.getListRewrite(cu, CompilationUnit.TYPES_PROPERTY);
        
@@ -109,9 +108,11 @@ public class TransitionCorrectnessTestStrategy extends AbstractTestStrategy{
         //add generated plan methods
         
         if (generatedPlans.isEmpty()){
-        	notifyUser("No test plans could have been generated. \n Please ensure selected state machine has at least one complete path from  initial to final state.");
+        	notifyUser("No test plans could have been generated. "
+        			+ "\n Please ensure selected state machine has at least one complete path from  initial to final state."
+        			+ "\n Please ensure there is at least one InitialState, one FinalState, and one path between Initial and Final states");
         }
-        
+ 
         for (Map.Entry<String, MethodDeclaration> entry: generatedPlans.entrySet()){
     	   //rename to PLAN_METHOD_LEADING + plan index from PLAN_METHOD_LEADING + UUID
     	   MethodDeclaration method = entry.getValue();
@@ -144,14 +145,9 @@ public class TransitionCorrectnessTestStrategy extends AbstractTestStrategy{
 	 * @param parrentPlanBlock - the block of code where the new state code must be added. Can be a method body, the body of an If statement, etc
 	 * @param pathTransitions - used to avoid testing cycles and ensure test plan keeps uniqueness on transitions
 	 */
-	private Thread generatePlanForState(final StateMachineState state, final ASTRewrite rewrite, final MethodDeclaration planMethodDeclaration, final Set<StateMachineStateTransition> pathTransitions){
+	private void generatePlanForState(final StateMachineState state, final ASTRewrite rewrite, final MethodDeclaration planMethodDeclaration, final Set<StateMachineStateTransition> pathTransitions){
 		
-		Thread thread = new Thread(){
-			
-			private List<Thread> subThreads = Collections.synchronizedList(new ArrayList<Thread>());
-
-			@Override
-			public void run() {
+	 
 				AST ast = planMethodDeclaration.getAST();
 				Block parrentPlanBlock = planMethodDeclaration.getBody();
 				
@@ -290,7 +286,7 @@ public class TransitionCorrectnessTestStrategy extends AbstractTestStrategy{
 						//continue from target state with plan generation
 						
 						StateMachineState targetState = transition.getTargetState();
-						subThreads.add(generatePlanForState(targetState,rewrite,planMethodDeclaration,pathTransitions));
+						 generatePlanForState(targetState,rewrite,planMethodDeclaration,pathTransitions) ;
 					}else{
 						if (transition.getTargetState() == null){
 							 notifyUser(state.getName() + " is not final and does not have a target state on transition " + transition.getTransition().getName());
@@ -300,14 +296,15 @@ public class TransitionCorrectnessTestStrategy extends AbstractTestStrategy{
 					
 					 
 				 }else if (transitions.size() > 1){
+					 
 					 for(StateMachineStateTransition transition: transitions){
 						 
-						//clone transitions to use clean path for each sub-trees
-						Set<StateMachineStateTransition> transitionsCopy = new HashSet<>();
-						transitionsCopy.addAll(pathTransitions);
-						
-						
-						//if we have visited this transition, continue
+						 //clone transitions to use clean path for each sub-trees
+						 //cloning is done here as we are generating different paths for each transition at this point
+					 	 Set<StateMachineStateTransition> transitionsCopy = new HashSet<>();
+					 	 transitionsCopy.addAll(pathTransitions);
+
+						 //if we have visited this transition, continue
 						 if (transitionsCopy.contains(transition)){
 							 continue;
 						 }else{
@@ -389,7 +386,7 @@ public class TransitionCorrectnessTestStrategy extends AbstractTestStrategy{
 						if (!(state.getVertex() instanceof FinalState)){
 							//continue from target state with plan generation
 							StateMachineState targetState = transition.getTargetState();
-							subThreads.add(generatePlanForState(targetState,rewrite,transitionMethod,transitionsCopy));
+							 generatePlanForState(targetState,rewrite,transitionMethod,transitionsCopy) ;
 						}else{
 							if (transition.getTargetState() == null){
 								notifyUser(state.getName() + " is not final and does not have a target state on transition " + transition.getTransition().getName());
@@ -407,23 +404,7 @@ public class TransitionCorrectnessTestStrategy extends AbstractTestStrategy{
 					generatedPlans.put(planMethodDeclaration.getName().toString(), planMethodDeclaration);
 			     }
 				 
-				 //join on all children threads
-				 for (Thread thread: subThreads){
-					 try {
-						thread.join();
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				 }
 				 
-			}
-			
-		};
-		
-		thread.setDaemon(true);
-		thread.start();
-		return thread;
 	}
 	
 }

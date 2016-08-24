@@ -90,5 +90,12 @@ public class StateMachineState{
 	public boolean isFinalState(){
 		return this.equals(FINAL_STATE);
 	}
+
+	@Override
+	public String toString() {
+		return "State [name= " + name + "]";
+	}
+	
+	
 	
 }

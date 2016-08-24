@@ -61,6 +61,14 @@ public class StateMachineStateTransition {
 				return false;
 			return true;
 		}
+		@Override
+		public String toString() {
+			return "Transition [transition= "
+					+ transition.getName() 
+					+ "sourceState= " + sourceState
+					+ ", targetState= " + targetState + "]";
+		}
+		
 		
 		
 		
