@@ -11,11 +11,15 @@
  *+------------------------------------------------------------------------+
  */
 package ac.at.tuwien.dsg.uml.stereotype.export.transformation.providers;
+import org.eclipse.uml2.uml.UMLPackage;
+
+import ac.at.tuwien.dsg.uml.stereotype.export.transformation.rules.DataTypeTransformationRule;
+import ac.at.tuwien.dsg.uml.stereotype.export.transformation.rules.SignalTransformationRule;
+import ac.at.tuwien.dsg.uml.stereotype.export.transformation.rules.StereotypeTransformationRule;
+
+import com.ibm.xtools.transform.core.ITransformationDescriptor;
 import com.ibm.xtools.transform.core.RootTransform;
 import com.ibm.xtools.uml.transform.core.UMLKindTransform;
-import com.ibm.xtools.transform.core.ITransformationDescriptor;
-import org.eclipse.uml2.uml.UMLPackage;
-import ac.at.tuwien.dsg.uml.stereotype.export.transformation.rules.StereotypeTransformationRule;
 
 /** 
  * @see com.ibm.xtools.transform.core.RootTransform
@@ -80,7 +84,8 @@ public class Stereotype2JavaTransformation extends RootTransform
 	private void addUMLRules(UMLKindTransform transform)
 	{
 		transform.addByKind(UMLPackage.eINSTANCE.getStereotype(), new StereotypeTransformationRule("ac.at.tuwien.dsg.uml.stereotype.export.transformation.Stereotype2JavaTransformation.ID.rule", "StereotypeTransformationRule"));
-	
+		transform.addByKind(UMLPackage.eINSTANCE.getDataType(), new DataTypeTransformationRule("ac.at.tuwien.dsg.uml.stereotype.export.transformation.Stereotype2JavaTransformation.ID.rule", "StereotypeTransformationRule"));
+		transform.addByKind(UMLPackage.eINSTANCE.getSignal(), new SignalTransformationRule("ac.at.tuwien.dsg.uml.stereotype.export.transformation.Stereotype2JavaTransformation.ID.rule", "StereotypeTransformationRule"));
 	}
 
 }

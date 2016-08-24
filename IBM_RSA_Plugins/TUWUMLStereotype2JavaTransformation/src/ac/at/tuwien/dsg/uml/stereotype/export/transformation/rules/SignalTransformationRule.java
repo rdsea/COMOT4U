@@ -16,8 +16,10 @@ import org.eclipse.jdt.core.jdom.IDOMImport;
 import org.eclipse.jdt.core.jdom.IDOMMethod;
 import org.eclipse.jdt.core.jdom.IDOMType;
 import org.eclipse.uml2.uml.Class;
+import org.eclipse.uml2.uml.DataType;
 import org.eclipse.uml2.uml.Namespace;
 import org.eclipse.uml2.uml.Property;
+import org.eclipse.uml2.uml.Signal;
 import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.Type;
 
@@ -32,13 +34,13 @@ import com.ibm.xtools.transform.core.ModelRule;
  * 
  * @see com.ibm.xtools.transform.core.AbstractRule
  */
-public class StereotypeTransformationRule extends ModelRule {
+public class SignalTransformationRule extends ModelRule {
 
 	
 	/**
 	 * Default constructor to create a rule.
 	 */
-	public StereotypeTransformationRule() {
+	public SignalTransformationRule() {
 		super();
 	}
 	/**
@@ -46,7 +48,7 @@ public class StereotypeTransformationRule extends ModelRule {
 	 * @param id
 	 * @param name
 	 */
-	public StereotypeTransformationRule(String id, String name) {
+	public SignalTransformationRule(String id, String name) {
 		super(id, name);
 		// TODO Auto-generated constructor stub
 	}
@@ -65,13 +67,11 @@ public class StereotypeTransformationRule extends ModelRule {
 		/**
 		 * Get the transformation UML Class
 		 */
-		Class umlCls = (Class) context.getSource();
-	    target.setName(umlCls.getName());
-			
-		Stereotype stereotype = (Stereotype) context.getSource();
+		Signal signal = (Signal) context.getSource();
+	    target.setName(signal.getName());
 			
 		//get all properties
-		for (Property attribute :  stereotype.getAllAttributes()) {
+		for (Property attribute :  signal.getAllAttributes()) {
 			
 			String name = attribute.getName();
 			Type type = attribute.getType();
@@ -92,8 +92,8 @@ public class StereotypeTransformationRule extends ModelRule {
 			if (typeName == null){
 				field.setType("Object");
 				//add in the generated code a comment explaining why field type is Object
-				field.setComment("/*Type for attribute \"" + name + "\" on stereotype \"" + stereotype + "\" is null */");
-				System.err.println("Type for attribute \"" + name + "\" on stereotype \"" + stereotype + "\" is null");
+				field.setComment("/*Type for attribute \"" + name + "\" on stereotype \"" + signal + "\" is null */");
+				System.err.println("Type for attribute \"" + name + "\" on stereotype \"" + signal + "\" is null");
 			}else{
 				field.setType(typeName);
 			}
