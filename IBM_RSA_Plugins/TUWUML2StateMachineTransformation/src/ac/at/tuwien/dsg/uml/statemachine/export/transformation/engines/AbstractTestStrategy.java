@@ -1,6 +1,8 @@
 package ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -66,6 +68,15 @@ public abstract class AbstractTestStrategy {
 	
 	private String description;
 	
+	/**
+	 * Map <Message, Thread>
+	 * Usefull to avoid notifying the same error multiple times
+	 */
+	private Map<String,Thread> notificationThreads;
+	
+	{
+		notificationThreads = new ConcurrentHashMap<>();
+	}
 	
 	
 	public AbstractTestStrategy(String description) {
@@ -116,7 +127,7 @@ public abstract class AbstractTestStrategy {
 			Class operationClass = (Class) operation.eContainer();
 			
 			methodName = operationClass.getName().replaceAll("\\W","") + "_" + operation.getName().replaceAll("\\W","");
-			textElement.setText("Method must return true if method invocation is successfull."
+			textElement.setText("Method must return true if method invocation is successful."
 					+ " Method designed to allow particular implementation  call of \"" + operation.getName()+"\"" + " on class \"" + operationClass.getName() +"\" so we can assert if transition after event is correct");
 			
 		}else if (event instanceof ChangeEvent){
@@ -130,7 +141,7 @@ public abstract class AbstractTestStrategy {
 				body = StringFormatter.convertNonAlphanumericalSymbolsToUnderscore(StringFormatter.convertMathSymbolsToText(body));
 				
 				methodName = changeEvent.getName().replaceAll("\\W","") + "_" + body;
-				textElement.setText("Method must return true if event invocation is successfull"
+				textElement.setText("Method must return true if event invocation is successful"
 						+ " Method designed to allow particular implementation  for forcing condition \"" + body + "\" encountered on event \"" + changeEvent.getName() + "\" to true so we can assert if transition after event is correct");
 			}
 		}else if (event instanceof TimeEvent){
@@ -144,7 +155,7 @@ public abstract class AbstractTestStrategy {
 				expression = StringFormatter.convertNonAlphanumericalSymbolsToUnderscore(StringFormatter.convertMathSymbolsToText(expression));
 				
 				methodName = timeEvent.getName().replaceAll("\\W","") + "_" + expression;
-				textElement.setText("Method must return true if event invocation is successfull"
+				textElement.setText("Method must return true if event invocation is successful"
 						+ " Method designed to allow particular implementation  for forcing the time event " + timeEvent.getName() + " with body \"" + expression + "\" to happen so we can assert if transition after event is correct");
 			}
 			
@@ -249,12 +260,46 @@ public abstract class AbstractTestStrategy {
 	 * Method used to display message boxes with warnings or instructions to users
 	 * @param message
 	 */
-	protected void notifyUser(String message){
-	   Display.getDefault().syncExec(new Runnable() {
-			    public void run() {
-		    	MessageDialog.openWarning(Display.getDefault().getActiveShell(), "Warning", message);
-		    }
-		});
+	protected void notifyUser(String message) {
+
+		//add notification only of previous was closed
+		if (!notificationThreads.containsKey(message)
+				|| !notificationThreads.get(message).isAlive()) {
+
+			Thread t = new Thread() {
+
+				@Override
+				public void run() {
+					Display.getDefault().syncExec(new Runnable() {
+						public void run() {
+							MessageDialog.openWarning(Display.getDefault()
+									.getActiveShell(), "Warning", message);
+						}
+					});
+				}
+
+			};
+
+			notificationThreads.put(message, t);
+
+			t.setDaemon(true);
+			t.start();
+		}
 	}
+
+
+
+	@Override
+	protected void finalize() throws Throwable {
+		for (Thread t : notificationThreads.values()){
+			if (t.isAlive()){
+				t.interrupt();
+				t.join();
+			}
+		}
+	}
+	
+	
+	
 	
 }
