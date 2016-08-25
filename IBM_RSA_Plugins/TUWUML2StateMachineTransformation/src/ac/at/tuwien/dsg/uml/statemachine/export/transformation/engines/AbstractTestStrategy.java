@@ -1,8 +1,6 @@
 package ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines;
 
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -25,6 +23,8 @@ import org.eclipse.uml2.uml.Event;
 import org.eclipse.uml2.uml.LiteralString;
 import org.eclipse.uml2.uml.OpaqueExpression;
 import org.eclipse.uml2.uml.Operation;
+import org.eclipse.uml2.uml.Signal;
+import org.eclipse.uml2.uml.SignalEvent;
 import org.eclipse.uml2.uml.TimeEvent;
 import org.eclipse.uml2.uml.Trigger;
 
@@ -159,6 +159,14 @@ public abstract class AbstractTestStrategy {
 						+ " Method designed to allow particular implementation  for forcing the time event " + timeEvent.getName() + " with body \"" + expression + "\" to happen so we can assert if transition after event is correct");
 			}
 			
+		}else if (event instanceof SignalEvent){
+			
+			SignalEvent signalEvent = (SignalEvent) event;
+			Signal signal = signalEvent.getSignal();
+			
+			methodName =  signal.getName().replaceAll("\\W","");
+			textElement.setText("Method must return true if method invocation is successful."
+					+ " Method designed to allow particular implementation call of \"" +signal.getName() +"\" so we can assert if transition after event is correct");
 		}else{
 			
 			System.err.println("Event type of " + event.getClass() + " not supported yet ");

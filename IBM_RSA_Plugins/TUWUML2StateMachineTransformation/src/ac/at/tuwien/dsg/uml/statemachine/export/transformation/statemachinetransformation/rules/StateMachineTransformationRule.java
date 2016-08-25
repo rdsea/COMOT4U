@@ -111,9 +111,14 @@ public class StateMachineTransformationRule extends ModelRule {
 				Vertex tSource = t.getSource();
 				Vertex tTarget = t.getTarget();
 
+				if(tSource.getName() == null){
+					notifyUser("Transition " + t.getName() + " to " + tTarget.getName() + " starts from State with no name. \n "
+							+ "Assuming state is initial state. Can generate problems if more states have no name (usually choice states)");
+				}
+				
 				StateMachineState sSource = new StateMachineState(tSource);
 				StateMachineState sTarget = new StateMachineState(tTarget);
-
+				
 				// still untreated ComplexState and ChoicePoint
 
 				// if state exist, retrieve and update it, else put it in map
