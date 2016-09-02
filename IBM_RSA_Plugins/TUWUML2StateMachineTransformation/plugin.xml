@@ -24,6 +24,27 @@
             </Property>
          </Transformation>
       </TransformationProvider>
+      <TransformationProvider
+            class="ac.at.tuwien.dsg.uml.classdiagram.export.transformation.provider.ClassDiagramTransformationProvider">
+         <Priority
+               name="Highest">
+         </Priority>
+         <Transformation
+               groupPath="ac.at.tuwien.dsg.uml.classdiagram.export.transformation"
+               id="ac.at.tuwien.dsg.uml.classdiagram.export.transformation.classdiagramtransformation"
+               name="ClassDiagramToRunTimeTestsTransformation"
+               sourceModelType="UML2"
+               targetModelType="resource"
+               transformGUI="ac.at.tuwien.dsg.uml.classdiagram.export.transformation.gui.ClassDiagramTransformationGUI"
+               version="1.0.0">
+            <Property
+                  id="system.transformation.property"
+                  name="system.transformation.property"
+                  readonly="true"
+                  value="ClassName=ac.at.tuwien.dsg.uml.classdiagram.export.transformation.provider.ClassDiagramToRunTimeTestsTransformation;IsUMLKind=true;">
+            </Property>
+         </Transformation>
+      </TransformationProvider>
    </extension>
 
 </plugin>

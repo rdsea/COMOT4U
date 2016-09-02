@@ -44,7 +44,7 @@ import ac.at.tuwien.dsg.uml.statemachine.export.transformation.util.StringFormat
  * __email__ = "d.moldovan@dsg.tuwien.ac.at"
  */
 
-public abstract class AbstractTestStrategy {
+public abstract class AbstractStateMachineTestStrategy {
 	
 	protected static final String ASSERT_STATE_LEADING = "currentStateIs_";
 	protected static final String ASSERT_GUARD_LEADING = "conditionIsTrue_";
@@ -79,7 +79,7 @@ public abstract class AbstractTestStrategy {
 	}
 	
 	
-	public AbstractTestStrategy(String description) {
+	public AbstractStateMachineTestStrategy(String description) {
 		super();
 		this.description = description;
 	}

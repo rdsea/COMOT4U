@@ -32,7 +32,7 @@ import org.eclipse.uml2.uml.FinalState;
 import org.eclipse.uml2.uml.OpaqueExpression;
 import org.eclipse.uml2.uml.Trigger;
 
-import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.AbstractTestStrategy;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.AbstractStateMachineTestStrategy;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineState;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineStateGraph;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineStateTransition;
@@ -56,7 +56,7 @@ import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.exceptio
  * __email__ = "d.moldovan@dsg.tuwien.ac.at"
  */
 
-public class TransitionCorrectnessTestStrategy extends AbstractTestStrategy{
+public class TransitionCorrectnessTestStrategy extends AbstractStateMachineTestStrategy{
 	 
 	public TransitionCorrectnessTestStrategy(){
 		super("Strategy which considers all transitions and generates test plans which check transition corectness.");

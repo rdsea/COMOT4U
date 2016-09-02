@@ -31,8 +31,8 @@ To help with implementing the test plan, one can use the other TUW plug-ins to e
 
 To extend the plug-in with custom strategies:
  1. Most important classes are:
-   - AbstractTestStrategy: class which has the abstract "generateTestPlan" method. The class must be sub-classed and the method implemented for any custom strategy.
-   - TestEngineFactory: factory class holding all supported strategies. Any new subclass of AbstractTestStrategy must be added in "supportedStrategies". After this they will appear on the selection tab and be called when required.
+   - AbstractStateMachineTestStrategy: class which has the abstract "generateTestPlan" method. The class must be sub-classed and the method implemented for any custom strategy.
+   - StateMachineTestEngineFactory: factory class holding all supported strategies. Any new subclass of AbstractStateMachineTestStrategy must be added in "supportedStrategies". After this they will appear on the selection tab and be called when required.
    - StateMachineStateGraph: class holding state machine parsed information. The class has methods ("toString", and "getStatesWithUncertainties()") which give good examples on how to go deeper and extract state information such as uncertainties, and the uncertainties' parameters.
    - StateMachineTransformationRule: class which contains the "createTarget" method which creates the StateMachineStateGraph from a state machine diagram. If user wants to add more information to StateMachineStateGraph then the rule can be modified to extract more information from the machine diagram.
 

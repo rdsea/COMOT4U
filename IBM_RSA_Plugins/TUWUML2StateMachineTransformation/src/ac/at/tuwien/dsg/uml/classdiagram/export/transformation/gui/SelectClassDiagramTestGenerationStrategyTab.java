@@ -1,4 +1,4 @@
-package ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui;
+package ac.at.tuwien.dsg.uml.classdiagram.export.transformation.gui;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +14,8 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
+import ac.at.tuwien.dsg.uml.classdiagram.export.transformation.engines.AbstractClassDiagramTestStrategy;
+import ac.at.tuwien.dsg.uml.classdiagram.export.transformation.engines.ClassDiagramTestEngineFactory;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.communication.sharedContext.SharedContext;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.communication.sharedContext.factories.impl.SingletonVolatileContextFactory;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.AbstractStateMachineTestStrategy;
@@ -34,9 +36,9 @@ import com.ibm.xtools.transform.ui.AbstractTransformConfigTab;
  * __email__ = "d.moldovan@dsg.tuwien.ac.at"
  */
 
-public class SelectTestGenerationStrategyTab extends AbstractTransformConfigTab {
+public class SelectClassDiagramTestGenerationStrategyTab extends AbstractTransformConfigTab {
 	
-	public static final String SELECTED_STRATEGY_PROPERTY = "SelectedStrategyProperty";
+	public static final String SELECTED_STRATEGY_PROPERTY = "ClassDiagram.SelectedStrategyProperty";
 	
 	private ITransformContext context;
 	
@@ -47,14 +49,14 @@ public class SelectTestGenerationStrategyTab extends AbstractTransformConfigTab 
 	}
 	
 	//supported strategies
-	List<AbstractStateMachineTestStrategy> strategies ;
+	List<AbstractClassDiagramTestStrategy> strategies ;
 	
 	{
-		strategies = new ArrayList<AbstractStateMachineTestStrategy>();
+		strategies = new ArrayList<AbstractClassDiagramTestStrategy>();
 		
-		for(Class<? extends AbstractStateMachineTestStrategy> strategyClass : StateMachineTestEngineFactory.getSupportedStrategies()){
+		for(Class<? extends AbstractClassDiagramTestStrategy> strategyClass : ClassDiagramTestEngineFactory.getSupportedStrategies()){
 			try {
-				strategies.add(StateMachineTestEngineFactory.createTestEngine(strategyClass.getCanonicalName()));
+				strategies.add(ClassDiagramTestEngineFactory.createTestEngine(strategyClass.getCanonicalName()));
 			} catch (NoSuchEngineTypeException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -62,7 +64,7 @@ public class SelectTestGenerationStrategyTab extends AbstractTransformConfigTab 
 		}
 	}
 
-	public SelectTestGenerationStrategyTab(ITransformationDescriptor transDesc,
+	public SelectClassDiagramTestGenerationStrategyTab(ITransformationDescriptor transDesc,
 			String tabId, String label) {
 		super(transDesc, tabId, label);
 		// TODO Auto-generated constructor stub
@@ -100,7 +102,7 @@ public class SelectTestGenerationStrategyTab extends AbstractTransformConfigTab 
 			}
 		});
 		
-		for (AbstractStateMachineTestStrategy strategy :  strategies  ) {
+		for (AbstractClassDiagramTestStrategy strategy :  strategies  ) {
 	      TableItem item = new TableItem(viewer, SWT.NONE);
 	      item.setText(strategy.getClass().getCanonicalName());
 	      item.setData(strategy.getDescription());

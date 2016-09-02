@@ -17,9 +17,13 @@ import org.eclipse.uml2.uml.OpaqueExpression;
 import org.eclipse.uml2.uml.Operation;
 import org.eclipse.uml2.uml.PrimitiveType;
 import org.eclipse.uml2.uml.Property;
+import org.eclipse.uml2.uml.Region;
+import org.eclipse.uml2.uml.StateMachine;
 import org.eclipse.uml2.uml.Stereotype;
+import org.eclipse.uml2.uml.Transition;
 import org.eclipse.uml2.uml.Trigger;
 import org.eclipse.uml2.uml.Type;
+import org.eclipse.uml2.uml.Vertex;
 
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.exceptions.NoSuchStateException;
 
@@ -36,6 +40,64 @@ import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.exceptio
 public class StateMachineStateGraph {
 	private String stateMachineName;
     private Map<StateMachineState, StateMachineState> statesMap = new LinkedHashMap<StateMachineState, StateMachineState>();
+    
+	public StateMachineStateGraph() {
+		super();
+	}
+	
+	/**
+	 * Method converts a UML state machine to our StateMachineStateGraph
+	 * In future should be moved outside in a Util/Factory class or something similar
+	 * @param stateMachine
+	 * @return
+	 */
+	public static StateMachineStateGraph fromStateMachine(StateMachine stateMachine) {
+		
+		StateMachineStateGraph stateGraph = new StateMachineStateGraph();
+		
+		stateGraph.setStateMachineName(stateMachine.getName()); //TODO: check if name correct
+
+		Map<StateMachineState,StateMachineState> statesMap = stateGraph.getStatesMap();
+
+		for (Region re : stateMachine.getRegions()) {
+			for (Transition t : re.getTransitions()) {
+				Vertex tSource = t.getSource();
+				Vertex tTarget = t.getTarget();
+
+				if(tSource.getName() == null){
+					System.err.format("Transition %s  to %s starts from State with no name. \n "
+							+ "Assuming state is initial state. Can generate problems if more states have no name (usually choice states)"
+							, new Object[]{t.getName(),tTarget.getName()}					
+							);
+				}
+				
+				StateMachineState sSource = new StateMachineState(tSource);
+				StateMachineState sTarget = new StateMachineState(tTarget);
+				
+				// still untreated ComplexState and ChoicePoint
+
+				// if state exist, retrieve and update it, else put it in map
+				if (!statesMap.containsKey(sSource)) {
+					statesMap.put(sSource, sSource);
+				} else {
+					sSource = statesMap.get(sSource);
+				}
+
+				if (!statesMap.containsKey(sTarget)) {
+					statesMap.put(sTarget, sTarget);
+				} else {
+					sTarget = statesMap.get(sTarget);
+				}
+
+				StateMachineStateTransition st = new StateMachineStateTransition(sSource, sTarget, t);
+
+				sSource.getOutTransitions().add(st);
+				sTarget.getInTransitions().add(st);
+			}
+		}
+		
+		return stateGraph;
+	}
 
 	public Map<StateMachineState, StateMachineState> getStatesMap() {
 		return statesMap;

@@ -18,8 +18,8 @@ import org.eclipse.uml2.uml.Vertex;
 
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.communication.sharedContext.SharedContext;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.communication.sharedContext.factories.impl.SingletonVolatileContextFactory;
-import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.AbstractTestStrategy;
-import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.TestEngineFactory;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.AbstractStateMachineTestStrategy;
+import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.StateMachineTestEngineFactory;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.exceptions.NoSuchEngineTypeException;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui.SelectTestGenerationStrategyTab;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.internal.StateMachineState;
@@ -152,9 +152,9 @@ public class StateMachineTransformationRule extends ModelRule {
 			return null;
 		}
 		
-		AbstractTestStrategy strategy;
+		AbstractStateMachineTestStrategy strategy;
 		try {
-			strategy = TestEngineFactory.createTestEngine(selectedStrategy.toString());
+			strategy = StateMachineTestEngineFactory.createTestEngine(selectedStrategy.toString());
 		} catch (NoSuchEngineTypeException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -163,7 +163,7 @@ public class StateMachineTransformationRule extends ModelRule {
 		Document plan = strategy.generateTestPlan(stateGraph);
 		
 		//save generated test plan as java class
-		String filename = targetPath.toOSString() + File.separatorChar + ( strategy.getClass().getSimpleName() + "_" + AbstractTestStrategy.TEST_PLAN_CLASS_LEADING + stateGraph.getStateMachineName()) + ".java";
+		String filename = targetPath.toOSString() + File.separatorChar + ( strategy.getClass().getSimpleName() + "_" + AbstractStateMachineTestStrategy.TEST_PLAN_CLASS_LEADING + stateGraph.getStateMachineName()) + ".java";
 		JavaClassOutputter.outputFile(context, plan, filename, strategy.getClass().getName() , source.getQualifiedName());
 		
 		return plan;

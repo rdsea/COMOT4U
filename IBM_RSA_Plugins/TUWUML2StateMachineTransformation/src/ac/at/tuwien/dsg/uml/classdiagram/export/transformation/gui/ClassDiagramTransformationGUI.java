@@ -1,4 +1,4 @@
-package ac.at.tuwien.dsg.uml.statemachine.export.transformation.gui;
+package ac.at.tuwien.dsg.uml.classdiagram.export.transformation.gui;
 
 import com.ibm.xtools.transform.core.ITransformationDescriptor;
 import com.ibm.xtools.transform.ui.AbstractTransformConfigTab;
@@ -14,8 +14,7 @@ import com.ibm.xtools.transform.ui.AbstractTransformGUI;
  * __email__ = "d.moldovan@dsg.tuwien.ac.at"
  */
 
-
-public class StateMachineTransformationGUI extends AbstractTransformGUI {
+public class ClassDiagramTransformationGUI extends AbstractTransformGUI {
 
 	 
 	@Override
@@ -30,7 +29,7 @@ public class StateMachineTransformationGUI extends AbstractTransformGUI {
 		for (int i = 0; i < superTabs.length; i++) {
 			myTabs[i] = superTabs[i];
 		}
-		myTabs[myTabs.length - 1] = new SelectTestGenerationStrategyTab(descriptor, "SelectTestGenerationStrategyTab", "Select Test Generation Strategy");
+		myTabs[myTabs.length - 1] = new SelectClassDiagramTestGenerationStrategyTab(descriptor, "SelectClassDiagramTestGenerationStrategyTab", "Select Test Generation Strategy");
 		return myTabs;
 	}
 	
