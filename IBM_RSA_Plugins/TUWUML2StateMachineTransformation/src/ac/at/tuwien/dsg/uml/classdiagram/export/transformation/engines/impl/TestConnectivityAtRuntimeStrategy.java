@@ -40,6 +40,12 @@ public class TestConnectivityAtRuntimeStrategy extends AbstractClassDiagramTestS
 		
 		List<Document> documents = Collections.synchronizedList(new ArrayList<Document>());
 		
+		//if it has no applied stereotype, in our context means they are not physical or virtual units defined in 
+        //overall Infrastructure Uncertainty Profile 
+		if (classImpl.getAppliedStereotypes().isEmpty()){
+			return documents;
+		}
+		
 		List<Thread> threads = new ArrayList<>();
 		
 		for (Property property: classImpl.getAllAttributes()){

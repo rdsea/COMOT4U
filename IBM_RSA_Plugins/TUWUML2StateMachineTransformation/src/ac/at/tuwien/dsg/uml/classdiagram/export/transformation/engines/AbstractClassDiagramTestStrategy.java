@@ -71,11 +71,11 @@ public abstract class AbstractClassDiagramTestStrategy {
 	
 	/**
 	 * Map <Message, Thread>
-	 * Usefull to avoid notifying the same error multiple times
+	 * Useful to avoid notifying the same error multiple times
 	 */
-	private Map<String,Thread> notificationThreads;
+	private static Map<String,Thread> notificationThreads;
 	
-	{
+	static{
 		notificationThreads = new ConcurrentHashMap<>();
 	}
 	
@@ -117,7 +117,7 @@ public abstract class AbstractClassDiagramTestStrategy {
 	 * Method used to display message boxes with warnings or instructions to users
 	 * @param message
 	 */
-	protected void notifyUser(String message) {
+	protected static void notifyUser(String message) {
 
 		//add notification only of previous was closed
 		if (!notificationThreads.containsKey(message)

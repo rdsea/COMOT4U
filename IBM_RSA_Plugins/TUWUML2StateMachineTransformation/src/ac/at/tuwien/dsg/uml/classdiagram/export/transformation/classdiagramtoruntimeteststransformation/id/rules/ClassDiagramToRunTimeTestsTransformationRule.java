@@ -187,11 +187,14 @@ public class ClassDiagramToRunTimeTestsTransformationRule extends ModelRule {
 		
 		
 		List<Document> documents = strategy.generateTestConfig(source);
+
+		//if documents empty, do not generate directory 
+		if (!documents.isEmpty()){
+			//write generated configuration files
+			JavaClassOutputter.outputFiles(context, documents, source.getName(), selectedStrategy.toString());
+		}
 		
-		//write generated configuration files
-		JavaClassOutputter.outputFiles(context, documents, source.getName(), selectedStrategy.toString());
-		
-		return null;
+		return context;
 	}
 	
 	
