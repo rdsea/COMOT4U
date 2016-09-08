@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: UMLClassDiagram2JavaDB
+Bundle-SymbolicName: ac.at.tuwien.dsg.utest.UMLClassDiagram2JavaDB;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: ac.at.tuwien.dsg.utest.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.gmf.runtime.common.core,
+ com.ibm.xtools.transform.core,
+ com.ibm.xtools.uml.transform.core,
+ org.eclipse.uml2.uml,
+ org.eclipse.jdt.core,
+ org.eclipse.text
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.jface.text
