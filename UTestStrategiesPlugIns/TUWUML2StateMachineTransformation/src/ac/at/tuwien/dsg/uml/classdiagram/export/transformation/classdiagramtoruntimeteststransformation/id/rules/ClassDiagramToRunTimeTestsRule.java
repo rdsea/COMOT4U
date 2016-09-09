@@ -36,7 +36,7 @@ import com.ibm.xtools.transform.core.ModelRule;
  * 
  * @see com.ibm.xtools.transform.core.AbstractRule
  */
-public class ClassDiagramToRunTimeTestsTransformationRule extends ModelRule {
+public class ClassDiagramToRunTimeTestsRule extends ModelRule {
 	
 
 	private SharedContext sharedContext;
@@ -50,7 +50,7 @@ public class ClassDiagramToRunTimeTestsTransformationRule extends ModelRule {
 	/**
 	 * Default constructor to create a rule.
 	 */
-	public ClassDiagramToRunTimeTestsTransformationRule() {
+	public ClassDiagramToRunTimeTestsRule() {
 		super();
 	}
 	/**
@@ -58,7 +58,7 @@ public class ClassDiagramToRunTimeTestsTransformationRule extends ModelRule {
 	 * @param id
 	 * @param name
 	 */
-	public ClassDiagramToRunTimeTestsTransformationRule(String id, String name) {
+	public ClassDiagramToRunTimeTestsRule(String id, String name) {
 		super(id, name);
 		// TODO Auto-generated constructor stub
 	}

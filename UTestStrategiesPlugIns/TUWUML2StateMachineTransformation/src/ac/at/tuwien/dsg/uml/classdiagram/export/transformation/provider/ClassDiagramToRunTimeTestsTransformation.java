@@ -15,8 +15,8 @@ import com.ibm.xtools.transform.core.ITransformationDescriptor;
 
 import org.eclipse.uml2.uml.UMLPackage;
 
-import ac.at.tuwien.dsg.uml.classdiagram.export.transformation.classdiagramtoruntimeteststransformation.id.rules.ClassDiagramToRunTimeTestsSystemDescriptionTransformationRule;
-import ac.at.tuwien.dsg.uml.classdiagram.export.transformation.classdiagramtoruntimeteststransformation.id.rules.ClassDiagramToRunTimeTestsTransformationRule;
+import ac.at.tuwien.dsg.uml.classdiagram.export.transformation.classdiagramtoruntimeteststransformation.id.rules.ClassDiagramToJSONSystemDescriptionRule;
+import ac.at.tuwien.dsg.uml.classdiagram.export.transformation.classdiagramtoruntimeteststransformation.id.rules.ClassDiagramToRunTimeTestsRule;
 
 /** 
  * @see com.ibm.xtools.transform.core.RootTransform
@@ -79,8 +79,8 @@ public class ClassDiagramToRunTimeTestsTransformation extends RootTransform {
 	 */
 	private void addUMLRules(UMLKindTransform transform)
 	{
-		transform.addByKind(UMLPackage.eINSTANCE.getClass_(), new ClassDiagramToRunTimeTestsTransformationRule("ac.at.tuwien.dsg.uml.classdiagram.export.transformation.classdiagramtransformation.1", "ClassDiagramToRunTimeTestsTransformationRule"));
-		transform.addByKind(UMLPackage.eINSTANCE.getPackage(), new ClassDiagramToRunTimeTestsSystemDescriptionTransformationRule("ac.at.tuwien.dsg.uml.classdiagram.export.transformation.classdiagramtransformation.2", "ClassDiagramToRunTimeTestsSystemDescriptionTransformationRule"));
+		transform.addByKind(UMLPackage.eINSTANCE.getClass_(), new ClassDiagramToRunTimeTestsRule("ac.at.tuwien.dsg.uml.classdiagram.export.transformation.classdiagramtransformation.1", "ClassDiagramToRunTimeTestsTransformationRule"));
+		transform.addByKind(UMLPackage.eINSTANCE.getPackage(), new ClassDiagramToJSONSystemDescriptionRule("ac.at.tuwien.dsg.uml.classdiagram.export.transformation.classdiagramtransformation.2", "ClassDiagramToRunTimeTestsSystemDescriptionTransformationRule"));
 	}
 
 }

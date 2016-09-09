@@ -44,7 +44,7 @@ import com.ibm.xtools.transform.core.ModelRule;
  * 
  * @see com.ibm.xtools.transform.core.AbstractRule
  */
-public class ClassDiagramToRunTimeTestsSystemDescriptionTransformationRule extends ModelRule {
+public class ClassDiagramToJSONSystemDescriptionRule extends ModelRule {
 	
 
 	private SharedContext sharedContext;
@@ -58,7 +58,7 @@ public class ClassDiagramToRunTimeTestsSystemDescriptionTransformationRule exten
 	/**
 	 * Default constructor to create a rule.
 	 */
-	public ClassDiagramToRunTimeTestsSystemDescriptionTransformationRule() {
+	public ClassDiagramToJSONSystemDescriptionRule() {
 		super();
 	}
 	/**
@@ -66,7 +66,7 @@ public class ClassDiagramToRunTimeTestsSystemDescriptionTransformationRule exten
 	 * @param id
 	 * @param name
 	 */
-	public ClassDiagramToRunTimeTestsSystemDescriptionTransformationRule(String id, String name) {
+	public ClassDiagramToJSONSystemDescriptionRule(String id, String name) {
 		super(id, name);
 		// TODO Auto-generated constructor stub
 	}
