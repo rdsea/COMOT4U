@@ -171,14 +171,17 @@ public class ClassDiagramToRunTimeTestsTransformationRule extends ModelRule {
 		
 		Object selectedStrategy = sharedContext.getProperty(SelectClassDiagramTestGenerationStrategyTab.SELECTED_STRATEGY_PROPERTY);
 		
-		if (selectedStrategy == null){
-			notifyUser("Please select a test generation strategy from the Select Test Generation Strategy Tab");
-			return null;
-		}
 		
 		AbstractClassDiagramTestStrategy strategy;
+		
 		try {
-			strategy = ClassDiagramTestEngineFactory.createTestEngine(selectedStrategy.toString());
+
+			if (selectedStrategy == null){
+				strategy = ClassDiagramTestEngineFactory.createDefaultTestEngine();
+				selectedStrategy = strategy.getClass().getCanonicalName();
+			}else{
+				strategy = ClassDiagramTestEngineFactory.createTestEngine(selectedStrategy.toString());
+			}
 		} catch (NoSuchEngineTypeException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

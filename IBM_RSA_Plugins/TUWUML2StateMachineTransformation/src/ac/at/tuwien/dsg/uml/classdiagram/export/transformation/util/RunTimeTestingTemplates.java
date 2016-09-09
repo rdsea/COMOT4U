@@ -36,7 +36,7 @@ public class RunTimeTestingTemplates {
 //	#supported types are Service | Process | SoftwarePlatform | PhysicalDevice | SoftwareContainer   | VirtualContainer | Gateway |  VirtualMachine | PhysicalMachine
 	
 
-	private static final String SELF_TEST_TEMPLATE="#tests property value"
+	private static final String SELF_TEST_TEMPLATE="#tests property value\n"
 			+ "Description \n"
 			+ "name: \"%1$s\" \n"
 			+ "description: \"testing property %1$s on class %2$s\" \n"
@@ -49,10 +49,10 @@ public class RunTimeTestingTemplates {
 			+ "#event:  \"E1\" , \"E2\" on UnitType.VirtualMachine -- events are also supported \n"
 			+ "\n"
 			+ "Execution \n"
-			+ "executor UnitID.\"%2$s\" for UnitID.\"%2$s\" \n"  // this line means the class will execute it by itself
+			+ "executor: UnitID.\"%2$s\" for UnitID.\"%2$s\" \n"  // this line means the class will execute it by itself
 			;
 	
-	private static final String REMOTE_TEST_TEMPLATE="#tests connectivity"
+	private static final String REMOTE_TEST_TEMPLATE="#tests connectivity\n"
 			+ "Description \n"
 			+ "name: \"%1$s\" \n"
 			+ "description: \"testing property %1$s on class %2$s\" \n"
@@ -65,7 +65,7 @@ public class RunTimeTestingTemplates {
 			+ "#event:  \"E1\" , \"E2\" on UnitType.VirtualMachine -- events are also supported \n"
 			+ "\n"
 			+ "Execution \n"
-			+ "executor UnitID.\"%3$s\" for UnitID.\"%2$s\" \n"  // this line means the class will execute it by itself
+			+ "executor: UnitID.\"%3$s\" for UnitID.\"%2$s\" \n"  // this line means the class will execute it by itself
 			;
 	
 	public static String fillSelfTestTemplate(String testName, String unitID){

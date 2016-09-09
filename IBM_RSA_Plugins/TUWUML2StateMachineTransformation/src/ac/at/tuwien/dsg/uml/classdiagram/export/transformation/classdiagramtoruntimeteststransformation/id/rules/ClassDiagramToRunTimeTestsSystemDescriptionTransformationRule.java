@@ -10,7 +10,10 @@
 
 package ac.at.tuwien.dsg.uml.classdiagram.export.transformation.classdiagramtoruntimeteststransformation.id.rules;
 
-import java.io.File;
+import java.lang.reflect.InvocationTargetException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,14 +30,9 @@ import org.eclipse.uml2.uml.Type;
 import org.eclipse.uml2.uml.internal.impl.ClassImpl;
 import org.eclipse.uml2.uml.internal.impl.PackageImpl;
 
-import ac.at.tuwien.dsg.uml.classdiagram.export.transformation.engines.AbstractClassDiagramTestStrategy;
-import ac.at.tuwien.dsg.uml.classdiagram.export.transformation.engines.ClassDiagramTestEngineFactory;
-import ac.at.tuwien.dsg.uml.classdiagram.export.transformation.gui.SelectClassDiagramTestGenerationStrategyTab;
 import ac.at.tuwien.dsg.uml.classdiagram.export.transformation.internal.entities.RunTimeTestingSystemDescriptionEntity;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.communication.sharedContext.SharedContext;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.communication.sharedContext.factories.impl.SingletonVolatileContextFactory;
-import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.AbstractStateMachineTestStrategy;
-import ac.at.tuwien.dsg.uml.statemachine.export.transformation.engines.exceptions.NoSuchEngineTypeException;
 import ac.at.tuwien.dsg.uml.statemachine.export.transformation.util.JavaClassOutputter;
 
 import com.ibm.xtools.transform.core.ITransformContext;
@@ -138,7 +136,7 @@ public class ClassDiagramToRunTimeTestsSystemDescriptionTransformationRule exten
 				//null is improperly formed object, e.g.. null type
 				if (jsonString!= null){
 					//else need to create Complex component for it
-					String complexEntityDescription = String.format("\n {"
+					String complexEntityDescription = String.format("\n  {"
 							+"'name': 'Composite.%s',"
 							+"'type': 'Composite',"
 							+"'containedUnits': [ \n %s \n] \n } ",entity.getName(),jsonString );
@@ -151,12 +149,51 @@ public class ClassDiagramToRunTimeTestsSystemDescriptionTransformationRule exten
 				
 		serviceDescription += "\n ] \n }";
 		
-		Document doc = new Document(serviceDescription);
+
+		//dynamically load the JSON jar to pretty print JSON text
+		String formattedJSON = serviceDescription;
+		try {
+			//StateMachineTransformation is plug-in ID
+			URL jarfile = new URL("platform:/plugin/StateMachineTransformation/lib/json-20160810.jar");
+			URLClassLoader cl = URLClassLoader.newInstance(new URL[] {jarfile });   
+			Class loadedClass = cl.loadClass("org.json.JSONObject");
+			Object instance = loadedClass.getConstructor(String.class).newInstance(serviceDescription);
+			formattedJSON = (String) loadedClass.getMethod("toString", int.class).invoke(instance, 4);
+			
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchMethodException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}    
+		
+		Document doc = new Document(formattedJSON);
+		
 		//write generated configuration files
 		JavaClassOutputter.outputRawFile(context, doc, sourceName);
 		
 		//here we return target because in a rule we create a target object, which is reused by the text transformations
 		return context.getTarget();
+		
 	}
 	
 	

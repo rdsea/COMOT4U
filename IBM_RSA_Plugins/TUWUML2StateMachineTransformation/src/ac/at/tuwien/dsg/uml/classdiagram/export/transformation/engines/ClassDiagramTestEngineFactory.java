@@ -42,6 +42,22 @@ public class ClassDiagramTestEngineFactory {
 		}
 	}
 	
+	public static AbstractClassDiagramTestStrategy createDefaultTestEngine() throws NoSuchEngineTypeException{
+		if (!supportedStrategies.values().isEmpty()){
+			try {
+				return supportedStrategies.values().iterator().next().newInstance();
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+				return null;
+			} catch (InstantiationException e) {
+				e.printStackTrace();
+				return null;
+			}
+		}else{
+			throw new NoSuchEngineTypeException("No supported engines found in  ClassDiagramTestEngineFactory" );
+		}
+	}
+	
 	/*
 	 * returns a copy list of the supported strategy classes
 	 */
