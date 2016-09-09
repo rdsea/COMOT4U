@@ -171,7 +171,7 @@ public class ClassDiagramToRunTimeTestsTransformationRule extends ModelRule {
 		
 		Object selectedStrategy = sharedContext.getProperty(SelectClassDiagramTestGenerationStrategyTab.SELECTED_STRATEGY_PROPERTY);
 		
-		
+				
 		AbstractClassDiagramTestStrategy strategy;
 		
 		try {
