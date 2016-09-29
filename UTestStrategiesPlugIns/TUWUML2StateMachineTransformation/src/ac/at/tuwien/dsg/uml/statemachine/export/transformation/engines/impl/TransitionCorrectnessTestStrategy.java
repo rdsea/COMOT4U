@@ -284,9 +284,8 @@ public class TransitionCorrectnessTestStrategy extends AbstractStateMachineTestS
 					
 					if (! (state.getVertex() instanceof FinalState)){
 						//continue from target state with plan generation
-						
-						StateMachineState targetState = transition.getTargetState();
-						 generatePlanForState(targetState,rewrite,planMethodDeclaration,pathTransitions) ;
+					 	StateMachineState targetState = transition.getTargetState();
+					    generatePlanForState(targetState,rewrite,planMethodDeclaration,pathTransitions) ;
 					}else{
 						if (transition.getTargetState() == null){
 							 notifyUser(state.getName() + " is not final and does not have a target state on transition " + transition.getTransition().getName());

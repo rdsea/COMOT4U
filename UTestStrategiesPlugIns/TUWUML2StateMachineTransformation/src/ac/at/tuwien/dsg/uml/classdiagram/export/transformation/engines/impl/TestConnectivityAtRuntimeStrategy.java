@@ -82,20 +82,25 @@ public class TestConnectivityAtRuntimeStrategy extends AbstractClassDiagramTestS
 	
 	private Document generateTestConfigForProperty(Property property, Class classImpl){
 		
-		 Association assoc = property.getAssociation();
-		 
-		//if not null, means it is associated to another class, so we must test connectivity and value
-		if (assoc==null){
-			System.err.format("Property %s from class %s is a simple property, it has no association \n", property.getName(), classImpl.getName());
+		Association assoc = property.getAssociation();
+
+		// if not null, means it is associated to another class, so we must test
+		// connectivity and value
+		if (assoc == null) {
+			System.err.format("Property %s from class %s is a simple property, it has no association \n",
+							property.getName(), classImpl.getName());
 			return null;
 		}
-		
-		 //get what type of aggregation is this. Can be AggregationKind.NONE, AggregationKind.COMPOSITE (composition), AggregationKind.SHARED (aggregation)
-	   AggregationKind agg = property.getAggregation();
-	   
-	   //if we want we can generate different tests if the class owns the target
-	   //if composition, the class owns the target.
-//	   if (agg.getValue() == AggregationKind.COMPOSITE){
+
+		// get what type of aggregation is this. Can be AggregationKind.NONE,
+		// AggregationKind.COMPOSITE (composition), AggregationKind.SHARED
+		// (aggregation)
+		AggregationKind agg = property.getAggregation();
+
+		// if we want we can generate different tests if the class owns the
+		// target
+		// if composition, the class owns the target.
+		// if (agg.getValue() == AggregationKind.COMPOSITE){
 //		   System.out.println("COMPOSITION");
 //	   }else if (agg.getValue() == AggregationKind.SHARED){
 //		   System.out.println("AGGREGATION");
@@ -105,7 +110,8 @@ public class TestConnectivityAtRuntimeStrategy extends AbstractClassDiagramTestS
 		   
 	    Optional<Type> optional = assoc.getEndTypes().stream().filter(t -> ! t.equals(classImpl)).findFirst();
 		if (optional == null){
-			System.err.format("Property %s from class %s does not have an association to a different class type \n", property.getName(), classImpl.getName());
+			System.err.format("Property %s from class %s does not have an association to a different class type \n",
+					property.getName(), classImpl.getName());
 			return null;
 		}
 		//for now we generate a generic test configuration for each property, which states that periodically every 30 seconds we poll the 
