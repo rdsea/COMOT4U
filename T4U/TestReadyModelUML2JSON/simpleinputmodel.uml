@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:InfrastructureCPSProfile.InfrastructureModeling.CommonConcepts="http:///InfrastructureCPSProfile/InfrastructureModeling/CommonConcepts.ecore" xmlns:InfrastructureCPSProfile.InfrastructureModeling.HardwareModeling="http:///InfrastructureCPSProfile/InfrastructureModeling/HardwareModeling.ecore" xmlns:InfrastructureCPSProfile.InfrastructureModeling.SoftwareModeling="http:///InfrastructureCPSProfile/InfrastructureModeling/SoftwareModeling.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///InfrastructureCPSProfile/InfrastructureModeling/CommonConcepts.ecore ../profiles/InfrastructureCPSProfile.profile.uml#_71kvzjF6Eee8n-AlHEqw5A http:///InfrastructureCPSProfile/InfrastructureModeling/HardwareModeling.ecore ../profiles/InfrastructureCPSProfile.profile.uml#_71kwaDF6Eee8n-AlHEqw5A http:///InfrastructureCPSProfile/InfrastructureModeling/SoftwareModeling.ecore ../profiles/InfrastructureCPSProfile.profile.uml#_71kvOjF6Eee8n-AlHEqw5A">
+  <uml:Model xmi:id="_Wi1GYDlGEee_Qf4Ba2dbYg" name="MySimpleSystem">
+    <packagedElement xmi:type="uml:Model" href="../libraries/TUW_InfrastructureLibrary.uml#_eMKxAA7uEee6wqcj8Y2-lg"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_7HJX4DlGEee_Qf4Ba2dbYg" name="Classes">
+      <packagedElement xmi:type="uml:Class" xmi:id="_XS2_sDlHEee_Qf4Ba2dbYg" name="ExampleInfrastructure">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xoSbUDlHEee_Qf4Ba2dbYg" name="accelerometersensor" type="_Ya0tUDlHEee_Qf4Ba2dbYg" association="_xoPYADlHEee_Qf4Ba2dbYg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_yMD2wjlHEee_Qf4Ba2dbYg" name="temperaturesensor" type="_ZAniADlHEee_Qf4Ba2dbYg" association="_yMDPsDlHEee_Qf4Ba2dbYg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_yis1IzlHEee_Qf4Ba2dbYg" name="virtualaccelerometersensor" type="_lc3nUDlHEee_Qf4Ba2dbYg" association="_yis1IDlHEee_Qf4Ba2dbYg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_y4DaEjlHEee_Qf4Ba2dbYg" name="virtualtemperaturesensor" type="_lu3WQDlHEee_Qf4Ba2dbYg" association="_y4CzADlHEee_Qf4Ba2dbYg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Ya0tUDlHEee_Qf4Ba2dbYg" name="AccelerometerSensor"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ZAniADlHEee_Qf4Ba2dbYg" name="TemperatureSensor"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_lc3nUDlHEee_Qf4Ba2dbYg" name="VirtualAccelerometerSensor"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_lu3WQDlHEee_Qf4Ba2dbYg" name="VirtualTemperatureSensor"/>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_PKRvADlHEee_Qf4Ba2dbYg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PKULQDlHEee_Qf4Ba2dbYg" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKULQTlHEee_Qf4Ba2dbYg" key="Version" value="0.0.123"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKULQjlHEee_Qf4Ba2dbYg" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKULQzlHEee_Qf4Ba2dbYg" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKULRDlHEee_Qf4Ba2dbYg" key="Date" value="2017-05-05"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKULRTlHEee_Qf4Ba2dbYg" key="Author" value=""/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PKTkMDlHEee_Qf4Ba2dbYg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureCPSProfile.profile.uml#_71kvITF6Eee8n-AlHEqw5A"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="../profiles/InfrastructureCPSProfile.profile.uml#_gJjV8PUfEeaI5-4OrfiDWg"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_PKUyUDlHEee_Qf4Ba2dbYg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PKVZYDlHEee_Qf4Ba2dbYg" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKVZYTlHEee_Qf4Ba2dbYg" key="Version" value="0.0.4"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKVZYjlHEee_Qf4Ba2dbYg" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKVZYzlHEee_Qf4Ba2dbYg" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKVZZDlHEee_Qf4Ba2dbYg" key="Date" value="2017-05-05"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKVZZTlHEee_Qf4Ba2dbYg" key="Author" value=""/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PKUyUTlHEee_Qf4Ba2dbYg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_f_M2cDGAEee8n-AlHEqw5A"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_cCy_MAfnEeeZEbTOKh85Qw"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_PKVZZjlHEee_Qf4Ba2dbYg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PKWAcDlHEee_Qf4Ba2dbYg" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKWAcTlHEee_Qf4Ba2dbYg" key="Version" value="0.0.1"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKWAcjlHEee_Qf4Ba2dbYg" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKWAczlHEee_Qf4Ba2dbYg" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKWAdDlHEee_Qf4Ba2dbYg" key="Date" value="2017-03-30"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKWAdTlHEee_Qf4Ba2dbYg" key="Author" value=""/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PKVZZzlHEee_Qf4Ba2dbYg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../profiles/Internal%20U-Profile%20Library.profile.uml#_ueq-wRVHEeev2_sZ3ngp-w"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="../profiles/Internal%20U-Profile%20Library.profile.uml#_k1AzAK1KEeWCop0vWwuZNg"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_PKWAdjlHEee_Qf4Ba2dbYg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PKWngTlHEee_Qf4Ba2dbYg" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKWngjlHEee_Qf4Ba2dbYg" key="Version" value="0.0.1"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKWngzlHEee_Qf4Ba2dbYg" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKWnhDlHEee_Qf4Ba2dbYg" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKWnhTlHEee_Qf4Ba2dbYg" key="Date" value="2017-03-30"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PKWnhjlHEee_Qf4Ba2dbYg" key="Author" value=""/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PKWngDlHEee_Qf4Ba2dbYg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../profiles/U-Profile.profile.uml#_yUEjARVHEeev2_sZ3ngp-w"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="../profiles/U-Profile.profile.uml#_SFfNUJQmEeWVWKdOybk1ZQ"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_-OKMIDlGEee_Qf4Ba2dbYg" name="Configurations">
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_VG6FgDlHEee_Qf4Ba2dbYg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VG6skTlHEee_Qf4Ba2dbYg" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG6skjlHEee_Qf4Ba2dbYg" key="Version" value="0.0.123"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG6skzlHEee_Qf4Ba2dbYg" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG6slDlHEee_Qf4Ba2dbYg" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG6slTlHEee_Qf4Ba2dbYg" key="Date" value="2017-05-05"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG6sljlHEee_Qf4Ba2dbYg" key="Author" value=""/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VG6skDlHEee_Qf4Ba2dbYg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureCPSProfile.profile.uml#_71kvITF6Eee8n-AlHEqw5A"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="../profiles/InfrastructureCPSProfile.profile.uml#_gJjV8PUfEeaI5-4OrfiDWg"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_VG7ToDlHEee_Qf4Ba2dbYg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VG7TojlHEee_Qf4Ba2dbYg" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG7TozlHEee_Qf4Ba2dbYg" key="Version" value="0.0.4"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG7TpDlHEee_Qf4Ba2dbYg" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG7TpTlHEee_Qf4Ba2dbYg" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG7TpjlHEee_Qf4Ba2dbYg" key="Date" value="2017-05-05"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG7TpzlHEee_Qf4Ba2dbYg" key="Author" value=""/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VG7ToTlHEee_Qf4Ba2dbYg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_f_M2cDGAEee8n-AlHEqw5A"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_cCy_MAfnEeeZEbTOKh85Qw"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_VG76sDlHEee_Qf4Ba2dbYg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VG76sjlHEee_Qf4Ba2dbYg" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG76szlHEee_Qf4Ba2dbYg" key="Version" value="0.0.1"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG76tDlHEee_Qf4Ba2dbYg" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG76tTlHEee_Qf4Ba2dbYg" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG76tjlHEee_Qf4Ba2dbYg" key="Date" value="2017-03-30"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VG76tzlHEee_Qf4Ba2dbYg" key="Author" value=""/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VG76sTlHEee_Qf4Ba2dbYg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../profiles/Internal%20U-Profile%20Library.profile.uml#_ueq-wRVHEeev2_sZ3ngp-w"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="../profiles/Internal%20U-Profile%20Library.profile.uml#_k1AzAK1KEeWCop0vWwuZNg"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_VG_lEDlHEee_Qf4Ba2dbYg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VHAzMDlHEee_Qf4Ba2dbYg" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VHAzMTlHEee_Qf4Ba2dbYg" key="Version" value="0.0.1"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VHAzMjlHEee_Qf4Ba2dbYg" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VHAzMzlHEee_Qf4Ba2dbYg" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VHAzNDlHEee_Qf4Ba2dbYg" key="Date" value="2017-03-30"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VHAzNTlHEee_Qf4Ba2dbYg" key="Author" value=""/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VHAMIDlHEee_Qf4Ba2dbYg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../profiles/U-Profile.profile.uml#_yUEjARVHEeev2_sZ3ngp-w"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="../profiles/U-Profile.profile.uml#_SFfNUJQmEeWVWKdOybk1ZQ"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_xoPYADlHEee_Qf4Ba2dbYg" memberEnd="_xoSbUDlHEee_Qf4Ba2dbYg _xoTpcDlHEee_Qf4Ba2dbYg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xoR0QDlHEee_Qf4Ba2dbYg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xoR0QTlHEee_Qf4Ba2dbYg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_xoTpcDlHEee_Qf4Ba2dbYg" name="exampleinfrastructure" type="_XS2_sDlHEee_Qf4Ba2dbYg" association="_xoPYADlHEee_Qf4Ba2dbYg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_yMDPsDlHEee_Qf4Ba2dbYg" memberEnd="_yMD2wjlHEee_Qf4Ba2dbYg _yMEd0DlHEee_Qf4Ba2dbYg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yMD2wDlHEee_Qf4Ba2dbYg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yMD2wTlHEee_Qf4Ba2dbYg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_yMEd0DlHEee_Qf4Ba2dbYg" name="exampleinfrastructure" type="_XS2_sDlHEee_Qf4Ba2dbYg" association="_yMDPsDlHEee_Qf4Ba2dbYg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_yis1IDlHEee_Qf4Ba2dbYg" memberEnd="_yis1IzlHEee_Qf4Ba2dbYg _yitcMDlHEee_Qf4Ba2dbYg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yis1ITlHEee_Qf4Ba2dbYg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yis1IjlHEee_Qf4Ba2dbYg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_yitcMDlHEee_Qf4Ba2dbYg" name="exampleinfrastructure" type="_XS2_sDlHEee_Qf4Ba2dbYg" association="_yis1IDlHEee_Qf4Ba2dbYg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_y4CzADlHEee_Qf4Ba2dbYg" memberEnd="_y4DaEjlHEee_Qf4Ba2dbYg _y4DaEzlHEee_Qf4Ba2dbYg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_y4DaEDlHEee_Qf4Ba2dbYg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y4DaETlHEee_Qf4Ba2dbYg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_y4DaEzlHEee_Qf4Ba2dbYg" name="exampleinfrastructure" type="_XS2_sDlHEee_Qf4Ba2dbYg" association="_y4CzADlHEee_Qf4Ba2dbYg"/>
+    </packagedElement>
+  </uml:Model>
+  <InfrastructureCPSProfile.InfrastructureModeling.CommonConcepts:Infrastructure xmi:id="_XS3mwDlHEee_Qf4Ba2dbYg" physicalUnits="_Ya1UYDlHEee_Qf4Ba2dbYg _ZAoJEDlHEee_Qf4Ba2dbYg" virtualUnits="_lc4OYDlHEee_Qf4Ba2dbYg _lu39UDlHEee_Qf4Ba2dbYg" base_Class="_XS2_sDlHEee_Qf4Ba2dbYg"/>
+  <InfrastructureCPSProfile.InfrastructureModeling.HardwareModeling:Sensor xmi:id="_Ya1UYDlHEee_Qf4Ba2dbYg" base_Class="_Ya0tUDlHEee_Qf4Ba2dbYg"/>
+  <InfrastructureCPSProfile.InfrastructureModeling.HardwareModeling:Sensor xmi:id="_ZAoJEDlHEee_Qf4Ba2dbYg" base_Class="_ZAniADlHEee_Qf4Ba2dbYg"/>
+  <InfrastructureCPSProfile.InfrastructureModeling.SoftwareModeling:VirtualSensor xmi:id="_lc4OYDlHEee_Qf4Ba2dbYg" base_Class="_lc3nUDlHEee_Qf4Ba2dbYg"/>
+  <InfrastructureCPSProfile.InfrastructureModeling.SoftwareModeling:VirtualSensor xmi:id="_lu39UDlHEee_Qf4Ba2dbYg" base_Class="_lu3WQDlHEee_Qf4Ba2dbYg"/>
+</xmi:XMI>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_fZilMDlCEeeA_Mk9WTVHiA" name="RootElement">
+  <packagedElement xmi:type="uml:Package" xmi:id="_79uXYDlCEeeA_Mk9WTVHiA" name="Classes">
+    <packagedElement xmi:type="uml:Class" xmi:id="_jhAw4DlCEeeA_Mk9WTVHiA" name="CompA">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_veDxsDlCEeeA_Mk9WTVHiA" name="compb" type="_leslkDlCEeeA_Mk9WTVHiA" association="_veDKoDlCEeeA_Mk9WTVHiA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_kqceIDlCEeeA_Mk9WTVHiA" name="System">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_plKrsDlCEeeA_Mk9WTVHiA" name="compa" type="_jhAw4DlCEeeA_Mk9WTVHiA" aggregation="composite" association="_plFzMDlCEeeA_Mk9WTVHiA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qXrtwDlCEeeA_Mk9WTVHiA" name="compb" type="_leslkDlCEeeA_Mk9WTVHiA" aggregation="composite" association="_qXrGsDlCEeeA_Mk9WTVHiA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_leslkDlCEeeA_Mk9WTVHiA" name="CompB"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_plFzMDlCEeeA_Mk9WTVHiA" memberEnd="_plKrsDlCEeeA_Mk9WTVHiA _plLSwDlCEeeA_Mk9WTVHiA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_plHoYDlCEeeA_Mk9WTVHiA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_plIPcDlCEeeA_Mk9WTVHiA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_plLSwDlCEeeA_Mk9WTVHiA" name="system" type="_kqceIDlCEeeA_Mk9WTVHiA" association="_plFzMDlCEeeA_Mk9WTVHiA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_qXrGsDlCEeeA_Mk9WTVHiA" memberEnd="_qXrtwDlCEeeA_Mk9WTVHiA _qXuKADlCEeeA_Mk9WTVHiA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qXrGsTlCEeeA_Mk9WTVHiA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qXrGsjlCEeeA_Mk9WTVHiA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_qXuKADlCEeeA_Mk9WTVHiA" name="system" type="_kqceIDlCEeeA_Mk9WTVHiA" association="_qXrGsDlCEeeA_Mk9WTVHiA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_veDKoDlCEeeA_Mk9WTVHiA" memberEnd="_veDxsDlCEeeA_Mk9WTVHiA _veDxsTlCEeeA_Mk9WTVHiA" navigableOwnedEnd="_veDxsTlCEeeA_Mk9WTVHiA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_veDKoTlCEeeA_Mk9WTVHiA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_veDKojlCEeeA_Mk9WTVHiA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_veDxsTlCEeeA_Mk9WTVHiA" name="compa" type="_jhAw4DlCEeeA_Mk9WTVHiA" association="_veDKoDlCEeeA_Mk9WTVHiA"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="__zu_oDlCEeeA_Mk9WTVHiA" name="Instances"/>
+</uml:Model>
