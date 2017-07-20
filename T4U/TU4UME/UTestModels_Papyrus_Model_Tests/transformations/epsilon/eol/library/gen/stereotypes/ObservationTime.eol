@@ -1,0 +1,236 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of Element annotated with ObservationTime.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package ObservationTimesAsSequenceOfElement() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isObservationTime()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Element annotated with ObservationTime.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONObservationTimesAsSequenceOfElement() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isObservationTime()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Element from the applied Stereotype ObservationTime
+
+operation ObservationTime getBaseElementOfObservationTime() : Element{
+	var baseElement = new ObservationTime;
+	baseElement = self.base_Element;
+	return baseElement;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Element from the applied Stereotype ObservationTime
+
+operation ObservationTime JSONgetBaseElementOfObservationTime() : String {
+	var baseElement = new ObservationTime;
+	baseElement = self.base_Element;
+	
+	var baseElement_string = baseElement.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype ObservationTime using native objects.
+*/ 
+operation Element toJsonObservationTime() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype ObservationTime
+ 
+operation ObservationTime getBaseElementOfObservationTimeDeprecated() : Element{
+	var baseElement = new ObservationTime;
+
+	
+	if(not self.base_Element.isUndefined()){
+		baseElement = self.base_Element;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype ObservationTime using UMLUtil native object
+*/ 
+operation ObservationTime getBaseElementOfObservationTime() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype ObservationTime using UMLUtil native object
+*/ 
+//operation ObservationTime toJsonObservationTime() : String {
+operation toJsonObservationTime() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with ObservationTime.
+*/ 
+operation Element isObservationTime() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isObservationTime() : Boolean in ObservationTime.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "ObservationTime");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in ObservationTime.
+*/ 
+operation ObservationTime getAllAttributesOfObservationTime() : Sequence(Property){
+	var stereotypeAttr = ObservationTime.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of time of stereotype ObservationTime.
+*/ 
+operation Element getTimeOfObservationTimeAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ObservationTime"), "time");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of configuration of stereotype ObservationTime.
+*/ 
+operation Element getConfigurationOfObservationTimeAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ObservationTime"), "configuration");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of description of stereotype ObservationTime.
+*/ 
+operation Element getDescriptionOfObservationTimeAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ObservationTime"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of time of stereotype ObservationTime is empty.
+*/ 
+operation Element isTimeOfObservationTimeEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ObservationTime"), "time");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of configuration of stereotype ObservationTime is empty.
+*/ 
+operation Element isConfigurationOfObservationTimeEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ObservationTime"), "configuration");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of description of stereotype ObservationTime is empty.
+*/ 
+operation Element isDescriptionOfObservationTimeEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ObservationTime"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}

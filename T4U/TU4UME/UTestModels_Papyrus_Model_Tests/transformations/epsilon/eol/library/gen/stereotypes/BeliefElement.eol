@@ -1,0 +1,842 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of StateMachine annotated with BeliefElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package BeliefElementsAsSequenceOfStateMachine() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefElement()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of StateMachine annotated with BeliefElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONBeliefElementsAsSequenceOfStateMachine() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefElement()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type StateMachine from the applied Stereotype BeliefElement
+
+operation BeliefElement getBaseStateMachineOfBeliefElement() : StateMachine{
+	var baseStateMachine = new BeliefElement;
+	baseStateMachine = self.base_StateMachine;
+	return baseStateMachine;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type StateMachine from the applied Stereotype BeliefElement
+
+operation BeliefElement JSONgetBaseStateMachineOfBeliefElement() : String {
+	var baseStateMachine = new BeliefElement;
+	baseStateMachine = self.base_StateMachine;
+	
+	var baseStateMachine_string = baseStateMachine.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseStateMachine_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype BeliefElement using native objects.
+*/ 
+operation StateMachine toJsonBeliefElement() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Transition annotated with BeliefElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package BeliefElementsAsSequenceOfTransition() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefElement()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Transition annotated with BeliefElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONBeliefElementsAsSequenceOfTransition() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefElement()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Transition from the applied Stereotype BeliefElement
+
+operation BeliefElement getBaseTransitionOfBeliefElement() : Transition{
+	var baseTransition = new BeliefElement;
+	baseTransition = self.base_Transition;
+	return baseTransition;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Transition from the applied Stereotype BeliefElement
+
+operation BeliefElement JSONgetBaseTransitionOfBeliefElement() : String {
+	var baseTransition = new BeliefElement;
+	baseTransition = self.base_Transition;
+	
+	var baseTransition_string = baseTransition.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseTransition_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype BeliefElement using native objects.
+*/ 
+operation Transition toJsonBeliefElement() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Constraint annotated with BeliefElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package BeliefElementsAsSequenceOfConstraint() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefElement()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Constraint annotated with BeliefElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONBeliefElementsAsSequenceOfConstraint() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefElement()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Constraint from the applied Stereotype BeliefElement
+
+operation BeliefElement getBaseConstraintOfBeliefElement() : Constraint{
+	var baseConstraint = new BeliefElement;
+	baseConstraint = self.base_Constraint;
+	return baseConstraint;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Constraint from the applied Stereotype BeliefElement
+
+operation BeliefElement JSONgetBaseConstraintOfBeliefElement() : String {
+	var baseConstraint = new BeliefElement;
+	baseConstraint = self.base_Constraint;
+	
+	var baseConstraint_string = baseConstraint.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseConstraint_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype BeliefElement using native objects.
+*/ 
+operation Constraint toJsonBeliefElement() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Vertex annotated with BeliefElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package BeliefElementsAsSequenceOfVertex() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefElement()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Vertex annotated with BeliefElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONBeliefElementsAsSequenceOfVertex() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefElement()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Vertex from the applied Stereotype BeliefElement
+
+operation BeliefElement getBaseVertexOfBeliefElement() : Vertex{
+	var baseVertex = new BeliefElement;
+	baseVertex = self.base_Vertex;
+	return baseVertex;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Vertex from the applied Stereotype BeliefElement
+
+operation BeliefElement JSONgetBaseVertexOfBeliefElement() : String {
+	var baseVertex = new BeliefElement;
+	baseVertex = self.base_Vertex;
+	
+	var baseVertex_string = baseVertex.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseVertex_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype BeliefElement using native objects.
+*/ 
+operation Vertex toJsonBeliefElement() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Region annotated with BeliefElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package BeliefElementsAsSequenceOfRegion() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefElement()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Region annotated with BeliefElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONBeliefElementsAsSequenceOfRegion() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefElement()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Region from the applied Stereotype BeliefElement
+
+operation BeliefElement getBaseRegionOfBeliefElement() : Region{
+	var baseRegion = new BeliefElement;
+	baseRegion = self.base_Region;
+	return baseRegion;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Region from the applied Stereotype BeliefElement
+
+operation BeliefElement JSONgetBaseRegionOfBeliefElement() : String {
+	var baseRegion = new BeliefElement;
+	baseRegion = self.base_Region;
+	
+	var baseRegion_string = baseRegion.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseRegion_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype BeliefElement using native objects.
+*/ 
+operation Region toJsonBeliefElement() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Behavior annotated with BeliefElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package BeliefElementsAsSequenceOfBehavior() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefElement()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Behavior annotated with BeliefElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONBeliefElementsAsSequenceOfBehavior() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefElement()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Behavior from the applied Stereotype BeliefElement
+
+operation BeliefElement getBaseBehaviorOfBeliefElement() : Behavior{
+	var baseBehavior = new BeliefElement;
+	baseBehavior = self.base_Behavior;
+	return baseBehavior;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Behavior from the applied Stereotype BeliefElement
+
+operation BeliefElement JSONgetBaseBehaviorOfBeliefElement() : String {
+	var baseBehavior = new BeliefElement;
+	baseBehavior = self.base_Behavior;
+	
+	var baseBehavior_string = baseBehavior.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseBehavior_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype BeliefElement using native objects.
+*/ 
+operation Behavior toJsonBeliefElement() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Classifier annotated with BeliefElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package BeliefElementsAsSequenceOfClassifier() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefElement()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Classifier annotated with BeliefElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONBeliefElementsAsSequenceOfClassifier() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefElement()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Classifier from the applied Stereotype BeliefElement
+
+operation BeliefElement getBaseClassifierOfBeliefElement() : Classifier{
+	var baseClassifier = new BeliefElement;
+	baseClassifier = self.base_Classifier;
+	return baseClassifier;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Classifier from the applied Stereotype BeliefElement
+
+operation BeliefElement JSONgetBaseClassifierOfBeliefElement() : String {
+	var baseClassifier = new BeliefElement;
+	baseClassifier = self.base_Classifier;
+	
+	var baseClassifier_string = baseClassifier.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClassifier_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype BeliefElement using native objects.
+*/ 
+operation Classifier toJsonBeliefElement() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype BeliefElement
+ 
+operation BeliefElement getBaseElementOfBeliefElementDeprecated() : Element{
+	var baseElement = new BeliefElement;
+
+	
+	if(not self.base_StateMachine.isUndefined()){
+		baseElement = self.base_StateMachine;
+	}
+	
+	if(not self.base_Transition.isUndefined()){
+		baseElement = self.base_Transition;
+	}
+	
+	if(not self.base_Constraint.isUndefined()){
+		baseElement = self.base_Constraint;
+	}
+	
+	if(not self.base_Vertex.isUndefined()){
+		baseElement = self.base_Vertex;
+	}
+	
+	if(not self.base_Region.isUndefined()){
+		baseElement = self.base_Region;
+	}
+	
+	if(not self.base_Behavior.isUndefined()){
+		baseElement = self.base_Behavior;
+	}
+	
+	if(not self.base_Classifier.isUndefined()){
+		baseElement = self.base_Classifier;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype BeliefElement using UMLUtil native object
+*/ 
+operation BeliefElement getBaseElementOfBeliefElement() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype BeliefElement using UMLUtil native object
+*/ 
+//operation BeliefElement toJsonBeliefElement() : String {
+operation toJsonBeliefElement() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with BeliefElement.
+*/ 
+operation Element isBeliefElement() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isBeliefElement() : Boolean in BeliefElement.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "BeliefElement");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in BeliefElement.
+*/ 
+operation BeliefElement getAllAttributesOfBeliefElement() : Sequence(Property){
+	var stereotypeAttr = BeliefElement.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of agent of stereotype BeliefElement.
+*/ 
+operation Element getAgentOfBeliefElementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "agent");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of from of stereotype BeliefElement.
+*/ 
+operation Element getFromOfBeliefElementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "from");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of duration of stereotype BeliefElement.
+*/ 
+operation Element getDurationOfBeliefElementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "duration");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of beliefDegree of stereotype BeliefElement.
+*/ 
+operation Element getBeliefDegreeOfBeliefElementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "beliefDegree");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of prerequisites of stereotype BeliefElement.
+*/ 
+operation Element getPrerequisitesOfBeliefElementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "prerequisites");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of substatements of stereotype BeliefElement.
+*/ 
+operation Element getSubstatementsOfBeliefElementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "substatements");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of beliefAgent of stereotype BeliefElement.
+*/ 
+operation Element getBeliefAgentOfBeliefElementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "beliefAgent");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of uncertainties of stereotype BeliefElement.
+*/ 
+operation Element getUncertaintiesOfBeliefElementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "uncertainties");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of agent of stereotype BeliefElement is empty.
+*/ 
+operation Element isAgentOfBeliefElementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "agent");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of from of stereotype BeliefElement is empty.
+*/ 
+operation Element isFromOfBeliefElementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "from");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of duration of stereotype BeliefElement is empty.
+*/ 
+operation Element isDurationOfBeliefElementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "duration");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of beliefDegree of stereotype BeliefElement is empty.
+*/ 
+operation Element isBeliefDegreeOfBeliefElementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "beliefDegree");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of prerequisites of stereotype BeliefElement is empty.
+*/ 
+operation Element isPrerequisitesOfBeliefElementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "prerequisites");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of substatements of stereotype BeliefElement is empty.
+*/ 
+operation Element isSubstatementsOfBeliefElementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "substatements");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of beliefAgent of stereotype BeliefElement is empty.
+*/ 
+operation Element isBeliefAgentOfBeliefElementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "beliefAgent");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of uncertainties of stereotype BeliefElement is empty.
+*/ 
+operation Element isUncertaintiesOfBeliefElementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefElement"), "uncertainties");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}

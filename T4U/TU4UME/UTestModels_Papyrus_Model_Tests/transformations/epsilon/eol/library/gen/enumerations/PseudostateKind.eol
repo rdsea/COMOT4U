@@ -1,0 +1,45 @@
+import "../../element.eol";
+
+operation PseudostateKind getinitial() : String {
+	var initial = "initial";
+	return initial;
+}
+operation PseudostateKind getdeepHistory() : String {
+	var deepHistory = "deepHistory";
+	return deepHistory;
+}
+operation PseudostateKind getshallowHistory() : String {
+	var shallowHistory = "shallowHistory";
+	return shallowHistory;
+}
+operation PseudostateKind getjoin() : String {
+	var join = "join";
+	return join;
+}
+operation PseudostateKind getfork() : String {
+	var fork = "fork";
+	return fork;
+}
+operation PseudostateKind getjunction() : String {
+	var junction = "junction";
+	return junction;
+}
+operation PseudostateKind getchoice() : String {
+	var choice = "choice";
+	return choice;
+}
+operation PseudostateKind getentryPoint() : String {
+	var entryPoint = "entryPoint";
+	return entryPoint;
+}
+operation PseudostateKind getexitPoint() : String {
+	var exitPoint = "exitPoint";
+	return exitPoint;
+}
+operation PseudostateKind getterminate() : String {
+	var terminate = "terminate";
+	return terminate;
+}
+
+
+

@@ -1,0 +1,14 @@
+//libraries
+import "../eol/utest/utestlibrary.eol";
+
+
+rule Package2Infrastructure
+
+	transform aPackage : Package {
+	
+		guard : aPackage.hasStereotype("Infrastructure")
+		
+		template : "../egl/BTS_POJOGenTemplate.egl"
+		target : "../../../../at.ac.tuwien.dsg.epsilon.tools/src/at/ac/tuwien/dsg/epsilon/tools/json/generator/" + aPackage.name.replaceAll("\\s+","") + ".java"
+	}
+	

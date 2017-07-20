@@ -1,0 +1,17 @@
+import "../../element.eol";
+
+operation NameBasedMsgMode getDefault() : String {
+	var Default = "Default";
+	return Default;
+}
+operation NameBasedMsgMode getNameIsMessage() : String {
+	var NameIsMessage = "NameIsMessage";
+	return NameIsMessage;
+}
+operation NameBasedMsgMode getCustomTemplate() : String {
+	var CustomTemplate = "CustomTemplate";
+	return CustomTemplate;
+}
+
+
+

@@ -1,0 +1,494 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of Class annotated with TestExecutor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package TestExecutorsAsSequenceOfClass() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isTestExecutor()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Class annotated with TestExecutor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONTestExecutorsAsSequenceOfClass() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isTestExecutor()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Class from the applied Stereotype TestExecutor
+
+operation TestExecutor getBaseClassOfTestExecutor() : Class{
+	var baseClass = new TestExecutor;
+	baseClass = self.base_Class;
+	return baseClass;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Class from the applied Stereotype TestExecutor
+
+operation TestExecutor JSONgetBaseClassOfTestExecutor() : String {
+	var baseClass = new TestExecutor;
+	baseClass = self.base_Class;
+	
+	var baseClass_string = baseClass.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClass_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype TestExecutor using native objects.
+*/ 
+operation Class toJsonTestExecutor() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Node annotated with TestExecutor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package TestExecutorsAsSequenceOfNode() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isTestExecutor()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Node annotated with TestExecutor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONTestExecutorsAsSequenceOfNode() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isTestExecutor()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Node from the applied Stereotype TestExecutor
+
+operation TestExecutor getBaseNodeOfTestExecutor() : Node{
+	var baseNode = new TestExecutor;
+	baseNode = self.base_Node;
+	return baseNode;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Node from the applied Stereotype TestExecutor
+
+operation TestExecutor JSONgetBaseNodeOfTestExecutor() : String {
+	var baseNode = new TestExecutor;
+	baseNode = self.base_Node;
+	
+	var baseNode_string = baseNode.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseNode_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype TestExecutor using native objects.
+*/ 
+operation Node toJsonTestExecutor() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with TestExecutor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package TestExecutorsAsSequenceOfInstanceSpecification() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isTestExecutor()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of InstanceSpecification annotated with TestExecutor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONTestExecutorsAsSequenceOfInstanceSpecification() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isTestExecutor()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type InstanceSpecification from the applied Stereotype TestExecutor
+
+operation TestExecutor getBaseInstanceSpecificationOfTestExecutor() : InstanceSpecification{
+	var baseInstanceSpecification = new TestExecutor;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	return baseInstanceSpecification;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type InstanceSpecification from the applied Stereotype TestExecutor
+
+operation TestExecutor JSONgetBaseInstanceSpecificationOfTestExecutor() : String {
+	var baseInstanceSpecification = new TestExecutor;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	
+	var baseInstanceSpecification_string = baseInstanceSpecification.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseInstanceSpecification_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype TestExecutor using native objects.
+*/ 
+operation InstanceSpecification toJsonTestExecutor() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype TestExecutor
+ 
+operation TestExecutor getBaseElementOfTestExecutorDeprecated() : Element{
+	var baseElement = new TestExecutor;
+
+	
+	if(not self.base_Class.isUndefined()){
+		baseElement = self.base_Class;
+	}
+	
+	if(not self.base_Node.isUndefined()){
+		baseElement = self.base_Node;
+	}
+	
+	if(not self.base_InstanceSpecification.isUndefined()){
+		baseElement = self.base_InstanceSpecification;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype TestExecutor using UMLUtil native object
+*/ 
+operation TestExecutor getBaseElementOfTestExecutor() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype TestExecutor using UMLUtil native object
+*/ 
+//operation TestExecutor toJsonTestExecutor() : String {
+operation toJsonTestExecutor() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with TestExecutor.
+*/ 
+operation Element isTestExecutor() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isTestExecutor() : Boolean in TestExecutor.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "TestExecutor");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in TestExecutor.
+*/ 
+operation TestExecutor getAllAttributesOfTestExecutor() : Sequence(Property){
+	var stereotypeAttr = TestExecutor.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of description of stereotype TestExecutor.
+*/ 
+operation Element getDescriptionOfTestExecutorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("TestExecutor"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of distinctFromTarget of stereotype TestExecutor.
+*/ 
+operation Element getDistinctFromTargetOfTestExecutorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("TestExecutor"), "distinctFromTarget");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of target of stereotype TestExecutor.
+*/ 
+operation Element getTargetOfTestExecutorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("TestExecutor"), "target");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of phyCapabilities of stereotype TestExecutor.
+*/ 
+operation Element getPhyCapabilitiesOfTestExecutorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("TestExecutor"), "phyCapabilities");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of swCapabilities of stereotype TestExecutor.
+*/ 
+operation Element getSwCapabilitiesOfTestExecutorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("TestExecutor"), "swCapabilities");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of testTriggers of stereotype TestExecutor.
+*/ 
+operation Element getTestTriggersOfTestExecutorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("TestExecutor"), "testTriggers");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of strategy of stereotype TestExecutor.
+*/ 
+operation Element getStrategyOfTestExecutorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("TestExecutor"), "strategy");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of description of stereotype TestExecutor is empty.
+*/ 
+operation Element isDescriptionOfTestExecutorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("TestExecutor"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of distinctFromTarget of stereotype TestExecutor is empty.
+*/ 
+operation Element isDistinctFromTargetOfTestExecutorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("TestExecutor"), "distinctFromTarget");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of target of stereotype TestExecutor is empty.
+*/ 
+operation Element isTargetOfTestExecutorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("TestExecutor"), "target");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of phyCapabilities of stereotype TestExecutor is empty.
+*/ 
+operation Element isPhyCapabilitiesOfTestExecutorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("TestExecutor"), "phyCapabilities");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of swCapabilities of stereotype TestExecutor is empty.
+*/ 
+operation Element isSwCapabilitiesOfTestExecutorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("TestExecutor"), "swCapabilities");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of testTriggers of stereotype TestExecutor is empty.
+*/ 
+operation Element isTestTriggersOfTestExecutorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("TestExecutor"), "testTriggers");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of strategy of stereotype TestExecutor is empty.
+*/ 
+operation Element isStrategyOfTestExecutorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("TestExecutor"), "strategy");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}

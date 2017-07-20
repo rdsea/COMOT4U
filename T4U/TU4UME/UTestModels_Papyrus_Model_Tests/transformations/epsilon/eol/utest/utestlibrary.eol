@@ -1,0 +1,123 @@
+
+import "../library/element.eol";
+
+
+
+
+
+operation Package getVirtualUnits() : Sequence(Class){
+	var returnValue : Sequence(Class) = new Sequence(Class);
+	for(son in self.getPackagedElements){
+		if(son.isTypeOf(Class) and son.hasStereotype("VirtualUnit")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+operation Package getVirtualSensors() : Sequence(Class){
+	var returnValue : Sequence(Class) = new Sequence(Class);
+	for(son in self.getPackagedElements){
+		if(son.isTypeOf(Class) and son.hasStereotype("VirtualSensor")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+operation Package getVirtualActuators() : Sequence(Class){
+	var returnValue : Sequence(Class) = new Sequence(Class);
+	for(son in self.getPackagedElements){
+		if(son.isTypeOf(Class) and son.hasStereotype("VirtualActuator")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+operation Package getActuators() : Sequence(Class){
+	var returnValue : Sequence(Class) = new Sequence(Class);
+	for(son in self.getPackagedElements){
+		if(son.isTypeOf(Class) and son.hasStereotype("Actuator")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+operation Package getSensors() : Sequence(Class){
+	var returnValue : Sequence(Class) = new Sequence(Class);
+	for(son in self.getPackagedElements){
+		if(son.isTypeOf(Class) and son.hasStereotype("Sensor")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+operation Package getCommunications() : Sequence(Association){
+	var returnValue : Sequence(Association) = new Sequence(Association);
+	for(son in self.getPackagedElements){
+		if(son.isTypeOf(Association) and son.hasStereotype("Communication")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+//clone gli attributi interni dello stereotipo
+operation Element getStereotypeAttributes(stereotype : Stereotype){
+	var stereotypeAttr = stereotype.allAttributes();
+	var returnValue : Sequence(Element) = new Sequence(Element);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+operation Element generateAssociationName(association: Association){
+	var assoc_name = "Comm-";
+	for(end in association.getMemberEnds()){
+		assoc_name = assoc_name + "-" + end.getType().getName();
+	}
+	return assoc_name;	
+}
+
+operation Association getCommunicationEnds() : Sequence(String){
+	var names = new Sequence;
+	for(end in self.getMemberEnds()){
+		names.add(end.getType().getName());
+	}
+	return names;	
+}
+
+
+//This operation returns directly the stereotype, not the annotated model element
+operation Element getCommunicationConfigurations(){
+	//var returnValue : Sequence(ConfigurationProtocol) = new Sequence(ConfigurationProtocol);
+	//var returnValue : Sequence(Stereotype) = new Sequence(Stereotype);
+	//var returnValue : Sequence(Class) = new Sequence(Class);
+	var returnValue = new Sequence;
+	var configs = self.getValue(self.getStereotype("Communication"), "communicationConfigs");
+	//var configs = self.getStereotype("Communication");
+	for(config in configs){
+		returnValue.add(config);
+	}
+	return returnValue;
+}
+
+/*Check the return type*/
+operation Classifier getOwnedVirtualSensors(pkg: Package) : Sequence(VirtualSensor){
+	var returnValue : Sequence(VirtualSensor) = new Sequence(VirtualSensor);
+	for(son in self.getPackagedElements){
+		if(son.isTypeOf(Artifact)){
+			//returnValue.addAll(son.getOwnedVirtualSensors());
+		}
+	}
+	var allRelationships = pkg.allRelationships();
+	return returnValue;
+}

@@ -1,0 +1,21 @@
+import "../../element.eol";
+
+operation ParameterDirectionKind getin() : String {
+	var in = "in";
+	return in;
+}
+operation ParameterDirectionKind getinout() : String {
+	var inout = "inout";
+	return inout;
+}
+operation ParameterDirectionKind getout() : String {
+	var out = "out";
+	return out;
+}
+operation ParameterDirectionKind getreturn() : String {
+	var return = "return";
+	return return;
+}
+
+
+

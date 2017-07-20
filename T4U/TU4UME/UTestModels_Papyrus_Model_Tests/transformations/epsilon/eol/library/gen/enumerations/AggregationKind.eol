@@ -1,0 +1,17 @@
+import "../../element.eol";
+
+operation AggregationKind getnone() : String {
+	var none = "none";
+	return none;
+}
+operation AggregationKind getshared() : String {
+	var shared = "shared";
+	return shared;
+}
+operation AggregationKind getcomposite() : String {
+	var composite = "composite";
+	return composite;
+}
+
+
+

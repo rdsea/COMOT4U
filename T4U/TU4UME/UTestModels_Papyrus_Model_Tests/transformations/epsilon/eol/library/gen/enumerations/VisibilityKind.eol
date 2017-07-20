@@ -1,0 +1,29 @@
+import "../../element.eol";
+
+operation VisibilityKind getUnspecified() : String {
+	var Unspecified = "Unspecified";
+	return Unspecified;
+}
+operation VisibilityKind getNone() : String {
+	var None = "None";
+	return None;
+}
+operation VisibilityKind getReadOnly() : String {
+	var ReadOnly = "ReadOnly";
+	return ReadOnly;
+}
+operation VisibilityKind getReadWrite() : String {
+	var ReadWrite = "ReadWrite";
+	return ReadWrite;
+}
+operation VisibilityKind getReadOnlyUnsettable() : String {
+	var ReadOnlyUnsettable = "ReadOnlyUnsettable";
+	return ReadOnlyUnsettable;
+}
+operation VisibilityKind getReadWriteUnsettable() : String {
+	var ReadWriteUnsettable = "ReadWriteUnsettable";
+	return ReadWriteUnsettable;
+}
+
+
+

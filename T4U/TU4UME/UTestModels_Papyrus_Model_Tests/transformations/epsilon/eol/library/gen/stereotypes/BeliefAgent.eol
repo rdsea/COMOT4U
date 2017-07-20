@@ -1,0 +1,269 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of Classifier annotated with BeliefAgent.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package BeliefAgentsAsSequenceOfClassifier() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefAgent()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Classifier annotated with BeliefAgent.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONBeliefAgentsAsSequenceOfClassifier() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefAgent()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Classifier from the applied Stereotype BeliefAgent
+
+operation BeliefAgent getBaseClassifierOfBeliefAgent() : Classifier{
+	var baseClassifier = new BeliefAgent;
+	baseClassifier = self.base_Classifier;
+	return baseClassifier;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Classifier from the applied Stereotype BeliefAgent
+
+operation BeliefAgent JSONgetBaseClassifierOfBeliefAgent() : String {
+	var baseClassifier = new BeliefAgent;
+	baseClassifier = self.base_Classifier;
+	
+	var baseClassifier_string = baseClassifier.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClassifier_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype BeliefAgent using native objects.
+*/ 
+operation Classifier toJsonBeliefAgent() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Package annotated with BeliefAgent.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package BeliefAgentsAsSequenceOfPackage() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefAgent()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Package annotated with BeliefAgent.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONBeliefAgentsAsSequenceOfPackage() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefAgent()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Package from the applied Stereotype BeliefAgent
+
+operation BeliefAgent getBasePackageOfBeliefAgent() : Package{
+	var basePackage = new BeliefAgent;
+	basePackage = self.base_Package;
+	return basePackage;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Package from the applied Stereotype BeliefAgent
+
+operation BeliefAgent JSONgetBasePackageOfBeliefAgent() : String {
+	var basePackage = new BeliefAgent;
+	basePackage = self.base_Package;
+	
+	var basePackage_string = basePackage.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(basePackage_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype BeliefAgent using native objects.
+*/ 
+operation Package toJsonBeliefAgent() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype BeliefAgent
+ 
+operation BeliefAgent getBaseElementOfBeliefAgentDeprecated() : Element{
+	var baseElement = new BeliefAgent;
+
+	
+	if(not self.base_Classifier.isUndefined()){
+		baseElement = self.base_Classifier;
+	}
+	
+	if(not self.base_Package.isUndefined()){
+		baseElement = self.base_Package;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype BeliefAgent using UMLUtil native object
+*/ 
+operation BeliefAgent getBaseElementOfBeliefAgent() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype BeliefAgent using UMLUtil native object
+*/ 
+//operation BeliefAgent toJsonBeliefAgent() : String {
+operation toJsonBeliefAgent() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with BeliefAgent.
+*/ 
+operation Element isBeliefAgent() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isBeliefAgent() : Boolean in BeliefAgent.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "BeliefAgent");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in BeliefAgent.
+*/ 
+operation BeliefAgent getAllAttributesOfBeliefAgent() : Sequence(Property){
+	var stereotypeAttr = BeliefAgent.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of beliefStatement of stereotype BeliefAgent.
+*/ 
+operation Element getBeliefStatementOfBeliefAgentAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefAgent"), "beliefStatement");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of beliefStatement of stereotype BeliefAgent is empty.
+*/ 
+operation Element isBeliefStatementOfBeliefAgentEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefAgent"), "beliefStatement");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}

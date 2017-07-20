@@ -1,0 +1,893 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of Element annotated with StorageUncertainty.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package StorageUncertaintysAsSequenceOfElement() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isStorageUncertainty()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Element annotated with StorageUncertainty.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONStorageUncertaintysAsSequenceOfElement() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isStorageUncertainty()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Element from the applied Stereotype StorageUncertainty
+
+operation StorageUncertainty getBaseElementOfStorageUncertainty() : Element{
+	var baseElement = new StorageUncertainty;
+	baseElement = self.base_Element;
+	return baseElement;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Element from the applied Stereotype StorageUncertainty
+
+operation StorageUncertainty JSONgetBaseElementOfStorageUncertainty() : String {
+	var baseElement = new StorageUncertainty;
+	baseElement = self.base_Element;
+	
+	var baseElement_string = baseElement.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype StorageUncertainty using native objects.
+*/ 
+operation Element toJsonStorageUncertainty() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Classifier annotated with StorageUncertainty.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package StorageUncertaintysAsSequenceOfClassifier() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isStorageUncertainty()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Classifier annotated with StorageUncertainty.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONStorageUncertaintysAsSequenceOfClassifier() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isStorageUncertainty()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Classifier from the applied Stereotype StorageUncertainty
+
+operation StorageUncertainty getBaseClassifierOfStorageUncertainty() : Classifier{
+	var baseClassifier = new StorageUncertainty;
+	baseClassifier = self.base_Classifier;
+	return baseClassifier;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Classifier from the applied Stereotype StorageUncertainty
+
+operation StorageUncertainty JSONgetBaseClassifierOfStorageUncertainty() : String {
+	var baseClassifier = new StorageUncertainty;
+	baseClassifier = self.base_Classifier;
+	
+	var baseClassifier_string = baseClassifier.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClassifier_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype StorageUncertainty using native objects.
+*/ 
+operation Classifier toJsonStorageUncertainty() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype StorageUncertainty
+ 
+operation StorageUncertainty getBaseElementOfStorageUncertaintyDeprecated() : Element{
+	var baseElement = new StorageUncertainty;
+
+	
+	if(not self.base_Element.isUndefined()){
+		baseElement = self.base_Element;
+	}
+	
+	if(not self.base_Classifier.isUndefined()){
+		baseElement = self.base_Classifier;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype StorageUncertainty using UMLUtil native object
+*/ 
+operation StorageUncertainty getBaseElementOfStorageUncertainty() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype StorageUncertainty using UMLUtil native object
+*/ 
+//operation StorageUncertainty toJsonStorageUncertainty() : String {
+operation toJsonStorageUncertainty() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with StorageUncertainty.
+*/ 
+operation Element isStorageUncertainty() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isStorageUncertainty() : Boolean in StorageUncertainty.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "StorageUncertainty");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in StorageUncertainty.
+*/ 
+operation StorageUncertainty getAllAttributesOfStorageUncertainty() : Sequence(Property){
+	var stereotypeAttr = StorageUncertainty.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of description of stereotype StorageUncertainty.
+*/ 
+operation Element getDescriptionOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of cause_type of stereotype StorageUncertainty.
+*/ 
+operation Element getCause_typeOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "cause_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of effect_propagation_type of stereotype StorageUncertainty.
+*/ 
+operation Element getEffect_propagation_typeOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "effect_propagation_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of functional_dimensionality_type of stereotype StorageUncertainty.
+*/ 
+operation Element getFunctional_dimensionality_typeOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "functional_dimensionality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of locality_type of stereotype StorageUncertainty.
+*/ 
+operation Element getLocality_typeOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "locality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of non_functional_dimensionality_type of stereotype StorageUncertainty.
+*/ 
+operation Element getNon_functional_dimensionality_typeOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "non_functional_dimensionality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of observation_time_type of stereotype StorageUncertainty.
+*/ 
+operation Element getObservation_time_typeOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "observation_time_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of temporal_manifestation_type of stereotype StorageUncertainty.
+*/ 
+operation Element getTemporal_manifestation_typeOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "temporal_manifestation_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of cause of stereotype StorageUncertainty.
+*/ 
+operation Element getCauseOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "cause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of effect of stereotype StorageUncertainty.
+*/ 
+operation Element getEffectOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "effect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of field of stereotype StorageUncertainty.
+*/ 
+operation Element getFieldOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "field");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of from of stereotype StorageUncertainty.
+*/ 
+operation Element getFromOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "from");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of kind of stereotype StorageUncertainty.
+*/ 
+operation Element getKindOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "kind");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of lifeTime of stereotype StorageUncertainty.
+*/ 
+operation Element getLifeTimeOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "lifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of locality of stereotype StorageUncertainty.
+*/ 
+operation Element getLocalityOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "locality");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of pattern of stereotype StorageUncertainty.
+*/ 
+operation Element getPatternOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "pattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredCause of stereotype StorageUncertainty.
+*/ 
+operation Element getReferredCauseOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "referredCause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredEffect of stereotype StorageUncertainty.
+*/ 
+operation Element getReferredEffectOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "referredEffect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredIndeterminacySource of stereotype StorageUncertainty.
+*/ 
+operation Element getReferredIndeterminacySourceOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "referredIndeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredLifeTime of stereotype StorageUncertainty.
+*/ 
+operation Element getReferredLifeTimeOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "referredLifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredPattern of stereotype StorageUncertainty.
+*/ 
+operation Element getReferredPatternOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "referredPattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of risk of stereotype StorageUncertainty.
+*/ 
+operation Element getRiskOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "risk");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of riskInDT of stereotype StorageUncertainty.
+*/ 
+operation Element getRiskInDTOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "riskInDT");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of riskInDTViaClass of stereotype StorageUncertainty.
+*/ 
+operation Element getRiskInDTViaClassOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "riskInDTViaClass");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of riskLevel of stereotype StorageUncertainty.
+*/ 
+operation Element getRiskLevelOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "riskLevel");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of uncertaintyMeasurement of stereotype StorageUncertainty.
+*/ 
+operation Element getUncertaintyMeasurementOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "uncertaintyMeasurement");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of indeterminacySource of stereotype StorageUncertainty.
+*/ 
+operation Element getIndeterminacySourceOfStorageUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "indeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of description of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isDescriptionOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of cause_type of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isCause_typeOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "cause_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of effect_propagation_type of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isEffect_propagation_typeOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "effect_propagation_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of functional_dimensionality_type of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isFunctional_dimensionality_typeOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "functional_dimensionality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of locality_type of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isLocality_typeOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "locality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of non_functional_dimensionality_type of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isNon_functional_dimensionality_typeOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "non_functional_dimensionality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of observation_time_type of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isObservation_time_typeOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "observation_time_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of temporal_manifestation_type of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isTemporal_manifestation_typeOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "temporal_manifestation_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of cause of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isCauseOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "cause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of effect of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isEffectOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "effect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of field of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isFieldOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "field");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of from of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isFromOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "from");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of kind of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isKindOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "kind");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of lifeTime of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isLifeTimeOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "lifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of locality of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isLocalityOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "locality");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of pattern of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isPatternOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "pattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredCause of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isReferredCauseOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "referredCause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredEffect of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isReferredEffectOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "referredEffect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredIndeterminacySource of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isReferredIndeterminacySourceOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "referredIndeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredLifeTime of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isReferredLifeTimeOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "referredLifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredPattern of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isReferredPatternOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "referredPattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of risk of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isRiskOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "risk");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of riskInDT of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isRiskInDTOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "riskInDT");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of riskInDTViaClass of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isRiskInDTViaClassOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "riskInDTViaClass");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of riskLevel of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isRiskLevelOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "riskLevel");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of uncertaintyMeasurement of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isUncertaintyMeasurementOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "uncertaintyMeasurement");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of indeterminacySource of stereotype StorageUncertainty is empty.
+*/ 
+operation Element isIndeterminacySourceOfStorageUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("StorageUncertainty"), "indeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}

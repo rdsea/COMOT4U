@@ -1,0 +1,614 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of Class annotated with VirtualGateway.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package VirtualGatewaysAsSequenceOfClass() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isVirtualGateway()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Class annotated with VirtualGateway.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONVirtualGatewaysAsSequenceOfClass() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isVirtualGateway()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Class from the applied Stereotype VirtualGateway
+
+operation VirtualGateway getBaseClassOfVirtualGateway() : Class{
+	var baseClass = new VirtualGateway;
+	baseClass = self.base_Class;
+	return baseClass;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Class from the applied Stereotype VirtualGateway
+
+operation VirtualGateway JSONgetBaseClassOfVirtualGateway() : String {
+	var baseClass = new VirtualGateway;
+	baseClass = self.base_Class;
+	
+	var baseClass_string = baseClass.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClass_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype VirtualGateway using native objects.
+*/ 
+operation Class toJsonVirtualGateway() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with VirtualGateway.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package VirtualGatewaysAsSequenceOfInstanceSpecification() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isVirtualGateway()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of InstanceSpecification annotated with VirtualGateway.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONVirtualGatewaysAsSequenceOfInstanceSpecification() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isVirtualGateway()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type InstanceSpecification from the applied Stereotype VirtualGateway
+
+operation VirtualGateway getBaseInstanceSpecificationOfVirtualGateway() : InstanceSpecification{
+	var baseInstanceSpecification = new VirtualGateway;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	return baseInstanceSpecification;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type InstanceSpecification from the applied Stereotype VirtualGateway
+
+operation VirtualGateway JSONgetBaseInstanceSpecificationOfVirtualGateway() : String {
+	var baseInstanceSpecification = new VirtualGateway;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	
+	var baseInstanceSpecification_string = baseInstanceSpecification.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseInstanceSpecification_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype VirtualGateway using native objects.
+*/ 
+operation InstanceSpecification toJsonVirtualGateway() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Node annotated with VirtualGateway.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package VirtualGatewaysAsSequenceOfNode() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isVirtualGateway()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Node annotated with VirtualGateway.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONVirtualGatewaysAsSequenceOfNode() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isVirtualGateway()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Node from the applied Stereotype VirtualGateway
+
+operation VirtualGateway getBaseNodeOfVirtualGateway() : Node{
+	var baseNode = new VirtualGateway;
+	baseNode = self.base_Node;
+	return baseNode;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Node from the applied Stereotype VirtualGateway
+
+operation VirtualGateway JSONgetBaseNodeOfVirtualGateway() : String {
+	var baseNode = new VirtualGateway;
+	baseNode = self.base_Node;
+	
+	var baseNode_string = baseNode.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseNode_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype VirtualGateway using native objects.
+*/ 
+operation Node toJsonVirtualGateway() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype VirtualGateway
+ 
+operation VirtualGateway getBaseElementOfVirtualGatewayDeprecated() : Element{
+	var baseElement = new VirtualGateway;
+
+	
+	if(not self.base_Class.isUndefined()){
+		baseElement = self.base_Class;
+	}
+	
+	if(not self.base_InstanceSpecification.isUndefined()){
+		baseElement = self.base_InstanceSpecification;
+	}
+	
+	if(not self.base_Node.isUndefined()){
+		baseElement = self.base_Node;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype VirtualGateway using UMLUtil native object
+*/ 
+operation VirtualGateway getBaseElementOfVirtualGateway() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype VirtualGateway using UMLUtil native object
+*/ 
+//operation VirtualGateway toJsonVirtualGateway() : String {
+operation toJsonVirtualGateway() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with VirtualGateway.
+*/ 
+operation Element isVirtualGateway() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isVirtualGateway() : Boolean in VirtualGateway.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "VirtualGateway");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in VirtualGateway.
+*/ 
+operation VirtualGateway getAllAttributesOfVirtualGateway() : Sequence(Property){
+	var stereotypeAttr = VirtualGateway.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of virtualActuators of stereotype VirtualGateway.
+*/ 
+operation Element getVirtualActuatorsOfVirtualGatewayAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "virtualActuators");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of virtualSensors of stereotype VirtualGateway.
+*/ 
+operation Element getVirtualSensorsOfVirtualGatewayAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "virtualSensors");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of ownedVirtualUnits of stereotype VirtualGateway.
+*/ 
+operation Element getOwnedVirtualUnitsOfVirtualGatewayAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "ownedVirtualUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of deployedOn of stereotype VirtualGateway.
+*/ 
+operation Element getDeployedOnOfVirtualGatewayAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "deployedOn");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of id of stereotype VirtualGateway.
+*/ 
+operation Element getIdOfVirtualGatewayAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of location of stereotype VirtualGateway.
+*/ 
+operation Element getLocationOfVirtualGatewayAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "location");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of description of stereotype VirtualGateway.
+*/ 
+operation Element getDescriptionOfVirtualGatewayAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of ownedUnits of stereotype VirtualGateway.
+*/ 
+operation Element getOwnedUnitsOfVirtualGatewayAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "ownedUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of hasTimestampMechanism of stereotype VirtualGateway.
+*/ 
+operation Element getHasTimestampMechanismOfVirtualGatewayAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "hasTimestampMechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of timestampMaxLatency of stereotype VirtualGateway.
+*/ 
+operation Element getTimestampMaxLatencyOfVirtualGatewayAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "timestampMaxLatency");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of isSafetyCritical of stereotype VirtualGateway.
+*/ 
+operation Element getIsSafetyCriticalOfVirtualGatewayAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "isSafetyCritical");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of infrastructureInterface of stereotype VirtualGateway.
+*/ 
+operation Element getInfrastructureInterfaceOfVirtualGatewayAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "infrastructureInterface");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of virtualActuators of stereotype VirtualGateway is empty.
+*/ 
+operation Element isVirtualActuatorsOfVirtualGatewayEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "virtualActuators");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of virtualSensors of stereotype VirtualGateway is empty.
+*/ 
+operation Element isVirtualSensorsOfVirtualGatewayEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "virtualSensors");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of ownedVirtualUnits of stereotype VirtualGateway is empty.
+*/ 
+operation Element isOwnedVirtualUnitsOfVirtualGatewayEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "ownedVirtualUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of deployedOn of stereotype VirtualGateway is empty.
+*/ 
+operation Element isDeployedOnOfVirtualGatewayEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "deployedOn");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of id of stereotype VirtualGateway is empty.
+*/ 
+operation Element isIdOfVirtualGatewayEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of location of stereotype VirtualGateway is empty.
+*/ 
+operation Element isLocationOfVirtualGatewayEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "location");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of description of stereotype VirtualGateway is empty.
+*/ 
+operation Element isDescriptionOfVirtualGatewayEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of ownedUnits of stereotype VirtualGateway is empty.
+*/ 
+operation Element isOwnedUnitsOfVirtualGatewayEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "ownedUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of hasTimestampMechanism of stereotype VirtualGateway is empty.
+*/ 
+operation Element isHasTimestampMechanismOfVirtualGatewayEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "hasTimestampMechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of timestampMaxLatency of stereotype VirtualGateway is empty.
+*/ 
+operation Element isTimestampMaxLatencyOfVirtualGatewayEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "timestampMaxLatency");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of isSafetyCritical of stereotype VirtualGateway is empty.
+*/ 
+operation Element isIsSafetyCriticalOfVirtualGatewayEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "isSafetyCritical");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of infrastructureInterface of stereotype VirtualGateway is empty.
+*/ 
+operation Element isInfrastructureInterfaceOfVirtualGatewayEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualGateway"), "infrastructureInterface");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}

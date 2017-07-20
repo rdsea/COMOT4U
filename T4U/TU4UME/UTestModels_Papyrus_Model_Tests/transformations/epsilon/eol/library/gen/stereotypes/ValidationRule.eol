@@ -1,0 +1,380 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of Constraint annotated with ValidationRule.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package ValidationRulesAsSequenceOfConstraint() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isValidationRule()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Constraint annotated with ValidationRule.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONValidationRulesAsSequenceOfConstraint() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isValidationRule()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Constraint from the applied Stereotype ValidationRule
+
+operation ValidationRule getBaseConstraintOfValidationRule() : Constraint{
+	var baseConstraint = new ValidationRule;
+	baseConstraint = self.base_Constraint;
+	return baseConstraint;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Constraint from the applied Stereotype ValidationRule
+
+operation ValidationRule JSONgetBaseConstraintOfValidationRule() : String {
+	var baseConstraint = new ValidationRule;
+	baseConstraint = self.base_Constraint;
+	
+	var baseConstraint_string = baseConstraint.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseConstraint_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype ValidationRule using native objects.
+*/ 
+operation Constraint toJsonValidationRule() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype ValidationRule
+ 
+operation ValidationRule getBaseElementOfValidationRuleDeprecated() : Element{
+	var baseElement = new ValidationRule;
+
+	
+	if(not self.base_Constraint.isUndefined()){
+		baseElement = self.base_Constraint;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype ValidationRule using UMLUtil native object
+*/ 
+operation ValidationRule getBaseElementOfValidationRule() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype ValidationRule using UMLUtil native object
+*/ 
+//operation ValidationRule toJsonValidationRule() : String {
+operation toJsonValidationRule() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with ValidationRule.
+*/ 
+operation Element isValidationRule() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isValidationRule() : Boolean in ValidationRule.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "ValidationRule");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in ValidationRule.
+*/ 
+operation ValidationRule getAllAttributesOfValidationRule() : Sequence(Property){
+	var stereotypeAttr = ValidationRule.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of severity of stereotype ValidationRule.
+*/ 
+operation Element getSeverityOfValidationRuleAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "severity");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of mode of stereotype ValidationRule.
+*/ 
+operation Element getModeOfValidationRuleAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "mode");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of isEnabledByDefault of stereotype ValidationRule.
+*/ 
+operation Element getIsEnabledByDefaultOfValidationRuleAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "isEnabledByDefault");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of statusCode of stereotype ValidationRule.
+*/ 
+operation Element getStatusCodeOfValidationRuleAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "statusCode");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of message of stereotype ValidationRule.
+*/ 
+operation Element getMessageOfValidationRuleAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "message");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of description of stereotype ValidationRule.
+*/ 
+operation Element getDescriptionOfValidationRuleAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of target of stereotype ValidationRule.
+*/ 
+operation Element getTargetOfValidationRuleAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "target");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of class of stereotype ValidationRule.
+*/ 
+operation Element getClassOfValidationRuleAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "class");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of id of stereotype ValidationRule.
+*/ 
+operation Element getIdOfValidationRuleAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of severity of stereotype ValidationRule is empty.
+*/ 
+operation Element isSeverityOfValidationRuleEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "severity");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of mode of stereotype ValidationRule is empty.
+*/ 
+operation Element isModeOfValidationRuleEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "mode");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of isEnabledByDefault of stereotype ValidationRule is empty.
+*/ 
+operation Element isIsEnabledByDefaultOfValidationRuleEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "isEnabledByDefault");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of statusCode of stereotype ValidationRule is empty.
+*/ 
+operation Element isStatusCodeOfValidationRuleEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "statusCode");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of message of stereotype ValidationRule is empty.
+*/ 
+operation Element isMessageOfValidationRuleEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "message");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of description of stereotype ValidationRule is empty.
+*/ 
+operation Element isDescriptionOfValidationRuleEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of target of stereotype ValidationRule is empty.
+*/ 
+operation Element isTargetOfValidationRuleEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "target");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of class of stereotype ValidationRule is empty.
+*/ 
+operation Element isClassOfValidationRuleEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "class");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of id of stereotype ValidationRule is empty.
+*/ 
+operation Element isIdOfValidationRuleEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ValidationRule"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}

@@ -1,0 +1,29 @@
+import "../../element.eol";
+
+operation SupportedCommunicationProtocols getMQTT() : String {
+	var MQTT = "MQTT";
+	return MQTT;
+}
+operation SupportedCommunicationProtocols getHTTP() : String {
+	var HTTP = "HTTP";
+	return HTTP;
+}
+operation SupportedCommunicationProtocols getTCP() : String {
+	var TCP = "TCP";
+	return TCP;
+}
+operation SupportedCommunicationProtocols getUDP() : String {
+	var UDP = "UDP";
+	return UDP;
+}
+operation SupportedCommunicationProtocols getAMQP() : String {
+	var AMQP = "AMQP";
+	return AMQP;
+}
+operation SupportedCommunicationProtocols getSTOMP() : String {
+	var STOMP = "STOMP";
+	return STOMP;
+}
+
+
+

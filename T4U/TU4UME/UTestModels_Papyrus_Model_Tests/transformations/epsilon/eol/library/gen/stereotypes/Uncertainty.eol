@@ -1,0 +1,620 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of Classifier annotated with Uncertainty.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package UncertaintysAsSequenceOfClassifier() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isUncertainty()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Classifier annotated with Uncertainty.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONUncertaintysAsSequenceOfClassifier() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isUncertainty()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Classifier from the applied Stereotype Uncertainty
+
+operation Uncertainty getBaseClassifierOfUncertainty() : Classifier{
+	var baseClassifier = new Uncertainty;
+	baseClassifier = self.base_Classifier;
+	return baseClassifier;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Classifier from the applied Stereotype Uncertainty
+
+operation Uncertainty JSONgetBaseClassifierOfUncertainty() : String {
+	var baseClassifier = new Uncertainty;
+	baseClassifier = self.base_Classifier;
+	
+	var baseClassifier_string = baseClassifier.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClassifier_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype Uncertainty using native objects.
+*/ 
+operation Classifier toJsonUncertainty() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype Uncertainty
+ 
+operation Uncertainty getBaseElementOfUncertaintyDeprecated() : Element{
+	var baseElement = new Uncertainty;
+
+	
+	if(not self.base_Classifier.isUndefined()){
+		baseElement = self.base_Classifier;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype Uncertainty using UMLUtil native object
+*/ 
+operation Uncertainty getBaseElementOfUncertainty() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype Uncertainty using UMLUtil native object
+*/ 
+//operation Uncertainty toJsonUncertainty() : String {
+operation toJsonUncertainty() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with Uncertainty.
+*/ 
+operation Element isUncertainty() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isUncertainty() : Boolean in Uncertainty.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "Uncertainty");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in Uncertainty.
+*/ 
+operation Uncertainty getAllAttributesOfUncertainty() : Sequence(Property){
+	var stereotypeAttr = Uncertainty.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of cause of stereotype Uncertainty.
+*/ 
+operation Element getCauseOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "cause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of effect of stereotype Uncertainty.
+*/ 
+operation Element getEffectOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "effect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of field of stereotype Uncertainty.
+*/ 
+operation Element getFieldOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "field");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of from of stereotype Uncertainty.
+*/ 
+operation Element getFromOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "from");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of kind of stereotype Uncertainty.
+*/ 
+operation Element getKindOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "kind");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of lifeTime of stereotype Uncertainty.
+*/ 
+operation Element getLifeTimeOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "lifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of locality of stereotype Uncertainty.
+*/ 
+operation Element getLocalityOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "locality");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of pattern of stereotype Uncertainty.
+*/ 
+operation Element getPatternOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "pattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredCause of stereotype Uncertainty.
+*/ 
+operation Element getReferredCauseOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "referredCause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredEffect of stereotype Uncertainty.
+*/ 
+operation Element getReferredEffectOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "referredEffect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredIndeterminacySource of stereotype Uncertainty.
+*/ 
+operation Element getReferredIndeterminacySourceOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "referredIndeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredLifeTime of stereotype Uncertainty.
+*/ 
+operation Element getReferredLifeTimeOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "referredLifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredPattern of stereotype Uncertainty.
+*/ 
+operation Element getReferredPatternOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "referredPattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of risk of stereotype Uncertainty.
+*/ 
+operation Element getRiskOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "risk");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of riskInDT of stereotype Uncertainty.
+*/ 
+operation Element getRiskInDTOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "riskInDT");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of riskInDTViaClass of stereotype Uncertainty.
+*/ 
+operation Element getRiskInDTViaClassOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "riskInDTViaClass");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of riskLevel of stereotype Uncertainty.
+*/ 
+operation Element getRiskLevelOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "riskLevel");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of uncertaintyMeasurement of stereotype Uncertainty.
+*/ 
+operation Element getUncertaintyMeasurementOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "uncertaintyMeasurement");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of indeterminacySource of stereotype Uncertainty.
+*/ 
+operation Element getIndeterminacySourceOfUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "indeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of cause of stereotype Uncertainty is empty.
+*/ 
+operation Element isCauseOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "cause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of effect of stereotype Uncertainty is empty.
+*/ 
+operation Element isEffectOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "effect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of field of stereotype Uncertainty is empty.
+*/ 
+operation Element isFieldOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "field");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of from of stereotype Uncertainty is empty.
+*/ 
+operation Element isFromOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "from");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of kind of stereotype Uncertainty is empty.
+*/ 
+operation Element isKindOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "kind");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of lifeTime of stereotype Uncertainty is empty.
+*/ 
+operation Element isLifeTimeOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "lifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of locality of stereotype Uncertainty is empty.
+*/ 
+operation Element isLocalityOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "locality");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of pattern of stereotype Uncertainty is empty.
+*/ 
+operation Element isPatternOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "pattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredCause of stereotype Uncertainty is empty.
+*/ 
+operation Element isReferredCauseOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "referredCause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredEffect of stereotype Uncertainty is empty.
+*/ 
+operation Element isReferredEffectOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "referredEffect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredIndeterminacySource of stereotype Uncertainty is empty.
+*/ 
+operation Element isReferredIndeterminacySourceOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "referredIndeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredLifeTime of stereotype Uncertainty is empty.
+*/ 
+operation Element isReferredLifeTimeOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "referredLifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredPattern of stereotype Uncertainty is empty.
+*/ 
+operation Element isReferredPatternOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "referredPattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of risk of stereotype Uncertainty is empty.
+*/ 
+operation Element isRiskOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "risk");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of riskInDT of stereotype Uncertainty is empty.
+*/ 
+operation Element isRiskInDTOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "riskInDT");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of riskInDTViaClass of stereotype Uncertainty is empty.
+*/ 
+operation Element isRiskInDTViaClassOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "riskInDTViaClass");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of riskLevel of stereotype Uncertainty is empty.
+*/ 
+operation Element isRiskLevelOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "riskLevel");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of uncertaintyMeasurement of stereotype Uncertainty is empty.
+*/ 
+operation Element isUncertaintyMeasurementOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "uncertaintyMeasurement");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of indeterminacySource of stereotype Uncertainty is empty.
+*/ 
+operation Element isIndeterminacySourceOfUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Uncertainty"), "indeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}

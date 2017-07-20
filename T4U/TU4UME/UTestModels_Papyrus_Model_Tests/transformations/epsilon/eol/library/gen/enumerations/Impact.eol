@@ -1,0 +1,17 @@
+import "../../element.eol";
+
+operation Impact getStrong() : String {
+	var Strong = "Strong";
+	return Strong;
+}
+operation Impact getAverage() : String {
+	var Average = "Average";
+	return Average;
+}
+operation Impact getWeak() : String {
+	var Weak = "Weak";
+	return Weak;
+}
+
+
+

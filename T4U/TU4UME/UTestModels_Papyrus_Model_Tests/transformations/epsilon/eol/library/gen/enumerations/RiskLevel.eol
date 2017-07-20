@@ -1,0 +1,21 @@
+import "../../element.eol";
+
+operation RiskLevel getLow() : String {
+	var Low = "Low";
+	return Low;
+}
+operation RiskLevel getMedium() : String {
+	var Medium = "Medium";
+	return Medium;
+}
+operation RiskLevel getHigh() : String {
+	var High = "High";
+	return High;
+}
+operation RiskLevel getExtreme() : String {
+	var Extreme = "Extreme";
+	return Extreme;
+}
+
+
+

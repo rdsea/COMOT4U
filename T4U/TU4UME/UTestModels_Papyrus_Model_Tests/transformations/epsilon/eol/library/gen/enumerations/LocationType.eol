@@ -1,0 +1,21 @@
+import "../../element.eol";
+
+operation LocationType getHardware() : String {
+	var Hardware = "Hardware";
+	return Hardware;
+}
+operation LocationType getPlatform() : String {
+	var Platform = "Platform";
+	return Platform;
+}
+operation LocationType getExternal() : String {
+	var External = "External";
+	return External;
+}
+operation LocationType getHuman() : String {
+	var Human = "Human";
+	return Human;
+}
+
+
+

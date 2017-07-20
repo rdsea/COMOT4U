@@ -1,0 +1,25 @@
+import "../../element.eol";
+
+operation IODeviceType getTouchScreen() : String {
+	var TouchScreen = "TouchScreen";
+	return TouchScreen;
+}
+operation IODeviceType getCamera() : String {
+	var Camera = "Camera";
+	return Camera;
+}
+operation IODeviceType getGPSchip() : String {
+	var GPSchip = "GPSchip";
+	return GPSchip;
+}
+operation IODeviceType getSpeaker() : String {
+	var Speaker = "Speaker";
+	return Speaker;
+}
+operation IODeviceType getMicrophone() : String {
+	var Microphone = "Microphone";
+	return Microphone;
+}
+
+
+

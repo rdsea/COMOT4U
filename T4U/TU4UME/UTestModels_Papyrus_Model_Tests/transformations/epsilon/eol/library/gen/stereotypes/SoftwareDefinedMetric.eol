@@ -1,0 +1,542 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of Class annotated with SoftwareDefinedMetric.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package SoftwareDefinedMetricsAsSequenceOfClass() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isSoftwareDefinedMetric()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Class annotated with SoftwareDefinedMetric.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONSoftwareDefinedMetricsAsSequenceOfClass() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isSoftwareDefinedMetric()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Class from the applied Stereotype SoftwareDefinedMetric
+
+operation SoftwareDefinedMetric getBaseClassOfSoftwareDefinedMetric() : Class{
+	var baseClass = new SoftwareDefinedMetric;
+	baseClass = self.base_Class;
+	return baseClass;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Class from the applied Stereotype SoftwareDefinedMetric
+
+operation SoftwareDefinedMetric JSONgetBaseClassOfSoftwareDefinedMetric() : String {
+	var baseClass = new SoftwareDefinedMetric;
+	baseClass = self.base_Class;
+	
+	var baseClass_string = baseClass.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClass_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype SoftwareDefinedMetric using native objects.
+*/ 
+operation Class toJsonSoftwareDefinedMetric() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with SoftwareDefinedMetric.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package SoftwareDefinedMetricsAsSequenceOfInstanceSpecification() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isSoftwareDefinedMetric()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of InstanceSpecification annotated with SoftwareDefinedMetric.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONSoftwareDefinedMetricsAsSequenceOfInstanceSpecification() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isSoftwareDefinedMetric()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type InstanceSpecification from the applied Stereotype SoftwareDefinedMetric
+
+operation SoftwareDefinedMetric getBaseInstanceSpecificationOfSoftwareDefinedMetric() : InstanceSpecification{
+	var baseInstanceSpecification = new SoftwareDefinedMetric;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	return baseInstanceSpecification;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type InstanceSpecification from the applied Stereotype SoftwareDefinedMetric
+
+operation SoftwareDefinedMetric JSONgetBaseInstanceSpecificationOfSoftwareDefinedMetric() : String {
+	var baseInstanceSpecification = new SoftwareDefinedMetric;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	
+	var baseInstanceSpecification_string = baseInstanceSpecification.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseInstanceSpecification_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype SoftwareDefinedMetric using native objects.
+*/ 
+operation InstanceSpecification toJsonSoftwareDefinedMetric() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Operation annotated with SoftwareDefinedMetric.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package SoftwareDefinedMetricsAsSequenceOfOperation() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isSoftwareDefinedMetric()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Operation annotated with SoftwareDefinedMetric.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONSoftwareDefinedMetricsAsSequenceOfOperation() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isSoftwareDefinedMetric()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Operation from the applied Stereotype SoftwareDefinedMetric
+
+operation SoftwareDefinedMetric getBaseOperationOfSoftwareDefinedMetric() : Operation{
+	var baseOperation = new SoftwareDefinedMetric;
+	baseOperation = self.base_Operation;
+	return baseOperation;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Operation from the applied Stereotype SoftwareDefinedMetric
+
+operation SoftwareDefinedMetric JSONgetBaseOperationOfSoftwareDefinedMetric() : String {
+	var baseOperation = new SoftwareDefinedMetric;
+	baseOperation = self.base_Operation;
+	
+	var baseOperation_string = baseOperation.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseOperation_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype SoftwareDefinedMetric using native objects.
+*/ 
+operation Operation toJsonSoftwareDefinedMetric() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype SoftwareDefinedMetric
+ 
+operation SoftwareDefinedMetric getBaseElementOfSoftwareDefinedMetricDeprecated() : Element{
+	var baseElement = new SoftwareDefinedMetric;
+
+	
+	if(not self.base_Class.isUndefined()){
+		baseElement = self.base_Class;
+	}
+	
+	if(not self.base_InstanceSpecification.isUndefined()){
+		baseElement = self.base_InstanceSpecification;
+	}
+	
+	if(not self.base_Operation.isUndefined()){
+		baseElement = self.base_Operation;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype SoftwareDefinedMetric using UMLUtil native object
+*/ 
+operation SoftwareDefinedMetric getBaseElementOfSoftwareDefinedMetric() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype SoftwareDefinedMetric using UMLUtil native object
+*/ 
+//operation SoftwareDefinedMetric toJsonSoftwareDefinedMetric() : String {
+operation toJsonSoftwareDefinedMetric() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with SoftwareDefinedMetric.
+*/ 
+operation Element isSoftwareDefinedMetric() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isSoftwareDefinedMetric() : Boolean in SoftwareDefinedMetric.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "SoftwareDefinedMetric");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in SoftwareDefinedMetric.
+*/ 
+operation SoftwareDefinedMetric getAllAttributesOfSoftwareDefinedMetric() : Sequence(Property){
+	var stereotypeAttr = SoftwareDefinedMetric.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of measuredProperty of stereotype SoftwareDefinedMetric.
+*/ 
+operation Element getMeasuredPropertyOfSoftwareDefinedMetricAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "measuredProperty");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of measurementProtocol of stereotype SoftwareDefinedMetric.
+*/ 
+operation Element getMeasurementProtocolOfSoftwareDefinedMetricAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "measurementProtocol");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of endpoint of stereotype SoftwareDefinedMetric.
+*/ 
+operation Element getEndpointOfSoftwareDefinedMetricAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "endpoint");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of description of stereotype SoftwareDefinedMetric.
+*/ 
+operation Element getDescriptionOfSoftwareDefinedMetricAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of period of stereotype SoftwareDefinedMetric.
+*/ 
+operation Element getPeriodOfSoftwareDefinedMetricAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "period");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of id of stereotype SoftwareDefinedMetric.
+*/ 
+operation Element getIdOfSoftwareDefinedMetricAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of quantity of stereotype SoftwareDefinedMetric.
+*/ 
+operation Element getQuantityOfSoftwareDefinedMetricAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "quantity");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of unit of stereotype SoftwareDefinedMetric.
+*/ 
+operation Element getUnitOfSoftwareDefinedMetricAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "unit");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of infrastructure_level_uncertainty of stereotype SoftwareDefinedMetric.
+*/ 
+operation Element getInfrastructure_level_uncertaintyOfSoftwareDefinedMetricAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "infrastructure_level_uncertainty");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of measuredProperty of stereotype SoftwareDefinedMetric is empty.
+*/ 
+operation Element isMeasuredPropertyOfSoftwareDefinedMetricEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "measuredProperty");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of measurementProtocol of stereotype SoftwareDefinedMetric is empty.
+*/ 
+operation Element isMeasurementProtocolOfSoftwareDefinedMetricEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "measurementProtocol");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of endpoint of stereotype SoftwareDefinedMetric is empty.
+*/ 
+operation Element isEndpointOfSoftwareDefinedMetricEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "endpoint");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of description of stereotype SoftwareDefinedMetric is empty.
+*/ 
+operation Element isDescriptionOfSoftwareDefinedMetricEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of period of stereotype SoftwareDefinedMetric is empty.
+*/ 
+operation Element isPeriodOfSoftwareDefinedMetricEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "period");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of id of stereotype SoftwareDefinedMetric is empty.
+*/ 
+operation Element isIdOfSoftwareDefinedMetricEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of quantity of stereotype SoftwareDefinedMetric is empty.
+*/ 
+operation Element isQuantityOfSoftwareDefinedMetricEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "quantity");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of unit of stereotype SoftwareDefinedMetric is empty.
+*/ 
+operation Element isUnitOfSoftwareDefinedMetricEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "unit");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of infrastructure_level_uncertainty of stereotype SoftwareDefinedMetric is empty.
+*/ 
+operation Element isInfrastructure_level_uncertaintyOfSoftwareDefinedMetricEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedMetric"), "infrastructure_level_uncertainty");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}

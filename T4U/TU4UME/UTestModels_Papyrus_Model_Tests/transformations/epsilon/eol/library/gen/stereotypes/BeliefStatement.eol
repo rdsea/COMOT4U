@@ -1,0 +1,380 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of Classifier annotated with BeliefStatement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package BeliefStatementsAsSequenceOfClassifier() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefStatement()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Classifier annotated with BeliefStatement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONBeliefStatementsAsSequenceOfClassifier() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isBeliefStatement()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Classifier from the applied Stereotype BeliefStatement
+
+operation BeliefStatement getBaseClassifierOfBeliefStatement() : Classifier{
+	var baseClassifier = new BeliefStatement;
+	baseClassifier = self.base_Classifier;
+	return baseClassifier;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Classifier from the applied Stereotype BeliefStatement
+
+operation BeliefStatement JSONgetBaseClassifierOfBeliefStatement() : String {
+	var baseClassifier = new BeliefStatement;
+	baseClassifier = self.base_Classifier;
+	
+	var baseClassifier_string = baseClassifier.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClassifier_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype BeliefStatement using native objects.
+*/ 
+operation Classifier toJsonBeliefStatement() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype BeliefStatement
+ 
+operation BeliefStatement getBaseElementOfBeliefStatementDeprecated() : Element{
+	var baseElement = new BeliefStatement;
+
+	
+	if(not self.base_Classifier.isUndefined()){
+		baseElement = self.base_Classifier;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype BeliefStatement using UMLUtil native object
+*/ 
+operation BeliefStatement getBaseElementOfBeliefStatement() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype BeliefStatement using UMLUtil native object
+*/ 
+//operation BeliefStatement toJsonBeliefStatement() : String {
+operation toJsonBeliefStatement() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with BeliefStatement.
+*/ 
+operation Element isBeliefStatement() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isBeliefStatement() : Boolean in BeliefStatement.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "BeliefStatement");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in BeliefStatement.
+*/ 
+operation BeliefStatement getAllAttributesOfBeliefStatement() : Sequence(Property){
+	var stereotypeAttr = BeliefStatement.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of uncertainty of stereotype BeliefStatement.
+*/ 
+operation Element getUncertaintyOfBeliefStatementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "uncertainty");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of agent of stereotype BeliefStatement.
+*/ 
+operation Element getAgentOfBeliefStatementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "agent");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of from of stereotype BeliefStatement.
+*/ 
+operation Element getFromOfBeliefStatementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "from");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of duration of stereotype BeliefStatement.
+*/ 
+operation Element getDurationOfBeliefStatementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "duration");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of beliefDegree of stereotype BeliefStatement.
+*/ 
+operation Element getBeliefDegreeOfBeliefStatementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "beliefDegree");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of prerequisites of stereotype BeliefStatement.
+*/ 
+operation Element getPrerequisitesOfBeliefStatementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "prerequisites");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of substatements of stereotype BeliefStatement.
+*/ 
+operation Element getSubstatementsOfBeliefStatementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "substatements");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of beliefAgent of stereotype BeliefStatement.
+*/ 
+operation Element getBeliefAgentOfBeliefStatementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "beliefAgent");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of uncertainties of stereotype BeliefStatement.
+*/ 
+operation Element getUncertaintiesOfBeliefStatementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "uncertainties");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of uncertainty of stereotype BeliefStatement is empty.
+*/ 
+operation Element isUncertaintyOfBeliefStatementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "uncertainty");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of agent of stereotype BeliefStatement is empty.
+*/ 
+operation Element isAgentOfBeliefStatementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "agent");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of from of stereotype BeliefStatement is empty.
+*/ 
+operation Element isFromOfBeliefStatementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "from");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of duration of stereotype BeliefStatement is empty.
+*/ 
+operation Element isDurationOfBeliefStatementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "duration");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of beliefDegree of stereotype BeliefStatement is empty.
+*/ 
+operation Element isBeliefDegreeOfBeliefStatementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "beliefDegree");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of prerequisites of stereotype BeliefStatement is empty.
+*/ 
+operation Element isPrerequisitesOfBeliefStatementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "prerequisites");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of substatements of stereotype BeliefStatement is empty.
+*/ 
+operation Element isSubstatementsOfBeliefStatementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "substatements");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of beliefAgent of stereotype BeliefStatement is empty.
+*/ 
+operation Element isBeliefAgentOfBeliefStatementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "beliefAgent");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of uncertainties of stereotype BeliefStatement is empty.
+*/ 
+operation Element isUncertaintiesOfBeliefStatementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("BeliefStatement"), "uncertainties");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}

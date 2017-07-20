@@ -1,0 +1,33 @@
+import "../../element.eol";
+
+operation NetworkDeviceType getGateway() : String {
+	var Gateway = "Gateway";
+	return Gateway;
+}
+operation NetworkDeviceType getRouter() : String {
+	var Router = "Router";
+	return Router;
+}
+operation NetworkDeviceType getSwitch() : String {
+	var Switch = "Switch";
+	return Switch;
+}
+operation NetworkDeviceType getBridge() : String {
+	var Bridge = "Bridge";
+	return Bridge;
+}
+operation NetworkDeviceType getHub() : String {
+	var Hub = "Hub";
+	return Hub;
+}
+operation NetworkDeviceType getRepeater() : String {
+	var Repeater = "Repeater";
+	return Repeater;
+}
+operation NetworkDeviceType getProtocolConverter() : String {
+	var ProtocolConverter = "ProtocolConverter";
+	return ProtocolConverter;
+}
+
+
+

@@ -1,0 +1,25 @@
+import "../../element.eol";
+
+operation InfrastructuralIODevice getGATEWAY() : String {
+	var GATEWAY = "GATEWAY";
+	return GATEWAY;
+}
+operation InfrastructuralIODevice getROUTER() : String {
+	var ROUTER = "ROUTER";
+	return ROUTER;
+}
+operation InfrastructuralIODevice getSWITCH() : String {
+	var SWITCH = "SWITCH";
+	return SWITCH;
+}
+operation InfrastructuralIODevice getHUB() : String {
+	var HUB = "HUB";
+	return HUB;
+}
+operation InfrastructuralIODevice getPROTOCOLCONVERTER() : String {
+	var PROTOCOLCONVERTER = "PROTOCOLCONVERTER";
+	return PROTOCOLCONVERTER;
+}
+
+
+

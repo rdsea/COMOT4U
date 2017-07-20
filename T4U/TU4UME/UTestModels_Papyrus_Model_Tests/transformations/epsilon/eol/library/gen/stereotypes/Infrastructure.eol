@@ -1,0 +1,767 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of Node annotated with Infrastructure.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package InfrastructuresAsSequenceOfNode() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInfrastructure()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Node annotated with Infrastructure.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONInfrastructuresAsSequenceOfNode() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInfrastructure()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Node from the applied Stereotype Infrastructure
+
+operation Infrastructure getBaseNodeOfInfrastructure() : Node{
+	var baseNode = new Infrastructure;
+	baseNode = self.base_Node;
+	return baseNode;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Node from the applied Stereotype Infrastructure
+
+operation Infrastructure JSONgetBaseNodeOfInfrastructure() : String {
+	var baseNode = new Infrastructure;
+	baseNode = self.base_Node;
+	
+	var baseNode_string = baseNode.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseNode_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype Infrastructure using native objects.
+*/ 
+operation Node toJsonInfrastructure() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Class annotated with Infrastructure.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package InfrastructuresAsSequenceOfClass() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInfrastructure()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Class annotated with Infrastructure.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONInfrastructuresAsSequenceOfClass() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInfrastructure()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Class from the applied Stereotype Infrastructure
+
+operation Infrastructure getBaseClassOfInfrastructure() : Class{
+	var baseClass = new Infrastructure;
+	baseClass = self.base_Class;
+	return baseClass;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Class from the applied Stereotype Infrastructure
+
+operation Infrastructure JSONgetBaseClassOfInfrastructure() : String {
+	var baseClass = new Infrastructure;
+	baseClass = self.base_Class;
+	
+	var baseClass_string = baseClass.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClass_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype Infrastructure using native objects.
+*/ 
+operation Class toJsonInfrastructure() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with Infrastructure.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package InfrastructuresAsSequenceOfInstanceSpecification() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInfrastructure()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of InstanceSpecification annotated with Infrastructure.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONInfrastructuresAsSequenceOfInstanceSpecification() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInfrastructure()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type InstanceSpecification from the applied Stereotype Infrastructure
+
+operation Infrastructure getBaseInstanceSpecificationOfInfrastructure() : InstanceSpecification{
+	var baseInstanceSpecification = new Infrastructure;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	return baseInstanceSpecification;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type InstanceSpecification from the applied Stereotype Infrastructure
+
+operation Infrastructure JSONgetBaseInstanceSpecificationOfInfrastructure() : String {
+	var baseInstanceSpecification = new Infrastructure;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	
+	var baseInstanceSpecification_string = baseInstanceSpecification.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseInstanceSpecification_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype Infrastructure using native objects.
+*/ 
+operation InstanceSpecification toJsonInfrastructure() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Package annotated with Infrastructure.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package InfrastructuresAsSequenceOfPackage() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInfrastructure()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Package annotated with Infrastructure.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONInfrastructuresAsSequenceOfPackage() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInfrastructure()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Package from the applied Stereotype Infrastructure
+
+operation Infrastructure getBasePackageOfInfrastructure() : Package{
+	var basePackage = new Infrastructure;
+	basePackage = self.base_Package;
+	return basePackage;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Package from the applied Stereotype Infrastructure
+
+operation Infrastructure JSONgetBasePackageOfInfrastructure() : String {
+	var basePackage = new Infrastructure;
+	basePackage = self.base_Package;
+	
+	var basePackage_string = basePackage.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(basePackage_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype Infrastructure using native objects.
+*/ 
+operation Package toJsonInfrastructure() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype Infrastructure
+ 
+operation Infrastructure getBaseElementOfInfrastructureDeprecated() : Element{
+	var baseElement = new Infrastructure;
+
+	
+	if(not self.base_Node.isUndefined()){
+		baseElement = self.base_Node;
+	}
+	
+	if(not self.base_Class.isUndefined()){
+		baseElement = self.base_Class;
+	}
+	
+	if(not self.base_InstanceSpecification.isUndefined()){
+		baseElement = self.base_InstanceSpecification;
+	}
+	
+	if(not self.base_Package.isUndefined()){
+		baseElement = self.base_Package;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype Infrastructure using UMLUtil native object
+*/ 
+operation Infrastructure getBaseElementOfInfrastructure() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype Infrastructure using UMLUtil native object
+*/ 
+//operation Infrastructure toJsonInfrastructure() : String {
+operation toJsonInfrastructure() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with Infrastructure.
+*/ 
+operation Element isInfrastructure() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isInfrastructure() : Boolean in Infrastructure.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "Infrastructure");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in Infrastructure.
+*/ 
+operation Infrastructure getAllAttributesOfInfrastructure() : Sequence(Property){
+	var stereotypeAttr = Infrastructure.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of description of stereotype Infrastructure.
+*/ 
+operation Element getDescriptionOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of id of stereotype Infrastructure.
+*/ 
+operation Element getIdOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of physicalUnits of stereotype Infrastructure.
+*/ 
+operation Element getPhysicalUnitsOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "physicalUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of virtualUnits of stereotype Infrastructure.
+*/ 
+operation Element getVirtualUnitsOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "virtualUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of infrastructureElements of stereotype Infrastructure.
+*/ 
+operation Element getInfrastructureElementsOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "infrastructureElements");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of applicationElements of stereotype Infrastructure.
+*/ 
+operation Element getApplicationElementsOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "applicationElements");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of integrationElements of stereotype Infrastructure.
+*/ 
+operation Element getIntegrationElementsOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "integrationElements");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of cloudServices of stereotype Infrastructure.
+*/ 
+operation Element getCloudServicesOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "cloudServices");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of containers of stereotype Infrastructure.
+*/ 
+operation Element getContainersOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "containers");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of metrics of stereotype Infrastructure.
+*/ 
+operation Element getMetricsOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "metrics");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of units of stereotype Infrastructure.
+*/ 
+operation Element getUnitsOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "units");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of SensorDataMngmtMechanism of stereotype Infrastructure.
+*/ 
+operation Element getSensorDataMngmtMechanismOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "SensorDataMngmtMechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of testConfigs of stereotype Infrastructure.
+*/ 
+operation Element getTestConfigsOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "testConfigs");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of hasSensorDataManagementMechanism of stereotype Infrastructure.
+*/ 
+operation Element getHasSensorDataManagementMechanismOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "hasSensorDataManagementMechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of configs of stereotype Infrastructure.
+*/ 
+operation Element getConfigsOfInfrastructureAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "configs");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of description of stereotype Infrastructure is empty.
+*/ 
+operation Element isDescriptionOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of id of stereotype Infrastructure is empty.
+*/ 
+operation Element isIdOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of physicalUnits of stereotype Infrastructure is empty.
+*/ 
+operation Element isPhysicalUnitsOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "physicalUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of virtualUnits of stereotype Infrastructure is empty.
+*/ 
+operation Element isVirtualUnitsOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "virtualUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of infrastructureElements of stereotype Infrastructure is empty.
+*/ 
+operation Element isInfrastructureElementsOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "infrastructureElements");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of applicationElements of stereotype Infrastructure is empty.
+*/ 
+operation Element isApplicationElementsOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "applicationElements");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of integrationElements of stereotype Infrastructure is empty.
+*/ 
+operation Element isIntegrationElementsOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "integrationElements");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of cloudServices of stereotype Infrastructure is empty.
+*/ 
+operation Element isCloudServicesOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "cloudServices");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of containers of stereotype Infrastructure is empty.
+*/ 
+operation Element isContainersOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "containers");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of metrics of stereotype Infrastructure is empty.
+*/ 
+operation Element isMetricsOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "metrics");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of units of stereotype Infrastructure is empty.
+*/ 
+operation Element isUnitsOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "units");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of SensorDataMngmtMechanism of stereotype Infrastructure is empty.
+*/ 
+operation Element isSensorDataMngmtMechanismOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "SensorDataMngmtMechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of testConfigs of stereotype Infrastructure is empty.
+*/ 
+operation Element isTestConfigsOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "testConfigs");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of hasSensorDataManagementMechanism of stereotype Infrastructure is empty.
+*/ 
+operation Element isHasSensorDataManagementMechanismOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "hasSensorDataManagementMechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of configs of stereotype Infrastructure is empty.
+*/ 
+operation Element isConfigsOfInfrastructureEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Infrastructure"), "configs");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}

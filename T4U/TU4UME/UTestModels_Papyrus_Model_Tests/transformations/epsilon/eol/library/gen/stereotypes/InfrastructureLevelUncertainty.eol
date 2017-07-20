@@ -1,0 +1,893 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of Element annotated with InfrastructureLevelUncertainty.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package InfrastructureLevelUncertaintysAsSequenceOfElement() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInfrastructureLevelUncertainty()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Element annotated with InfrastructureLevelUncertainty.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONInfrastructureLevelUncertaintysAsSequenceOfElement() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInfrastructureLevelUncertainty()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Element from the applied Stereotype InfrastructureLevelUncertainty
+
+operation InfrastructureLevelUncertainty getBaseElementOfInfrastructureLevelUncertainty() : Element{
+	var baseElement = new InfrastructureLevelUncertainty;
+	baseElement = self.base_Element;
+	return baseElement;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Element from the applied Stereotype InfrastructureLevelUncertainty
+
+operation InfrastructureLevelUncertainty JSONgetBaseElementOfInfrastructureLevelUncertainty() : String {
+	var baseElement = new InfrastructureLevelUncertainty;
+	baseElement = self.base_Element;
+	
+	var baseElement_string = baseElement.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype InfrastructureLevelUncertainty using native objects.
+*/ 
+operation Element toJsonInfrastructureLevelUncertainty() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Classifier annotated with InfrastructureLevelUncertainty.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package InfrastructureLevelUncertaintysAsSequenceOfClassifier() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInfrastructureLevelUncertainty()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Classifier annotated with InfrastructureLevelUncertainty.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONInfrastructureLevelUncertaintysAsSequenceOfClassifier() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInfrastructureLevelUncertainty()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Classifier from the applied Stereotype InfrastructureLevelUncertainty
+
+operation InfrastructureLevelUncertainty getBaseClassifierOfInfrastructureLevelUncertainty() : Classifier{
+	var baseClassifier = new InfrastructureLevelUncertainty;
+	baseClassifier = self.base_Classifier;
+	return baseClassifier;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Classifier from the applied Stereotype InfrastructureLevelUncertainty
+
+operation InfrastructureLevelUncertainty JSONgetBaseClassifierOfInfrastructureLevelUncertainty() : String {
+	var baseClassifier = new InfrastructureLevelUncertainty;
+	baseClassifier = self.base_Classifier;
+	
+	var baseClassifier_string = baseClassifier.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClassifier_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype InfrastructureLevelUncertainty using native objects.
+*/ 
+operation Classifier toJsonInfrastructureLevelUncertainty() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype InfrastructureLevelUncertainty
+ 
+operation InfrastructureLevelUncertainty getBaseElementOfInfrastructureLevelUncertaintyDeprecated() : Element{
+	var baseElement = new InfrastructureLevelUncertainty;
+
+	
+	if(not self.base_Element.isUndefined()){
+		baseElement = self.base_Element;
+	}
+	
+	if(not self.base_Classifier.isUndefined()){
+		baseElement = self.base_Classifier;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype InfrastructureLevelUncertainty using UMLUtil native object
+*/ 
+operation InfrastructureLevelUncertainty getBaseElementOfInfrastructureLevelUncertainty() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype InfrastructureLevelUncertainty using UMLUtil native object
+*/ 
+//operation InfrastructureLevelUncertainty toJsonInfrastructureLevelUncertainty() : String {
+operation toJsonInfrastructureLevelUncertainty() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with InfrastructureLevelUncertainty.
+*/ 
+operation Element isInfrastructureLevelUncertainty() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isInfrastructureLevelUncertainty() : Boolean in InfrastructureLevelUncertainty.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "InfrastructureLevelUncertainty");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in InfrastructureLevelUncertainty.
+*/ 
+operation InfrastructureLevelUncertainty getAllAttributesOfInfrastructureLevelUncertainty() : Sequence(Property){
+	var stereotypeAttr = InfrastructureLevelUncertainty.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of description of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getDescriptionOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of cause_type of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getCause_typeOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "cause_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of effect_propagation_type of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getEffect_propagation_typeOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "effect_propagation_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of functional_dimensionality_type of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getFunctional_dimensionality_typeOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "functional_dimensionality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of locality_type of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getLocality_typeOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "locality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of non_functional_dimensionality_type of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getNon_functional_dimensionality_typeOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "non_functional_dimensionality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of observation_time_type of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getObservation_time_typeOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "observation_time_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of temporal_manifestation_type of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getTemporal_manifestation_typeOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "temporal_manifestation_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of cause of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getCauseOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "cause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of effect of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getEffectOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "effect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of field of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getFieldOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "field");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of from of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getFromOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "from");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of kind of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getKindOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "kind");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of lifeTime of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getLifeTimeOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "lifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of locality of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getLocalityOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "locality");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of pattern of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getPatternOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "pattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredCause of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getReferredCauseOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "referredCause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredEffect of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getReferredEffectOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "referredEffect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredIndeterminacySource of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getReferredIndeterminacySourceOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "referredIndeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredLifeTime of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getReferredLifeTimeOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "referredLifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredPattern of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getReferredPatternOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "referredPattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of risk of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getRiskOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "risk");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of riskInDT of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getRiskInDTOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "riskInDT");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of riskInDTViaClass of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getRiskInDTViaClassOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "riskInDTViaClass");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of riskLevel of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getRiskLevelOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "riskLevel");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of uncertaintyMeasurement of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getUncertaintyMeasurementOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "uncertaintyMeasurement");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of indeterminacySource of stereotype InfrastructureLevelUncertainty.
+*/ 
+operation Element getIndeterminacySourceOfInfrastructureLevelUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "indeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of description of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isDescriptionOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of cause_type of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isCause_typeOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "cause_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of effect_propagation_type of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isEffect_propagation_typeOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "effect_propagation_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of functional_dimensionality_type of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isFunctional_dimensionality_typeOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "functional_dimensionality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of locality_type of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isLocality_typeOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "locality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of non_functional_dimensionality_type of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isNon_functional_dimensionality_typeOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "non_functional_dimensionality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of observation_time_type of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isObservation_time_typeOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "observation_time_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of temporal_manifestation_type of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isTemporal_manifestation_typeOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "temporal_manifestation_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of cause of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isCauseOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "cause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of effect of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isEffectOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "effect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of field of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isFieldOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "field");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of from of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isFromOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "from");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of kind of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isKindOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "kind");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of lifeTime of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isLifeTimeOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "lifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of locality of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isLocalityOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "locality");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of pattern of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isPatternOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "pattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredCause of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isReferredCauseOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "referredCause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredEffect of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isReferredEffectOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "referredEffect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredIndeterminacySource of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isReferredIndeterminacySourceOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "referredIndeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredLifeTime of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isReferredLifeTimeOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "referredLifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredPattern of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isReferredPatternOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "referredPattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of risk of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isRiskOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "risk");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of riskInDT of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isRiskInDTOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "riskInDT");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of riskInDTViaClass of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isRiskInDTViaClassOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "riskInDTViaClass");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of riskLevel of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isRiskLevelOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "riskLevel");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of uncertaintyMeasurement of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isUncertaintyMeasurementOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "uncertaintyMeasurement");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of indeterminacySource of stereotype InfrastructureLevelUncertainty is empty.
+*/ 
+operation Element isIndeterminacySourceOfInfrastructureLevelUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("InfrastructureLevelUncertainty"), "indeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}

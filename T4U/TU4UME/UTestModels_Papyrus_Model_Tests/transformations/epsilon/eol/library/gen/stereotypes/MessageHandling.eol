@@ -1,0 +1,212 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of Package annotated with MessageHandling.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package MessageHandlingsAsSequenceOfPackage() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isMessageHandling()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Package annotated with MessageHandling.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONMessageHandlingsAsSequenceOfPackage() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isMessageHandling()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Package from the applied Stereotype MessageHandling
+
+operation MessageHandling getBasePackageOfMessageHandling() : Package{
+	var basePackage = new MessageHandling;
+	basePackage = self.base_Package;
+	return basePackage;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Package from the applied Stereotype MessageHandling
+
+operation MessageHandling JSONgetBasePackageOfMessageHandling() : String {
+	var basePackage = new MessageHandling;
+	basePackage = self.base_Package;
+	
+	var basePackage_string = basePackage.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(basePackage_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype MessageHandling using native objects.
+*/ 
+operation Package toJsonMessageHandling() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype MessageHandling
+ 
+operation MessageHandling getBaseElementOfMessageHandlingDeprecated() : Element{
+	var baseElement = new MessageHandling;
+
+	
+	if(not self.base_Package.isUndefined()){
+		baseElement = self.base_Package;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype MessageHandling using UMLUtil native object
+*/ 
+operation MessageHandling getBaseElementOfMessageHandling() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype MessageHandling using UMLUtil native object
+*/ 
+//operation MessageHandling toJsonMessageHandling() : String {
+operation toJsonMessageHandling() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with MessageHandling.
+*/ 
+operation Element isMessageHandling() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isMessageHandling() : Boolean in MessageHandling.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "MessageHandling");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in MessageHandling.
+*/ 
+operation MessageHandling getAllAttributesOfMessageHandling() : Sequence(Property){
+	var stereotypeAttr = MessageHandling.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of messageMode of stereotype MessageHandling.
+*/ 
+operation Element getMessageModeOfMessageHandlingAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("MessageHandling"), "messageMode");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of customTemplate of stereotype MessageHandling.
+*/ 
+operation Element getCustomTemplateOfMessageHandlingAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("MessageHandling"), "customTemplate");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of messageMode of stereotype MessageHandling is empty.
+*/ 
+operation Element isMessageModeOfMessageHandlingEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("MessageHandling"), "messageMode");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of customTemplate of stereotype MessageHandling is empty.
+*/ 
+operation Element isCustomTemplateOfMessageHandlingEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("MessageHandling"), "customTemplate");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}

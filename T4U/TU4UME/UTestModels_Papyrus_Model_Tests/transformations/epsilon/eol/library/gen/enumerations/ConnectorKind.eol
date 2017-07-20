@@ -1,0 +1,13 @@
+import "../../element.eol";
+
+operation ConnectorKind getassembly() : String {
+	var assembly = "assembly";
+	return assembly;
+}
+operation ConnectorKind getdelegation() : String {
+	var delegation = "delegation";
+	return delegation;
+}
+
+
+

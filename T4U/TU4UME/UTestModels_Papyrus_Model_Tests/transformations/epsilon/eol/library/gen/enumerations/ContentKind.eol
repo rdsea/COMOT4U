@@ -1,0 +1,25 @@
+import "../../element.eol";
+
+operation ContentKind getUnspecified() : String {
+	var Unspecified = "Unspecified";
+	return Unspecified;
+}
+operation ContentKind getEmpty() : String {
+	var Empty = "Empty";
+	return Empty;
+}
+operation ContentKind getSimple() : String {
+	var Simple = "Simple";
+	return Simple;
+}
+operation ContentKind getMixed() : String {
+	var Mixed = "Mixed";
+	return Mixed;
+}
+operation ContentKind getElementOnly() : String {
+	var ElementOnly = "ElementOnly";
+	return ElementOnly;
+}
+
+
+

@@ -1,0 +1,25 @@
+import "../../element.eol";
+
+operation IndeterminacyNature getInsufficientResolution() : String {
+	var InsufficientResolution = "InsufficientResolution";
+	return InsufficientResolution;
+}
+operation IndeterminacyNature getMissingInfo() : String {
+	var MissingInfo = "MissingInfo";
+	return MissingInfo;
+}
+operation IndeterminacyNature getNonDeterminism() : String {
+	var NonDeterminism = "NonDeterminism";
+	return NonDeterminism;
+}
+operation IndeterminacyNature getComposite() : String {
+	var Composite = "Composite";
+	return Composite;
+}
+operation IndeterminacyNature getUnclassified() : String {
+	var Unclassified = "Unclassified";
+	return Unclassified;
+}
+
+
+

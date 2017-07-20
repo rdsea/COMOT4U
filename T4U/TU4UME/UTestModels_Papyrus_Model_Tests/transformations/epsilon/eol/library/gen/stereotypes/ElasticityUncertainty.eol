@@ -1,0 +1,893 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of Element annotated with ElasticityUncertainty.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package ElasticityUncertaintysAsSequenceOfElement() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isElasticityUncertainty()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Element annotated with ElasticityUncertainty.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONElasticityUncertaintysAsSequenceOfElement() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isElasticityUncertainty()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Element from the applied Stereotype ElasticityUncertainty
+
+operation ElasticityUncertainty getBaseElementOfElasticityUncertainty() : Element{
+	var baseElement = new ElasticityUncertainty;
+	baseElement = self.base_Element;
+	return baseElement;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Element from the applied Stereotype ElasticityUncertainty
+
+operation ElasticityUncertainty JSONgetBaseElementOfElasticityUncertainty() : String {
+	var baseElement = new ElasticityUncertainty;
+	baseElement = self.base_Element;
+	
+	var baseElement_string = baseElement.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype ElasticityUncertainty using native objects.
+*/ 
+operation Element toJsonElasticityUncertainty() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Classifier annotated with ElasticityUncertainty.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package ElasticityUncertaintysAsSequenceOfClassifier() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isElasticityUncertainty()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Classifier annotated with ElasticityUncertainty.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONElasticityUncertaintysAsSequenceOfClassifier() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isElasticityUncertainty()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Classifier from the applied Stereotype ElasticityUncertainty
+
+operation ElasticityUncertainty getBaseClassifierOfElasticityUncertainty() : Classifier{
+	var baseClassifier = new ElasticityUncertainty;
+	baseClassifier = self.base_Classifier;
+	return baseClassifier;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Classifier from the applied Stereotype ElasticityUncertainty
+
+operation ElasticityUncertainty JSONgetBaseClassifierOfElasticityUncertainty() : String {
+	var baseClassifier = new ElasticityUncertainty;
+	baseClassifier = self.base_Classifier;
+	
+	var baseClassifier_string = baseClassifier.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClassifier_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype ElasticityUncertainty using native objects.
+*/ 
+operation Classifier toJsonElasticityUncertainty() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype ElasticityUncertainty
+ 
+operation ElasticityUncertainty getBaseElementOfElasticityUncertaintyDeprecated() : Element{
+	var baseElement = new ElasticityUncertainty;
+
+	
+	if(not self.base_Element.isUndefined()){
+		baseElement = self.base_Element;
+	}
+	
+	if(not self.base_Classifier.isUndefined()){
+		baseElement = self.base_Classifier;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype ElasticityUncertainty using UMLUtil native object
+*/ 
+operation ElasticityUncertainty getBaseElementOfElasticityUncertainty() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype ElasticityUncertainty using UMLUtil native object
+*/ 
+//operation ElasticityUncertainty toJsonElasticityUncertainty() : String {
+operation toJsonElasticityUncertainty() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with ElasticityUncertainty.
+*/ 
+operation Element isElasticityUncertainty() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isElasticityUncertainty() : Boolean in ElasticityUncertainty.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "ElasticityUncertainty");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in ElasticityUncertainty.
+*/ 
+operation ElasticityUncertainty getAllAttributesOfElasticityUncertainty() : Sequence(Property){
+	var stereotypeAttr = ElasticityUncertainty.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of description of stereotype ElasticityUncertainty.
+*/ 
+operation Element getDescriptionOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of cause_type of stereotype ElasticityUncertainty.
+*/ 
+operation Element getCause_typeOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "cause_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of effect_propagation_type of stereotype ElasticityUncertainty.
+*/ 
+operation Element getEffect_propagation_typeOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "effect_propagation_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of functional_dimensionality_type of stereotype ElasticityUncertainty.
+*/ 
+operation Element getFunctional_dimensionality_typeOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "functional_dimensionality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of locality_type of stereotype ElasticityUncertainty.
+*/ 
+operation Element getLocality_typeOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "locality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of non_functional_dimensionality_type of stereotype ElasticityUncertainty.
+*/ 
+operation Element getNon_functional_dimensionality_typeOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "non_functional_dimensionality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of observation_time_type of stereotype ElasticityUncertainty.
+*/ 
+operation Element getObservation_time_typeOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "observation_time_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of temporal_manifestation_type of stereotype ElasticityUncertainty.
+*/ 
+operation Element getTemporal_manifestation_typeOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "temporal_manifestation_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of cause of stereotype ElasticityUncertainty.
+*/ 
+operation Element getCauseOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "cause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of effect of stereotype ElasticityUncertainty.
+*/ 
+operation Element getEffectOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "effect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of field of stereotype ElasticityUncertainty.
+*/ 
+operation Element getFieldOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "field");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of from of stereotype ElasticityUncertainty.
+*/ 
+operation Element getFromOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "from");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of kind of stereotype ElasticityUncertainty.
+*/ 
+operation Element getKindOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "kind");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of lifeTime of stereotype ElasticityUncertainty.
+*/ 
+operation Element getLifeTimeOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "lifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of locality of stereotype ElasticityUncertainty.
+*/ 
+operation Element getLocalityOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "locality");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of pattern of stereotype ElasticityUncertainty.
+*/ 
+operation Element getPatternOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "pattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredCause of stereotype ElasticityUncertainty.
+*/ 
+operation Element getReferredCauseOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "referredCause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredEffect of stereotype ElasticityUncertainty.
+*/ 
+operation Element getReferredEffectOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "referredEffect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredIndeterminacySource of stereotype ElasticityUncertainty.
+*/ 
+operation Element getReferredIndeterminacySourceOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "referredIndeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredLifeTime of stereotype ElasticityUncertainty.
+*/ 
+operation Element getReferredLifeTimeOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "referredLifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of referredPattern of stereotype ElasticityUncertainty.
+*/ 
+operation Element getReferredPatternOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "referredPattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of risk of stereotype ElasticityUncertainty.
+*/ 
+operation Element getRiskOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "risk");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of riskInDT of stereotype ElasticityUncertainty.
+*/ 
+operation Element getRiskInDTOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "riskInDT");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of riskInDTViaClass of stereotype ElasticityUncertainty.
+*/ 
+operation Element getRiskInDTViaClassOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "riskInDTViaClass");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of riskLevel of stereotype ElasticityUncertainty.
+*/ 
+operation Element getRiskLevelOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "riskLevel");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of uncertaintyMeasurement of stereotype ElasticityUncertainty.
+*/ 
+operation Element getUncertaintyMeasurementOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "uncertaintyMeasurement");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of indeterminacySource of stereotype ElasticityUncertainty.
+*/ 
+operation Element getIndeterminacySourceOfElasticityUncertaintyAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "indeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of description of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isDescriptionOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of cause_type of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isCause_typeOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "cause_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of effect_propagation_type of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isEffect_propagation_typeOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "effect_propagation_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of functional_dimensionality_type of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isFunctional_dimensionality_typeOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "functional_dimensionality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of locality_type of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isLocality_typeOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "locality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of non_functional_dimensionality_type of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isNon_functional_dimensionality_typeOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "non_functional_dimensionality_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of observation_time_type of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isObservation_time_typeOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "observation_time_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of temporal_manifestation_type of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isTemporal_manifestation_typeOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "temporal_manifestation_type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of cause of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isCauseOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "cause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of effect of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isEffectOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "effect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of field of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isFieldOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "field");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of from of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isFromOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "from");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of kind of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isKindOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "kind");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of lifeTime of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isLifeTimeOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "lifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of locality of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isLocalityOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "locality");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of pattern of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isPatternOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "pattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredCause of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isReferredCauseOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "referredCause");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredEffect of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isReferredEffectOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "referredEffect");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredIndeterminacySource of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isReferredIndeterminacySourceOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "referredIndeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredLifeTime of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isReferredLifeTimeOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "referredLifeTime");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of referredPattern of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isReferredPatternOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "referredPattern");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of risk of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isRiskOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "risk");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of riskInDT of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isRiskInDTOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "riskInDT");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of riskInDTViaClass of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isRiskInDTViaClassOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "riskInDTViaClass");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of riskLevel of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isRiskLevelOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "riskLevel");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of uncertaintyMeasurement of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isUncertaintyMeasurementOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "uncertaintyMeasurement");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of indeterminacySource of stereotype ElasticityUncertainty is empty.
+*/ 
+operation Element isIndeterminacySourceOfElasticityUncertaintyEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("ElasticityUncertainty"), "indeterminacySource");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}

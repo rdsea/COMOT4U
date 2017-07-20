@@ -1,0 +1,25 @@
+import "../../element.eol";
+
+operation UncertaintyKind getEnvironment() : String {
+	var Environment = "Environment";
+	return Environment;
+}
+operation UncertaintyKind getGeographicalLocation() : String {
+	var GeographicalLocation = "GeographicalLocation";
+	return GeographicalLocation;
+}
+operation UncertaintyKind getContent() : String {
+	var Content = "Content";
+	return Content;
+}
+operation UncertaintyKind getTime() : String {
+	var Time = "Time";
+	return Time;
+}
+operation UncertaintyKind getOccurrence() : String {
+	var Occurrence = "Occurrence";
+	return Occurrence;
+}
+
+
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/viewpoints/policy/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <notation:Diagram xmi:id="_Iv24MAiSEeeszorbFLOmmA" type="PapyrusUMLProfileDiagram" name="Internal U-Profile Library" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_x2sqoFqMEee3uK0w5XnxNA" type="2006">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yfSUoVqMEee3uK0w5XnxNA" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yfSUolqMEee3uK0w5XnxNA" key="canonical" value="true"/>
+      </eAnnotations>
+      <children xmi:type="notation:DecorationNode" xmi:id="_x2sqolqMEee3uK0w5XnxNA" type="5023"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_x2sqo1qMEee3uK0w5XnxNA" type="1063">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ygDJoFqMEee3uK0w5XnxNA" source="PapyrusCSSForceValue">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ygDJoVqMEee3uK0w5XnxNA" key="mutable" value="true"/>
+        </eAnnotations>
+        <children xmi:type="notation:Shape" xmi:id="_yfeh4FqMEee3uK0w5XnxNA" type="1037">
+          <element xmi:type="uml:EnumerationLiteral" href="Internal%20U-Profile%20Library.profile.uml#_2tlvwOqjEeW9GfU_w37a8g"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_yfeh4VqMEee3uK0w5XnxNA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_yfeh4lqMEee3uK0w5XnxNA" type="1037">
+          <element xmi:type="uml:EnumerationLiteral" href="Internal%20U-Profile%20Library.profile.uml#_hfC48OqkEeW9GfU_w37a8g"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_yfeh41qMEee3uK0w5XnxNA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_yfeh5FqMEee3uK0w5XnxNA" type="1037">
+          <element xmi:type="uml:EnumerationLiteral" href="Internal%20U-Profile%20Library.profile.uml#_4G-IEOqkEeW9GfU_w37a8g"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_yfeh5VqMEee3uK0w5XnxNA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_y-cV0FqMEee3uK0w5XnxNA" type="1037">
+          <element xmi:type="uml:EnumerationLiteral" href="Internal%20U-Profile%20Library.profile.uml#_y-KB8FqMEee3uK0w5XnxNA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_y-cV0VqMEee3uK0w5XnxNA"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_x2sqpFqMEee3uK0w5XnxNA"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_x2sqpVqMEee3uK0w5XnxNA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_x2sqplqMEee3uK0w5XnxNA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x2sqp1qMEee3uK0w5XnxNA"/>
+      </children>
+      <styles xmi:type="notation:CanonicalStyle" xmi:id="_yfSUoFqMEee3uK0w5XnxNA"/>
+      <element xmi:type="uml:Enumeration" href="Internal%20U-Profile%20Library.profile.uml#_xPz4cOqjEeW9GfU_w37a8g"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x2sqoVqMEee3uK0w5XnxNA" x="361" y="246"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_Iv25CgiSEeeszorbFLOmmA"/>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_X2b9sBUzEeeoRaPCKTG6yA" name="diagram_compatibility_version" stringValue="1.1.0"/>
+    <element xmi:type="uml:Profile" href="Internal%20U-Profile%20Library.profile.uml#_k1AzAK1KEeWCop0vWwuZNg"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_pztEcBVHEeev2_sZ3ngp-w" type="PapyrusUMLClassDiagram" name="ClassDiagram" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_qrrOQBVHEeev2_sZ3ngp-w" type="2008">
+      <children xmi:type="notation:DecorationNode" xmi:id="_qrscYBVHEeev2_sZ3ngp-w" type="5029"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_qrscYRVHEeev2_sZ3ngp-w" type="8510">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_qrscYhVHEeev2_sZ3ngp-w" y="5"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_qrscYxVHEeev2_sZ3ngp-w" type="7017">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_qrscZBVHEeev2_sZ3ngp-w"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_qrscZRVHEeev2_sZ3ngp-w"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_qrscZhVHEeev2_sZ3ngp-w"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qrscZxVHEeev2_sZ3ngp-w"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_qrscaBVHEeev2_sZ3ngp-w" type="7018">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_qrscaRVHEeev2_sZ3ngp-w"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_qrscahVHEeev2_sZ3ngp-w"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_qrscaxVHEeev2_sZ3ngp-w"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qrscbBVHEeev2_sZ3ngp-w"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_qrscbRVHEeev2_sZ3ngp-w" type="7019">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_qrscbhVHEeev2_sZ3ngp-w"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_qrscbxVHEeev2_sZ3ngp-w"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_qrsccBVHEeev2_sZ3ngp-w"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qrsccRVHEeev2_sZ3ngp-w"/>
+      </children>
+      <element xmi:type="uml:Class" href="Internal%20U-Profile%20Library.profile.uml#_QNCXgK1MEeWCop0vWwuZNg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qrrOQRVHEeev2_sZ3ngp-w" x="198" y="155"/>
+    </children>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_pztEcRVHEeev2_sZ3ngp-w" name="diagram_compatibility_version" stringValue="1.1.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_pztEchVHEeev2_sZ3ngp-w"/>
+    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_pztEcxVHEeev2_sZ3ngp-w">
+      <owner xmi:type="uml:Profile" href="Internal%20U-Profile%20Library.profile.uml#_k1AzAK1KEeWCop0vWwuZNg"/>
+    </styles>
+    <element xmi:type="uml:Profile" href="Internal%20U-Profile%20Library.profile.uml#_k1AzAK1KEeWCop0vWwuZNg"/>
+  </notation:Diagram>
+</xmi:XMI>

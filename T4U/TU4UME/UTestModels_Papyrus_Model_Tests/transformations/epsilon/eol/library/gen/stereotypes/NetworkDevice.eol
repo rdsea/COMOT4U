@@ -1,0 +1,638 @@
+
+
+import "../../../../eol/library/element.eol";
+
+
+/*
+Returns a Sequence of Class annotated with NetworkDevice.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package NetworkDevicesAsSequenceOfClass() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isNetworkDevice()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Class annotated with NetworkDevice.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONNetworkDevicesAsSequenceOfClass() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isNetworkDevice()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Class from the applied Stereotype NetworkDevice
+
+operation NetworkDevice getBaseClassOfNetworkDevice() : Class{
+	var baseClass = new NetworkDevice;
+	baseClass = self.base_Class;
+	return baseClass;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Class from the applied Stereotype NetworkDevice
+
+operation NetworkDevice JSONgetBaseClassOfNetworkDevice() : String {
+	var baseClass = new NetworkDevice;
+	baseClass = self.base_Class;
+	
+	var baseClass_string = baseClass.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClass_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype NetworkDevice using native objects.
+*/ 
+operation Class toJsonNetworkDevice() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of Node annotated with NetworkDevice.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package NetworkDevicesAsSequenceOfNode() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isNetworkDevice()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of Node annotated with NetworkDevice.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONNetworkDevicesAsSequenceOfNode() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isNetworkDevice()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Node from the applied Stereotype NetworkDevice
+
+operation NetworkDevice getBaseNodeOfNetworkDevice() : Node{
+	var baseNode = new NetworkDevice;
+	baseNode = self.base_Node;
+	return baseNode;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Node from the applied Stereotype NetworkDevice
+
+operation NetworkDevice JSONgetBaseNodeOfNetworkDevice() : String {
+	var baseNode = new NetworkDevice;
+	baseNode = self.base_Node;
+	
+	var baseNode_string = baseNode.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseNode_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype NetworkDevice using native objects.
+*/ 
+operation Node toJsonNetworkDevice() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with NetworkDevice.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package NetworkDevicesAsSequenceOfInstanceSpecification() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isNetworkDevice()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+/*
+Returns the JSON representation of a Sequence of InstanceSpecification annotated with NetworkDevice.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+operation Package JSONNetworkDevicesAsSequenceOfInstanceSpecification() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isNetworkDevice()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type InstanceSpecification from the applied Stereotype NetworkDevice
+
+operation NetworkDevice getBaseInstanceSpecificationOfNetworkDevice() : InstanceSpecification{
+	var baseInstanceSpecification = new NetworkDevice;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	return baseInstanceSpecification;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type InstanceSpecification from the applied Stereotype NetworkDevice
+
+operation NetworkDevice JSONgetBaseInstanceSpecificationOfNetworkDevice() : String {
+	var baseInstanceSpecification = new NetworkDevice;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	
+	var baseInstanceSpecification_string = baseInstanceSpecification.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseInstanceSpecification_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype NetworkDevice using native objects.
+*/ 
+operation InstanceSpecification toJsonNetworkDevice() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype NetworkDevice
+ 
+operation NetworkDevice getBaseElementOfNetworkDeviceDeprecated() : Element{
+	var baseElement = new NetworkDevice;
+
+	
+	if(not self.base_Class.isUndefined()){
+		baseElement = self.base_Class;
+	}
+	
+	if(not self.base_Node.isUndefined()){
+		baseElement = self.base_Node;
+	}
+	
+	if(not self.base_InstanceSpecification.isUndefined()){
+		baseElement = self.base_InstanceSpecification;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype NetworkDevice using UMLUtil native object
+*/ 
+operation NetworkDevice getBaseElementOfNetworkDevice() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype NetworkDevice using UMLUtil native object
+*/ 
+//operation NetworkDevice toJsonNetworkDevice() : String {
+operation toJsonNetworkDevice() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.epsilon.tools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+
+
+/*
+Check if the element is annotated with NetworkDevice.
+*/ 
+operation Element isNetworkDevice() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isNetworkDevice() : Boolean in NetworkDevice.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "NetworkDevice");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in NetworkDevice.
+*/ 
+operation NetworkDevice getAllAttributesOfNetworkDevice() : Sequence(Property){
+	var stereotypeAttr = NetworkDevice.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of type of stereotype NetworkDevice.
+*/ 
+operation Element getTypeOfNetworkDeviceAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of sensors of stereotype NetworkDevice.
+*/ 
+operation Element getSensorsOfNetworkDeviceAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "sensors");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of actuators of stereotype NetworkDevice.
+*/ 
+operation Element getActuatorsOfNetworkDeviceAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "actuators");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of ownedPhysicalUnits of stereotype NetworkDevice.
+*/ 
+operation Element getOwnedPhysicalUnitsOfNetworkDeviceAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "ownedPhysicalUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of ioDevices of stereotype NetworkDevice.
+*/ 
+operation Element getIoDevicesOfNetworkDeviceAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "ioDevices");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of id of stereotype NetworkDevice.
+*/ 
+operation Element getIdOfNetworkDeviceAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of location of stereotype NetworkDevice.
+*/ 
+operation Element getLocationOfNetworkDeviceAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "location");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of description of stereotype NetworkDevice.
+*/ 
+operation Element getDescriptionOfNetworkDeviceAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of ownedUnits of stereotype NetworkDevice.
+*/ 
+operation Element getOwnedUnitsOfNetworkDeviceAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "ownedUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of hasTimestampMechanism of stereotype NetworkDevice.
+*/ 
+operation Element getHasTimestampMechanismOfNetworkDeviceAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "hasTimestampMechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of timestampMaxLatency of stereotype NetworkDevice.
+*/ 
+operation Element getTimestampMaxLatencyOfNetworkDeviceAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "timestampMaxLatency");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of isSafetyCritical of stereotype NetworkDevice.
+*/ 
+operation Element getIsSafetyCriticalOfNetworkDeviceAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "isSafetyCritical");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of infrastructureInterface of stereotype NetworkDevice.
+*/ 
+operation Element getInfrastructureInterfaceOfNetworkDeviceAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "infrastructureInterface");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of type of stereotype NetworkDevice is empty.
+*/ 
+operation Element isTypeOfNetworkDeviceEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "type");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of sensors of stereotype NetworkDevice is empty.
+*/ 
+operation Element isSensorsOfNetworkDeviceEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "sensors");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of actuators of stereotype NetworkDevice is empty.
+*/ 
+operation Element isActuatorsOfNetworkDeviceEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "actuators");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of ownedPhysicalUnits of stereotype NetworkDevice is empty.
+*/ 
+operation Element isOwnedPhysicalUnitsOfNetworkDeviceEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "ownedPhysicalUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of ioDevices of stereotype NetworkDevice is empty.
+*/ 
+operation Element isIoDevicesOfNetworkDeviceEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "ioDevices");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of id of stereotype NetworkDevice is empty.
+*/ 
+operation Element isIdOfNetworkDeviceEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of location of stereotype NetworkDevice is empty.
+*/ 
+operation Element isLocationOfNetworkDeviceEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "location");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of description of stereotype NetworkDevice is empty.
+*/ 
+operation Element isDescriptionOfNetworkDeviceEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of ownedUnits of stereotype NetworkDevice is empty.
+*/ 
+operation Element isOwnedUnitsOfNetworkDeviceEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "ownedUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of hasTimestampMechanism of stereotype NetworkDevice is empty.
+*/ 
+operation Element isHasTimestampMechanismOfNetworkDeviceEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "hasTimestampMechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of timestampMaxLatency of stereotype NetworkDevice is empty.
+*/ 
+operation Element isTimestampMaxLatencyOfNetworkDeviceEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "timestampMaxLatency");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of isSafetyCritical of stereotype NetworkDevice is empty.
+*/ 
+operation Element isIsSafetyCriticalOfNetworkDeviceEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "isSafetyCritical");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of infrastructureInterface of stereotype NetworkDevice is empty.
+*/ 
+operation Element isInfrastructureInterfaceOfNetworkDeviceEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("NetworkDevice"), "infrastructureInterface");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
