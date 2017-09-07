@@ -1,0 +1,572 @@
+{
+  "xmi:XMI": {
+    "xsi:schemaLocation": "http:///InfrastructureCPSProfile/InfrastructureModeling/CommonConcepts.ecore ../profiles/InfrastructureCPSProfile.profile.uml#_71kvzjF6Eee8n-AlHEqw5A http:///InfrastructureCPSProfile/InfrastructureModeling/HardwareModeling.ecore ../profiles/InfrastructureCPSProfile.profile.uml#_71kwaDF6Eee8n-AlHEqw5A http:///InfrastructureCPSProfile/InfrastructureModeling/SoftwareModeling.ecore ../profiles/InfrastructureCPSProfile.profile.uml#_71kvOjF6Eee8n-AlHEqw5A",
+    "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "InfrastructureCPSProfile.InfrastructureModeling.SoftwareModeling:VirtualSensor": [
+      {
+        "xmi:id": "_lc4OYDlHEee_Qf4Ba2dbYg",
+        "base_Class": "_lc3nUDlHEee_Qf4Ba2dbYg"
+      },
+      {
+        "xmi:id": "_lu39UDlHEee_Qf4Ba2dbYg",
+        "base_Class": "_lu3WQDlHEee_Qf4Ba2dbYg"
+      }
+    ],
+    "xmlns:xmi": "http://www.omg.org/spec/XMI/20131001",
+    "xmlns:uml": "http://www.eclipse.org/uml2/5.0.0/UML",
+    "xmlns:InfrastructureCPSProfile.InfrastructureModeling.HardwareModeling": "http:///InfrastructureCPSProfile/InfrastructureModeling/HardwareModeling.ecore",
+    "xmi:version": 20131001,
+    "uml:Model": {
+      "packagedElement": [
+        {
+          "xmi:type": "uml:Model",
+          "href": "../libraries/TUW_InfrastructureLibrary.uml#_eMKxAA7uEee6wqcj8Y2-lg"
+        },
+        {
+          "profileApplication": [
+            {
+              "eAnnotations": [
+                {
+                  "xmi:id": "_PKULQDlHEee_Qf4Ba2dbYg",
+                  "details": [
+                    {
+                      "xmi:id": "_PKULQTlHEee_Qf4Ba2dbYg",
+                      "value": "0.0.123",
+                      "key": "Version"
+                    },
+                    {
+                      "xmi:id": "_PKULQjlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Comment"
+                    },
+                    {
+                      "xmi:id": "_PKULQzlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Copyright"
+                    },
+                    {
+                      "xmi:id": "_PKULRDlHEee_Qf4Ba2dbYg",
+                      "value": "2017-05-05",
+                      "key": "Date"
+                    },
+                    {
+                      "xmi:id": "_PKULRTlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Author"
+                    }
+                  ],
+                  "source": "PapyrusVersion"
+                },
+                {
+                  "references": {
+                    "xmi:type": "ecore:EPackage",
+                    "href": "../profiles/InfrastructureCPSProfile.profile.uml#_71kvITF6Eee8n-AlHEqw5A"
+                  },
+                  "xmi:id": "_PKTkMDlHEee_Qf4Ba2dbYg",
+                  "source": "http://www.eclipse.org/uml2/2.0.0/UML"
+                }
+              ],
+              "xmi:id": "_PKRvADlHEee_Qf4Ba2dbYg",
+              "appliedProfile": {
+                "href": "../profiles/InfrastructureCPSProfile.profile.uml#_gJjV8PUfEeaI5-4OrfiDWg"
+              }
+            },
+            {
+              "eAnnotations": [
+                {
+                  "xmi:id": "_PKVZYDlHEee_Qf4Ba2dbYg",
+                  "details": [
+                    {
+                      "xmi:id": "_PKVZYTlHEee_Qf4Ba2dbYg",
+                      "value": "0.0.4",
+                      "key": "Version"
+                    },
+                    {
+                      "xmi:id": "_PKVZYjlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Comment"
+                    },
+                    {
+                      "xmi:id": "_PKVZYzlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Copyright"
+                    },
+                    {
+                      "xmi:id": "_PKVZZDlHEee_Qf4Ba2dbYg",
+                      "value": "2017-05-05",
+                      "key": "Date"
+                    },
+                    {
+                      "xmi:id": "_PKVZZTlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Author"
+                    }
+                  ],
+                  "source": "PapyrusVersion"
+                },
+                {
+                  "references": {
+                    "xmi:type": "ecore:EPackage",
+                    "href": "../profiles/InfrastructureUncertaintyProfile.profile.uml#_f_M2cDGAEee8n-AlHEqw5A"
+                  },
+                  "xmi:id": "_PKUyUTlHEee_Qf4Ba2dbYg",
+                  "source": "http://www.eclipse.org/uml2/2.0.0/UML"
+                }
+              ],
+              "xmi:id": "_PKUyUDlHEee_Qf4Ba2dbYg",
+              "appliedProfile": {
+                "href": "../profiles/InfrastructureUncertaintyProfile.profile.uml#_cCy_MAfnEeeZEbTOKh85Qw"
+              }
+            },
+            {
+              "eAnnotations": [
+                {
+                  "xmi:id": "_PKWAcDlHEee_Qf4Ba2dbYg",
+                  "details": [
+                    {
+                      "xmi:id": "_PKWAcTlHEee_Qf4Ba2dbYg",
+                      "value": "0.0.1",
+                      "key": "Version"
+                    },
+                    {
+                      "xmi:id": "_PKWAcjlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Comment"
+                    },
+                    {
+                      "xmi:id": "_PKWAczlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Copyright"
+                    },
+                    {
+                      "xmi:id": "_PKWAdDlHEee_Qf4Ba2dbYg",
+                      "value": "2017-03-30",
+                      "key": "Date"
+                    },
+                    {
+                      "xmi:id": "_PKWAdTlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Author"
+                    }
+                  ],
+                  "source": "PapyrusVersion"
+                },
+                {
+                  "references": {
+                    "xmi:type": "ecore:EPackage",
+                    "href": "../profiles/Internal%20U-Profile%20Library.profile.uml#_ueq-wRVHEeev2_sZ3ngp-w"
+                  },
+                  "xmi:id": "_PKVZZzlHEee_Qf4Ba2dbYg",
+                  "source": "http://www.eclipse.org/uml2/2.0.0/UML"
+                }
+              ],
+              "xmi:id": "_PKVZZjlHEee_Qf4Ba2dbYg",
+              "appliedProfile": {
+                "href": "../profiles/Internal%20U-Profile%20Library.profile.uml#_k1AzAK1KEeWCop0vWwuZNg"
+              }
+            },
+            {
+              "eAnnotations": [
+                {
+                  "xmi:id": "_PKWngTlHEee_Qf4Ba2dbYg",
+                  "details": [
+                    {
+                      "xmi:id": "_PKWngjlHEee_Qf4Ba2dbYg",
+                      "value": "0.0.1",
+                      "key": "Version"
+                    },
+                    {
+                      "xmi:id": "_PKWngzlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Comment"
+                    },
+                    {
+                      "xmi:id": "_PKWnhDlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Copyright"
+                    },
+                    {
+                      "xmi:id": "_PKWnhTlHEee_Qf4Ba2dbYg",
+                      "value": "2017-03-30",
+                      "key": "Date"
+                    },
+                    {
+                      "xmi:id": "_PKWnhjlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Author"
+                    }
+                  ],
+                  "source": "PapyrusVersion"
+                },
+                {
+                  "references": {
+                    "xmi:type": "ecore:EPackage",
+                    "href": "../profiles/U-Profile.profile.uml#_yUEjARVHEeev2_sZ3ngp-w"
+                  },
+                  "xmi:id": "_PKWngDlHEee_Qf4Ba2dbYg",
+                  "source": "http://www.eclipse.org/uml2/2.0.0/UML"
+                }
+              ],
+              "xmi:id": "_PKWAdjlHEee_Qf4Ba2dbYg",
+              "appliedProfile": {
+                "href": "../profiles/U-Profile.profile.uml#_SFfNUJQmEeWVWKdOybk1ZQ"
+              }
+            }
+          ],
+          "packagedElement": [
+            {
+              "xmi:id": "_XS2_sDlHEee_Qf4Ba2dbYg",
+              "xmi:type": "uml:Class",
+              "name": "ExampleInfrastructure",
+              "ownedAttribute": [
+                {
+                  "xmi:id": "_xoSbUDlHEee_Qf4Ba2dbYg",
+                  "name": "accelerometersensor",
+                  "association": "_xoPYADlHEee_Qf4Ba2dbYg",
+                  "type": "_Ya0tUDlHEee_Qf4Ba2dbYg"
+                },
+                {
+                  "xmi:id": "_yMD2wjlHEee_Qf4Ba2dbYg",
+                  "name": "temperaturesensor",
+                  "association": "_yMDPsDlHEee_Qf4Ba2dbYg",
+                  "type": "_ZAniADlHEee_Qf4Ba2dbYg"
+                },
+                {
+                  "xmi:id": "_yis1IzlHEee_Qf4Ba2dbYg",
+                  "name": "virtualaccelerometersensor",
+                  "association": "_yis1IDlHEee_Qf4Ba2dbYg",
+                  "type": "_lc3nUDlHEee_Qf4Ba2dbYg"
+                },
+                {
+                  "xmi:id": "_y4DaEjlHEee_Qf4Ba2dbYg",
+                  "name": "virtualtemperaturesensor",
+                  "association": "_y4CzADlHEee_Qf4Ba2dbYg",
+                  "type": "_lu3WQDlHEee_Qf4Ba2dbYg"
+                }
+              ]
+            },
+            {
+              "xmi:id": "_Ya0tUDlHEee_Qf4Ba2dbYg",
+              "xmi:type": "uml:Class",
+              "name": "AccelerometerSensor"
+            },
+            {
+              "xmi:id": "_ZAniADlHEee_Qf4Ba2dbYg",
+              "xmi:type": "uml:Class",
+              "name": "TemperatureSensor"
+            },
+            {
+              "xmi:id": "_lc3nUDlHEee_Qf4Ba2dbYg",
+              "xmi:type": "uml:Class",
+              "name": "VirtualAccelerometerSensor"
+            },
+            {
+              "xmi:id": "_lu3WQDlHEee_Qf4Ba2dbYg",
+              "xmi:type": "uml:Class",
+              "name": "VirtualTemperatureSensor"
+            }
+          ],
+          "xmi:id": "_7HJX4DlGEee_Qf4Ba2dbYg",
+          "xmi:type": "uml:Package",
+          "name": "Classes"
+        },
+        {
+          "profileApplication": [
+            {
+              "eAnnotations": [
+                {
+                  "xmi:id": "_VG6skTlHEee_Qf4Ba2dbYg",
+                  "details": [
+                    {
+                      "xmi:id": "_VG6skjlHEee_Qf4Ba2dbYg",
+                      "value": "0.0.123",
+                      "key": "Version"
+                    },
+                    {
+                      "xmi:id": "_VG6skzlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Comment"
+                    },
+                    {
+                      "xmi:id": "_VG6slDlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Copyright"
+                    },
+                    {
+                      "xmi:id": "_VG6slTlHEee_Qf4Ba2dbYg",
+                      "value": "2017-05-05",
+                      "key": "Date"
+                    },
+                    {
+                      "xmi:id": "_VG6sljlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Author"
+                    }
+                  ],
+                  "source": "PapyrusVersion"
+                },
+                {
+                  "references": {
+                    "xmi:type": "ecore:EPackage",
+                    "href": "../profiles/InfrastructureCPSProfile.profile.uml#_71kvITF6Eee8n-AlHEqw5A"
+                  },
+                  "xmi:id": "_VG6skDlHEee_Qf4Ba2dbYg",
+                  "source": "http://www.eclipse.org/uml2/2.0.0/UML"
+                }
+              ],
+              "xmi:id": "_VG6FgDlHEee_Qf4Ba2dbYg",
+              "appliedProfile": {
+                "href": "../profiles/InfrastructureCPSProfile.profile.uml#_gJjV8PUfEeaI5-4OrfiDWg"
+              }
+            },
+            {
+              "eAnnotations": [
+                {
+                  "xmi:id": "_VG7TojlHEee_Qf4Ba2dbYg",
+                  "details": [
+                    {
+                      "xmi:id": "_VG7TozlHEee_Qf4Ba2dbYg",
+                      "value": "0.0.4",
+                      "key": "Version"
+                    },
+                    {
+                      "xmi:id": "_VG7TpDlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Comment"
+                    },
+                    {
+                      "xmi:id": "_VG7TpTlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Copyright"
+                    },
+                    {
+                      "xmi:id": "_VG7TpjlHEee_Qf4Ba2dbYg",
+                      "value": "2017-05-05",
+                      "key": "Date"
+                    },
+                    {
+                      "xmi:id": "_VG7TpzlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Author"
+                    }
+                  ],
+                  "source": "PapyrusVersion"
+                },
+                {
+                  "references": {
+                    "xmi:type": "ecore:EPackage",
+                    "href": "../profiles/InfrastructureUncertaintyProfile.profile.uml#_f_M2cDGAEee8n-AlHEqw5A"
+                  },
+                  "xmi:id": "_VG7ToTlHEee_Qf4Ba2dbYg",
+                  "source": "http://www.eclipse.org/uml2/2.0.0/UML"
+                }
+              ],
+              "xmi:id": "_VG7ToDlHEee_Qf4Ba2dbYg",
+              "appliedProfile": {
+                "href": "../profiles/InfrastructureUncertaintyProfile.profile.uml#_cCy_MAfnEeeZEbTOKh85Qw"
+              }
+            },
+            {
+              "eAnnotations": [
+                {
+                  "xmi:id": "_VG76sjlHEee_Qf4Ba2dbYg",
+                  "details": [
+                    {
+                      "xmi:id": "_VG76szlHEee_Qf4Ba2dbYg",
+                      "value": "0.0.1",
+                      "key": "Version"
+                    },
+                    {
+                      "xmi:id": "_VG76tDlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Comment"
+                    },
+                    {
+                      "xmi:id": "_VG76tTlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Copyright"
+                    },
+                    {
+                      "xmi:id": "_VG76tjlHEee_Qf4Ba2dbYg",
+                      "value": "2017-03-30",
+                      "key": "Date"
+                    },
+                    {
+                      "xmi:id": "_VG76tzlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Author"
+                    }
+                  ],
+                  "source": "PapyrusVersion"
+                },
+                {
+                  "references": {
+                    "xmi:type": "ecore:EPackage",
+                    "href": "../profiles/Internal%20U-Profile%20Library.profile.uml#_ueq-wRVHEeev2_sZ3ngp-w"
+                  },
+                  "xmi:id": "_VG76sTlHEee_Qf4Ba2dbYg",
+                  "source": "http://www.eclipse.org/uml2/2.0.0/UML"
+                }
+              ],
+              "xmi:id": "_VG76sDlHEee_Qf4Ba2dbYg",
+              "appliedProfile": {
+                "href": "../profiles/Internal%20U-Profile%20Library.profile.uml#_k1AzAK1KEeWCop0vWwuZNg"
+              }
+            },
+            {
+              "eAnnotations": [
+                {
+                  "xmi:id": "_VHAzMDlHEee_Qf4Ba2dbYg",
+                  "details": [
+                    {
+                      "xmi:id": "_VHAzMTlHEee_Qf4Ba2dbYg",
+                      "value": "0.0.1",
+                      "key": "Version"
+                    },
+                    {
+                      "xmi:id": "_VHAzMjlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Comment"
+                    },
+                    {
+                      "xmi:id": "_VHAzMzlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Copyright"
+                    },
+                    {
+                      "xmi:id": "_VHAzNDlHEee_Qf4Ba2dbYg",
+                      "value": "2017-03-30",
+                      "key": "Date"
+                    },
+                    {
+                      "xmi:id": "_VHAzNTlHEee_Qf4Ba2dbYg",
+                      "value": "",
+                      "key": "Author"
+                    }
+                  ],
+                  "source": "PapyrusVersion"
+                },
+                {
+                  "references": {
+                    "xmi:type": "ecore:EPackage",
+                    "href": "../profiles/U-Profile.profile.uml#_yUEjARVHEeev2_sZ3ngp-w"
+                  },
+                  "xmi:id": "_VHAMIDlHEee_Qf4Ba2dbYg",
+                  "source": "http://www.eclipse.org/uml2/2.0.0/UML"
+                }
+              ],
+              "xmi:id": "_VG_lEDlHEee_Qf4Ba2dbYg",
+              "appliedProfile": {
+                "href": "../profiles/U-Profile.profile.uml#_SFfNUJQmEeWVWKdOybk1ZQ"
+              }
+            }
+          ],
+          "xmi:id": "_-OKMIDlGEee_Qf4Ba2dbYg",
+          "xmi:type": "uml:Package",
+          "name": "Configurations"
+        },
+        {
+          "memberEnd": "_xoSbUDlHEee_Qf4Ba2dbYg _xoTpcDlHEee_Qf4Ba2dbYg",
+          "eAnnotations": {
+            "xmi:id": "_xoR0QDlHEee_Qf4Ba2dbYg",
+            "details": {
+              "xmi:id": "_xoR0QTlHEee_Qf4Ba2dbYg",
+              "value": "UML_Nature",
+              "key": "nature"
+            },
+            "source": "org.eclipse.papyrus"
+          },
+          "xmi:id": "_xoPYADlHEee_Qf4Ba2dbYg",
+          "xmi:type": "uml:Association",
+          "ownedEnd": {
+            "xmi:id": "_xoTpcDlHEee_Qf4Ba2dbYg",
+            "name": "exampleinfrastructure",
+            "association": "_xoPYADlHEee_Qf4Ba2dbYg",
+            "type": "_XS2_sDlHEee_Qf4Ba2dbYg"
+          }
+        },
+        {
+          "memberEnd": "_yMD2wjlHEee_Qf4Ba2dbYg _yMEd0DlHEee_Qf4Ba2dbYg",
+          "eAnnotations": {
+            "xmi:id": "_yMD2wDlHEee_Qf4Ba2dbYg",
+            "details": {
+              "xmi:id": "_yMD2wTlHEee_Qf4Ba2dbYg",
+              "value": "UML_Nature",
+              "key": "nature"
+            },
+            "source": "org.eclipse.papyrus"
+          },
+          "xmi:id": "_yMDPsDlHEee_Qf4Ba2dbYg",
+          "xmi:type": "uml:Association",
+          "ownedEnd": {
+            "xmi:id": "_yMEd0DlHEee_Qf4Ba2dbYg",
+            "name": "exampleinfrastructure",
+            "association": "_yMDPsDlHEee_Qf4Ba2dbYg",
+            "type": "_XS2_sDlHEee_Qf4Ba2dbYg"
+          }
+        },
+        {
+          "memberEnd": "_yis1IzlHEee_Qf4Ba2dbYg _yitcMDlHEee_Qf4Ba2dbYg",
+          "eAnnotations": {
+            "xmi:id": "_yis1ITlHEee_Qf4Ba2dbYg",
+            "details": {
+              "xmi:id": "_yis1IjlHEee_Qf4Ba2dbYg",
+              "value": "UML_Nature",
+              "key": "nature"
+            },
+            "source": "org.eclipse.papyrus"
+          },
+          "xmi:id": "_yis1IDlHEee_Qf4Ba2dbYg",
+          "xmi:type": "uml:Association",
+          "ownedEnd": {
+            "xmi:id": "_yitcMDlHEee_Qf4Ba2dbYg",
+            "name": "exampleinfrastructure",
+            "association": "_yis1IDlHEee_Qf4Ba2dbYg",
+            "type": "_XS2_sDlHEee_Qf4Ba2dbYg"
+          }
+        },
+        {
+          "memberEnd": "_y4DaEjlHEee_Qf4Ba2dbYg _y4DaEzlHEee_Qf4Ba2dbYg",
+          "eAnnotations": {
+            "xmi:id": "_y4DaEDlHEee_Qf4Ba2dbYg",
+            "details": {
+              "xmi:id": "_y4DaETlHEee_Qf4Ba2dbYg",
+              "value": "UML_Nature",
+              "key": "nature"
+            },
+            "source": "org.eclipse.papyrus"
+          },
+          "xmi:id": "_y4CzADlHEee_Qf4Ba2dbYg",
+          "xmi:type": "uml:Association",
+          "ownedEnd": {
+            "xmi:id": "_y4DaEzlHEee_Qf4Ba2dbYg",
+            "name": "exampleinfrastructure",
+            "association": "_y4CzADlHEee_Qf4Ba2dbYg",
+            "type": "_XS2_sDlHEee_Qf4Ba2dbYg"
+          }
+        }
+      ],
+      "xmi:id": "_Wi1GYDlGEee_Qf4Ba2dbYg",
+      "name": "MySimpleSystem"
+    },
+    "InfrastructureCPSProfile.InfrastructureModeling.HardwareModeling:Sensor": [
+      {
+        "xmi:id": "_Ya1UYDlHEee_Qf4Ba2dbYg",
+        "base_Class": "_Ya0tUDlHEee_Qf4Ba2dbYg"
+      },
+      {
+        "xmi:id": "_ZAoJEDlHEee_Qf4Ba2dbYg",
+        "base_Class": "_ZAniADlHEee_Qf4Ba2dbYg"
+      }
+    ],
+    "xmlns:ecore": "http://www.eclipse.org/emf/2002/Ecore",
+    "xmlns:InfrastructureCPSProfile.InfrastructureModeling.SoftwareModeling": "http:///InfrastructureCPSProfile/InfrastructureModeling/SoftwareModeling.ecore",
+    "xmlns:InfrastructureCPSProfile.InfrastructureModeling.CommonConcepts": "http:///InfrastructureCPSProfile/InfrastructureModeling/CommonConcepts.ecore",
+    "InfrastructureCPSProfile.InfrastructureModeling.CommonConcepts:Infrastructure": {
+      "xmi:id": "_XS3mwDlHEee_Qf4Ba2dbYg",
+      "physicalUnits": "_Ya1UYDlHEee_Qf4Ba2dbYg _ZAoJEDlHEee_Qf4Ba2dbYg",
+      "virtualUnits": "_lc4OYDlHEee_Qf4Ba2dbYg _lu39UDlHEee_Qf4Ba2dbYg",
+      "base_Class": "_XS2_sDlHEee_Qf4Ba2dbYg"
+    }
+  }
+}

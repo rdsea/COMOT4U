@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:Documentation="http://www.eclipse.org/papyrus/documentation" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Package xmi:id="_X9PUcLVPEeW6F6X1iCgrUw" name="Pattern_Library">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_VzXioLW3EeW6F6X1iCgrUw" annotatedElement="_X9PUcLVPEeW6F6X1iCgrUw">
+      <body>&lt;p>&lt;img src=&quot;file:/Users/manzhang/Google%20Drive/Profile/UMF%20Model%20Library/SRL-CPS-Uncertainty-Profiles/img/u_taxonomy_pattern.jpg&quot;>&lt;/img>&lt;/p>&lt;p>&lt;/p>&lt;p>[U-Taxonomy] Pattern represents an intelligible way in which an Uncertainty appears.&lt;/p></body>
+    </ownedComment>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_X9PUc7VPEeW6F6X1iCgrUw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_z2nlILYKEeWqVdVzVCM11Q">
+      <importedPackage xmi:type="uml:Package" href="SRL_Time_Library.uml#_oneyQbVREeW6F6X1iCgrUw"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_1NMWgLYKEeWqVdVzVCM11Q">
+      <importedPackage xmi:type="uml:Package" href="SRL_Measure_Library.uml#_pyJYErOwEeW6hra-QKy9fw"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_4BxW8LYKEeWqVdVzVCM11Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_LnJT4DaPEdy8NoXj6Y5Thw?MARTE_Library?"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_h1pukLVQEeW6F6X1iCgrUw" name="AperiodicPattern">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_pk9joLVQEeW6F6X1iCgrUw" annotatedElement="_h1pukLVQEeW6F6X1iCgrUw">
+        <body>&lt;p>[Marte] It describes an unbounded pattern that is defined by a distribution function.&lt;/p>&lt;p>[U-Taxonomy] An Uncertainty that occurs at irregular intervals of time.&lt;/p></body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_uCs6QLVQEeW6F6X1iCgrUw" name="distribution" visibility="public">
+        <type xmi:type="uml:DataType" href="SRL_Measure_Library.uml#_L3GxgLR9EeWVh-73AwxFPQ"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_45mdALXtEeWJ18qBvUFQYg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_45nrILXtEeWJ18qBvUFQYg" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_4kQ0gLVQEeW6F6X1iCgrUw" name="SporadicPattern">
+      <ownedComment xmi:type="uml:Comment" xmi:id="__CzlQLVQEeW6F6X1iCgrUw" annotatedElement="_4kQ0gLVQEeW6F6X1iCgrUw">
+        <body>&lt;p>[Marte] It describes a bounded pattern that is defined by a corner case interarrival times and a maximum deviation (jitter).&lt;/p></body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_T8M2ALVREeW6F6X1iCgrUw" general="_h1pukLVQEeW6F6X1iCgrUw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_mTgLMLVWEeW6F6X1iCgrUw" name="minInterarrival" visibility="public">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_oYqg4LVWEeW6F6X1iCgrUw" annotatedElement="_mTgLMLVWEeW6F6X1iCgrUw">
+          <body>&lt;p>[Marte] The minimum interarrival duration between two successive occurrences of an event.&lt;/p></body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rPQ6kLVWEeW6F6X1iCgrUw" name="maxInterarrival" visibility="public">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_wZ_TALVWEeW6F6X1iCgrUw" annotatedElement="_rPQ6kLVWEeW6F6X1iCgrUw">
+          <body>&lt;p>[Marte] The maximum interarrival duration between two successive occurrences of an event.&lt;/p></body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uWlQ0LVWEeW6F6X1iCgrUw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uWl34LVWEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_xSBHMLVWEeW6F6X1iCgrUw" name="jitter" visibility="public">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_0NINcLVWEeW6F6X1iCgrUw" annotatedElement="_xSBHMLVWEeW6F6X1iCgrUw">
+          <body>&lt;p>[Marte] The maximum deviation of the occurrences regarding to the minimum interarrival time.&lt;/p></body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1zsioLVWEeW6F6X1iCgrUw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1ztJsLVWEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_7i1ecLVQEeW6F6X1iCgrUw" name="BurstPattern">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_BfBJALVREeW6F6X1iCgrUw" annotatedElement="_7i1ecLVQEeW6F6X1iCgrUw">
+        <body>&lt;p>[Marte] It describes a bursty interarrival pattern with a number of events that can occur in a bounded period.&lt;/p></body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_UfRt4LVREeW6F6X1iCgrUw" general="_h1pukLVQEeW6F6X1iCgrUw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dAG0kLVTEeW6F6X1iCgrUw" name="minInterarrival" visibility="public">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_uum2oLVTEeW6F6X1iCgrUw" annotatedElement="_dAG0kLVTEeW6F6X1iCgrUw">
+          <body>&lt;p>[Marte]The minimum interarrival duration between two successive occurrences of a burst.&lt;/p></body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wZnKcLVUEeW6F6X1iCgrUw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wZnKcbVUEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_h85esLVTEeW6F6X1iCgrUw" name="maxInterarrival" visibility="public">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_x6zF0LVTEeW6F6X1iCgrUw" annotatedElement="_h85esLVTEeW6F6X1iCgrUw">
+          <body>&lt;p>[Marte] The maximum interarrival duration between two successive occurrences of a burst.&lt;/p></body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vrrtcLVUEeW6F6X1iCgrUw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vrrtcbVUEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_yeC80LVTEeW6F6X1iCgrUw" name="minEventInterval" visibility="public">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_CwZxALVUEeW6F6X1iCgrUw" annotatedElement="_yeC80LVTEeW6F6X1iCgrUw">
+          <body>&lt;p>[Marte] The minimum interval between two event occurrences within a burst.&lt;/p></body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vKazcLVUEeW6F6X1iCgrUw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vKazcbVUEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_1sa9ULVTEeW6F6X1iCgrUw" name="maxEventInterval" visibility="public">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_BIwdwLVUEeW6F6X1iCgrUw" annotatedElement="_1sa9ULVTEeW6F6X1iCgrUw">
+          <body>&lt;p>[Marte] The maximum interval between two event occurrences within a burst.&lt;/p></body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tpt1sLVUEeW6F6X1iCgrUw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tpucwLVUEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6EXN8LVTEeW6F6X1iCgrUw" name="burstSize" visibility="public">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_ES_lILVUEeW6F6X1iCgrUw" annotatedElement="_6EXN8LVTEeW6F6X1iCgrUw">
+          <body>&lt;p>[Marte] The number of event occurrences within a burst.&lt;/p></body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sgSIcLVUEeW6F6X1iCgrUw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sgSIcbVUEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_BkNyELVREeW6F6X1iCgrUw" name="IrregularPattern">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_DQu-QLVREeW6F6X1iCgrUw" annotatedElement="_BkNyELVREeW6F6X1iCgrUw">
+        <body>&lt;p>It describes an aperiodic pattern that is described by a table of successive interarrivals durations measured from a starting phase.&lt;/p></body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_U76mkLVREeW6F6X1iCgrUw" general="_h1pukLVQEeW6F6X1iCgrUw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cse4gLVUEeW6F6X1iCgrUw" name="phase" visibility="public">
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nMtWALVUEeW6F6X1iCgrUw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nMt9ELVUEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dJzGoLVUEeW6F6X1iCgrUw" name="interarrivals" visibility="public">
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mMJQ4LVUEeW6F6X1iCgrUw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mMJ38LVUEeW6F6X1iCgrUw" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_Edly8LVREeW6F6X1iCgrUw" name="ClosedPattern">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_K8An4LVREeW6F6X1iCgrUw" annotatedElement="_Edly8LVREeW6F6X1iCgrUw">
+        <body>&lt;p>[Marte] It describes a workload characterized by a fixed number of active or potential users or jobs that cycle between executing the scenario.&lt;/p></body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JViR8LVUEeW6F6X1iCgrUw" name="population" visibility="public">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_T74lkLVUEeW6F6X1iCgrUw" annotatedElement="_JViR8LVUEeW6F6X1iCgrUw">
+          <body>&lt;p>[Marte] The size of the workload (number of system users).&lt;/p></body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qDze8LVUEeW6F6X1iCgrUw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qD0GALVUEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JzQIsLVUEeW6F6X1iCgrUw" name="extDelay" visibility="public">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Z5hBoLVUEeW6F6X1iCgrUw" annotatedElement="_JzQIsLVUEeW6F6X1iCgrUw">
+          <body>&lt;p>[Marte] The delay between the end of one response and the start of the next for each member of the population of system users.&lt;/p></body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qpxSwLVUEeW6F6X1iCgrUw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qpyg4LVUEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_LpbHgLVREeW6F6X1iCgrUw" name="OpenPattern">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_N9Vq4LVREeW6F6X1iCgrUw" annotatedElement="_LpbHgLVREeW6F6X1iCgrUw">
+        <body>&lt;p>[Marte]It describes a workload that is modeled as a stream of requests that arrive at a given rate in some predetermined pattern (such as Poisson arrivals).&lt;/p></body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_AGw_0LVVEeW6F6X1iCgrUw" name="interArrivalTime" visibility="public">
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_C2tX4LVVEeW6F6X1iCgrUw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_C2t-8LVVEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_El2aQLVVEeW6F6X1iCgrUw" name="arrivalRate" visibility="public">
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_I-3o8LVVEeW6F6X1iCgrUw"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_DtgnkLVWEeW6F6X1iCgrUw" name="PeriodicPattern">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_3N2XALVXEeW6F6X1iCgrUw" annotatedElement="_DtgnkLVWEeW6F6X1iCgrUw">
+        <body>&lt;p>[Marte] It describes periodic interarrival patterns, with an optional maximal deviation (jitter).&lt;/p>&lt;p>[U-Taxonomy] An Uncertainty that occurs in repeated periods or at regular intervals.&lt;/p></body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_cmYukLW3EeW6F6X1iCgrUw" general="_Q2_IMLW3EeW6F6X1iCgrUw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Gb8jwLVWEeW6F6X1iCgrUw" name="period" visibility="public">
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Igw7MLVWEeW6F6X1iCgrUw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Igw7MbVWEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LvRekLVWEeW6F6X1iCgrUw" name="jitter" visibility="public">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_N5RQ8LVWEeW6F6X1iCgrUw" annotatedElement="_LvRekLVWEeW6F6X1iCgrUw">
+          <body>&lt;p>[Marte] The maximum deviation of the occurrences.&lt;/p></body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_S0l7cLVWEeW6F6X1iCgrUw" name="phase" visibility="public">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_X6FOkLVWEeW6F6X1iCgrUw" annotatedElement="_S0l7cLVWEeW6F6X1iCgrUw">
+          <body>&lt;p>[Marte] A delay for the first occurrence of the event.&lt;/p></body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YbQB8LVWEeW6F6X1iCgrUw" name="occurrences" visibility="public">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_faGDYLVWEeW6F6X1iCgrUw" annotatedElement="_YbQB8LVWEeW6F6X1iCgrUw">
+          <body>&lt;p>[Marte]The maximum number of occurrences of the periodic arrival event.&lt;/p>&lt;p>&lt;/p></body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_a0JL8LVWEeW6F6X1iCgrUw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_a0JL8bVWEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_uy-ccLVXEeW6F6X1iCgrUw" name="PersistentPattern">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_A8ViALW6EeW6F6X1iCgrUw" annotatedElement="_uy-ccLVXEeW6F6X1iCgrUw">
+        <body>&lt;p>[https://en.wikipedia.org/wiki/Persistence_(computer_science)] In computer science, persistence refers to the characteristic of state that outlives the process that created it. This is achieved in practice by storing the state as data in computer data storage. Programmers have to transfer data to and from storage devices and have to provide mappings from the programming data structures to the storage device data structures[1] via serialization of data and structure to formats compatible with the storage.&lt;/p>&lt;p>[Persistent Threat Pattern Discovery]Persistence:Persistence is characterized by the length of time a particular APT has been conducting operations: (1) More than five years, (2) Between two and five years, (3) Less than two years.&lt;/p>&lt;p>[U-Taxonomy] A permanent Uncertainty, i.e., lasting forever.&lt;/p>&lt;p>&lt;/p></body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_dBbr0LW3EeW6F6X1iCgrUw" general="_Q2_IMLW3EeW6F6X1iCgrUw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_IvMaULW6EeW6F6X1iCgrUw" name="period" visibility="public">
+        <type xmi:type="uml:DataType" href="SRL_Time_Library.uml#_uC4D8LVREeW6F6X1iCgrUw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LhOdELW6EeW6F6X1iCgrUw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LhOdEbW6EeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_J0eT4LVYEeW6F6X1iCgrUw" name="Transitent">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_JliT0LW3EeW6F6X1iCgrUw" annotatedElement="_J0eT4LVYEeW6F6X1iCgrUw">
+        <body>&lt;p>[U-taxonomy] Uncertainty occurring temporarily.&lt;/p></body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_LeR-ILW3EeW6F6X1iCgrUw" general="_BkNyELVREeW6F6X1iCgrUw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_Q2_IMLW3EeW6F6X1iCgrUw" name="SystematicPattern">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_9mNzYLW8EeW6F6X1iCgrUw" annotatedElement="_Q2_IMLW3EeW6F6X1iCgrUw">
+        <body>&lt;p>[Applying and Interpreting Statistics: A Comprehensive Guide]&lt;/p>&lt;p>&lt;img height=&quot;268&quot; src=&quot;file:/Users/manzhang/Google%20Drive/Profile/UMF%20Model%20Library/SRL-CPS-Uncertainty-Profiles/img/systematic%20pattern.jpg&quot; width=&quot;859&quot;>&lt;/img>&lt;/p></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_dSNLYLW6EeW6F6X1iCgrUw" name="Random">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_xopX4LXtEeWJ18qBvUFQYg" annotatedElement="_dSNLYLW6EeW6F6X1iCgrUw">
+        <body>&lt;p>[U-Taxonomy] An Uncertainty that occurs without definite method, purpose or conscious decision.&lt;/p></body>
+      </ownedComment>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_X9PUdLVPEeW6F6X1iCgrUw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_X9PUdbVPEeW6F6X1iCgrUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_X9PUdrVPEeW6F6X1iCgrUw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_X9PUd7VPEeW6F6X1iCgrUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/documentation#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_DOCUMENTATION/Papyrus.profile.uml#_H9068AEYEeCIz8iAxBJnfA"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_X9PUeLVPEeW6F6X1iCgrUw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_X9PUebVPEeW6F6X1iCgrUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_4OVBUD0TEeKt-L0gyEptgQ?Deployment/Deployment?"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_vjbuwOvHEdiDX5bji0iVSA?Deployment?"/>
+    </profileApplication>
+  </uml:Package>
+  <standard:ModelLibrary xmi:id="_ZY6oQLVPEeW6F6X1iCgrUw" base_Package="_X9PUcLVPEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLsAiXEeeszorbFLOmmA" base_Comment="_pk9joLVQEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLsQiXEeeszorbFLOmmA" base_Comment="__CzlQLVQEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLsgiXEeeszorbFLOmmA" base_Comment="_BfBJALVREeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLswiXEeeszorbFLOmmA" base_Comment="_DQu-QLVREeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLtAiXEeeszorbFLOmmA" base_Comment="_K8An4LVREeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLtQiXEeeszorbFLOmmA" base_Comment="_N9Vq4LVREeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLtgiXEeeszorbFLOmmA" base_Comment="_uum2oLVTEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLtwiXEeeszorbFLOmmA" base_Comment="_x6zF0LVTEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLuAiXEeeszorbFLOmmA" base_Comment="_BIwdwLVUEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLuQiXEeeszorbFLOmmA" base_Comment="_CwZxALVUEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLugiXEeeszorbFLOmmA" base_Comment="_ES_lILVUEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLuwiXEeeszorbFLOmmA" base_Comment="_T74lkLVUEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLvAiXEeeszorbFLOmmA" base_Comment="_Z5hBoLVUEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLvQiXEeeszorbFLOmmA" base_Comment="_N5RQ8LVWEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLvgiXEeeszorbFLOmmA" base_Comment="_X6FOkLVWEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLvwiXEeeszorbFLOmmA" base_Comment="_faGDYLVWEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLwAiXEeeszorbFLOmmA" base_Comment="_oYqg4LVWEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLwQiXEeeszorbFLOmmA" base_Comment="_wZ_TALVWEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLwgiXEeeszorbFLOmmA" base_Comment="_0NINcLVWEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLwwiXEeeszorbFLOmmA" base_Comment="_3N2XALVXEeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLxAiXEeeszorbFLOmmA" base_Comment="_JliT0LW3EeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLxQiXEeeszorbFLOmmA" base_Comment="_VzXioLW3EeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLxgiXEeeszorbFLOmmA" base_Comment="_A8ViALW6EeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLxwiXEeeszorbFLOmmA" base_Comment="_9mNzYLW8EeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kXtLyAiXEeeszorbFLOmmA" base_Comment="_xopX4LXtEeWJ18qBvUFQYg"/>
+</xmi:XMI>

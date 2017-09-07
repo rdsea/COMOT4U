@@ -1,0 +1,1738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CoreProfile="http:///schemas/CoreProfile/_b0We8FKjEeed76oMGqCQiQ/12" xmlns:GQAM="http://www.eclipse.org/papyrus/GQAM/1" xmlns:GRM="http://www.eclipse.org/papyrus/GRM/1" xmlns:HwComputing="http://www.eclipse.org/papyrus/HwComputing/1" xmlns:HwDevice="http://www.eclipse.org/papyrus/HwDevice/1" xmlns:HwMemory="http://www.eclipse.org/papyrus/HwMemory/1" xmlns:InfrastructureCPSProfile="http://www.u-test.eu/infrastructurecpsprofile/" xmlns:InfrastructureUncertaintyProfile="http://www.u-test.eu/infrastructureuncertaintyprofile/" xmlns:InfrastructureUncertaintyProfile.DEPRECATED="http:///InfrastructureUncertaintyProfile/DEPRECATED.ecore" xmlns:InternalUProfileLibrary="http:///schemas/InternalUProfileLibrary/_ueoigBVHEeev2_sZ3ngp-w/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/CoreProfile/_b0We8FKjEeed76oMGqCQiQ/12 ../profiles/U-Profile.profile.uml#_b0Y7MFKjEeed76oMGqCQiQ http://www.eclipse.org/papyrus/GQAM/1 http://www.eclipse.org/papyrus/MARTE/1#//GQAM http://www.eclipse.org/papyrus/GRM/1 http://www.eclipse.org/papyrus/MARTE/1#//GRM http://www.eclipse.org/papyrus/HwComputing/1 http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwComputing http://www.eclipse.org/papyrus/HwDevice/1 http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwDevice http://www.eclipse.org/papyrus/HwMemory/1 http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwStorage/HwMemory http://www.u-test.eu/infrastructurecpsprofile/ ../profiles/InfrastructureCPSProfile.profile.uml#_eBqYMHaLEeeo94v8rkBTgA http://www.u-test.eu/infrastructureuncertaintyprofile/ ../profiles/InfrastructureUncertaintyProfile.profile.uml#_RjE_kHXmEeejaaLU6EnJWw http:///InfrastructureUncertaintyProfile/DEPRECATED.ecore ../profiles/InfrastructureUncertaintyProfile.profile.uml#_RjFABnXmEeejaaLU6EnJWw http:///schemas/InternalUProfileLibrary/_ueoigBVHEeev2_sZ3ngp-w/0 ../profiles/Internal%20U-Profile%20Library.profile.uml#_ueq-wRVHEeev2_sZ3ngp-w">
+  <uml:Model xmi:id="_eMKxAA7uEee6wqcj8Y2-lg" name="InfrastructureModelLibrary">
+    <packageImport xmi:id="_eWOE4A7uEee6wqcj8Y2-lg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_wR6qwBVXEeev2_sZ3ngp-w" name="Classes">
+      <packagedElement xmi:type="uml:Class" xmi:id="_6sK3sA73Eee6wqcj8Y2-lg" name="GenericVirtualComponent">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_AVTLoEO3EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_AVTLoUO3EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_AVTLokO3EeeTNbOHCbo_Mw" source="_AVTLp0O3EeeTNbOHCbo_Mw" target="_AVTLqUO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AVTLo0O3EeeTNbOHCbo_Mw" source="_AVTLqUO3EeeTNbOHCbo_Mw" target="_AVTLqEO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AVTLpEO3EeeTNbOHCbo_Mw" source="_AVTLqkO3EeeTNbOHCbo_Mw" target="_AVTLqEO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AVTLpUO3EeeTNbOHCbo_Mw" source="_AVTLqUO3EeeTNbOHCbo_Mw" target="_AVTLqkO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AVTLpkO3EeeTNbOHCbo_Mw" source="_AVTLqkO3EeeTNbOHCbo_Mw" target="_AVTLqUO3EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_AVTLp0O3EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_AVTLqEO3EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_AVTLqUO3EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_AVTLqkO3EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_k161oEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_k161oUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_k161okPHEeeTNbOHCbo_Mw" source="_k161pEPHEeeTNbOHCbo_Mw" target="_k161pUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_k161o0PHEeeTNbOHCbo_Mw" source="_k161pUPHEeeTNbOHCbo_Mw" target="_k161pkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_k161pEPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_k161pUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_k161pkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_-RqXsA73Eee6wqcj8Y2-lg" name="GenericVirtualSensor">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_AisHYEO3EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_AisHYUO3EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_AisHYkO3EeeTNbOHCbo_Mw" source="_AisHZ0O3EeeTNbOHCbo_Mw" target="_AisHaUO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AisHY0O3EeeTNbOHCbo_Mw" source="_AisHaUO3EeeTNbOHCbo_Mw" target="_AisHaEO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AisHZEO3EeeTNbOHCbo_Mw" source="_AisHakO3EeeTNbOHCbo_Mw" target="_AisHaEO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AisHZUO3EeeTNbOHCbo_Mw" source="_AisHaUO3EeeTNbOHCbo_Mw" target="_AisHakO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AisHZkO3EeeTNbOHCbo_Mw" source="_AisHakO3EeeTNbOHCbo_Mw" target="_AisHaUO3EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_AisHZ0O3EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_AisHaEO3EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_AisHaUO3EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_AisHakO3EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_lYRUwEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_lYRUwUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_lYRUwkPHEeeTNbOHCbo_Mw" source="_lYRUxEPHEeeTNbOHCbo_Mw" target="_lYRUxUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_lYRUw0PHEeeTNbOHCbo_Mw" source="_lYRUxUPHEeeTNbOHCbo_Mw" target="_lYRUxkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_lYRUxEPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_lYRUxUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_lYRUxkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_KXLYAA74Eee6wqcj8Y2-lg" name="GenericVirtualActuator">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="__xQqcEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="__xQqcUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="__xQqckO2EeeTNbOHCbo_Mw" source="__xQqd0O2EeeTNbOHCbo_Mw" target="__xQqeUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="__xQqc0O2EeeTNbOHCbo_Mw" source="__xQqeUO2EeeTNbOHCbo_Mw" target="__xQqeEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="__xQqdEO2EeeTNbOHCbo_Mw" source="__xQqekO2EeeTNbOHCbo_Mw" target="__xQqeEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="__xQqdUO2EeeTNbOHCbo_Mw" source="__xQqeUO2EeeTNbOHCbo_Mw" target="__xQqekO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="__xQqdkO2EeeTNbOHCbo_Mw" source="__xQqekO2EeeTNbOHCbo_Mw" target="__xQqeUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="__xQqd0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="__xQqeEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="__xQqeUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="__xQqekO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_lD3yEEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_lD3yEUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_lD3yEkPHEeeTNbOHCbo_Mw" source="_lD3yFEPHEeeTNbOHCbo_Mw" target="_lD3yFUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_lD3yE0PHEeeTNbOHCbo_Mw" source="_lD3yFUPHEeeTNbOHCbo_Mw" target="_lD3yFkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_lD3yFEPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_lD3yFUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_lD3yFkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_O7ZxIA74Eee6wqcj8Y2-lg" name="GenericSoftwareDefinedMetric">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_-9rRYEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_-9rRYUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_-9rRYkO2EeeTNbOHCbo_Mw" source="_-9rRZ0O2EeeTNbOHCbo_Mw" target="_-9rRaUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-9rRY0O2EeeTNbOHCbo_Mw" source="_-9rRaUO2EeeTNbOHCbo_Mw" target="_-9rRaEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-9rRZEO2EeeTNbOHCbo_Mw" source="_-9rRakO2EeeTNbOHCbo_Mw" target="_-9rRaEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-9rRZUO2EeeTNbOHCbo_Mw" source="_-9rRaUO2EeeTNbOHCbo_Mw" target="_-9rRakO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-9rRZkO2EeeTNbOHCbo_Mw" source="_-9rRakO2EeeTNbOHCbo_Mw" target="_-9rRaUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_-9rRZ0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_-9rRaEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-9rRaUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-9rRakO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_UI0RMA74Eee6wqcj8Y2-lg" name="GenericTestConfiguration">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="__C2FQEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="__C2FQUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="__C2FQkO2EeeTNbOHCbo_Mw" source="__C2FR0O2EeeTNbOHCbo_Mw" target="__C2FSUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="__C2FQ0O2EeeTNbOHCbo_Mw" source="__C2FSUO2EeeTNbOHCbo_Mw" target="__C2FSEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="__C2FREO2EeeTNbOHCbo_Mw" source="__C2FSkO2EeeTNbOHCbo_Mw" target="__C2FSEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="__C2FRUO2EeeTNbOHCbo_Mw" source="__C2FSUO2EeeTNbOHCbo_Mw" target="__C2FSkO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="__C2FRkO2EeeTNbOHCbo_Mw" source="__C2FSkO2EeeTNbOHCbo_Mw" target="__C2FSUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="__C2FR0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="__C2FSEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="__C2FSUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="__C2FSkO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_kcMuEEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_kcMuEUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_kcMuEkPHEeeTNbOHCbo_Mw" source="_kcMuFEPHEeeTNbOHCbo_Mw" target="_kcMuFUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_kcMuE0PHEeeTNbOHCbo_Mw" source="_kcMuFUPHEeeTNbOHCbo_Mw" target="_kcMuFkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_kcMuFEPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_kcMuFUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_kcMuFkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TtJcABVSEeev2_sZ3ngp-w" name="GenericCommunicationProtocol">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_9MpYoEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_9MpYoUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_9MpYokO2EeeTNbOHCbo_Mw" source="_9MpYp0O2EeeTNbOHCbo_Mw" target="_9MpYqUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9MpYo0O2EeeTNbOHCbo_Mw" source="_9MpYqUO2EeeTNbOHCbo_Mw" target="_9MpYqEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9MpYpEO2EeeTNbOHCbo_Mw" source="_9MpYqkO2EeeTNbOHCbo_Mw" target="_9MpYqEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9MpYpUO2EeeTNbOHCbo_Mw" source="_9MpYqUO2EeeTNbOHCbo_Mw" target="_9MpYqkO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9MpYpkO2EeeTNbOHCbo_Mw" source="_9MpYqkO2EeeTNbOHCbo_Mw" target="_9MpYqUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_9MpYp0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_9MpYqEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_9MpYqUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_9MpYqkO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_g6Q4YEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_g6RfcEPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_g6RfcUPHEeeTNbOHCbo_Mw" source="_g6Rfc0PHEeeTNbOHCbo_Mw" target="_g6RfdEPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_g6RfckPHEeeTNbOHCbo_Mw" source="_g6RfdEPHEeeTNbOHCbo_Mw" target="_g6RfdUPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_g6Rfc0PHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_g6RfdEPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_g6RfdUPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_OwL1EA73Eee6wqcj8Y2-lg" name="GenericActuator" classifierBehavior="_qjvj0EO2EeeTNbOHCbo_Mw">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_qjvj0EO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_rGpckEO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_vdEDMEO2EeeTNbOHCbo_Mw" source="_sUOqAEO2EeeTNbOHCbo_Mw" target="_tfh_gEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_wH36wEO2EeeTNbOHCbo_Mw" source="_tfh_gEO2EeeTNbOHCbo_Mw" target="_s8qjAEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_2pdYcEO2EeeTNbOHCbo_Mw" source="_0MmUcEO2EeeTNbOHCbo_Mw" target="_s8qjAEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_5RdVcEO2EeeTNbOHCbo_Mw" source="_tfh_gEO2EeeTNbOHCbo_Mw" target="_0MmUcEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_53IOUEO2EeeTNbOHCbo_Mw" source="_0MmUcEO2EeeTNbOHCbo_Mw" target="_tfh_gEO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_sUOqAEO2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_s8qjAEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_tfh_gEO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_0MmUcEO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_zGlSIEO3EeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_0il9IEO3EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="__GZ6IEO3EeeTNbOHCbo_Mw" source="_8s99kEO3EeeTNbOHCbo_Mw" target="_9Fi1oEO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="__td6IEO3EeeTNbOHCbo_Mw" source="_9Fi1oEO3EeeTNbOHCbo_Mw" target="_9mKPYEO3EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_8s99kEO3EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_9Fi1oEO3EeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_9mKPYEO3EeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_QPazMA73Eee6wqcj8Y2-lg" name="GenericSensor">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_-w9rEEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_-w9rEUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_-w9rEkO2EeeTNbOHCbo_Mw" source="_-w9rF0O2EeeTNbOHCbo_Mw" target="_-w9rGUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-w9rE0O2EeeTNbOHCbo_Mw" source="_-w9rGUO2EeeTNbOHCbo_Mw" target="_-w9rGEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-w9rFEO2EeeTNbOHCbo_Mw" source="_-w9rGkO2EeeTNbOHCbo_Mw" target="_-w9rGEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-w9rFUO2EeeTNbOHCbo_Mw" source="_-w9rGUO2EeeTNbOHCbo_Mw" target="_-w9rGkO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-w9rFkO2EeeTNbOHCbo_Mw" source="_-w9rGkO2EeeTNbOHCbo_Mw" target="_-w9rGUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_-w9rF0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_-w9rGEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-w9rGUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-w9rGkO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_jytFIEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_jytFIUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_jytFIkPHEeeTNbOHCbo_Mw" source="_jytFJEPHEeeTNbOHCbo_Mw" target="_jytFJUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_jytFI0PHEeeTNbOHCbo_Mw" source="_jytFJUPHEeeTNbOHCbo_Mw" target="_jytFJkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_jytFJEPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_jytFJUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_jytFJkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_hZhHsA73Eee6wqcj8Y2-lg" name="GenericIODevice">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_-HoaMEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_-HoaMUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_-HoaMkO2EeeTNbOHCbo_Mw" source="_-HoaN0O2EeeTNbOHCbo_Mw" target="_-HoaOUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-HoaM0O2EeeTNbOHCbo_Mw" source="_-HoaOUO2EeeTNbOHCbo_Mw" target="_-HoaOEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-HoaNEO2EeeTNbOHCbo_Mw" source="_-HoaOkO2EeeTNbOHCbo_Mw" target="_-HoaOEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-HoaNUO2EeeTNbOHCbo_Mw" source="_-HoaOUO2EeeTNbOHCbo_Mw" target="_-HoaOkO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-HoaNkO2EeeTNbOHCbo_Mw" source="_-HoaOkO2EeeTNbOHCbo_Mw" target="_-HoaOUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_-HoaN0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_-HoaOEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-HoaOUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-HoaOkO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_nqIKIA73Eee6wqcj8Y2-lg" name="GenericNetworkDevice">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_-NaSEEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_-NaSEUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_-NaSEkO2EeeTNbOHCbo_Mw" source="_-NaSF0O2EeeTNbOHCbo_Mw" target="_-NaSGUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-NaSE0O2EeeTNbOHCbo_Mw" source="_-NaSGUO2EeeTNbOHCbo_Mw" target="_-NaSGEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-NaSFEO2EeeTNbOHCbo_Mw" source="_-NaSGkO2EeeTNbOHCbo_Mw" target="_-NaSGEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-NaSFUO2EeeTNbOHCbo_Mw" source="_-NaSGUO2EeeTNbOHCbo_Mw" target="_-NaSGkO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-NaSFkO2EeeTNbOHCbo_Mw" source="_-NaSGkO2EeeTNbOHCbo_Mw" target="_-NaSGUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_-NaSF0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_-NaSGEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-NaSGUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-NaSGkO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_i67voEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_i67voUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_i67vokPHEeeTNbOHCbo_Mw" source="_i67vpEPHEeeTNbOHCbo_Mw" target="_i67vpUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_i67vo0PHEeeTNbOHCbo_Mw" source="_i67vpUPHEeeTNbOHCbo_Mw" target="_i67vpkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_i67vpEPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_i67vpUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_i67vpkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_xAbyMA73Eee6wqcj8Y2-lg" name="GenericVirtualCommunication">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_9GJvEEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_9GJvEUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_9GJvEkO2EeeTNbOHCbo_Mw" source="_9GJvF0O2EeeTNbOHCbo_Mw" target="_9GJvGUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9GJvE0O2EeeTNbOHCbo_Mw" source="_9GJvGUO2EeeTNbOHCbo_Mw" target="_9GJvGEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9GJvFEO2EeeTNbOHCbo_Mw" source="_9GJvGkO2EeeTNbOHCbo_Mw" target="_9GJvGEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9GJvFUO2EeeTNbOHCbo_Mw" source="_9GJvGUO2EeeTNbOHCbo_Mw" target="_9GJvGkO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9GJvFkO2EeeTNbOHCbo_Mw" source="_9GJvGkO2EeeTNbOHCbo_Mw" target="_9GJvGUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_9GJvF0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_9GJvGEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_9GJvGUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_9GJvGkO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_2APUEA73Eee6wqcj8Y2-lg" name="GenericVirtualGateway">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_AdHq4EO3EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_AdHq4UO3EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_AdHq4kO3EeeTNbOHCbo_Mw" source="_AdHq50O3EeeTNbOHCbo_Mw" target="_AdHq6UO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AdHq40O3EeeTNbOHCbo_Mw" source="_AdHq6UO3EeeTNbOHCbo_Mw" target="_AdHq6EO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AdHq5EO3EeeTNbOHCbo_Mw" source="_AdHq6kO3EeeTNbOHCbo_Mw" target="_AdHq6EO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AdHq5UO3EeeTNbOHCbo_Mw" source="_AdHq6UO3EeeTNbOHCbo_Mw" target="_AdHq6kO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AdHq5kO3EeeTNbOHCbo_Mw" source="_AdHq6kO3EeeTNbOHCbo_Mw" target="_AdHq6UO3EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_AdHq50O3EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_AdHq6EO3EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_AdHq6UO3EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_AdHq6kO3EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_DgqeEA72Eee6wqcj8Y2-lg" name="GenericContainer">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_9T2z4EO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_9T2z4UO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_9T2z4kO2EeeTNbOHCbo_Mw" source="_9T2z50O2EeeTNbOHCbo_Mw" target="_9T2z6UO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9T2z40O2EeeTNbOHCbo_Mw" source="_9T2z6UO2EeeTNbOHCbo_Mw" target="_9T2z6EO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9T2z5EO2EeeTNbOHCbo_Mw" source="_9T2z6kO2EeeTNbOHCbo_Mw" target="_9T2z6EO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9T2z5UO2EeeTNbOHCbo_Mw" source="_9T2z6UO2EeeTNbOHCbo_Mw" target="_9T2z6kO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9T2z5kO2EeeTNbOHCbo_Mw" source="_9T2z6kO2EeeTNbOHCbo_Mw" target="_9T2z6UO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_9T2z50O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_9T2z6EO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_9T2z6UO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_9T2z6kO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_JDGy8A72Eee6wqcj8Y2-lg" name="GenericApplicationElement">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_8Z5GAEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_8Z5GAUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_8Z5GAkO2EeeTNbOHCbo_Mw" source="_8Z5GB0O2EeeTNbOHCbo_Mw" target="_8Z5GCUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_8Z5GA0O2EeeTNbOHCbo_Mw" source="_8Z5GCUO2EeeTNbOHCbo_Mw" target="_8Z5GCEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_8Z5GBEO2EeeTNbOHCbo_Mw" source="_8Z5GCkO2EeeTNbOHCbo_Mw" target="_8Z5GCEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_8Z5GBUO2EeeTNbOHCbo_Mw" source="_8Z5GCUO2EeeTNbOHCbo_Mw" target="_8Z5GCkO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_8Z5GBkO2EeeTNbOHCbo_Mw" source="_8Z5GCkO2EeeTNbOHCbo_Mw" target="_8Z5GCUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_8Z5GB0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_8Z5GCEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_8Z5GCUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_8Z5GCkO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_gSnpkEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_gSnpkUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_gSnpkkPHEeeTNbOHCbo_Mw" source="_gSnplEPHEeeTNbOHCbo_Mw" target="_gSnplUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_gSnpk0PHEeeTNbOHCbo_Mw" source="_gSnplUPHEeeTNbOHCbo_Mw" target="_gSnplkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_gSnplEPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_gSnplUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_gSnplkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_f-QgEA72Eee6wqcj8Y2-lg" name="GenericInfrastructureElement">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_9tFzQEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_9tFzQUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_9tFzQkO2EeeTNbOHCbo_Mw" source="_9tFzR0O2EeeTNbOHCbo_Mw" target="_9tFzSUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9tFzQ0O2EeeTNbOHCbo_Mw" source="_9tFzSUO2EeeTNbOHCbo_Mw" target="_9tFzSEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9tFzREO2EeeTNbOHCbo_Mw" source="_9tFzSkO2EeeTNbOHCbo_Mw" target="_9tFzSEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9tFzRUO2EeeTNbOHCbo_Mw" source="_9tFzSUO2EeeTNbOHCbo_Mw" target="_9tFzSkO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9tFzRkO2EeeTNbOHCbo_Mw" source="_9tFzSkO2EeeTNbOHCbo_Mw" target="_9tFzSUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_9tFzR0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_9tFzSEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_9tFzSUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_9tFzSkO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_hsEv0EPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_hsEv0UPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_hsEv0kPHEeeTNbOHCbo_Mw" source="_hsEv1EPHEeeTNbOHCbo_Mw" target="_hsEv1UPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_hsEv00PHEeeTNbOHCbo_Mw" source="_hsEv1UPHEeeTNbOHCbo_Mw" target="_hsEv1kPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_hsEv1EPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_hsEv1UPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_hsEv1kPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jRhAkA72Eee6wqcj8Y2-lg" name="GenericIntegrationElement">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_96brsEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_96brsUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_96brskO2EeeTNbOHCbo_Mw" source="_96brt0O2EeeTNbOHCbo_Mw" target="_96bruUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_96brs0O2EeeTNbOHCbo_Mw" source="_96bruUO2EeeTNbOHCbo_Mw" target="_96bruEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_96brtEO2EeeTNbOHCbo_Mw" source="_96brukO2EeeTNbOHCbo_Mw" target="_96bruEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_96brtUO2EeeTNbOHCbo_Mw" source="_96bruUO2EeeTNbOHCbo_Mw" target="_96brukO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_96brtkO2EeeTNbOHCbo_Mw" source="_96brukO2EeeTNbOHCbo_Mw" target="_96bruUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_96brt0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_96bruEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_96bruUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_96brukO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_idovoEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_idovoUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_idovokPHEeeTNbOHCbo_Mw" source="_idovpEPHEeeTNbOHCbo_Mw" target="_idovpUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_idovo0PHEeeTNbOHCbo_Mw" source="_idovpUPHEeeTNbOHCbo_Mw" target="_idovpkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_idovpEPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_idovpUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_idovpkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_knkNgA72Eee6wqcj8Y2-lg" name="GenericInfrastructureInterface">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_90SncEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_90SncUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_90SnckO2EeeTNbOHCbo_Mw" source="_90Snd0O2EeeTNbOHCbo_Mw" target="_90SneUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_90Snc0O2EeeTNbOHCbo_Mw" source="_90SneUO2EeeTNbOHCbo_Mw" target="_90SneEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_90SndEO2EeeTNbOHCbo_Mw" source="_90SnekO2EeeTNbOHCbo_Mw" target="_90SneEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_90SndUO2EeeTNbOHCbo_Mw" source="_90SneUO2EeeTNbOHCbo_Mw" target="_90SnekO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_90SndkO2EeeTNbOHCbo_Mw" source="_90SnekO2EeeTNbOHCbo_Mw" target="_90SneUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_90Snd0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_90SneEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_90SneUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_90SnekO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_iQ1pwEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_iQ1pwUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_iQ1pwkPHEeeTNbOHCbo_Mw" source="_iQ1pxEPHEeeTNbOHCbo_Mw" target="_iQ1pxUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_iQ1pw0PHEeeTNbOHCbo_Mw" source="_iQ1pxUPHEeeTNbOHCbo_Mw" target="_iQ1pxkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_iQ1pxEPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_iQ1pxUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_iQ1pxkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_D5O5oA73Eee6wqcj8Y2-lg" name="GenericApplicationInterface">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_8kE8wEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_8kE8wUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_8kE8wkO2EeeTNbOHCbo_Mw" source="_8kE8x0O2EeeTNbOHCbo_Mw" target="_8kE8yUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_8kE8w0O2EeeTNbOHCbo_Mw" source="_8kE8yUO2EeeTNbOHCbo_Mw" target="_8kE8yEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_8kE8xEO2EeeTNbOHCbo_Mw" source="_8kE8ykO2EeeTNbOHCbo_Mw" target="_8kE8yEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_8kE8xUO2EeeTNbOHCbo_Mw" source="_8kE8yUO2EeeTNbOHCbo_Mw" target="_8kE8ykO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_8kE8xkO2EeeTNbOHCbo_Mw" source="_8kE8ykO2EeeTNbOHCbo_Mw" target="_8kE8yUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_8kE8x0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_8kE8yEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_8kE8yUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_8kE8ykO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_gffn8EPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_gffn8UPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_gffn8kPHEeeTNbOHCbo_Mw" source="_gffn9EPHEeeTNbOHCbo_Mw" target="_gffn9UPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_gffn80PHEeeTNbOHCbo_Mw" source="_gffn9UPHEeeTNbOHCbo_Mw" target="_gffn9kPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_gffn9EPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_gffn9UPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_gffn9kPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GytBIA73Eee6wqcj8Y2-lg" name="GenericIntegrationInterface">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_-BA00EO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_-BA00UO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_-BA00kO2EeeTNbOHCbo_Mw" source="_-BA010O2EeeTNbOHCbo_Mw" target="_-BA02UO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-BA000O2EeeTNbOHCbo_Mw" source="_-BA02UO2EeeTNbOHCbo_Mw" target="_-BA02EO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-BA01EO2EeeTNbOHCbo_Mw" source="_-BA02kO2EeeTNbOHCbo_Mw" target="_-BA02EO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-BA01UO2EeeTNbOHCbo_Mw" source="_-BA02UO2EeeTNbOHCbo_Mw" target="_-BA02kO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-BA01kO2EeeTNbOHCbo_Mw" source="_-BA02kO2EeeTNbOHCbo_Mw" target="_-BA02UO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_-BA010O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_-BA02EO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-BA02UO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-BA02kO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_isr4QEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_isr4QUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_isr4QkPHEeeTNbOHCbo_Mw" source="_isr4REPHEeeTNbOHCbo_Mw" target="_isr4RUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_isr4Q0PHEeeTNbOHCbo_Mw" source="_isr4RUPHEeeTNbOHCbo_Mw" target="_isr4RkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_isr4REPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_isr4RUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_isr4RkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_zB4-gA71Eee6wqcj8Y2-lg" name="GenericInfrastructure">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_9bNZEEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_9bNZEUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_9bNZEkO2EeeTNbOHCbo_Mw" source="_9bNZF0O2EeeTNbOHCbo_Mw" target="_9bNZGUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9bNZE0O2EeeTNbOHCbo_Mw" source="_9bNZGUO2EeeTNbOHCbo_Mw" target="_9bNZGEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9bNZFEO2EeeTNbOHCbo_Mw" source="_9bNZGkO2EeeTNbOHCbo_Mw" target="_9bNZGEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9bNZFUO2EeeTNbOHCbo_Mw" source="_9bNZGUO2EeeTNbOHCbo_Mw" target="_9bNZGkO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_9bNZFkO2EeeTNbOHCbo_Mw" source="_9bNZGkO2EeeTNbOHCbo_Mw" target="_9bNZGUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_9bNZF0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_9bNZGEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_9bNZGUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_9bNZGkO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_haROIEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_haROIUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_haROIkPHEeeTNbOHCbo_Mw" source="_haROJEPHEeeTNbOHCbo_Mw" target="_haROJUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_haROI0PHEeeTNbOHCbo_Mw" source="_haROJUPHEeeTNbOHCbo_Mw" target="_haROJkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_haROJEPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_haROJUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_haROJkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3u3rAA71Eee6wqcj8Y2-lg" name="GenericPhysicalUnit">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_-rJ-AEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_-rJ-AUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_-rJ-AkO2EeeTNbOHCbo_Mw" source="_-rJ-B0O2EeeTNbOHCbo_Mw" target="_-rJ-CUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-rJ-A0O2EeeTNbOHCbo_Mw" source="_-rJ-CUO2EeeTNbOHCbo_Mw" target="_-rJ-CEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-rJ-BEO2EeeTNbOHCbo_Mw" source="_-rJ-CkO2EeeTNbOHCbo_Mw" target="_-rJ-CEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-rJ-BUO2EeeTNbOHCbo_Mw" source="_-rJ-CUO2EeeTNbOHCbo_Mw" target="_-rJ-CkO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-rJ-BkO2EeeTNbOHCbo_Mw" source="_-rJ-CkO2EeeTNbOHCbo_Mw" target="_-rJ-CUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_-rJ-B0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_-rJ-CEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-rJ-CUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-rJ-CkO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_jk55sEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_jk55sUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_jk55skPHEeeTNbOHCbo_Mw" source="_jk55tEPHEeeTNbOHCbo_Mw" target="_jk55tUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_jk55s0PHEeeTNbOHCbo_Mw" source="_jk55tUPHEeeTNbOHCbo_Mw" target="_jk55tkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_jk55tEPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_jk55tUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_jk55tkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_7Dak8A71Eee6wqcj8Y2-lg" name="GenericVirtualUnit">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_AprgMEO3EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_AprgMUO3EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_AprgMkO3EeeTNbOHCbo_Mw" source="_AprgN0O3EeeTNbOHCbo_Mw" target="_AprgOUO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AprgM0O3EeeTNbOHCbo_Mw" source="_AprgOUO3EeeTNbOHCbo_Mw" target="_AprgOEO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AprgNEO3EeeTNbOHCbo_Mw" source="_AprgOkO3EeeTNbOHCbo_Mw" target="_AprgOEO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AprgNUO3EeeTNbOHCbo_Mw" source="_AprgOUO3EeeTNbOHCbo_Mw" target="_AprgOkO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_AprgNkO3EeeTNbOHCbo_Mw" source="_AprgOkO3EeeTNbOHCbo_Mw" target="_AprgOUO3EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_AprgN0O3EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_AprgOEO3EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_AprgOUO3EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_AprgOkO3EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_llppcEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_llppcUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_llppckPHEeeTNbOHCbo_Mw" source="_llppdEPHEeeTNbOHCbo_Mw" target="_llppdUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_llppc0PHEeeTNbOHCbo_Mw" source="_llppdUPHEeeTNbOHCbo_Mw" target="_llppdkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_llppdEPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_llppdUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_llppdkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="__xFN8A71Eee6wqcj8Y2-lg" name="GenericCloudService">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_89gJYEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_89gJYUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_89gJYkO2EeeTNbOHCbo_Mw" source="_89gJZ0O2EeeTNbOHCbo_Mw" target="_89gJaUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_89gJY0O2EeeTNbOHCbo_Mw" source="_89gJaUO2EeeTNbOHCbo_Mw" target="_89gJaEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_89gJZEO2EeeTNbOHCbo_Mw" source="_89gJakO2EeeTNbOHCbo_Mw" target="_89gJaEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_89gJZUO2EeeTNbOHCbo_Mw" source="_89gJaUO2EeeTNbOHCbo_Mw" target="_89gJakO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_89gJZkO2EeeTNbOHCbo_Mw" source="_89gJakO2EeeTNbOHCbo_Mw" target="_89gJaUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_89gJZ0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_89gJaEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_89gJaUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_89gJakO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_gs0SQEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_gs0SQUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_gs0SQkPHEeeTNbOHCbo_Mw" source="_gs0SREPHEeeTNbOHCbo_Mw" target="_gs0SRUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_gs0SQ0PHEeeTNbOHCbo_Mw" source="_gs0SRUPHEeeTNbOHCbo_Mw" target="_gs0SRkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_gs0SREPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_gs0SRUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_gs0SRkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_us83sBnvEeefv6_mGR-Zbg" name="GenericSoftwareDefinedCapability">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_-2o1QEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_-2o1QUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_-2o1QkO2EeeTNbOHCbo_Mw" source="_-2o1R0O2EeeTNbOHCbo_Mw" target="_-2o1SUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-2o1Q0O2EeeTNbOHCbo_Mw" source="_-2o1SUO2EeeTNbOHCbo_Mw" target="_-2o1SEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-2o1REO2EeeTNbOHCbo_Mw" source="_-2o1SkO2EeeTNbOHCbo_Mw" target="_-2o1SEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-2o1RUO2EeeTNbOHCbo_Mw" source="_-2o1SUO2EeeTNbOHCbo_Mw" target="_-2o1SkO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-2o1RkO2EeeTNbOHCbo_Mw" source="_-2o1SkO2EeeTNbOHCbo_Mw" target="_-2o1SUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_-2o1R0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_-2o1SEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-2o1SUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-2o1SkO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_kMYwcEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_kMYwcUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_kMYwckPHEeeTNbOHCbo_Mw" source="_kMYwdEPHEeeTNbOHCbo_Mw" target="_kMYwdUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_kMYwc0PHEeeTNbOHCbo_Mw" source="_kMYwdUPHEeeTNbOHCbo_Mw" target="_kMYwdkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_kMYwdEPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_kMYwdUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_kMYwdkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_iozJUBnvEeefv6_mGR-Zbg" name="GenericTestExecutor">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="__pkHAEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="__pkHAUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="__pkHAkO2EeeTNbOHCbo_Mw" source="__pkHB0O2EeeTNbOHCbo_Mw" target="__pkHCUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="__pkHA0O2EeeTNbOHCbo_Mw" source="__pkHCUO2EeeTNbOHCbo_Mw" target="__pkHCEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="__pkHBEO2EeeTNbOHCbo_Mw" source="__pkHCkO2EeeTNbOHCbo_Mw" target="__pkHCEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="__pkHBUO2EeeTNbOHCbo_Mw" source="__pkHCUO2EeeTNbOHCbo_Mw" target="__pkHCkO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="__pkHBkO2EeeTNbOHCbo_Mw" source="__pkHCkO2EeeTNbOHCbo_Mw" target="__pkHCUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="__pkHB0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="__pkHCEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="__pkHCUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="__pkHCkO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_kngmMEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_kngmMUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_kngmMkPHEeeTNbOHCbo_Mw" source="_kngmNEPHEeeTNbOHCbo_Mw" target="_kngmNUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_kngmM0PHEeeTNbOHCbo_Mw" source="_kngmNUPHEeeTNbOHCbo_Mw" target="_kngmNkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_kngmNEPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_kngmNUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_kngmNkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_rR338BnvEeefv6_mGR-Zbg" name="GenericPhysicalCapability">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_-UB3cEO2EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_-UB3cUO2EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_-UB3ckO2EeeTNbOHCbo_Mw" source="_-UB3d0O2EeeTNbOHCbo_Mw" target="_-UB3eUO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-UB3c0O2EeeTNbOHCbo_Mw" source="_-UB3eUO2EeeTNbOHCbo_Mw" target="_-UB3eEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-UB3dEO2EeeTNbOHCbo_Mw" source="_-UB3ekO2EeeTNbOHCbo_Mw" target="_-UB3eEO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-UB3dUO2EeeTNbOHCbo_Mw" source="_-UB3eUO2EeeTNbOHCbo_Mw" target="_-UB3ekO2EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_-UB3dkO2EeeTNbOHCbo_Mw" source="_-UB3ekO2EeeTNbOHCbo_Mw" target="_-UB3eUO2EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_-UB3d0O2EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_-UB3eEO2EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-UB3eUO2EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-UB3ekO2EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_jJTi0EPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_jJTi0UPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_jJTi0kPHEeeTNbOHCbo_Mw" source="_jJTi1EPHEeeTNbOHCbo_Mw" target="_jJTi1UPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_jJTi00PHEeeTNbOHCbo_Mw" source="_jJTi1UPHEeeTNbOHCbo_Mw" target="_jJTi1kPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_jJTi1EPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_jJTi1UPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_jJTi1kPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_nUQL0BnvEeefv6_mGR-Zbg" name="GenericCapability">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_O_a2sEO3EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_O_a2sUO3EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_O_a2skO3EeeTNbOHCbo_Mw" source="_O_a2t0O3EeeTNbOHCbo_Mw" target="_O_a2uUO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_O_a2s0O3EeeTNbOHCbo_Mw" source="_O_a2uUO3EeeTNbOHCbo_Mw" target="_O_a2uEO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_O_a2tEO3EeeTNbOHCbo_Mw" source="_O_a2ukO3EeeTNbOHCbo_Mw" target="_O_a2uEO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_O_a2tUO3EeeTNbOHCbo_Mw" source="_O_a2uUO3EeeTNbOHCbo_Mw" target="_O_a2ukO3EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_O_a2tkO3EeeTNbOHCbo_Mw" source="_O_a2ukO3EeeTNbOHCbo_Mw" target="_O_a2uUO3EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_O_a2t0O3EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_O_a2uEO3EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_O_a2uUO3EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_O_a2ukO3EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_l2tkQEPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_l2tkQUPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_l2tkQkPHEeeTNbOHCbo_Mw" source="_l2tkREPHEeeTNbOHCbo_Mw" target="_l2tkRUPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_l2tkQ0PHEeeTNbOHCbo_Mw" source="_l2tkRUPHEeeTNbOHCbo_Mw" target="_l2tkRkPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_l2tkREPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_l2tkRUPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_l2tkRkPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_YuKFIBnvEeefv6_mGR-Zbg" name="GenericEventTrigger"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_e0YcgBnvEeefv6_mGR-Zbg" name="GenericPeriodicTrigger"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_CD0bMBnvEeefv6_mGR-Zbg" name="GenericTestTrigger"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ziR6oCOBEeeEbt5FCAmS1w" name="GenericPhysicalMetric">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_K6elIEO4EeeTNbOHCbo_Mw" name="StateMachine1">
+          <region xmi:id="_K6elIUO4EeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_K6elIkO4EeeTNbOHCbo_Mw" source="_K6elJ0O4EeeTNbOHCbo_Mw" target="_K6elKUO4EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_K6elI0O4EeeTNbOHCbo_Mw" source="_K6elKUO4EeeTNbOHCbo_Mw" target="_K6elKEO4EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_K6elJEO4EeeTNbOHCbo_Mw" source="_K6elKkO4EeeTNbOHCbo_Mw" target="_K6elKEO4EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_K6elJUO4EeeTNbOHCbo_Mw" source="_K6elKUO4EeeTNbOHCbo_Mw" target="_K6elKkO4EeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_K6elJkO4EeeTNbOHCbo_Mw" source="_K6elKkO4EeeTNbOHCbo_Mw" target="_K6elKUO4EeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_K6elJ0O4EeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_K6elKEO4EeeTNbOHCbo_Mw" name="FinalState1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_K6elKUO4EeeTNbOHCbo_Mw" name="Ready"/>
+            <subvertex xmi:type="uml:State" xmi:id="_K6elKkO4EeeTNbOHCbo_Mw" name="Running"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_jWwI8EPHEeeTNbOHCbo_Mw" name="StateMachineWithUncertainty">
+          <region xmi:id="_jWwI8UPHEeeTNbOHCbo_Mw" name="Region1">
+            <transition xmi:id="_jWwI8kPHEeeTNbOHCbo_Mw" source="_jWwI9EPHEeeTNbOHCbo_Mw" target="_jWwI9UPHEeeTNbOHCbo_Mw"/>
+            <transition xmi:id="_jWwI80PHEeeTNbOHCbo_Mw" source="_jWwI9UPHEeeTNbOHCbo_Mw" target="_jWwI9kPHEeeTNbOHCbo_Mw"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_jWwI9EPHEeeTNbOHCbo_Mw" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_jWwI9UPHEeeTNbOHCbo_Mw" name="State1"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_jWwI9kPHEeeTNbOHCbo_Mw" name="FinalState1"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_dNPx4EO4EeeTNbOHCbo_Mw" name="UncertaintySpecifications">
+        <packagedElement xmi:type="uml:Package" xmi:id="_OIUIMEO6EeeTNbOHCbo_Mw" name="GenericSpecification">
+          <packagedElement xmi:type="uml:Class" xmi:id="_ezazkEO6EeeTNbOHCbo_Mw" name="Cause_001"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_g-e88EO6EeeTNbOHCbo_Mw" name="TemporalManifestation_001"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_EAnYEEO9EeeTNbOHCbo_Mw" name="SporadicManifestation_001"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Gak5EEO9EeeTNbOHCbo_Mw" name="RecurringManifestation"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Ih3VsEO9EeeTNbOHCbo_Mw" name="PersistentManifestation"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZvHE0EO9EeeTNbOHCbo_Mw" name="IngressEgress_001"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_fFCAoEO9EeeTNbOHCbo_Mw" name="Locality_001"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_kf6U8EO9EeeTNbOHCbo_Mw" name="ObservatiomTime_001"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_sOUyIEO9EeeTNbOHCbo_Mw" name="NonFunctionalDimensionality_001"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_wuLooEO9EeeTNbOHCbo_Mw" name="NonFunctionalAttribute001"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_EyBKYEO-EeeTNbOHCbo_Mw" name="FunctionalDimensionality_001"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_I3nGwEO-EeeTNbOHCbo_Mw" name="FunctionalAttribute_001"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZD7kYEO-EeeTNbOHCbo_Mw" name="InfrastructureLevelEffect_001"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_51CqAEO-EeeTNbOHCbo_Mw" name="Observation"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_phNPIEO-EeeTNbOHCbo_Mw" name="InfrastructureLevelUncertainty_001"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_YokMIEPAEeeTNbOHCbo_Mw" name="StorageUncertainty_001"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_mVhEUEPAEeeTNbOHCbo_Mw" name="DataDeliveryUncertainty_001"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_FPykIEPBEeeTNbOHCbo_Mw" name="ElasticityUncertainty_001"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_I9N4IEPBEeeTNbOHCbo_Mw" name="ActuationUncertainty_001"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_OSukQEPBEeeTNbOHCbo_Mw" name="ExecutionEnvironmentUncertainty_001"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_UsrI4EPBEeeTNbOHCbo_Mw" name="GovernanceUncertainty_001"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_fQnpwEO2EeeTNbOHCbo_Mw" name="Examples">
+      <packagedElement xmi:type="uml:Package" xmi:id="_lYIzoERQEeeXpvCVjWTYeA" name="TelcoBaseTransceiverStation">
+        <ownedComment xmi:id="_DptVwEXzEeeNrMhg6pDppw" annotatedElement="_2GTaEERQEeeXpvCVjWTYeA _plYu0EReEeeXpvCVjWTYeA">
+          <body>resMult=$m2</body>
+        </ownedComment>
+        <ownedComment xmi:id="_67TeYEX2EeeNrMhg6pDppw" annotatedElement="_lYIzoERQEeeXpvCVjWTYeA">
+          <body>resMult = $m2</body>
+        </ownedComment>
+        <ownedComment xmi:id="__tHAgEX2EeeNrMhg6pDppw">
+          <body>resMult = $m3</body>
+        </ownedComment>
+        <ownedComment xmi:id="_d_zWEEdvEee5F8b1qsyZMA" annotatedElement="_wuSp8EUIEeebuPNq01--pQ">
+          <body>communicationProtocols=[MQTTConfigClient]</body>
+        </ownedComment>
+        <ownedComment xmi:id="_XhBDAEeWEee5F8b1qsyZMA" annotatedElement="_juHaYEUXEeeNrMhg6pDppw">
+          <body>&lt;&lt;TestConfiguration>>&#xD;
+configurations= {MQTTConfig1Server, MQTTConfig2Client, CassandraConfig1, GoogleBigQueryConfig1}</body>
+        </ownedComment>
+        <ownedComment xmi:id="_aG2aYE0IEeen7K41utM1aw" annotatedElement="_WsMMYEXsEeeNrMhg6pDppw">
+          <body>resMult=1, speed factor = 0.2</body>
+        </ownedComment>
+        <ownedComment xmi:id="_h0mJME0IEeen7K41utM1aw" annotatedElement="_azh1MEXsEeeNrMhg6pDppw">
+          <body>resMult = 1,&#xD;
+memorySize =(0.6, GB)</body>
+        </ownedComment>
+        <ownedComment xmi:id="_uP1h4E0IEeen7K41utM1aw" annotatedElement="_gJhpgEXsEeeNrMhg6pDppw">
+          <body>resMult = 4,&#xD;
+memorySize = (3, TB)</body>
+        </ownedComment>
+        <ownedComment xmi:id="_W_AHME9OEee-m7qAtQ_W2A">
+          <body>Please select some config params. we left them undefined so that this &#xD;
+StorageConfiguration will be also a IndeterminacySource for Uncertainty caused by missing information </body>
+        </ownedComment>
+        <ownedComment xmi:id="_lkHWcE9OEee-m7qAtQ_W2A">
+          <body>Please select some config params. we left them undefined so that this &#xD;
+StorageConfiguration will be also a IndeterminacySource for Uncertainty caused by missing information </body>
+        </ownedComment>
+        <ownedComment xmi:id="_yEqq0FDsEeeBaKpUcWLICA">
+          <body>Please select some config params. we left them undefined so that this &#xD;
+ComputingConfiguration will be also a IndeterminacySource for Uncertainty caused by missing information </body>
+        </ownedComment>
+        <ownedComment xmi:id="_6fKp8F15Eeel-tS9I1vO3w" annotatedElement="_8V-5EEdpEee5F8b1qsyZMA">
+          <body>{&#xD;
+protocolType= MQTT,&#xD;
+qosLevel,&#xD;
+keepAlive = 210,&#xD;
+}</body>
+        </ownedComment>
+        <ownedComment xmi:id="_m1cb4F16Eeel-tS9I1vO3w">
+          <body>{&#xD;
+protocolType = MQTT,&#xD;
+clientID = &quot;&quot;,&#xD;
+serverIP = &quot;&quot;,&#xD;
+portNumber = 1883,&#xD;
+topics = &quot;gateway/electricity&quot;,&#xD;
+qosLevel = 2&#xD;
+}</body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Class" xmi:id="_2GTaEERQEeeXpvCVjWTYeA" name="HwTemperatureSensor">
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_2GTaEURQEeeXpvCVjWTYeA" name="Temperature Sensor Main Behavior">
+            <region xmi:id="_2GTaEkRQEeeXpvCVjWTYeA" name="Region1">
+              <transition xmi:id="_2GTaE0RQEeeXpvCVjWTYeA" source="_2GTaGERQEeeXpvCVjWTYeA" target="_2GTaGkRQEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_2GTaFERQEeeXpvCVjWTYeA" name="stop" source="_2GTaGkRQEeeXpvCVjWTYeA" target="_2GTaGURQEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_2GTaFkRQEeeXpvCVjWTYeA" name="start" source="_2GTaGkRQEeeXpvCVjWTYeA" target="_2GTaG0RQEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_2GTaF0RQEeeXpvCVjWTYeA" name="stop" source="_2GTaG0RQEeeXpvCVjWTYeA" target="_2GTaGkRQEeeXpvCVjWTYeA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_2GTaGERQEeeXpvCVjWTYeA" name="Start"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_2GTaGURQEeeXpvCVjWTYeA" name="End"/>
+              <subvertex xmi:type="uml:State" xmi:id="_2GTaGkRQEeeXpvCVjWTYeA" name="Ready"/>
+              <subvertex xmi:type="uml:State" xmi:id="_2GTaG0RQEeeXpvCVjWTYeA" name="Running"/>
+            </region>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_2GTaHERQEeeXpvCVjWTYeA" name="StateMachineWithUncertainty">
+            <region xmi:id="_2GTaHURQEeeXpvCVjWTYeA" name="Region1">
+              <transition xmi:id="_2GTaHkRQEeeXpvCVjWTYeA" source="_2GTaIERQEeeXpvCVjWTYeA" target="_2GTaIURQEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_2GTaH0RQEeeXpvCVjWTYeA" source="_2GTaIURQEeeXpvCVjWTYeA" target="_2GTaIkRQEeeXpvCVjWTYeA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_2GTaIERQEeeXpvCVjWTYeA" name="Initial1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_2GTaIURQEeeXpvCVjWTYeA" name="State1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_2GTaIkRQEeeXpvCVjWTYeA" name="FinalState1"/>
+            </region>
+          </ownedBehavior>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_WqOYQERREeeXpvCVjWTYeA" name="TemperatureSensor">
+          <ownedAttribute xmi:id="_QQDfQERTEeeXpvCVjWTYeA" name="hw_temperature_sensor" type="_2GTaEERQEeeXpvCVjWTYeA" association="_QQC4MERTEeeXpvCVjWTYeA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_G8o_wEXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_G8o_wUXrEeeNrMhg6pDppw" value="*"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_WqOYQURREeeXpvCVjWTYeA" name="StateMachine1">
+            <region xmi:id="_WqOYQkRREeeXpvCVjWTYeA" name="Region1">
+              <transition xmi:id="_WqOYQ0RREeeXpvCVjWTYeA" source="_WqOYSERREeeXpvCVjWTYeA" target="_WqOYSkRREeeXpvCVjWTYeA"/>
+              <transition xmi:id="_WqOYRERREeeXpvCVjWTYeA" source="_WqOYSkRREeeXpvCVjWTYeA" target="_WqOYSURREeeXpvCVjWTYeA"/>
+              <transition xmi:id="_WqOYRURREeeXpvCVjWTYeA" source="_WqOYS0RREeeXpvCVjWTYeA" target="_WqOYSURREeeXpvCVjWTYeA"/>
+              <transition xmi:id="_WqOYRkRREeeXpvCVjWTYeA" source="_WqOYSkRREeeXpvCVjWTYeA" target="_WqOYS0RREeeXpvCVjWTYeA"/>
+              <transition xmi:id="_WqOYR0RREeeXpvCVjWTYeA" source="_WqOYS0RREeeXpvCVjWTYeA" target="_WqOYSkRREeeXpvCVjWTYeA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_WqOYSERREeeXpvCVjWTYeA" name="Initial1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_WqOYSURREeeXpvCVjWTYeA" name="FinalState1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_WqOYSkRREeeXpvCVjWTYeA" name="Ready"/>
+              <subvertex xmi:type="uml:State" xmi:id="_WqOYS0RREeeXpvCVjWTYeA" name="Running"/>
+            </region>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_WqOYTERREeeXpvCVjWTYeA" name="StateMachineWithUncertainty">
+            <region xmi:id="_WqOYTURREeeXpvCVjWTYeA" name="Region1">
+              <transition xmi:id="_WqOYTkRREeeXpvCVjWTYeA" source="_WqOYUERREeeXpvCVjWTYeA" target="_WqOYUURREeeXpvCVjWTYeA"/>
+              <transition xmi:id="_WqOYT0RREeeXpvCVjWTYeA" source="_WqOYUURREeeXpvCVjWTYeA" target="_WqOYUkRREeeXpvCVjWTYeA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_WqOYUERREeeXpvCVjWTYeA" name="Initial1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_WqOYUURREeeXpvCVjWTYeA" name="State1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_WqOYUkRREeeXpvCVjWTYeA" name="FinalState1"/>
+            </region>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_TbBc4FyxEee3fP2vaOmJjA" name="getProtocol"/>
+          <ownedOperation xmi:id="_TbCrAFyxEee3fP2vaOmJjA" name="getRate"/>
+          <ownedOperation xmi:id="_TbD5IFyxEee3fP2vaOmJjA" name="setProtocol"/>
+          <ownedOperation xmi:id="_TbD5IVyxEee3fP2vaOmJjA" name="setRate"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_YSRUIERREeeXpvCVjWTYeA" name="BTSBroker">
+          <ownedAttribute xmi:id="_Xcl-ckRTEeeXpvCVjWTYeA" name="ingestion_client" type="_wgQJgE0BEeedg6nzD0_JBg" association="_XclXYERTEeeXpvCVjWTYeA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UUi1AEXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UUi1AUXrEeeNrMhg6pDppw" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_hrJa4kUIEeebuPNq01--pQ" name="iot_gateway" type="_plYu0EReEeeXpvCVjWTYeA" association="_hrIz0EUIEeebuPNq01--pQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PpI10EXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PpO8cEXrEeeNrMhg6pDppw" value="*"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_YSRUIURREeeXpvCVjWTYeA" name="StateMachine1">
+            <region xmi:id="_YSRUIkRREeeXpvCVjWTYeA" name="Region1">
+              <transition xmi:id="_YSRUI0RREeeXpvCVjWTYeA" source="_YSRUKERREeeXpvCVjWTYeA" target="_YSRUKkRREeeXpvCVjWTYeA"/>
+              <transition xmi:id="_YSRUJERREeeXpvCVjWTYeA" source="_YSRUKkRREeeXpvCVjWTYeA" target="_YSRUKURREeeXpvCVjWTYeA"/>
+              <transition xmi:id="_YSRUJURREeeXpvCVjWTYeA" source="_YSRUK0RREeeXpvCVjWTYeA" target="_YSRUKURREeeXpvCVjWTYeA"/>
+              <transition xmi:id="_YSRUJkRREeeXpvCVjWTYeA" source="_YSRUKkRREeeXpvCVjWTYeA" target="_YSRUK0RREeeXpvCVjWTYeA"/>
+              <transition xmi:id="_YSRUJ0RREeeXpvCVjWTYeA" source="_YSRUK0RREeeXpvCVjWTYeA" target="_YSRUKkRREeeXpvCVjWTYeA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_YSRUKERREeeXpvCVjWTYeA" name="Initial1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_YSRUKURREeeXpvCVjWTYeA" name="FinalState1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_YSRUKkRREeeXpvCVjWTYeA" name="Ready"/>
+              <subvertex xmi:type="uml:State" xmi:id="_YSRUK0RREeeXpvCVjWTYeA" name="Running"/>
+            </region>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_YSRULERREeeXpvCVjWTYeA" name="StateMachineWithUncertainty">
+            <region xmi:id="_YSRULURREeeXpvCVjWTYeA" name="Region1">
+              <transition xmi:id="_YSRULkRREeeXpvCVjWTYeA" source="_YSRUMERREeeXpvCVjWTYeA" target="_YSRUMURREeeXpvCVjWTYeA"/>
+              <transition xmi:id="_YSRUL0RREeeXpvCVjWTYeA" source="_YSRUMURREeeXpvCVjWTYeA" target="_YSRUMkRREeeXpvCVjWTYeA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_YSRUMERREeeXpvCVjWTYeA" name="Initial1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_YSRUMURREeeXpvCVjWTYeA" name="State1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_YSRUMkRREeeXpvCVjWTYeA" name="FinalState1"/>
+            </region>
+          </ownedBehavior>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_QQC4MERTEeeXpvCVjWTYeA" name="HwTemperatureSensor_TemperatureSensor" memberEnd="_QQDfQERTEeeXpvCVjWTYeA _QQDfQURTEeeXpvCVjWTYeA" navigableOwnedEnd="_QQDfQURTEeeXpvCVjWTYeA">
+          <eAnnotations xmi:id="_QQC4MURTEeeXpvCVjWTYeA" source="org.eclipse.papyrus">
+            <details xmi:id="_QQC4MkRTEeeXpvCVjWTYeA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="_QQDfQURTEeeXpvCVjWTYeA" name="temperature_sensor" type="_WqOYQERREeeXpvCVjWTYeA" association="_QQC4MERTEeeXpvCVjWTYeA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GXVTQEXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GXXIcEXrEeeNrMhg6pDppw" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_XclXYERTEeeXpvCVjWTYeA" name="BTSBroker_IngestionClient" memberEnd="_Xcl-ckRTEeeXpvCVjWTYeA _Xcl-c0RTEeeXpvCVjWTYeA" navigableOwnedEnd="_Xcl-c0RTEeeXpvCVjWTYeA">
+          <eAnnotations xmi:id="_Xcl-cERTEeeXpvCVjWTYeA" source="org.eclipse.papyrus">
+            <details xmi:id="_Xcl-cURTEeeXpvCVjWTYeA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="_Xcl-c0RTEeeXpvCVjWTYeA" name="bts_broker" type="_YSRUIERREeeXpvCVjWTYeA" association="_XclXYERTEeeXpvCVjWTYeA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UqTpoEXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UqTpoUXrEeeNrMhg6pDppw" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_OyNLwERUEeeXpvCVjWTYeA" name="BTS Monitor">
+          <ownedAttribute xmi:id="_gHfckkRUEeeXpvCVjWTYeA" name="bts_broker" type="_YSRUIERREeeXpvCVjWTYeA" association="_gHe1gERUEeeXpvCVjWTYeA"/>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_OyNLwURUEeeXpvCVjWTYeA" name="StateMachine1">
+            <region xmi:id="_OyNLwkRUEeeXpvCVjWTYeA" name="Region1">
+              <transition xmi:id="_OyNLw0RUEeeXpvCVjWTYeA" source="_OyNLyERUEeeXpvCVjWTYeA" target="_OyNLykRUEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_OyNLxERUEeeXpvCVjWTYeA" source="_OyNLykRUEeeXpvCVjWTYeA" target="_OyNLyURUEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_OyNLxURUEeeXpvCVjWTYeA" source="_OyNLy0RUEeeXpvCVjWTYeA" target="_OyNLyURUEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_OyNLxkRUEeeXpvCVjWTYeA" source="_OyNLykRUEeeXpvCVjWTYeA" target="_OyNLy0RUEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_OyNLx0RUEeeXpvCVjWTYeA" source="_OyNLy0RUEeeXpvCVjWTYeA" target="_OyNLykRUEeeXpvCVjWTYeA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_OyNLyERUEeeXpvCVjWTYeA" name="Initial1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_OyNLyURUEeeXpvCVjWTYeA" name="FinalState1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_OyNLykRUEeeXpvCVjWTYeA" name="Ready"/>
+              <subvertex xmi:type="uml:State" xmi:id="_OyNLy0RUEeeXpvCVjWTYeA" name="Running"/>
+            </region>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_OyNLzERUEeeXpvCVjWTYeA" name="StateMachineWithUncertainty">
+            <region xmi:id="_OyNLzURUEeeXpvCVjWTYeA" name="Region1">
+              <transition xmi:id="_OyNLzkRUEeeXpvCVjWTYeA" source="_OyNL0ERUEeeXpvCVjWTYeA" target="_OyNL0URUEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_OyNLz0RUEeeXpvCVjWTYeA" source="_OyNL0URUEeeXpvCVjWTYeA" target="_OyNL0kRUEeeXpvCVjWTYeA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_OyNL0ERUEeeXpvCVjWTYeA" name="Initial1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_OyNL0URUEeeXpvCVjWTYeA" name="State1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_OyNL0kRUEeeXpvCVjWTYeA" name="FinalState1"/>
+            </region>
+          </ownedBehavior>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_gHe1gERUEeeXpvCVjWTYeA" name="BTSBroker_BTSMonitor" memberEnd="_gHfckkRUEeeXpvCVjWTYeA _gHhRwERUEeeXpvCVjWTYeA" navigableOwnedEnd="_gHhRwERUEeeXpvCVjWTYeA">
+          <eAnnotations xmi:id="_gHfckERUEeeXpvCVjWTYeA" source="org.eclipse.papyrus">
+            <details xmi:id="_gHfckURUEeeXpvCVjWTYeA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="_gHhRwERUEeeXpvCVjWTYeA" name="bts_monitor" type="_OyNLwERUEeeXpvCVjWTYeA" association="_gHe1gERUEeeXpvCVjWTYeA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Ucis0EReEeeXpvCVjWTYeA" name="HwElectricitySensor">
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Ucis0UReEeeXpvCVjWTYeA" name="StateMachine1">
+            <region xmi:id="_Ucis0kReEeeXpvCVjWTYeA" name="Region1">
+              <transition xmi:id="_Ucis00ReEeeXpvCVjWTYeA" source="_Ucis2EReEeeXpvCVjWTYeA" target="_Ucis2kReEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_Ucis1EReEeeXpvCVjWTYeA" source="_Ucis2kReEeeXpvCVjWTYeA" target="_Ucis2UReEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_Ucis1UReEeeXpvCVjWTYeA" source="_Ucis20ReEeeXpvCVjWTYeA" target="_Ucis2UReEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_Ucis1kReEeeXpvCVjWTYeA" source="_Ucis2kReEeeXpvCVjWTYeA" target="_Ucis20ReEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_Ucis10ReEeeXpvCVjWTYeA" source="_Ucis20ReEeeXpvCVjWTYeA" target="_Ucis2kReEeeXpvCVjWTYeA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_Ucis2EReEeeXpvCVjWTYeA" name="Initial1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_Ucis2UReEeeXpvCVjWTYeA" name="FinalState1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_Ucis2kReEeeXpvCVjWTYeA" name="Ready"/>
+              <subvertex xmi:type="uml:State" xmi:id="_Ucis20ReEeeXpvCVjWTYeA" name="Running"/>
+            </region>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Ucis3EReEeeXpvCVjWTYeA" name="StateMachineWithUncertainty">
+            <region xmi:id="_Ucis3UReEeeXpvCVjWTYeA" name="Region1">
+              <transition xmi:id="_Ucis3kReEeeXpvCVjWTYeA" source="_Ucis4EReEeeXpvCVjWTYeA" target="_Ucis4UReEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_Ucis30ReEeeXpvCVjWTYeA" source="_Ucis4UReEeeXpvCVjWTYeA" target="_Ucis4kReEeeXpvCVjWTYeA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_Ucis4EReEeeXpvCVjWTYeA" name="Initial1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_Ucis4UReEeeXpvCVjWTYeA" name="State1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_Ucis4kReEeeXpvCVjWTYeA" name="FinalState1"/>
+            </region>
+          </ownedBehavior>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_iSyq8EReEeeXpvCVjWTYeA" name="HwAirConditioningSensor">
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_iSyq8UReEeeXpvCVjWTYeA" name="StateMachine1">
+            <region xmi:id="_iSyq8kReEeeXpvCVjWTYeA" name="Region1">
+              <transition xmi:id="_iSyq80ReEeeXpvCVjWTYeA" source="_iSyq-EReEeeXpvCVjWTYeA" target="_iSyq-kReEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_iSyq9EReEeeXpvCVjWTYeA" source="_iSyq-kReEeeXpvCVjWTYeA" target="_iSyq-UReEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_iSyq9UReEeeXpvCVjWTYeA" source="_iSyq-0ReEeeXpvCVjWTYeA" target="_iSyq-UReEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_iSyq9kReEeeXpvCVjWTYeA" source="_iSyq-kReEeeXpvCVjWTYeA" target="_iSyq-0ReEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_iSyq90ReEeeXpvCVjWTYeA" source="_iSyq-0ReEeeXpvCVjWTYeA" target="_iSyq-kReEeeXpvCVjWTYeA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_iSyq-EReEeeXpvCVjWTYeA" name="Initial1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_iSyq-UReEeeXpvCVjWTYeA" name="FinalState1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_iSyq-kReEeeXpvCVjWTYeA" name="Ready"/>
+              <subvertex xmi:type="uml:State" xmi:id="_iSyq-0ReEeeXpvCVjWTYeA" name="Running"/>
+            </region>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_iSyq_EReEeeXpvCVjWTYeA" name="StateMachineWithUncertainty">
+            <region xmi:id="_iSyq_UReEeeXpvCVjWTYeA" name="Region1">
+              <transition xmi:id="_iSyq_kReEeeXpvCVjWTYeA" source="_iSyrAEReEeeXpvCVjWTYeA" target="_iSyrAUReEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_iSyq_0ReEeeXpvCVjWTYeA" source="_iSyrAUReEeeXpvCVjWTYeA" target="_iSyrAkReEeeXpvCVjWTYeA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_iSyrAEReEeeXpvCVjWTYeA" name="Initial1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_iSyrAUReEeeXpvCVjWTYeA" name="State1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_iSyrAkReEeeXpvCVjWTYeA" name="FinalState1"/>
+            </region>
+          </ownedBehavior>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_plYu0EReEeeXpvCVjWTYeA" name="IoTGateway">
+          <ownedAttribute xmi:id="_pOfQgkUIEeebuPNq01--pQ" name="temperature_sensor" type="_WqOYQERREeeXpvCVjWTYeA" association="_pOepcEUIEeebuPNq01--pQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_H_La0EXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_H_La0UXrEeeNrMhg6pDppw" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_wuTRAUUIEeebuPNq01--pQ" name="electricity_sensor" type="_TonUQEUIEeebuPNq01--pQ" association="_wuSp8EUIEeebuPNq01--pQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Lql8oEXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LqsDQEXrEeeNrMhg6pDppw" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_N0e9AkUJEeebuPNq01--pQ" name="airconditioning_sensor" type="_Hxgt8EUJEeebuPNq01--pQ" association="_N0eV8EUJEeebuPNq01--pQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JYR7wEXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JYR7wUXrEeeNrMhg6pDppw" value="*"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_plYu0UReEeeXpvCVjWTYeA" name="StateMachine1">
+            <region xmi:id="_plYu0kReEeeXpvCVjWTYeA" name="Region1">
+              <transition xmi:id="_plYu00ReEeeXpvCVjWTYeA" source="_plYu2EReEeeXpvCVjWTYeA" target="_plYu2kReEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_plYu1EReEeeXpvCVjWTYeA" source="_plYu2kReEeeXpvCVjWTYeA" target="_plYu2UReEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_plYu1UReEeeXpvCVjWTYeA" source="_plYu20ReEeeXpvCVjWTYeA" target="_plYu2UReEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_plYu1kReEeeXpvCVjWTYeA" source="_plYu2kReEeeXpvCVjWTYeA" target="_plYu20ReEeeXpvCVjWTYeA"/>
+              <transition xmi:id="_plYu10ReEeeXpvCVjWTYeA" source="_plYu20ReEeeXpvCVjWTYeA" target="_plYu2kReEeeXpvCVjWTYeA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_plYu2EReEeeXpvCVjWTYeA" name="Initial1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_plYu2UReEeeXpvCVjWTYeA" name="FinalState1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_plYu2kReEeeXpvCVjWTYeA" name="Ready"/>
+              <subvertex xmi:type="uml:State" xmi:id="_plYu20ReEeeXpvCVjWTYeA" name="Running"/>
+            </region>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_obW2EE9eEee-m7qAtQ_W2A" name="getDataService"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_TonUQEUIEeebuPNq01--pQ" name="ElectricitySensor">
+          <ownedAttribute xmi:id="_Y0dHAkUIEeebuPNq01--pQ" name="hw_electricity_sensor" type="_Ucis0EReEeeXpvCVjWTYeA" association="_Y0cf8EUIEeebuPNq01--pQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Dm1hkEXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Dm7oMEXrEeeNrMhg6pDppw" value="*"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_TonUQUUIEeebuPNq01--pQ" name="StateMachine1">
+            <region xmi:id="_TonUQkUIEeebuPNq01--pQ" name="Region1">
+              <transition xmi:id="_TonUQ0UIEeebuPNq01--pQ" source="_TonUSEUIEeebuPNq01--pQ" target="_TonUSkUIEeebuPNq01--pQ"/>
+              <transition xmi:id="_TonUREUIEeebuPNq01--pQ" source="_TonUSkUIEeebuPNq01--pQ" target="_TonUSUUIEeebuPNq01--pQ"/>
+              <transition xmi:id="_TonURUUIEeebuPNq01--pQ" source="_TonUS0UIEeebuPNq01--pQ" target="_TonUSUUIEeebuPNq01--pQ"/>
+              <transition xmi:id="_TonURkUIEeebuPNq01--pQ" source="_TonUSkUIEeebuPNq01--pQ" target="_TonUS0UIEeebuPNq01--pQ"/>
+              <transition xmi:id="_TonUR0UIEeebuPNq01--pQ" source="_TonUS0UIEeebuPNq01--pQ" target="_TonUSkUIEeebuPNq01--pQ"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_TonUSEUIEeebuPNq01--pQ" name="Initial1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_TonUSUUIEeebuPNq01--pQ" name="FinalState1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_TonUSkUIEeebuPNq01--pQ" name="Ready"/>
+              <subvertex xmi:type="uml:State" xmi:id="_TonUS0UIEeebuPNq01--pQ" name="Running"/>
+            </region>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_TonUTEUIEeebuPNq01--pQ" name="StateMachineWithUncertainty">
+            <region xmi:id="_TonUTUUIEeebuPNq01--pQ" name="Region1">
+              <transition xmi:id="_TonUTkUIEeebuPNq01--pQ" source="_TonUUEUIEeebuPNq01--pQ" target="_TonUUUUIEeebuPNq01--pQ"/>
+              <transition xmi:id="_TonUT0UIEeebuPNq01--pQ" source="_TonUUUUIEeebuPNq01--pQ" target="_TonUUkUIEeebuPNq01--pQ"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_TonUUEUIEeebuPNq01--pQ" name="Initial1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_TonUUUUIEeebuPNq01--pQ" name="State1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_TonUUkUIEeebuPNq01--pQ" name="FinalState1"/>
+            </region>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_sfuCUE28EeeW8tmPVB892Q" name="setRate"/>
+          <ownedOperation xmi:id="_utoEUE28EeeW8tmPVB892Q" name="getRate"/>
+          <ownedOperation xmi:id="_1BPN8E9dEee-m7qAtQ_W2A" name="setProtocol"/>
+          <ownedOperation xmi:id="_1PJuIE9dEee-m7qAtQ_W2A" name="getProtocol"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_Y0cf8EUIEeebuPNq01--pQ" name="HwElectricitySensor_ElectricitySensor" memberEnd="_Y0dHAkUIEeebuPNq01--pQ _Y0e8MEUIEeebuPNq01--pQ" navigableOwnedEnd="_Y0e8MEUIEeebuPNq01--pQ">
+          <eAnnotations xmi:id="_Y0dHAEUIEeebuPNq01--pQ" source="org.eclipse.papyrus">
+            <details xmi:id="_Y0dHAUUIEeebuPNq01--pQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="_Y0e8MEUIEeebuPNq01--pQ" name="electricity_sensor" type="_TonUQEUIEeebuPNq01--pQ" association="_Y0cf8EUIEeebuPNq01--pQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D_bnwEXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D_bnwUXrEeeNrMhg6pDppw" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_hrIz0EUIEeebuPNq01--pQ" name="BTSBroker_IotGateway" memberEnd="_hrJa4kUIEeebuPNq01--pQ _hrKpAEUIEeebuPNq01--pQ" navigableOwnedEnd="_hrKpAEUIEeebuPNq01--pQ">
+          <eAnnotations xmi:id="_hrJa4EUIEeebuPNq01--pQ" source="org.eclipse.papyrus">
+            <details xmi:id="_hrJa4UUIEeebuPNq01--pQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="_hrKpAEUIEeebuPNq01--pQ" name="bts_broker" type="_YSRUIERREeeXpvCVjWTYeA" association="_hrIz0EUIEeebuPNq01--pQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QC4ykEXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QC4ykUXrEeeNrMhg6pDppw" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_pOepcEUIEeebuPNq01--pQ" name="IoTGateway_TemperatureSensor" memberEnd="_pOfQgkUIEeebuPNq01--pQ _pOf3kEUIEeebuPNq01--pQ" navigableOwnedEnd="_pOf3kEUIEeebuPNq01--pQ">
+          <eAnnotations xmi:id="_pOfQgEUIEeebuPNq01--pQ" source="org.eclipse.papyrus">
+            <details xmi:id="_pOfQgUUIEeebuPNq01--pQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="_pOf3kEUIEeebuPNq01--pQ" name="iot_gateway" type="_plYu0EReEeeXpvCVjWTYeA" association="_pOepcEUIEeebuPNq01--pQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IhPmEEXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IhPmEUXrEeeNrMhg6pDppw" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_wuSp8EUIEeebuPNq01--pQ" name="CommElectricitySensorIoTGateway1" memberEnd="_wuTRAUUIEeebuPNq01--pQ _wuT4EEUIEeebuPNq01--pQ" navigableOwnedEnd="_wuT4EEUIEeebuPNq01--pQ">
+          <eAnnotations xmi:id="_wuSp8UUIEeebuPNq01--pQ" source="org.eclipse.papyrus">
+            <details xmi:id="_wuTRAEUIEeebuPNq01--pQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="_wuT4EEUIEeebuPNq01--pQ" name="iot_gateway" type="_plYu0EReEeeXpvCVjWTYeA" association="_wuSp8EUIEeebuPNq01--pQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LW0FAEXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LW6LoEXrEeeNrMhg6pDppw" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Hxgt8EUJEeebuPNq01--pQ" name="AirConditioningSensor">
+          <ownedAttribute xmi:id="_QvxCYkUJEeebuPNq01--pQ" name="hw_airconditioning_sensor" type="_iSyq8EReEeeXpvCVjWTYeA" association="_QvwbUEUJEeebuPNq01--pQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_B-iHAEXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_B-iHAUXrEeeNrMhg6pDppw" value="*"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_HxhVCkUJEeebuPNq01--pQ" name="StateMachineWithUncertainty">
+            <region xmi:id="_HxhVC0UJEeebuPNq01--pQ" name="Region1">
+              <transition xmi:id="_HxhVDEUJEeebuPNq01--pQ" source="_HxhVDkUJEeebuPNq01--pQ" target="_HxhVD0UJEeebuPNq01--pQ"/>
+              <transition xmi:id="_HxhVDUUJEeebuPNq01--pQ" source="_HxhVD0UJEeebuPNq01--pQ" target="_HxhVEEUJEeebuPNq01--pQ"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_HxhVDkUJEeebuPNq01--pQ" name="Initial1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_HxhVD0UJEeebuPNq01--pQ" name="State1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_HxhVEEUJEeebuPNq01--pQ" name="FinalState1"/>
+            </region>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_P5dskFyvEee3fP2vaOmJjA" name="getProtocol"/>
+          <ownedOperation xmi:id="_P5gv4FyvEee3fP2vaOmJjA" name="getRate"/>
+          <ownedOperation xmi:id="_P5h-AFyvEee3fP2vaOmJjA" name="setProtocol"/>
+          <ownedOperation xmi:id="_P5ilEFyvEee3fP2vaOmJjA" name="setRate"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_N0eV8EUJEeebuPNq01--pQ" name="IoTGateway_AirConditioningSensor" memberEnd="_N0e9AkUJEeebuPNq01--pQ _N0gLIEUJEeebuPNq01--pQ" navigableOwnedEnd="_N0gLIEUJEeebuPNq01--pQ">
+          <eAnnotations xmi:id="_N0e9AEUJEeebuPNq01--pQ" source="org.eclipse.papyrus">
+            <details xmi:id="_N0e9AUUJEeebuPNq01--pQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="_N0gLIEUJEeebuPNq01--pQ" name="iotgateway" type="_plYu0EReEeeXpvCVjWTYeA" association="_N0eV8EUJEeebuPNq01--pQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JwsbwEXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JwyiYEXrEeeNrMhg6pDppw" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_QvwbUEUJEeebuPNq01--pQ" name="HwAirConditioningSensor_AirConditioningSensor" memberEnd="_QvxCYkUJEeebuPNq01--pQ _QvxpcEUJEeebuPNq01--pQ" navigableOwnedEnd="_QvxpcEUJEeebuPNq01--pQ">
+          <eAnnotations xmi:id="_QvxCYEUJEeebuPNq01--pQ" source="org.eclipse.papyrus">
+            <details xmi:id="_QvxCYUUJEeebuPNq01--pQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="_QvxpcEUJEeebuPNq01--pQ" name="airconditioning_sensor" type="_Hxgt8EUJEeebuPNq01--pQ" association="_QvwbUEUJEeebuPNq01--pQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CgSwQEXrEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CgY24EXrEeeNrMhg6pDppw" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_juHaYEUXEeeNrMhg6pDppw" name="Test001"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_RcAFIEXsEeeNrMhg6pDppw" name="F1MicroMachine">
+          <ownedAttribute xmi:id="_tlBv4kXtEeeNrMhg6pDppw" name="virtual_cpu" type="_WsMMYEXsEeeNrMhg6pDppw" aggregation="composite" association="_tk7pQEXtEeeNrMhg6pDppw"/>
+          <ownedAttribute xmi:id="_7cHmE0XuEeeNrMhg6pDppw" name="memory" type="_azh1MEXsEeeNrMhg6pDppw" aggregation="composite" association="_7cHmEEXuEeeNrMhg6pDppw"/>
+          <ownedAttribute xmi:id="_91kJs0XuEeeNrMhg6pDppw" name="persistent_disk" type="_gJhpgEXsEeeNrMhg6pDppw" aggregation="composite" association="_91kJsEXuEeeNrMhg6pDppw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VTDLAEXzEeeNrMhg6pDppw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VTDLAUXzEeeNrMhg6pDppw" value="*"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_WsMMYEXsEeeNrMhg6pDppw" name="VirtualCPU"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_azh1MEXsEeeNrMhg6pDppw" name="Memory"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_gJhpgEXsEeeNrMhg6pDppw" name="PersistentDisk"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_tk7pQEXtEeeNrMhg6pDppw" memberEnd="_tlBv4kXtEeeNrMhg6pDppw _tlBv40XtEeeNrMhg6pDppw">
+          <eAnnotations xmi:id="_tlBv4EXtEeeNrMhg6pDppw" source="org.eclipse.papyrus">
+            <details xmi:id="_tlBv4UXtEeeNrMhg6pDppw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="_tlBv40XtEeeNrMhg6pDppw" name="f1_micro_machine" type="_RcAFIEXsEeeNrMhg6pDppw" association="_tk7pQEXtEeeNrMhg6pDppw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_7cHmEEXuEeeNrMhg6pDppw" memberEnd="_7cHmE0XuEeeNrMhg6pDppw _7cHmFEXuEeeNrMhg6pDppw">
+          <eAnnotations xmi:id="_7cHmEUXuEeeNrMhg6pDppw" source="org.eclipse.papyrus">
+            <details xmi:id="_7cHmEkXuEeeNrMhg6pDppw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="_7cHmFEXuEeeNrMhg6pDppw" name="f1_micro_machine" type="_RcAFIEXsEeeNrMhg6pDppw" association="_7cHmEEXuEeeNrMhg6pDppw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_91kJsEXuEeeNrMhg6pDppw" memberEnd="_91kJs0XuEeeNrMhg6pDppw _91kJtEXuEeeNrMhg6pDppw">
+          <eAnnotations xmi:id="_91kJsUXuEeeNrMhg6pDppw" source="org.eclipse.papyrus">
+            <details xmi:id="_91kJskXuEeeNrMhg6pDppw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="_91kJtEXuEeeNrMhg6pDppw" name="f1_micro_machine" type="_RcAFIEXsEeeNrMhg6pDppw" association="_91kJsEXuEeeNrMhg6pDppw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_8V-5EEdpEee5F8b1qsyZMA" name="MQTTConfigServer"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Jif5QEqBEeemwObUvM0ZZA" name="GenericTestExecutor">
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Jif5QUqBEeemwObUvM0ZZA" name="StateMachine1">
+            <region xmi:id="_Jif5QkqBEeemwObUvM0ZZA" name="Region1">
+              <transition xmi:id="_Jif5Q0qBEeemwObUvM0ZZA" source="_Jif5SEqBEeemwObUvM0ZZA" target="_Jif5SkqBEeemwObUvM0ZZA"/>
+              <transition xmi:id="_Jif5REqBEeemwObUvM0ZZA" source="_Jif5SkqBEeemwObUvM0ZZA" target="_Jif5SUqBEeemwObUvM0ZZA"/>
+              <transition xmi:id="_Jif5RUqBEeemwObUvM0ZZA" source="_Jif5S0qBEeemwObUvM0ZZA" target="_Jif5SUqBEeemwObUvM0ZZA"/>
+              <transition xmi:id="_Jif5RkqBEeemwObUvM0ZZA" source="_Jif5SkqBEeemwObUvM0ZZA" target="_Jif5S0qBEeemwObUvM0ZZA"/>
+              <transition xmi:id="_Jif5R0qBEeemwObUvM0ZZA" source="_Jif5S0qBEeemwObUvM0ZZA" target="_Jif5SkqBEeemwObUvM0ZZA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_Jif5SEqBEeemwObUvM0ZZA" name="Initial1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_Jif5SUqBEeemwObUvM0ZZA" name="FinalState1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_Jif5SkqBEeemwObUvM0ZZA" name="Ready"/>
+              <subvertex xmi:type="uml:State" xmi:id="_Jif5S0qBEeemwObUvM0ZZA" name="Running"/>
+            </region>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Jif5TEqBEeemwObUvM0ZZA" name="StateMachineWithUncertainty">
+            <region xmi:id="_Jif5TUqBEeemwObUvM0ZZA" name="Region1">
+              <transition xmi:id="_Jif5TkqBEeemwObUvM0ZZA" source="_Jif5UEqBEeemwObUvM0ZZA" target="_Jif5UUqBEeemwObUvM0ZZA"/>
+              <transition xmi:id="_Jif5T0qBEeemwObUvM0ZZA" source="_Jif5UUqBEeemwObUvM0ZZA" target="_Jif5UkqBEeemwObUvM0ZZA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_Jif5UEqBEeemwObUvM0ZZA" name="Initial1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_Jif5UUqBEeemwObUvM0ZZA" name="State1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_Jif5UkqBEeemwObUvM0ZZA" name="FinalState1"/>
+            </region>
+          </ownedBehavior>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Z4yLMEqBEeemwObUvM0ZZA" name="GenericPhysicalMetric">
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Z4yLMUqBEeemwObUvM0ZZA" name="StateMachine1">
+            <region xmi:id="_Z4yLMkqBEeemwObUvM0ZZA" name="Region1">
+              <transition xmi:id="_Z4yLM0qBEeemwObUvM0ZZA" source="_Z4yLOEqBEeemwObUvM0ZZA" target="_Z4yLOkqBEeemwObUvM0ZZA"/>
+              <transition xmi:id="_Z4yLNEqBEeemwObUvM0ZZA" source="_Z4yLOkqBEeemwObUvM0ZZA" target="_Z4yLOUqBEeemwObUvM0ZZA"/>
+              <transition xmi:id="_Z4yLNUqBEeemwObUvM0ZZA" source="_Z4yLO0qBEeemwObUvM0ZZA" target="_Z4yLOUqBEeemwObUvM0ZZA"/>
+              <transition xmi:id="_Z4yLNkqBEeemwObUvM0ZZA" source="_Z4yLOkqBEeemwObUvM0ZZA" target="_Z4yLO0qBEeemwObUvM0ZZA"/>
+              <transition xmi:id="_Z4yLN0qBEeemwObUvM0ZZA" source="_Z4yLO0qBEeemwObUvM0ZZA" target="_Z4yLOkqBEeemwObUvM0ZZA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_Z4yLOEqBEeemwObUvM0ZZA" name="Initial1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_Z4yLOUqBEeemwObUvM0ZZA" name="FinalState1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_Z4yLOkqBEeemwObUvM0ZZA" name="Ready"/>
+              <subvertex xmi:type="uml:State" xmi:id="_Z4yLO0qBEeemwObUvM0ZZA" name="Running"/>
+            </region>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Z4yLPEqBEeemwObUvM0ZZA" name="StateMachineWithUncertainty">
+            <region xmi:id="_Z4yLPUqBEeemwObUvM0ZZA" name="Region1">
+              <transition xmi:id="_Z4yLPkqBEeemwObUvM0ZZA" source="_Z4yLQEqBEeemwObUvM0ZZA" target="_Z4yLQUqBEeemwObUvM0ZZA"/>
+              <transition xmi:id="_Z4yLP0qBEeemwObUvM0ZZA" source="_Z4yLQUqBEeemwObUvM0ZZA" target="_Z4yLQkqBEeemwObUvM0ZZA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_Z4yLQEqBEeemwObUvM0ZZA" name="Initial1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_Z4yLQUqBEeemwObUvM0ZZA" name="State1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_Z4yLQkqBEeemwObUvM0ZZA" name="FinalState1"/>
+            </region>
+          </ownedBehavior>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_U4jccEqKEeemwObUvM0ZZA" name="MQTTConfigClient">
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_U4jccUqKEeemwObUvM0ZZA" name="StateMachine1">
+            <region xmi:id="_U4jcckqKEeemwObUvM0ZZA" name="Region1">
+              <transition xmi:id="_U4jcc0qKEeemwObUvM0ZZA" source="_U4jceEqKEeemwObUvM0ZZA" target="_U4jcekqKEeemwObUvM0ZZA">
+                <trigger xmi:id="_uceTgFZ7Eee76uo3JJGiSg" name="MyTrigger" event="_tDbc8FZ7Eee76uo3JJGiSg"/>
+              </transition>
+              <transition xmi:id="_U4jcdEqKEeemwObUvM0ZZA" source="_U4jcekqKEeemwObUvM0ZZA" target="_U4jceUqKEeemwObUvM0ZZA"/>
+              <transition xmi:id="_U4jcdUqKEeemwObUvM0ZZA" source="_U4jce0qKEeemwObUvM0ZZA" target="_U4jceUqKEeemwObUvM0ZZA"/>
+              <transition xmi:id="_U4jcdkqKEeemwObUvM0ZZA" source="_U4jcekqKEeemwObUvM0ZZA" target="_U4jce0qKEeemwObUvM0ZZA"/>
+              <transition xmi:id="_U4jcd0qKEeemwObUvM0ZZA" source="_U4jce0qKEeemwObUvM0ZZA" target="_U4jcekqKEeemwObUvM0ZZA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_U4jceEqKEeemwObUvM0ZZA" name="Initial1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_U4jceUqKEeemwObUvM0ZZA" name="FinalState1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_U4jcekqKEeemwObUvM0ZZA" name="Ready"/>
+              <subvertex xmi:type="uml:State" xmi:id="_U4jce0qKEeemwObUvM0ZZA" name="Running"/>
+            </region>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_U4jcfEqKEeemwObUvM0ZZA" name="StateMachineWithUncertainty">
+            <region xmi:id="_U4jcfUqKEeemwObUvM0ZZA" name="Region1">
+              <transition xmi:id="_U4jcfkqKEeemwObUvM0ZZA" source="_U4jcgEqKEeemwObUvM0ZZA" target="_U4jcgUqKEeemwObUvM0ZZA"/>
+              <transition xmi:id="_U4jcf0qKEeemwObUvM0ZZA" source="_U4jcgUqKEeemwObUvM0ZZA" target="_U4jcgkqKEeemwObUvM0ZZA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_U4jcgEqKEeemwObUvM0ZZA" name="Initial1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_U4jcgUqKEeemwObUvM0ZZA" name="State1"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_U4jcgkqKEeemwObUvM0ZZA" name="FinalState1"/>
+            </region>
+          </ownedBehavior>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_wgQJgE0BEeedg6nzD0_JBg" name="IngestionClient">
+          <ownedAttribute xmi:id="_Eu1is00CEeedg6nzD0_JBg" name="bts_monitoring_data_service" type="_-WXkwE0BEeedg6nzD0_JBg" association="_Eu1isE0CEeedg6nzD0_JBg">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JnYmAE0CEeedg6nzD0_JBg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JnbpUE0CEeedg6nzD0_JBg" value="*"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_E8nFgE9eEee-m7qAtQ_W2A" name="getDataService"/>
+          <ownedOperation xmi:id="_IXbmkE9eEee-m7qAtQ_W2A" name="setDataService"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-WXkwE0BEeedg6nzD0_JBg" name="BTSMonitoringDataService"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_Eu1isE0CEeedg6nzD0_JBg" name="IngestionClient_BTSMonitoringDataService" memberEnd="_Eu1is00CEeedg6nzD0_JBg _Eu2JwE0CEeedg6nzD0_JBg" navigableOwnedEnd="_Eu2JwE0CEeedg6nzD0_JBg">
+          <eAnnotations xmi:id="_Eu1isU0CEeedg6nzD0_JBg" source="org.eclipse.papyrus">
+            <details xmi:id="_Eu1isk0CEeedg6nzD0_JBg" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="_Eu2JwE0CEeedg6nzD0_JBg" name="ingestion_client" type="_wgQJgE0BEeedg6nzD0_JBg" association="_Eu1isE0CEeedg6nzD0_JBg">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KDPbkE0CEeedg6nzD0_JBg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KDRQwE0CEeedg6nzD0_JBg" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_YFToIE0CEeedg6nzD0_JBg" name="CassandraConfig1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_airpgE0CEeedg6nzD0_JBg" name="GoogleBigQueryConfig1"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_5-LIME9AEee-m7qAtQ_W2A" name="BTSUncertainty">
+          <ownedComment xmi:id="_bHB-cE9MEee-m7qAtQ_W2A" annotatedElement="_sf5kME9LEee-m7qAtQ_W2A">
+            <body>indeterminacySource = MQTTConfig001&#xD;
+description = &quot;Missing QoS Level specification.&quot;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_M-hWME9NEee-m7qAtQ_W2A" annotatedElement="_rB2ZME9IEee-m7qAtQ_W2A">
+            <body>measureinDT = Integer&#xD;
+measure = Probability</body>
+          </ownedComment>
+          <packagedElement xmi:type="uml:Class" xmi:id="_MlpZoE9BEee-m7qAtQ_W2A" name="MQTT QoS Uncertainty">
+            <ownedAttribute xmi:id="_7gt4AE9LEee-m7qAtQ_W2A" name="mqtt data delivery uncertainty" type="_sf5kME9LEee-m7qAtQ_W2A" association="_7gtQ8E9LEee-m7qAtQ_W2A"/>
+            <ownedAttribute xmi:id="__A8dg09LEee-m7qAtQ_W2A" name="mqtt datadeliveryuncertainty measurement" type="_rB2ZME9IEee-m7qAtQ_W2A" association="__A8dgE9LEee-m7qAtQ_W2A"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_rB2ZME9IEee-m7qAtQ_W2A" name="MQTT DataDeliveryUncertainty Measurement"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_sf5kME9LEee-m7qAtQ_W2A" name="MQTT Data Delivery Uncertainty"/>
+          <packagedElement xmi:type="uml:Association" xmi:id="_7gtQ8E9LEee-m7qAtQ_W2A" memberEnd="_7gt4AE9LEee-m7qAtQ_W2A _7gt4AU9LEee-m7qAtQ_W2A">
+            <eAnnotations xmi:id="_7gtQ8U9LEee-m7qAtQ_W2A" source="org.eclipse.papyrus">
+              <details xmi:id="_7gtQ8k9LEee-m7qAtQ_W2A" key="nature" value="UML_Nature"/>
+            </eAnnotations>
+            <ownedEnd xmi:id="_7gt4AU9LEee-m7qAtQ_W2A" name="mqtt qos uncertainty" type="_MlpZoE9BEee-m7qAtQ_W2A" association="_7gtQ8E9LEee-m7qAtQ_W2A"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="__A8dgE9LEee-m7qAtQ_W2A" memberEnd="__A8dg09LEee-m7qAtQ_W2A __A8dhE9LEee-m7qAtQ_W2A">
+            <eAnnotations xmi:id="__A8dgU9LEee-m7qAtQ_W2A" source="org.eclipse.papyrus">
+              <details xmi:id="__A8dgk9LEee-m7qAtQ_W2A" key="nature" value="UML_Nature"/>
+            </eAnnotations>
+            <ownedEnd xmi:id="__A8dhE9LEee-m7qAtQ_W2A" name="mqtt qos uncertainty" type="_MlpZoE9BEee-m7qAtQ_W2A" association="__A8dgE9LEee-m7qAtQ_W2A"/>
+          </packagedElement>
+          <profileApplication xmi:id="_CuixoE9BEee-m7qAtQ_W2A">
+            <eAnnotations xmi:id="_e7xHFVZtEee76uo3JJGiSg" source="PapyrusVersion">
+              <details xmi:id="_e7xHFlZtEee76uo3JJGiSg" key="Version" value="0.0.13"/>
+              <details xmi:id="_e7xHF1ZtEee76uo3JJGiSg" key="Comment" value=""/>
+              <details xmi:id="_e7xHGFZtEee76uo3JJGiSg" key="Copyright" value=""/>
+              <details xmi:id="_e7xHGVZtEee76uo3JJGiSg" key="Date" value="2017-06-16"/>
+              <details xmi:id="_e7xHGlZtEee76uo3JJGiSg" key="Author" value=""/>
+            </eAnnotations>
+            <eAnnotations xmi:id="_Cuj_wE9BEee-m7qAtQ_W2A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <references xmi:type="ecore:EPackage" href="../profiles/U-Profile.profile.uml#_b0Y7MFKjEeed76oMGqCQiQ"/>
+            </eAnnotations>
+            <appliedProfile href="../profiles/U-Profile.profile.uml#_SFfNUJQmEeWVWKdOybk1ZQ"/>
+          </profileApplication>
+          <profileApplication xmi:id="_Cukm0E9BEee-m7qAtQ_W2A">
+            <eAnnotations xmi:id="_2fEKMHXmEeejaaLU6EnJWw" source="PapyrusVersion">
+              <details xmi:id="_2fEKMXXmEeejaaLU6EnJWw" key="Version" value="0.0.55"/>
+              <details xmi:id="_2fEKMnXmEeejaaLU6EnJWw" key="Comment" value=""/>
+              <details xmi:id="_2fEKM3XmEeejaaLU6EnJWw" key="Copyright" value=""/>
+              <details xmi:id="_2fEKNHXmEeejaaLU6EnJWw" key="Date" value="2017-07-31"/>
+              <details xmi:id="_2fEKNXXmEeejaaLU6EnJWw" key="Author" value=""/>
+            </eAnnotations>
+            <eAnnotations xmi:id="_CulN4E9BEee-m7qAtQ_W2A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_RjE_kHXmEeejaaLU6EnJWw"/>
+            </eAnnotations>
+            <appliedProfile href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_cCy_MAfnEeeZEbTOKh85Qw"/>
+          </profileApplication>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_TKc1YFDsEeeBaKpUcWLICA" name="GoogleComputeEngineConfig1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_wv53EFZtEee76uo3JJGiSg" name="BTS_TestExecutor_001"/>
+        <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_tDbc8FZ7Eee76uo3JJGiSg" name="MyReceiveEvent"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_2LB_4FgWEeeeTquJkarvqA" name="Cassandra">
+          <generalization xmi:id="_4jByAFgWEeeeTquJkarvqA" general="_-WXkwE0BEeedg6nzD0_JBg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_6vtsAFgWEeeeTquJkarvqA" name="BigQuery">
+          <generalization xmi:id="_7a_doFgWEeeeTquJkarvqA" general="_-WXkwE0BEeedg6nzD0_JBg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Jwm4UFgXEeeeTquJkarvqA" name="CassandraComputingConfiguration1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_3mxn4F12Eeel-tS9I1vO3w" name="MQTTBrokerLocal">
+          <generalization xmi:id="_Gq8KoF13Eeel-tS9I1vO3w" general="_YSRUIERREeeXpvCVjWTYeA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_I9-kQF13Eeel-tS9I1vO3w" name="MQTTBroker2Google">
+          <generalization xmi:id="_ySxFsF14Eeel-tS9I1vO3w" general="_YSRUIERREeeXpvCVjWTYeA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-mtjkF14Eeel-tS9I1vO3w" name="LocalProvider"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_k85bUF15Eeel-tS9I1vO3w" name="Google"/>
+        <profileApplication xmi:id="_veqYME9HEee-m7qAtQ_W2A">
+          <eAnnotations xmi:id="_2fXFIHXmEeejaaLU6EnJWw" source="PapyrusVersion">
+            <details xmi:id="_2fXFIXXmEeejaaLU6EnJWw" key="Version" value="0.0.55"/>
+            <details xmi:id="_2fXFInXmEeejaaLU6EnJWw" key="Comment" value=""/>
+            <details xmi:id="_2fXFI3XmEeejaaLU6EnJWw" key="Copyright" value=""/>
+            <details xmi:id="_2fXFJHXmEeejaaLU6EnJWw" key="Date" value="2017-07-31"/>
+            <details xmi:id="_2fXFJXXmEeejaaLU6EnJWw" key="Author" value=""/>
+          </eAnnotations>
+          <eAnnotations xmi:id="_vermUE9HEee-m7qAtQ_W2A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_RjE_kHXmEeejaaLU6EnJWw"/>
+          </eAnnotations>
+          <appliedProfile href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_cCy_MAfnEeeZEbTOKh85Qw"/>
+        </profileApplication>
+        <profileApplication xmi:id="_xEcqQE9HEee-m7qAtQ_W2A">
+          <eAnnotations xmi:id="_e5J3-FZtEee76uo3JJGiSg" source="PapyrusVersion">
+            <details xmi:id="_e5J3-VZtEee76uo3JJGiSg" key="Version" value="0.0.13"/>
+            <details xmi:id="_e5J3-lZtEee76uo3JJGiSg" key="Comment" value=""/>
+            <details xmi:id="_e5J3-1ZtEee76uo3JJGiSg" key="Copyright" value=""/>
+            <details xmi:id="_e5J3_FZtEee76uo3JJGiSg" key="Date" value="2017-06-16"/>
+            <details xmi:id="_e5J3_VZtEee76uo3JJGiSg" key="Author" value=""/>
+          </eAnnotations>
+          <eAnnotations xmi:id="_xEcqQU9HEee-m7qAtQ_W2A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <references xmi:type="ecore:EPackage" href="../profiles/U-Profile.profile.uml#_b0Y7MFKjEeed76oMGqCQiQ"/>
+          </eAnnotations>
+          <appliedProfile href="../profiles/U-Profile.profile.uml#_SFfNUJQmEeWVWKdOybk1ZQ"/>
+        </profileApplication>
+        <profileApplication xmi:id="_Oqeb8HYAEeeo94v8rkBTgA">
+          <eAnnotations xmi:id="_j1rlQHaLEeeo94v8rkBTgA" source="PapyrusVersion">
+            <details xmi:id="_j1rlQXaLEeeo94v8rkBTgA" key="Version" value="0.0.201"/>
+            <details xmi:id="_j1rlQnaLEeeo94v8rkBTgA" key="Comment" value=""/>
+            <details xmi:id="_j1rlQ3aLEeeo94v8rkBTgA" key="Copyright" value=""/>
+            <details xmi:id="_j1rlRHaLEeeo94v8rkBTgA" key="Date" value="2017-08-01"/>
+            <details xmi:id="_j1rlRXaLEeeo94v8rkBTgA" key="Author" value=""/>
+          </eAnnotations>
+          <eAnnotations xmi:id="_OqfDAHYAEeeo94v8rkBTgA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureCPSProfile.profile.uml#_eBqYMHaLEeeo94v8rkBTgA"/>
+          </eAnnotations>
+          <appliedProfile href="../profiles/InfrastructureCPSProfile.profile.uml#_gJjV8PUfEeaI5-4OrfiDWg"/>
+        </profileApplication>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_rJP24BVOEeev2_sZ3ngp-w">
+      <eAnnotations xmi:id="_j2GcAHaLEeeo94v8rkBTgA" source="PapyrusVersion">
+        <details xmi:id="_j2GcAXaLEeeo94v8rkBTgA" key="Version" value="0.0.201"/>
+        <details xmi:id="_j2GcAnaLEeeo94v8rkBTgA" key="Comment" value=""/>
+        <details xmi:id="_j2GcA3aLEeeo94v8rkBTgA" key="Copyright" value=""/>
+        <details xmi:id="_j2GcBHaLEeeo94v8rkBTgA" key="Date" value="2017-08-01"/>
+        <details xmi:id="_j2GcBXaLEeeo94v8rkBTgA" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:id="_rJQd8BVOEeev2_sZ3ngp-w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureCPSProfile.profile.uml#_eBqYMHaLEeeo94v8rkBTgA"/>
+      </eAnnotations>
+      <appliedProfile href="../profiles/InfrastructureCPSProfile.profile.uml#_gJjV8PUfEeaI5-4OrfiDWg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_rJSTIBVOEeev2_sZ3ngp-w">
+      <eAnnotations xmi:id="_j2JfUHaLEeeo94v8rkBTgA" source="PapyrusVersion">
+        <details xmi:id="_j2JfUXaLEeeo94v8rkBTgA" key="Version" value="0.0.3"/>
+        <details xmi:id="_j2JfUnaLEeeo94v8rkBTgA" key="Comment" value=""/>
+        <details xmi:id="_j2JfU3aLEeeo94v8rkBTgA" key="Copyright" value=""/>
+        <details xmi:id="_j2JfVHaLEeeo94v8rkBTgA" key="Date" value="2017-08-01"/>
+        <details xmi:id="_j2JfVXaLEeeo94v8rkBTgA" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:id="_rJSTIRVOEeev2_sZ3ngp-w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profiles/Internal%20U-Profile%20Library.profile.uml#_UEztgHaLEeeo94v8rkBTgA"/>
+      </eAnnotations>
+      <appliedProfile href="../profiles/Internal%20U-Profile%20Library.profile.uml#_k1AzAK1KEeWCop0vWwuZNg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDPBoCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDPosCQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//GRM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_XVWGUAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDQPwCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDQPwSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//NFPs"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_U_GAoAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDQ20CQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDQ20SQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//Time"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_WStkoAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDRd4CQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDRd4SQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//Alloc"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_ar8OsAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDSE8CQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDSE8SQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//CoreElements"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_-wEewECLEd6UTJZnztgOLw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDSsACQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDSsASQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HLAM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_yNSZIAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDSsAiQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDTTECQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_2dtsgAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDTTESQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDTTEiQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_P80EcBJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDT6ICQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDT6ISQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwComputing"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aMhZsBJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDUhMCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDUhMSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwCommunication"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_bmL7UBJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDVIQCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDVIQSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwTiming"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_dG2c0BJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDVvUCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDVvUSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwDevice"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_ja8REBJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDW9cCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDW9cSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwStorage"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_ZJjPoEIbEd6dmI2dd6jVFQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDXkgCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDYLkCQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwStorage/HwMemory"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_gHI-ABJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDYLkSQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDYyoCQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwStorage/HwStorageManager"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_hst0sBJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDZZsCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDZZsSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwPhysical"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_R7sL8BJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDaAwCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDaAwSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwPhysical/HwLayout"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_uAf6gBJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDan0CQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDan0SQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwPhysical/HwPower"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_vrbyUBJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDbO4CQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDbO4SQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwGeneral"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_WGZ44BJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDb18CQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDcdACQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//SRM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_3VS0wAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDdEECQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDdEESQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//SRM/SW_ResourceCore"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_-1fcUBJdEdy3Td9UhuLFPg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDdrICQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDdrISQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//SRM/SW_Concurrency"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_A_vtYBJeEdy3Td9UhuLFPg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDeSMCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDeSMSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//SRM/SW_Brokering"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_Cf874BJeEdy3Td9UhuLFPg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDe5QCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDfgUCQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//SRM/SW_Interaction"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_EIfnABJeEdy3Td9UhuLFPg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDgHYCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDgHYSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//GCM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_YgAioAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDgucCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDgucSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//GQAM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_4bV20APMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDhVgCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDhVgSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//SAM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_5ZCOIAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDh8kCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDijoCQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//PAM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_6c2bkAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_b-TvAEO3EeeTNbOHCbo_Mw">
+      <eAnnotations xmi:id="_2gS5QHXmEeejaaLU6EnJWw" source="PapyrusVersion">
+        <details xmi:id="_2gS5QXXmEeejaaLU6EnJWw" key="Version" value="0.0.55"/>
+        <details xmi:id="_2gS5QnXmEeejaaLU6EnJWw" key="Comment" value=""/>
+        <details xmi:id="_2gS5Q3XmEeejaaLU6EnJWw" key="Copyright" value=""/>
+        <details xmi:id="_2gS5RHXmEeejaaLU6EnJWw" key="Date" value="2017-07-31"/>
+        <details xmi:id="_2gS5RXXmEeejaaLU6EnJWw" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:id="_b-U9IEO3EeeTNbOHCbo_Mw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_RjE_kHXmEeejaaLU6EnJWw"/>
+      </eAnnotations>
+      <appliedProfile href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_cCy_MAfnEeeZEbTOKh85Qw"/>
+    </profileApplication>
+  </uml:Model>
+  <InfrastructureCPSProfile:Infrastructure xmi:id="_uaDgUBVOEeev2_sZ3ngp-w" base_Class="_zB4-gA71Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:VirtualSensor xmi:id="_tpaREBVPEeev2_sZ3ngp-w" base_Class="_-RqXsA73Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:VirtualUnit xmi:id="_xO-pkBVPEeev2_sZ3ngp-w" base_Class="_7Dak8A71Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:Container xmi:id="_zLwfUBVPEeev2_sZ3ngp-w" base_Classifier="_DgqeEA72Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:SoftwareDefinedMetric xmi:id="_06ZLYBVPEeev2_sZ3ngp-w" base_Class="_O7ZxIA74Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:VirtualGateway xmi:id="_4DgRYBVPEeev2_sZ3ngp-w" base_Class="_2APUEA73Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:IntegrationElement xmi:id="_54dA0BVPEeev2_sZ3ngp-w" base_Class="_jRhAkA72Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:InfrastructureElement xmi:id="_75nnUBVPEeev2_sZ3ngp-w" base_Class="_f-QgEA72Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:ApplicationElement xmi:id="_9jbdwBVPEeev2_sZ3ngp-w" base_Class="_JDGy8A72Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:IntegrationInterface xmi:id="_Buz5EBVQEeev2_sZ3ngp-w" base_Class="_GytBIA73Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:InfrastructureInterface xmi:id="_EOg1sBVQEeev2_sZ3ngp-w" base_Class="_knkNgA72Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:ApplicationInterface xmi:id="_FjS3UBVQEeev2_sZ3ngp-w" base_Class="_D5O5oA73Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:TestConfiguration xmi:id="_PoKOgBVQEeev2_sZ3ngp-w" base_Class="_UI0RMA74Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:TestExecutor xmi:id="_lsKzsBnvEeefv6_mGR-Zbg" base_Class="_iozJUBnvEeefv6_mGR-Zbg">
+    <strategy>all_path_strategy</strategy>
+  </InfrastructureCPSProfile:TestExecutor>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_zhp80BnvEeefv6_mGR-Zbg" base_Class="_us83sBnvEeefv6_mGR-Zbg"/>
+  <InfrastructureCPSProfile:CommunicationConfiguration xmi:id="_9zImkCNZEeeEbt5FCAmS1w" base_Class="_TtJcABVSEeev2_sZ3ngp-w" protocolType="TCP" clientID="undef" serverIP="undef" portNumber="undef" qosLevel="0" keepAlive="undef"/>
+  <InfrastructureCPSProfile:VirtualActuator xmi:id="_Camg8CNaEeeEbt5FCAmS1w" base_Class="_KXLYAA74Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:Communication xmi:id="_D79mACNaEeeEbt5FCAmS1w" base_Class="_xAbyMA73Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:VirtualComponent xmi:id="_FRB7gCNaEeeEbt5FCAmS1w" base_Class="_6sK3sA73Eee6wqcj8Y2-lg"/>
+  <InfrastructureCPSProfile:CloudService xmi:id="_fxwBQCRDEeeEbt5FCAmS1w" base_Classifier="__xFN8A71Eee6wqcj8Y2-lg" base_Class="__xFN8A71Eee6wqcj8Y2-lg"/>
+  <InfrastructureUncertaintyProfile.DEPRECATED:TemporalManifestation xmi:id="_zUTy0EO8EeeTNbOHCbo_Mw" persistent_manifestation="_S7NIEEO9EeeTNbOHCbo_Mw" recurring_manifestation="_Rc9BYEO9EeeTNbOHCbo_Mw" sporadic_manifestation="_P3T5QEO9EeeTNbOHCbo_Mw" base_Element="_g-e88EO6EeeTNbOHCbo_Mw"/>
+  <InfrastructureUncertaintyProfile.DEPRECATED:SporadicManifestation xmi:id="_P3T5QEO9EeeTNbOHCbo_Mw" base_Element="_EAnYEEO9EeeTNbOHCbo_Mw"/>
+  <InfrastructureUncertaintyProfile.DEPRECATED:RecurringManifestation xmi:id="_Rc9BYEO9EeeTNbOHCbo_Mw" base_Element="_Gak5EEO9EeeTNbOHCbo_Mw"/>
+  <InfrastructureUncertaintyProfile.DEPRECATED:PersistentManifestation xmi:id="_S7NIEEO9EeeTNbOHCbo_Mw" base_Element="_Ih3VsEO9EeeTNbOHCbo_Mw"/>
+  <InfrastructureUncertaintyProfile.DEPRECATED:IngressEgress xmi:id="_dLo2EEO9EeeTNbOHCbo_Mw" base_Element="_ZvHE0EO9EeeTNbOHCbo_Mw"/>
+  <InfrastructureUncertaintyProfile.DEPRECATED:Locality xmi:id="_j3gRIEO9EeeTNbOHCbo_Mw" base_Element="_fFCAoEO9EeeTNbOHCbo_Mw"/>
+  <InfrastructureUncertaintyProfile.DEPRECATED:ObservationTime xmi:id="_n8AoYEO9EeeTNbOHCbo_Mw" base_Element="_kf6U8EO9EeeTNbOHCbo_Mw"/>
+  <InfrastructureUncertaintyProfile.DEPRECATED:NonFunctionalDimensionality xmi:id="_vfxUwEO9EeeTNbOHCbo_Mw" non_functional_attributes="_60gYYEO9EeeTNbOHCbo_Mw" base_Element="_sOUyIEO9EeeTNbOHCbo_Mw"/>
+  <InfrastructureUncertaintyProfile.DEPRECATED:NonFunctionalAttribute xmi:id="_60gYYEO9EeeTNbOHCbo_Mw" base_Element="_wuLooEO9EeeTNbOHCbo_Mw"/>
+  <InfrastructureUncertaintyProfile.DEPRECATED:FunctionalDimensionality xmi:id="_IUqxwEO-EeeTNbOHCbo_Mw" functional_attributes="_NHYS0EO-EeeTNbOHCbo_Mw" base_Element="_EyBKYEO-EeeTNbOHCbo_Mw"/>
+  <InfrastructureUncertaintyProfile.DEPRECATED:FunctionalAttribute xmi:id="_NHYS0EO-EeeTNbOHCbo_Mw" base_Element="_I3nGwEO-EeeTNbOHCbo_Mw"/>
+  <InfrastructureUncertaintyProfile.DEPRECATED:Cause xmi:id="_WaZ9YEO-EeeTNbOHCbo_Mw" base_Element="_ezazkEO6EeeTNbOHCbo_Mw"/>
+  <InfrastructureUncertaintyProfile.DEPRECATED:InfrastructureLevelEffect xmi:id="_eIYVsEO-EeeTNbOHCbo_Mw" base_Element="_ZD7kYEO-EeeTNbOHCbo_Mw"/>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_tXdvAEO-EeeTNbOHCbo_Mw" base_Classifier="_phNPIEO-EeeTNbOHCbo_Mw" base_Element="_phNPIEO-EeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:DataDeliveryUncertainty xmi:id="_skqHIEPAEeeTNbOHCbo_Mw" base_Classifier="_mVhEUEPAEeeTNbOHCbo_Mw" base_Element="_mVhEUEPAEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:DataDeliveryUncertainty>
+  <InfrastructureUncertaintyProfile:StorageUncertainty xmi:id="_4CFzwEPAEeeTNbOHCbo_Mw" base_Classifier="_YokMIEPAEeeTNbOHCbo_Mw" base_Element="_YokMIEPAEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:StorageUncertainty>
+  <InfrastructureUncertaintyProfile:ElasticityUncertainty xmi:id="_H9EpwEPBEeeTNbOHCbo_Mw" base_Classifier="_FPykIEPBEeeTNbOHCbo_Mw" base_Element="_FPykIEPBEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:ElasticityUncertainty>
+  <InfrastructureUncertaintyProfile:ActuationUncertainty xmi:id="_NNnWUEPBEeeTNbOHCbo_Mw" base_Classifier="_I9N4IEPBEeeTNbOHCbo_Mw" base_Element="_I9N4IEPBEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:ActuationUncertainty>
+  <InfrastructureUncertaintyProfile:ExecutionEnvironmentUncertainty xmi:id="_Q9hWkEPBEeeTNbOHCbo_Mw" base_Classifier="_OSukQEPBEeeTNbOHCbo_Mw" base_Element="_OSukQEPBEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:ExecutionEnvironmentUncertainty>
+  <InfrastructureUncertaintyProfile:GovernanceUncertainty xmi:id="_XZG58EPBEeeTNbOHCbo_Mw" base_Classifier="_UsrI4EPBEeeTNbOHCbo_Mw" base_Element="_UsrI4EPBEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:GovernanceUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_Bm2f0EPHEeeTNbOHCbo_Mw" base_Element="_9Fi1oEO3EeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_gSpewEPHEeeTNbOHCbo_Mw" base_Element="_gSnplUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_gfhdIEPHEeeTNbOHCbo_Mw" base_Element="_gffn9UPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_gs1gYEPHEeeTNbOHCbo_Mw" base_Element="_gs0SRUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_g6TUoEPHEeeTNbOHCbo_Mw" base_Element="_g6RfdEPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_haTDUEPHEeeTNbOHCbo_Mw" base_Element="_haROJUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_hsGlAEPHEeeTNbOHCbo_Mw" base_Element="_hsEv1UPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_iQ3e8EPHEeeTNbOHCbo_Mw" base_Element="_iQ1pxUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_idqk0EPHEeeTNbOHCbo_Mw" base_Element="_idovpUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_istGYEPHEeeTNbOHCbo_Mw" base_Element="_isr4RUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_i69k0EPHEeeTNbOHCbo_Mw" base_Element="_i67vpUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_jJUw8EPHEeeTNbOHCbo_Mw" base_Element="_jJTi1UPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_jWx-IEPHEeeTNbOHCbo_Mw" base_Element="_jWwI9UPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_jk7H0EPHEeeTNbOHCbo_Mw" base_Element="_jk55tUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_jyu6UEPHEeeTNbOHCbo_Mw" base_Element="_jytFJUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_kMZ-kEPHEeeTNbOHCbo_Mw" base_Element="_kMYwdUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_kcOjQEPHEeeTNbOHCbo_Mw" base_Element="_kcMuFUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_knh0UEPHEeeTNbOHCbo_Mw" base_Element="_kngmNUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_k18q0EPHEeeTNbOHCbo_Mw" base_Element="_k161pUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_lD5AMEPHEeeTNbOHCbo_Mw" base_Element="_lD3yFUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_lYSi4EPHEeeTNbOHCbo_Mw" base_Element="_lYRUxUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_llreoEPHEeeTNbOHCbo_Mw" base_Element="_llppdUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_l2vZcEPHEeeTNbOHCbo_Mw" base_Element="_l2tkRUPHEeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_2GnjIERQEeeXpvCVjWTYeA" base_Element="_2GTaIURQEeeXpvCVjWTYeA">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureCPSProfile:VirtualSensor xmi:id="_WqVtAERREeeXpvCVjWTYeA" base_Class="_WqOYQERREeeXpvCVjWTYeA" id="1" location="this is the location" description="this is the description" timestampMaxLatency="string value for the latency" swCapabilities="_TbFHQFyxEee3fP2vaOmJjA _TbFuUFyxEee3fP2vaOmJjA _TbGVYFyxEee3fP2vaOmJjA _TbGVYVyxEee3fP2vaOmJjA"/>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_WqXiMERREeeXpvCVjWTYeA" base_Element="_WqOYUURREeeXpvCVjWTYeA">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureCPSProfile:CloudService xmi:id="_YSUXcERREeeXpvCVjWTYeA" cloudProvider="_ClOAgF15Eeel-tS9I1vO3w" base_Classifier="_YSRUIERREeeXpvCVjWTYeA" computingConfigs="_o0zB8FDsEeeBaKpUcWLICA" storageConfigs="_8o_AcE0CEeedg6nzD0_JBg _-cciIE0CEeedg6nzD0_JBg" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Class="_YSRUIERREeeXpvCVjWTYeA"/>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_YSU-gERREeeXpvCVjWTYeA" base_Element="_YSRUMURREeeXpvCVjWTYeA">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_OyTSYERUEeeXpvCVjWTYeA" base_Element="_OyNL0URUEeeXpvCVjWTYeA">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <GRM:Resource xmi:id="_zTHN0ERdEeeXpvCVjWTYeA" base_Classifier="_OyNLwERUEeeXpvCVjWTYeA"/>
+  <GRM:Resource xmi:id="_1ho64ERdEeeXpvCVjWTYeA" base_Classifier="_YSRUIERREeeXpvCVjWTYeA"/>
+  <GRM:Resource xmi:id="_3drw0ERdEeeXpvCVjWTYeA" base_Classifier="_WqOYQERREeeXpvCVjWTYeA"/>
+  <GRM:Resource xmi:id="_90EEEERdEeeXpvCVjWTYeA" resMult="23" base_Classifier="_2GTaEERQEeeXpvCVjWTYeA"/>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_UclwIEReEeeXpvCVjWTYeA" base_Element="_Ucis4UReEeeXpvCVjWTYeA">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_iS1uQEReEeeXpvCVjWTYeA" base_Element="_iSyrAUReEeeXpvCVjWTYeA">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureCPSProfile:VirtualGateway xmi:id="_plakAEReEeeXpvCVjWTYeA" base_Class="_plYu0EReEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:VirtualSensor xmi:id="_Toy6cEUIEeebuPNq01--pQ" base_Class="_TonUQEUIEeebuPNq01--pQ" location="string value for location" description="string value for the description" swCapabilities="_sfv3gE28EeeW8tmPVB892Q _utqgkE28EeeW8tmPVB892Q _1BRDIE9dEee-m7qAtQ_W2A _1PMKYE9dEee-m7qAtQ_W2A"/>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_TpBj8EUIEeebuPNq01--pQ" base_Element="_TonUUUUIEeebuPNq01--pQ">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureCPSProfile:VirtualSensor xmi:id="_HxmNgEUJEeebuPNq01--pQ" base_Class="_Hxgt8EUJEeebuPNq01--pQ" location="string value for the location" description="string value for the description" swCapabilities="_P5pSwFyvEee3fP2vaOmJjA _P5wngFyvEee3fP2vaOmJjA _P5x1oFyvEee3fP2vaOmJjA _P53VMFyvEee3fP2vaOmJjA"/>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_HxpQ0EUJEeebuPNq01--pQ" base_Element="_HxhVD0UJEeebuPNq01--pQ">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <HwDevice:HWSensor xmi:id="_JZHckEUXEeeNrMhg6pDppw" base_Classifier="_Ucis0EReEeeXpvCVjWTYeA" frequency=""/>
+  <InfrastructureCPSProfile:TestConfiguration xmi:id="_nG9lgEUXEeeNrMhg6pDppw" description="This is the description of Test Configuration Test001." testExecutors="_Jimm8EqBEeemwObUvM0ZZA" base_Class="_juHaYEUXEeeNrMhg6pDppw" configurations="_-k4ZkEdpEee5F8b1qsyZMA _8o_AcE0CEeedg6nzD0_JBg _-cciIE0CEeedg6nzD0_JBg _U4mfwEqKEeemwObUvM0ZZA _o0zB8FDsEeeBaKpUcWLICA"/>
+  <GRM:Resource xmi:id="_DVdHYEXPEeeNrMhg6pDppw" base_Classifier="_iSyq8EReEeeXpvCVjWTYeA"/>
+  <GRM:Resource xmi:id="_qdGLEEXsEeeNrMhg6pDppw" base_Classifier="_RcAFIEXsEeeNrMhg6pDppw"/>
+  <HwMemory:HwRAM xmi:id="_7-a3UEXtEeeNrMhg6pDppw" base_Classifier="_azh1MEXsEeeNrMhg6pDppw" frequency="" elementSize="" memorySize="(0.6, GB)" throughput="" isSynchronous="" isNonVolatile="" repl_Policy="undef" writePolicy="undef"/>
+  <HwMemory:HwMemory xmi:id="_O8cnkEXuEeeNrMhg6pDppw" resMult="4" base_Classifier="_gJhpgEXsEeeNrMhg6pDppw" description="" frequency="" elementSize="" memorySize="(3, TB)"/>
+  <HwComputing:HwProcessor xmi:id="_k32ScEXvEeeNrMhg6pDppw" base_Classifier="_WsMMYEXsEeeNrMhg6pDppw" description="" speedFactor="0.2" nbCores=""/>
+  <GQAM:GaAnalysisContext xmi:id="_z8k5EEXzEeeNrMhg6pDppw" base_StructuredClassifier="_juHaYEUXEeeNrMhg6pDppw" base_NamedElement="_juHaYEUXEeeNrMhg6pDppw"/>
+  <InfrastructureUncertaintyProfile:DataDeliveryUncertainty xmi:id="_6V7cQEX9EeeNrMhg6pDppw" base_Element="_0MmUcEO2EeeTNbOHCbo_Mw">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:DataDeliveryUncertainty>
+  <InfrastructureUncertaintyProfile:DataDeliveryUncertainty xmi:id="_xcSQIEX_EeeNrMhg6pDppw" base_Element="_2GTaG0RQEeeXpvCVjWTYeA">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:DataDeliveryUncertainty>
+  <InfrastructureCPSProfile:Communication xmi:id="_irMV4EdpEee5F8b1qsyZMA" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" virtualUnits="_plakAEReEeeXpvCVjWTYeA" base_Association="_hrIz0EUIEeebuPNq01--pQ"/>
+  <InfrastructureCPSProfile:CommunicationConfiguration xmi:id="_-k4ZkEdpEee5F8b1qsyZMA" base_Class="_8V-5EEdpEee5F8b1qsyZMA" id="-1" clientID="Jolla" serverIP="192.168.11.11" portNumber="1883" qosLevel="" keepAlive="210">
+    <topics>topic001</topics>
+    <topics>topic002</topics>
+  </InfrastructureCPSProfile:CommunicationConfiguration>
+  <InfrastructureCPSProfile:Communication xmi:id="_O5SC4EdvEee5F8b1qsyZMA" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Association="_XclXYERTEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:Communication xmi:id="_PVIKAEdyEee5F8b1qsyZMA" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Association="_pOepcEUIEeebuPNq01--pQ"/>
+  <InfrastructureCPSProfile:Communication xmi:id="_Wm0O8EdyEee5F8b1qsyZMA" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Association="_N0eV8EUJEeebuPNq01--pQ"/>
+  <InfrastructureCPSProfile:Communication xmi:id="_bOMCsEdyEee5F8b1qsyZMA" communicationConfigs="_U4mfwEqKEeemwObUvM0ZZA" base_Association="_wuSp8EUIEeebuPNq01--pQ"/>
+  <GRM:Resource xmi:id="_TVNpYEd0Eee5F8b1qsyZMA" base_Classifier="_TonUQEUIEeebuPNq01--pQ"/>
+  <GRM:Resource xmi:id="_VT8m8Ed0Eee5F8b1qsyZMA" base_Classifier="_Hxgt8EUJEeebuPNq01--pQ"/>
+  <GRM:Resource xmi:id="_X3ZbIEd0Eee5F8b1qsyZMA" base_Classifier="_plYu0EReEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:CloudService xmi:id="_HvaygEeWEee5F8b1qsyZMA" base_Classifier="_RcAFIEXsEeeNrMhg6pDppw" base_Class="_RcAFIEXsEeeNrMhg6pDppw"/>
+  <InfrastructureCPSProfile:TestExecutor xmi:id="_Jimm8EqBEeemwObUvM0ZZA" base_Class="_Jif5QEqBEeemwObUvM0ZZA">
+    <strategy>all_path_strategy</strategy>
+  </InfrastructureCPSProfile:TestExecutor>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_JiocIEqBEeemwObUvM0ZZA" base_Element="_Jif5UUqBEeemwObUvM0ZZA">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_Z43qwEqBEeemwObUvM0ZZA" base_Element="_Z4yLQUqBEeemwObUvM0ZZA">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureCPSProfile:CommunicationConfiguration xmi:id="_U4mfwEqKEeemwObUvM0ZZA" base_Class="_U4jccEqKEeemwObUvM0ZZA" clientID="" serverIP="35.189.187.208" portNumber="1883" qosLevel="2" keepAlive="undef">
+    <topics>gateway/electricity</topics>
+  </InfrastructureCPSProfile:CommunicationConfiguration>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_U4smYEqKEeemwObUvM0ZZA" base_Element="_U4jcgUqKEeemwObUvM0ZZA">
+    <description xsi:nil="true"/>
+  </InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty>
+  <InfrastructureCPSProfile:CloudService xmi:id="_xr75gE0BEeedg6nzD0_JBg" base_Classifier="_wgQJgE0BEeedg6nzD0_JBg" computingConfigs="_o0zB8FDsEeeBaKpUcWLICA" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Class="_wgQJgE0BEeedg6nzD0_JBg"/>
+  <InfrastructureCPSProfile:CloudService xmi:id="_DOETgE0CEeedg6nzD0_JBg" base_Classifier="_-WXkwE0BEeedg6nzD0_JBg" computingConfigs="_o0zB8FDsEeeBaKpUcWLICA" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Class="_-WXkwE0BEeedg6nzD0_JBg"/>
+  <InfrastructureCPSProfile:Communication xmi:id="_NGS84E0CEeedg6nzD0_JBg" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Association="_Eu1isE0CEeedg6nzD0_JBg"/>
+  <InfrastructureCPSProfile:StorageConfiguration xmi:id="_8o_AcE0CEeedg6nzD0_JBg" base_Class="_YFToIE0CEeedg6nzD0_JBg"/>
+  <InfrastructureCPSProfile:StorageConfiguration xmi:id="_-cciIE0CEeedg6nzD0_JBg" base_Class="_airpgE0CEeedg6nzD0_JBg"/>
+  <InfrastructureCPSProfile:InfrastructureElement xmi:id="_Os1VgE0FEeeP5PgJmqSIEQ" base_Class="_OyNLwERUEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:Infrastructure xmi:id="_10K-kE0fEeen7K41utM1aw" base_Package="_lYIzoERQEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_sfv3gE28EeeW8tmPVB892Q" base_Operation="_sfuCUE28EeeW8tmPVB892Q" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_utqgkE28EeeW8tmPVB892Q" base_Operation="_utoEUE28EeeW8tmPVB892Q" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <CoreProfile:BeliefAgent xmi:id="_EPZgYE9BEee-m7qAtQ_W2A" base_Package="_5-LIME9AEee-m7qAtQ_W2A"/>
+  <CoreProfile:BeliefElement xmi:id="_bfMAwE9BEee-m7qAtQ_W2A" base_Classifier="_MlpZoE9BEee-m7qAtQ_W2A" agent="_EPZgYE9BEee-m7qAtQ_W2A"/>
+  <CoreProfile:IndeterminacySource xmi:id="_1UNPQE9HEee-m7qAtQ_W2A" nature="Unclassified" base_Classifier="_8V-5EEdpEee5F8b1qsyZMA" description="Different QoS level affect the data delivery process. Check the qosLevel configuration value."/>
+  <CoreProfile:Measurement xmi:id="_ZpSVcE9JEee-m7qAtQ_W2A" measurement="" base_Element="_rB2ZME9IEee-m7qAtQ_W2A">
+    <measure xmi:type="InternalUProfileLibrary:Probability" xmi:id="_Is6-IE9NEee-m7qAtQ_W2A"/>
+    <measureInDT xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </CoreProfile:Measurement>
+  <InfrastructureUncertaintyProfile:DataDeliveryUncertainty xmi:id="_v-bgkE9LEee-m7qAtQ_W2A" base_Classifier="_sf5kME9LEee-m7qAtQ_W2A" base_Element="_sf5kME9LEee-m7qAtQ_W2A">
+    <description>This uncertainty is related to the required QoS configuration of the MQTT protocol used for communication among virtual units. </description>
+  </InfrastructureUncertaintyProfile:DataDeliveryUncertainty>
+  <CoreProfile:IndeterminacySource xmi:id="_uG1lcE9OEee-m7qAtQ_W2A" base_Classifier="_YFToIE0CEeedg6nzD0_JBg"/>
+  <CoreProfile:IndeterminacySource xmi:id="_xoqGYE9OEee-m7qAtQ_W2A" base_Classifier="_airpgE0CEeedg6nzD0_JBg"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_1BRDIE9dEee-m7qAtQ_W2A" base_Operation="_1BPN8E9dEee-m7qAtQ_W2A" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_1PMKYE9dEee-m7qAtQ_W2A" base_Operation="_1PJuIE9dEee-m7qAtQ_W2A" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_E8o6sE9eEee-m7qAtQ_W2A" base_Operation="_E8nFgE9eEee-m7qAtQ_W2A" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_IXdbwE9eEee-m7qAtQ_W2A" base_Operation="_IXbmkE9eEee-m7qAtQ_W2A" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_obYrQE9eEee-m7qAtQ_W2A" base_Operation="_obW2EE9eEee-m7qAtQ_W2A" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:ComputingConfiguration xmi:id="_o0zB8FDsEeeBaKpUcWLICA" base_Class="_TKc1YFDsEeeBaKpUcWLICA"/>
+  <CoreProfile:IndeterminacySource xmi:id="_t44m4FDsEeeBaKpUcWLICA" base_Classifier="_TKc1YFDsEeeBaKpUcWLICA"/>
+  <InfrastructureCPSProfile:TestExecutor xmi:id="_ywOwEFZtEee76uo3JJGiSg" base_Class="_wv53EFZtEee76uo3JJGiSg">
+    <strategy>all_path_strategy</strategy>
+  </InfrastructureCPSProfile:TestExecutor>
+  <InfrastructureCPSProfile:CloudService xmi:id="_AZyS4FgXEeeeTquJkarvqA" base_Classifier="_2LB_4FgWEeeeTquJkarvqA" computingConfigs="_LZ6YcFgXEeeeTquJkarvqA" base_Class="_2LB_4FgWEeeeTquJkarvqA"/>
+  <InfrastructureCPSProfile:CloudService xmi:id="_CVZrAFgXEeeeTquJkarvqA" base_Classifier="_6vtsAFgWEeeeTquJkarvqA" base_Class="_6vtsAFgWEeeeTquJkarvqA"/>
+  <InfrastructureCPSProfile:ComputingConfiguration xmi:id="_LZ6YcFgXEeeeTquJkarvqA" base_Class="_Jwm4UFgXEeeeTquJkarvqA"/>
+  <CoreProfile:IndeterminacySource xmi:id="_wncJwFquEeesiqa0zE-GKg" base_Classifier="_Jwm4UFgXEeeeTquJkarvqA"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_P5pSwFyvEee3fP2vaOmJjA" base_Operation="_P5dskFyvEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_P5wngFyvEee3fP2vaOmJjA" base_Operation="_P5gv4FyvEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_P5x1oFyvEee3fP2vaOmJjA" base_Operation="_P5h-AFyvEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_P53VMFyvEee3fP2vaOmJjA" base_Operation="_P5ilEFyvEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_TbFHQFyxEee3fP2vaOmJjA" base_Operation="_TbBc4FyxEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_TbFuUFyxEee3fP2vaOmJjA" base_Operation="_TbCrAFyxEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_TbGVYFyxEee3fP2vaOmJjA" base_Operation="_TbD5IFyxEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_TbGVYVyxEee3fP2vaOmJjA" base_Operation="_TbD5IVyxEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:CloudService xmi:id="_ILewUF13Eeel-tS9I1vO3w" base_Classifier="_3mxn4F12Eeel-tS9I1vO3w" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Class="_3mxn4F12Eeel-tS9I1vO3w"/>
+  <InfrastructureCPSProfile:CloudService xmi:id="_p4NUMF14Eeel-tS9I1vO3w" cloudProvider="_o3JDUF15Eeel-tS9I1vO3w" base_Classifier="_I9-kQF13Eeel-tS9I1vO3w" base_Class="_I9-kQF13Eeel-tS9I1vO3w"/>
+  <GRM:Resource xmi:id="_p4qAIF14Eeel-tS9I1vO3w" base_Classifier="_I9-kQF13Eeel-tS9I1vO3w"/>
+  <GRM:Resource xmi:id="_saYWAF14Eeel-tS9I1vO3w" base_Classifier="_3mxn4F12Eeel-tS9I1vO3w"/>
+  <InfrastructureCPSProfile:CloudProvider xmi:id="_ClOAgF15Eeel-tS9I1vO3w" base_Class="_-mtjkF14Eeel-tS9I1vO3w"/>
+  <CoreProfile:IndeterminacySource xmi:id="_VndiYF15Eeel-tS9I1vO3w" base_Classifier="_U4jccEqKEeemwObUvM0ZZA"/>
+  <InfrastructureCPSProfile:CloudProvider xmi:id="_o3JDUF15Eeel-tS9I1vO3w" base_Class="_k85bUF15Eeel-tS9I1vO3w"/>
+  <InfrastructureCPSProfile:Sensor xmi:id="_aqjioHYAEeeo94v8rkBTgA" base_Class="_Ucis0EReEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:Sensor xmi:id="_dm6mEHYAEeeo94v8rkBTgA" base_Class="_2GTaEERQEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:Sensor xmi:id="_hwHQEHYAEeeo94v8rkBTgA" base_Class="_iSyq8EReEeeXpvCVjWTYeA"/>
+</xmi:XMI>

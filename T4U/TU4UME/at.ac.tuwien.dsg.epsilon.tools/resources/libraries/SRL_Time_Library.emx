@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Default="http:///schemas/Default/_fNm3AAqoEd6-N_NOT9vsCA/2" xmlns:Standard="http://www.eclipse.org/uml2/schemas/Standard/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation" xsi:schemaLocation="http:///schemas/Default/_fNm3AAqoEd6-N_NOT9vsCA/2 pathmap://UML2_MSL_PROFILES/Default.epx#_fNwoAAqoEd6-N_NOT9vsCA?Default/Default? http://www.eclipse.org/uml2/schemas/Standard/1 pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w">
+  <uml:Package xmi:id="_oneyQbVREeW6F6X1iCgrUw" name="Time_Library">
+    <eAnnotations xmi:id="_oneyQrVREeW6F6X1iCgrUw" source="uml2.diagrams">
+      <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_skYFoLVREeW6F6X1iCgrUw" type="Class" name="Overall">
+        <children xmi:type="umlnotation:UMLShape" xmi:id="_uC55ILVREeW6F6X1iCgrUw" element="_uC4D8LVREeW6F6X1iCgrUw" fontName="Times New Roman" fontHeight="11" showListStereotype="Text" showListVisibility="None" transparency="100" lineColor="0" lineWidth="1" showStereotype="Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uC6gMLVREeW6F6X1iCgrUw" type="ImageCompartment">
+            <layoutConstraint xmi:type="notation:Size" xmi:id="_uC6gMbVREeW6F6X1iCgrUw" width="1320" height="1320"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_uC7HQLVREeW6F6X1iCgrUw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_uC7HQbVREeW6F6X1iCgrUw" type="Kind"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_uC7HQrVREeW6F6X1iCgrUw" type="Name"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_uC7HQ7VREeW6F6X1iCgrUw" type="Parent"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_uC7HRLVREeW6F6X1iCgrUw" type="AttributeCompartment"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_uC7uULVREeW6F6X1iCgrUw" visible="false" type="OperationCompartment"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uC55IbVREeW6F6X1iCgrUw" x="6787" y="2233"/>
+        </children>
+        <children xmi:type="umlnotation:UMLShape" xmi:id="_u0fHELVREeW6F6X1iCgrUw" element="_u0dR4LVREeW6F6X1iCgrUw" fontName="Times New Roman" fontHeight="11" showListStereotype="Text" showListVisibility="None" transparency="100" lineColor="0" lineWidth="1" showStereotype="Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_u0fuILVREeW6F6X1iCgrUw" type="ImageCompartment">
+            <layoutConstraint xmi:type="notation:Size" xmi:id="_u0fuIbVREeW6F6X1iCgrUw" width="1320" height="1320"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_u0gVMLVREeW6F6X1iCgrUw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_u0gVMbVREeW6F6X1iCgrUw" type="Kind"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_u0gVMrVREeW6F6X1iCgrUw" type="Name"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_u0gVM7VREeW6F6X1iCgrUw" type="Parent"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_u0g8QLVREeW6F6X1iCgrUw" type="AttributeCompartment"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_u0g8QbVREeW6F6X1iCgrUw" visible="false" type="OperationCompartment"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u0fHEbVREeW6F6X1iCgrUw" x="11412" y="2219"/>
+        </children>
+        <children xmi:type="umlnotation:UMLShape" xmi:id="_I-6FMLVVEeW6F6X1iCgrUw" element="_I-3o8LVVEeW6F6X1iCgrUw" fontName="Times New Roman" fontHeight="11" showListStereotype="Text" showListVisibility="None" transparency="100" lineColor="0" lineWidth="1" showStereotype="Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_I-6sQLVVEeW6F6X1iCgrUw" type="ImageCompartment">
+            <layoutConstraint xmi:type="notation:Size" xmi:id="_I-6sQbVVEeW6F6X1iCgrUw" width="1320" height="1320"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_I-7TULVVEeW6F6X1iCgrUw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_I-7TUbVVEeW6F6X1iCgrUw" type="Kind"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_I-7TUrVVEeW6F6X1iCgrUw" type="Name"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_I-76YLVVEeW6F6X1iCgrUw" type="Parent"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_I-76YbVVEeW6F6X1iCgrUw" type="AttributeCompartment"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_I-76YrVVEeW6F6X1iCgrUw" visible="false" type="OperationCompartment"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I-6FMbVVEeW6F6X1iCgrUw" x="16484" y="2219"/>
+        </children>
+        <children xmi:type="umlnotation:UMLShape" xmi:id="_a3NzMLYIEeW1wungp7mtTw" fontName="Times New Roman" fontHeight="11" showListStereotype="Text" showListVisibility="Text" transparency="100" lineColor="0" lineWidth="1" showStereotype="Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_a3TSwLYIEeW1wungp7mtTw" type="ImageCompartment">
+            <layoutConstraint xmi:type="notation:Size" xmi:id="_a3TSwbYIEeW1wungp7mtTw" width="1320" height="1320"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_a3T50LYIEeW1wungp7mtTw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_a3T50bYIEeW1wungp7mtTw" type="Kind"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_a3Ug4LYIEeW1wungp7mtTw" type="Name"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_a3Ug4bYIEeW1wungp7mtTw" type="Parent"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_a3VH8LYIEeW1wungp7mtTw" visible="false" type="AttributeCompartment"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_a3VH8bYIEeW1wungp7mtTw" visible="false" type="OperationCompartment"/>
+          <element xmi:type="uml:PrimitiveType" href="platform:/resource/MARTE/MARTELibrary.emx#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_a3NzMbYIEeW1wungp7mtTw" x="30432" y="2219"/>
+        </children>
+        <children xmi:type="umlnotation:UMLShape" xmi:id="_brMN0LYIEeW1wungp7mtTw" fontName="Times New Roman" fontHeight="11" showListStereotype="Text" showListVisibility="Text" transparency="100" lineColor="0" lineWidth="1" showStereotype="Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_brM04LYIEeW1wungp7mtTw" type="ImageCompartment">
+            <layoutConstraint xmi:type="notation:Size" xmi:id="_brM04bYIEeW1wungp7mtTw" width="1320" height="1320"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_brNb8LYIEeW1wungp7mtTw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_brNb8bYIEeW1wungp7mtTw" type="Kind"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_brNb8rYIEeW1wungp7mtTw" type="Name"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_brODALYIEeW1wungp7mtTw" type="Parent"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_brODAbYIEeW1wungp7mtTw" type="EnumerationCompartment"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_brOqELYIEeW1wungp7mtTw" visible="false" type="AttributeCompartment"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_brPRILYIEeW1wungp7mtTw" visible="false" type="OperationCompartment"/>
+          <element xmi:type="uml:Enumeration" href="platform:/resource/MARTE/MARTELibrary.emx#_T5Es0DaaEdyLQNH6QZ7cjA?MARTE_Library/MARTE_MeasurementUnits/FrequencyUnitKind?"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_brMN0bYIEeW1wungp7mtTw" x="25360" y="2219"/>
+        </children>
+        <children xmi:type="umlnotation:UMLShape" xmi:id="_cCy1gLYIEeW1wungp7mtTw" fontName="Times New Roman" fontHeight="11" showListStereotype="Text" showListVisibility="Text" transparency="100" lineColor="0" lineWidth="1" showStereotype="Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_cCzckLYIEeW1wungp7mtTw" type="ImageCompartment">
+            <layoutConstraint xmi:type="notation:Size" xmi:id="_cCzckbYIEeW1wungp7mtTw" width="1320" height="1320"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_cCzckrYIEeW1wungp7mtTw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_cC0DoLYIEeW1wungp7mtTw" type="Kind"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_cC0DobYIEeW1wungp7mtTw" type="Name"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_cC0DorYIEeW1wungp7mtTw" type="Parent"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_cC0qsLYIEeW1wungp7mtTw" type="EnumerationCompartment"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_cC0qsbYIEeW1wungp7mtTw" visible="false" type="AttributeCompartment"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_cC0qsrYIEeW1wungp7mtTw" visible="false" type="OperationCompartment"/>
+          <element xmi:type="uml:Enumeration" href="platform:/resource/MARTE/MARTELibrary.emx#_Gfn_cDaaEdyLQNH6QZ7cjA?MARTE_Library/MARTE_MeasurementUnits/TimeUnitKind?"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cCy1gbYIEeW1wungp7mtTw" x="21873" y="2219"/>
+        </children>
+        <element xsi:nil="true"/>
+      </contents>
+    </eAnnotations>
+    <packageImport xmi:id="_oneyRLVREeW6F6X1iCgrUw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:id="_bRiCkLYGEeWt--tKX72qew">
+      <importedPackage xmi:type="uml:Model" href="platform:/resource/MARTE/MARTELibrary.emx#_LnJT4DaPEdy8NoXj6Y5Thw?MARTE_Library?"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_uC4D8LVREeW6F6X1iCgrUw" name="Duration">
+      <ownedAttribute xmi:id="_zmVFcLVREeW6F6X1iCgrUw" name="best" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="platform:/resource/MARTE/MARTELibrary.emx#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_0GLqMLVREeW6F6X1iCgrUw" name="worst" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="platform:/resource/MARTE/MARTELibrary.emx#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_0i1J8LVREeW6F6X1iCgrUw" name="clock" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EPl9wLVSEeW6F6X1iCgrUw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EPlWsLVSEeW6F6X1iCgrUw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_1Bn-wLVREeW6F6X1iCgrUw" name="precision" visibility="public">
+        <ownedComment xmi:id="_7MQ0sLVUEeW6F6X1iCgrUw" annotatedElement="_1Bn-wLVREeW6F6X1iCgrUw">
+          <body>&lt;p>[Marte]Degree of refinement in the performance of a measurement operation, or the degree of perfection in the instruments&lt;br>and methods used to obtain a result. Precision is characterized in terms of a Real value, which is the standard&lt;br>deviation of the measurement.&lt;/p></body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="platform:/resource/MARTE/MARTELibrary.emx#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_2mPzMLVREeW6F6X1iCgrUw" name="unit" visibility="public">
+        <type xmi:type="uml:Enumeration" href="platform:/resource/MARTE/MARTELibrary.emx#_Gfn_cDaaEdyLQNH6QZ7cjA?MARTE_Library/MARTE_MeasurementUnits/TimeUnitKind?"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_u0dR4LVREeW6F6X1iCgrUw" name="DateTime">
+      <ownedAttribute xmi:id="_FUCn4LVTEeW6F6X1iCgrUw" name="value" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="platform:/resource/MARTE/MARTELibrary.emx#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NehWALVTEeW6F6X1iCgrUw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Negu8LVTEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_FyBkYLVTEeW6F6X1iCgrUw" name="literal_value" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MVGP0bVTEeW6F6X1iCgrUw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MVGP0LVTEeW6F6X1iCgrUw"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_I-3o8LVVEeW6F6X1iCgrUw" name="Frequency">
+      <ownedAttribute xmi:id="_j4GVMLVVEeW6F6X1iCgrUw" name="value" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="platform:/resource/MARTE/MARTELibrary.emx#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6OsjwLVVEeW6F6X1iCgrUw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6Or8sLVVEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_kvID0LVVEeW6F6X1iCgrUw" name="precision" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="platform:/resource/MARTE/MARTELibrary.emx#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4ZyQkbVVEeW6F6X1iCgrUw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4ZyQkLVVEeW6F6X1iCgrUw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_mnFD8LVVEeW6F6X1iCgrUw" name="unit" visibility="public">
+        <type xmi:type="uml:Enumeration" href="platform:/resource/MARTE/MARTELibrary.emx#_T5Es0DaaEdyLQNH6QZ7cjA?MARTE_Library/MARTE_MeasurementUnits/FrequencyUnitKind?"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5YRSEbVVEeW6F6X1iCgrUw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5YRSELVVEeW6F6X1iCgrUw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <profileApplication xmi:id="_oneyRbVREeW6F6X1iCgrUw">
+      <eAnnotations xmi:id="_oneyRrVREeW6F6X1iCgrUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_oneyR7VREeW6F6X1iCgrUw">
+      <eAnnotations xmi:id="_oneySLVREeW6F6X1iCgrUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Default.epx#_fNwoAAqoEd6-N_NOT9vsCA?Default/Default?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML2_MSL_PROFILES/Default.epx#_a_S3wNWLEdiy4IqP8whjFA?Default?"/>
+    </profileApplication>
+    <profileApplication xmi:id="_oneySbVREeW6F6X1iCgrUw">
+      <eAnnotations xmi:id="_oneySrVREeW6F6X1iCgrUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_4OVBUD0TEeKt-L0gyEptgQ?Deployment/Deployment?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_vjbuwOvHEdiDX5bji0iVSA?Deployment?"/>
+    </profileApplication>
+  </uml:Package>
+  <Standard:ModelLibrary xmi:id="_p_5WsLVREeW6F6X1iCgrUw" base_Package="_oneyQbVREeW6F6X1iCgrUw"/>
+  <Default:Documentation xmi:id="_7MSp4LVUEeW6F6X1iCgrUw" base_Comment="_7MQ0sLVUEeW6F6X1iCgrUw"/>
+</xmi:XMI>

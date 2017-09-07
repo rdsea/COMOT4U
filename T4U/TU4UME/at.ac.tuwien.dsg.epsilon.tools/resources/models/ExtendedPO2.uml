@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:InfrastructureCPSProfile.InfrastructureModeling.SoftwareModeling="http:///InfrastructureCPSProfile/InfrastructureModeling/SoftwareModeling.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///InfrastructureCPSProfile/InfrastructureModeling/SoftwareModeling.ecore ../profiles/InfrastructureCPSProfile.profile.uml#_FRfpYHXSEeezMYVgsuy-jA">
+  <uml:Model xmi:id="_TjU3IEJAEeeWzvYVSaULvg" name="MyModel">
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_TjU3IUJAEeeWzvYVSaULvg" name="int"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_TjU3IkJAEeeWzvYVSaULvg" name="MyPackage2">
+      <packagedElement xmi:type="uml:Class" xmi:id="_TjU3I0JAEeeWzvYVSaULvg" name="MyClass1">
+        <ownedAttribute xmi:id="_TjU3JEJAEeeWzvYVSaULvg" name="my_property" type="_TjU3KkJAEeeWzvYVSaULvg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TjU3JUJAEeeWzvYVSaULvg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TjU3JkJAEeeWzvYVSaULvg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_TjU3J0JAEeeWzvYVSaULvg" name="two" type="_TjU3KkJAEeeWzvYVSaULvg" aggregation="composite" association="_TjU3LEJAEeeWzvYVSaULvg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TjU3KEJAEeeWzvYVSaULvg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TjU3KUJAEeeWzvYVSaULvg" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TjU3KkJAEeeWzvYVSaULvg" name="MyClass2">
+        <generalization xmi:id="_TjU3K0JAEeeWzvYVSaULvg" general="_TjU3I0JAEeeWzvYVSaULvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_TjU3LEJAEeeWzvYVSaULvg" memberEnd="_TjU3J0JAEeeWzvYVSaULvg _TjU3LUJAEeeWzvYVSaULvg">
+        <ownedEnd xmi:id="_TjU3LUJAEeeWzvYVSaULvg" name="owner_one" type="_TjU3I0JAEeeWzvYVSaULvg" association="_TjU3LEJAEeeWzvYVSaULvg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TjU3LkJAEeeWzvYVSaULvg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TjU3L0JAEeeWzvYVSaULvg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <profileApplication xmi:id="_KzSL8HXUEeezMYVgsuy-jA">
+        <eAnnotations xmi:id="_KzUBIHXUEeezMYVgsuy-jA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureCPSProfile.profile.uml#_FRfpQHXSEeezMYVgsuy-jA"/>
+        </eAnnotations>
+        <appliedProfile href="../profiles/InfrastructureCPSProfile.profile.uml#_gJjV8PUfEeaI5-4OrfiDWg"/>
+      </profileApplication>
+    </packagedElement>
+    <profileApplication xmi:id="_TjU3MEJAEeeWzvYVSaULvg">
+      <eAnnotations xmi:id="_TjU3MUJAEeeWzvYVSaULvg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="file:/C:/Users/Luca/Desktop/workspaces/uTestCompatible2/UTestModels_Papyrus_Model_Tests/profiles/U-Profile.profile.uml#_yUEjARVHEeev2_sZ3ngp-w"/>
+      </eAnnotations>
+      <appliedProfile href="file:/C:/Users/Luca/Desktop/workspaces/uTestCompatible2/UTestModels_Papyrus_Model_Tests/profiles/U-Profile.profile.uml#_SFfNUJQmEeWVWKdOybk1ZQ"/>
+    </profileApplication>
+  </uml:Model>
+  <InfrastructureCPSProfile.InfrastructureModeling.SoftwareModeling:VirtualSensor xmi:id="_Opu5EHXUEeezMYVgsuy-jA" base_Class="_TjU3I0JAEeeWzvYVSaULvg"/>
+</xmi:XMI>

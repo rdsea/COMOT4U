@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_-mlXAEK5EeeferlRZ7wFOQ" name="RootElement">
+  <packageImport xmi:id="_-x85gEK5EeeferlRZ7wFOQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ABAtoEK6EeeferlRZ7wFOQ" name="A">
+    <ownedAttribute xmi:id="_CyeIoEK6EeeferlRZ7wFOQ" name="b" type="_AyQkYEK6EeeferlRZ7wFOQ" association="_CyaeQEK6EeeferlRZ7wFOQ"/>
+    <ownedAttribute xmi:id="_DMB4IUK6EeeferlRZ7wFOQ" name="c" type="_BWw_oEK6EeeferlRZ7wFOQ" association="_DMBREEK6EeeferlRZ7wFOQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_AyQkYEK6EeeferlRZ7wFOQ" name="B">
+    <ownedAttribute xmi:id="_EXe-oEK6EeeferlRZ7wFOQ" name="myAttr" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_t1BMYEK7EeeferlRZ7wFOQ"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_Gcva8EK6EeeferlRZ7wFOQ" name="myOp"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BWw_oEK6EeeferlRZ7wFOQ" name="C"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_CyaeQEK6EeeferlRZ7wFOQ" memberEnd="_CyeIoEK6EeeferlRZ7wFOQ _CyhL8EK6EeeferlRZ7wFOQ">
+    <eAnnotations xmi:id="_Cyc6gEK6EeeferlRZ7wFOQ" source="org.eclipse.papyrus">
+      <details xmi:id="_Cyc6gUK6EeeferlRZ7wFOQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_CyhL8EK6EeeferlRZ7wFOQ" name="a" type="_ABAtoEK6EeeferlRZ7wFOQ" association="_CyaeQEK6EeeferlRZ7wFOQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DMBREEK6EeeferlRZ7wFOQ" memberEnd="_DMB4IUK6EeeferlRZ7wFOQ _DMB4IkK6EeeferlRZ7wFOQ">
+    <eAnnotations xmi:id="_DMBREUK6EeeferlRZ7wFOQ" source="org.eclipse.papyrus">
+      <details xmi:id="_DMB4IEK6EeeferlRZ7wFOQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_DMB4IkK6EeeferlRZ7wFOQ" name="a" type="_ABAtoEK6EeeferlRZ7wFOQ" association="_DMBREEK6EeeferlRZ7wFOQ"/>
+  </packagedElement>
+  <profileApplication xmi:id="_-qHMIEK5EeeferlRZ7wFOQ">
+    <eAnnotations xmi:id="_-qOg4EK5EeeferlRZ7wFOQ" source="PapyrusVersion">
+      <details xmi:id="_-qOg4UK5EeeferlRZ7wFOQ" key="Version" value="0.0.1"/>
+      <details xmi:id="_-qOg4kK5EeeferlRZ7wFOQ" key="Comment" value=""/>
+      <details xmi:id="_-qOg40K5EeeferlRZ7wFOQ" key="Copyright" value=""/>
+      <details xmi:id="_-qOg5EK5EeeferlRZ7wFOQ" key="Date" value="2017-03-30"/>
+      <details xmi:id="_-qOg5UK5EeeferlRZ7wFOQ" key="Author" value=""/>
+    </eAnnotations>
+    <eAnnotations xmi:id="_-qJBUEK5EeeferlRZ7wFOQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="/UTestModels_Papyrus_Model_Tests/profiles/U-Profile.profile.uml#_yUEjARVHEeev2_sZ3ngp-w"/>
+    </eAnnotations>
+    <appliedProfile href="/UTestModels_Papyrus_Model_Tests/profiles/U-Profile.profile.uml#_SFfNUJQmEeWVWKdOybk1ZQ"/>
+  </profileApplication>
+</uml:Model>

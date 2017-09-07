@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:Documentation="http://www.eclipse.org/papyrus/documentation" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Package xmi:id="_pyJYErOwEeW6hra-QKy9fw" name="Measure_Library">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_pyJYFbOwEeW6hra-QKy9fw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_OEq4ILXkEeWKgZ9tw42xQw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_toU_cLOwEeW6hra-QKy9fw" name="Probability">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_j2W_YLQOEeWVh-73AwxFPQ" name="NormalDistribution">
+        <generalization xmi:type="uml:Generalization" xmi:id="_PhVAgLR9EeWVh-73AwxFPQ" general="_L3GxgLR9EeWVh-73AwxFPQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_HMXqsLQPEeWVh-73AwxFPQ" name="standDev" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PIyusLQPEeWVh-73AwxFPQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PIzVwLQPEeWVh-73AwxFPQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_IA4Q0LQPEeWVh-73AwxFPQ" name="mean" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OC3ocLQPEeWVh-73AwxFPQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OC3ocbQPEeWVh-73AwxFPQ" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_cO50QLRaEeWVh-73AwxFPQ" name="Probability">
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_-lQZYLRaEeWVh-73AwxFPQ" constrainedElement="_cO50QLRaEeWVh-73AwxFPQ">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="_-lQZYbRaEeWVh-73AwxFPQ">
+            <language>OCL</language>
+            <body>self.value &lt;= 1.0 and self.value >=0.0</body>
+          </specification>
+        </ownedRule>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_u4eXcLRaEeWVh-73AwxFPQ" name="value" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_t8aiYLRbEeWVh-73AwxFPQ" name="BernoulliDistribution">
+        <generalization xmi:type="uml:Generalization" xmi:id="_RFb3kLR9EeWVh-73AwxFPQ" general="_L3GxgLR9EeWVh-73AwxFPQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_tvY9kLRcEeWVh-73AwxFPQ" name="prob" visibility="public" type="_cO50QLRaEeWVh-73AwxFPQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_uIKp8LRcEeWVh-73AwxFPQ" name="trials" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_xv2XwLRbEeWVh-73AwxFPQ" name="BinomialDistribution">
+        <generalization xmi:type="uml:Generalization" xmi:id="_QGxP4LR9EeWVh-73AwxFPQ" general="_L3GxgLR9EeWVh-73AwxFPQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_mJduALRcEeWVh-73AwxFPQ" name="prob" visibility="public" type="_cO50QLRaEeWVh-73AwxFPQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_7-NpMLRbEeWVh-73AwxFPQ" name="ExponentialDistribution">
+        <generalization xmi:type="uml:Generalization" xmi:id="_SGIfkLR9EeWVh-73AwxFPQ" general="_L3GxgLR9EeWVh-73AwxFPQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_1Vuc0LRcEeWVh-73AwxFPQ" name="mean" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_--XngLRbEeWVh-73AwxFPQ" name="GammaDistribution">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Sj9EALR9EeWVh-73AwxFPQ" general="_L3GxgLR9EeWVh-73AwxFPQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_7G6YULRcEeWVh-73AwxFPQ" name="k" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_9hF7wLRcEeWVh-73AwxFPQ" name="mean" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_BTtuQLRcEeWVh-73AwxFPQ" name="PoissonDistribution">
+        <generalization xmi:type="uml:Generalization" xmi:id="_TPMZYLR9EeWVh-73AwxFPQ" general="_L3GxgLR9EeWVh-73AwxFPQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_PUZlULRdEeWVh-73AwxFPQ" name="mean" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Ddk9wLRcEeWVh-73AwxFPQ" name="UniformDistribution">
+        <generalization xmi:type="uml:Generalization" xmi:id="_TszicLR9EeWVh-73AwxFPQ" general="_L3GxgLR9EeWVh-73AwxFPQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_IjJ7ALRdEeWVh-73AwxFPQ" name="min" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_JAPfoLRdEeWVh-73AwxFPQ" name="max" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_FHQRULRcEeWVh-73AwxFPQ" name="GeometricDistribution">
+        <generalization xmi:type="uml:Generalization" xmi:id="_UJ_NsLR9EeWVh-73AwxFPQ" general="_L3GxgLR9EeWVh-73AwxFPQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_C5LawLRdEeWVh-73AwxFPQ" name="p" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_HQenoLRcEeWVh-73AwxFPQ" name="TriangularDistribution">
+        <generalization xmi:type="uml:Generalization" xmi:id="_UjTsoLR9EeWVh-73AwxFPQ" general="_L3GxgLR9EeWVh-73AwxFPQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_UYULILRdEeWVh-73AwxFPQ" name="min" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_V0ktwLRdEeWVh-73AwxFPQ" name="max" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_W6E9QLRdEeWVh-73AwxFPQ" name="mode" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_LcmCwLRcEeWVh-73AwxFPQ" name="LogarithmicDistribution">
+        <generalization xmi:type="uml:Generalization" xmi:id="_U-xgoLR9EeWVh-73AwxFPQ" general="_L3GxgLR9EeWVh-73AwxFPQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_eAeYMLRdEeWVh-73AwxFPQ" name="theta" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_Ul63YLRfEeWVh-73AwxFPQ" name="Probability_3Scale">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XCb9ILRfEeWVh-73AwxFPQ" name="Impossible"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_X26HALRfEeWVh-73AwxFPQ" name="Likely"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XheCgLRfEeWVh-73AwxFPQ" name="Certain"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_exkzELRfEeWVh-73AwxFPQ" name="Probability_4Scale">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_g279ELRfEeWVh-73AwxFPQ" name="Impossible"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_l5jiYLRfEeWVh-73AwxFPQ" name="Unlikely"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_npdZwLRfEeWVh-73AwxFPQ" name="Likely"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ohWrELRfEeWVh-73AwxFPQ" name="Certain"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_skRG4LRfEeWVh-73AwxFPQ" name="Probability_5Scale">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_uOP8cLRfEeWVh-73AwxFPQ" name="Impossible"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ukIF0LRfEeWVh-73AwxFPQ" name="Unlikely"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_u2KRALRfEeWVh-73AwxFPQ" name="Even"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_vkFG8LRfEeWVh-73AwxFPQ" name="Likely"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_1kme8LRfEeWVh-73AwxFPQ" name="Certain"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_SJeNoLRgEeWVh-73AwxFPQ" name="Probability_7Scale">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_WUmKQLRgEeWVh-73AwxFPQ" name="Impossible"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XVZf8LRgEeWVh-73AwxFPQ" name="VeryUnlikely"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bsI2sLRgEeWVh-73AwxFPQ" name="Unlikely"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_fArJkLRgEeWVh-73AwxFPQ" name="Even"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_gchcgLRgEeWVh-73AwxFPQ" name="Likely"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_h0THwLRgEeWVh-73AwxFPQ" name="VeryLikely"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_kSoycLRgEeWVh-73AwxFPQ" name="Certain"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_L3GxgLR9EeWVh-73AwxFPQ" name="ProbabilityDistribution" isAbstract="true">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_-JGKcLiPEeWWm9XFT5-RTg" annotatedElement="_L3GxgLR9EeWVh-73AwxFPQ">
+          <body>&lt;p>https://en.wikipedia.org/wiki/List_of_probability_distributions&lt;/p></body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_x4RHcLiOEeWWm9XFT5-RTg" general="_vY2esLiOEeWWm9XFT5-RTg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_X0Fg4LR9EeWVh-73AwxFPQ" name="ConfidenceLevel">
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_jaepQLVOEeW6F6X1iCgrUw" constrainedElement="_X0Fg4LR9EeWVh-73AwxFPQ">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="_jafQULVOEeW6F6X1iCgrUw">
+            <language>OCL</language>
+            <body>self.value &lt;= 1.0 and self.value >=0.0</body>
+          </specification>
+        </ownedRule>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_enpfYLR9EeWVh-73AwxFPQ" name="value" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lXtyALVOEeW6F6X1iCgrUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lXuZELVOEeW6F6X1iCgrUw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_vCBnILR9EeWVh-73AwxFPQ" name="ConfidenceInterval">
+        <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_aArUALUcEeW6F6X1iCgrUw" parameter="_aAr7ELUcEeW6F6X1iCgrUw">
+          <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_aAr7ELUcEeW6F6X1iCgrUw" parameteredElement="_aAtJMLUcEeW6F6X1iCgrUw">
+            <ownedParameteredElement xmi:type="uml:DataType" xmi:id="_aAtJMLUcEeW6F6X1iCgrUw" name="GenericType" templateParameter="_aAr7ELUcEeW6F6X1iCgrUw"/>
+          </ownedParameter>
+        </ownedTemplateSignature>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Vb9ysLUcEeW6F6X1iCgrUw" name="value" visibility="public" type="_aAtJMLUcEeW6F6X1iCgrUw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_V5uswLUcEeW6F6X1iCgrUw" name="error" visibility="public" type="_aAtJMLUcEeW6F6X1iCgrUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j0kP8LUcEeW6F6X1iCgrUw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j0k3ALUcEeW6F6X1iCgrUw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_WTJSULUcEeW6F6X1iCgrUw" name="level" visibility="public" type="_X0Fg4LR9EeWVh-73AwxFPQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_d-IWYLR_EeWVh-73AwxFPQ" name="Percentage">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_j_rpILR_EeWVh-73AwxFPQ" name="value" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_lpEv8LUbEeW6F6X1iCgrUw" name="Interval">
+        <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_g3mkILYPEeWqVdVzVCM11Q" parameter="_g3nLMLYPEeWqVdVzVCM11Q">
+          <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_g3nLMLYPEeWqVdVzVCM11Q" parameteredElement="_g3pncLYPEeWqVdVzVCM11Q">
+            <ownedParameteredElement xmi:type="uml:DataType" xmi:id="_g3pncLYPEeWqVdVzVCM11Q" name="GenericType" templateParameter="_g3nLMLYPEeWqVdVzVCM11Q"/>
+          </ownedParameter>
+        </ownedTemplateSignature>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_cwzG0LYPEeWqVdVzVCM11Q" name="min" visibility="public" type="_g3pncLYPEeWqVdVzVCM11Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_dFeWULYPEeWqVdVzVCM11Q" name="max" visibility="public" type="_g3pncLYPEeWqVdVzVCM11Q"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_tFh5kLYPEeWqVdVzVCM11Q" name="Probability_Interval">
+        <templateBinding xmi:type="uml:TemplateBinding" xmi:id="_xSJrALYPEeWqVdVzVCM11Q" signature="_g3mkILYPEeWqVdVzVCM11Q">
+          <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="_zgxesLYPEeWqVdVzVCM11Q" actual="_cO50QLRaEeWVh-73AwxFPQ" formal="_g3nLMLYPEeWqVdVzVCM11Q"/>
+        </templateBinding>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_2rypMLYPEeWqVdVzVCM11Q" name="min" visibility="public" type="_cO50QLRaEeWVh-73AwxFPQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_3ErqULYPEeWqVdVzVCM11Q" name="max" visibility="public" type="_cO50QLRaEeWVh-73AwxFPQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="__2I44LYPEeWqVdVzVCM11Q" name="Probability_ConfidenceInterval">
+        <templateBinding xmi:type="uml:TemplateBinding" xmi:id="_Og7SULYQEeWqVdVzVCM11Q" signature="_aArUALUcEeW6F6X1iCgrUw">
+          <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="_QENC8LYQEeWqVdVzVCM11Q" actual="_cO50QLRaEeWVh-73AwxFPQ" formal="_aAr7ELUcEeW6F6X1iCgrUw"/>
+        </templateBinding>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_E1nqoLYQEeWqVdVzVCM11Q" name="vaule" visibility="public" type="_cO50QLRaEeWVh-73AwxFPQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_FNbtsLYQEeWqVdVzVCM11Q" name="error" visibility="public" type="_cO50QLRaEeWVh-73AwxFPQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Firk8LYQEeWqVdVzVCM11Q" name="level" visibility="public" type="_X0Fg4LR9EeWVh-73AwxFPQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_O7ma0Ld-EeWWm9XFT5-RTg" name="ShannonEntropy">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_XP5W0Ld_EeWWm9XFT5-RTg" annotatedElement="_O7ma0Ld-EeWWm9XFT5-RTg">
+          <body>&lt;p>unit is bit&lt;/p>&lt;p>[Introduction from wiki]https://en.wiktionary.org/wiki/Shannon_entropy&lt;/p>&lt;p>http://www.mtm.ufsc.br/~taneja/book/node5.html&lt;/p>&lt;p>&lt;span style=&quot;font-size:15pt;color:#000000;font-family:Georgia, Times, 'Times New Roman', serif;font-weight:normal;&quot;>the entropy&lt;span> &lt;/span>&lt;/span>&lt;span style=&quot;font-size:15pt;color:#000000;font-family:Georgia, Times, 'Times New Roman', serif;font-weight:normal;&quot;>&lt;span style=&quot;font-size:15pt;font-weight:normal;&quot;>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;font-size:16pt;text-decoration:none;&quot;>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;font-family:STIXGeneral-Italic;text-decoration:none;&quot;>H&lt;/span>&lt;span style=&quot;font-family:STIXGeneral-Regular;text-decoration:none;&quot;>(&lt;/span>&lt;span style=&quot;font-family:STIXGeneral-Italic;text-decoration:none;&quot;>x&lt;/span>&lt;span style=&quot;font-family:STIXGeneral-Regular;text-decoration:none;&quot;>)&lt;/span>&lt;span style=&quot;font-family:STIXGeneral-Regular;text-decoration:none;&quot;>=&lt;/span>&lt;span style=&quot;font-family:STIXGeneral-Regular;text-decoration:none;&quot;>−&lt;/span>&lt;span style=&quot;font-family:STIXGeneral-Regular;text-decoration:none;&quot;>∑&lt;/span>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;font-family:STIXGeneral-Italic;text-decoration:none;&quot;>p&lt;/span>&lt;/span>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;font-size:11pt;font-family:STIXGeneral-Italic;text-decoration:none;&quot;>i&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;span style=&quot;font-family:STIXGeneral-Regular;text-decoration:none;&quot;>log&lt;/span>&lt;span style=&quot;font-family:STIXGeneral-Regular;text-decoration:none;&quot;>(&lt;/span>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;font-family:STIXGeneral-Italic;text-decoration:none;&quot;>p&lt;/span>&lt;/span>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;text-decoration:none;&quot;>&lt;span style=&quot;font-size:11pt;font-family:STIXGeneral-Italic;text-decoration:none;&quot;>i&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;span style=&quot;font-family:STIXGeneral-Regular;text-decoration:none;&quot;>)&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;span style=&quot;font-size:15pt;color:#000000;font-family:Georgia, Times, 'Times New Roman', serif;font-weight:normal;&quot;>  is something that maximises when each of the outcomes occurs with same probability i,e lot of uncertainty and minimises when there is only single outcome i,e no uncertainty.&lt;/span>&lt;/p></body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_W0dNcLd-EeWWm9XFT5-RTg" name="h" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_koryULd-EeWWm9XFT5-RTg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kosZYLd-EeWWm9XFT5-RTg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_lfQN8Ld-EeWWm9XFT5-RTg" name="set" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nY-vsLd-EeWWm9XFT5-RTg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nY_WwLd-EeWWm9XFT5-RTg" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_v26W4LOwEeW6hra-QKy9fw" name="Ambiguity">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_yGoF0LiJEeWWm9XFT5-RTg" name="AlternativeMeasure">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_UOJdYLiNEeWWm9XFT5-RTg" name="a" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_yxUSwLfzEeWWm9XFT5-RTg" name="Belief">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_0XFvYLhDEeWWm9XFT5-RTg" annotatedElement="_yxUSwLfzEeWWm9XFT5-RTg">
+          <body>&lt;p>For example, suppose we have a belief of 0.5 and a plausibility of 0.8 for a proposition, say “the cat in the box is dead.” This means that we have evidence that allows us to state strongly that the proposition is true with a confidence of 0.5. However, the evidence contrary to that hypothesis (i.e. “the cat is alive”) only has a confidence of 0.2. The remaining mass of 0.3 (the gap between the 0.5 supporting evidence on the one hand, and the 0.2 contrary evidence on the other) is “indeterminate,” meaning that the cat could either be dead or alive. This interval represents the level of uncertainty based on the evidence in your system.&lt;/p></body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_L4pH0LiJEeWWm9XFT5-RTg" name="degree" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_0xfzcLhDEeWWm9XFT5-RTg" name="BeliefInterval">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_5iO-kLhDEeWWm9XFT5-RTg" name="max" visibility="public" type="_zlPqELfzEeWWm9XFT5-RTg" aggregation="composite" association="_5iOXgLhDEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5iPloLhDEeWWm9XFT5-RTg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5iQMsLhDEeWWm9XFT5-RTg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_6L3xcLhDEeWWm9XFT5-RTg" name="min" visibility="public" type="_yxUSwLfzEeWWm9XFT5-RTg" aggregation="composite" association="_6L3KYLhDEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6L4_kLhDEeWWm9XFT5-RTg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6L4_kbhDEeWWm9XFT5-RTg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zha98LiLEeWWm9XFT5-RTg" name="Confilct">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_3aIU4LiLEeWWm9XFT5-RTg" name="weight" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-EZNcLiLEeWWm9XFT5-RTg" name="right" visibility="public" type="_O7ma0Ld-EeWWm9XFT5-RTg" association="_-EX_ULiLEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-EZ0gLiLEeWWm9XFT5-RTg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-EZ0gbiLEeWWm9XFT5-RTg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Ank74LiMEeWWm9XFT5-RTg" name="left" visibility="public" type="_O7ma0Ld-EeWWm9XFT5-RTg" association="_AnjtwLiMEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Anli8LiMEeWWm9XFT5-RTg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Anli8biMEeWWm9XFT5-RTg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_d8F0QLiLEeWWm9XFT5-RTg" name="DissonanceMeasure">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_rYVW8LiLEeWWm9XFT5-RTg" name="shannonEntropy" visibility="public" type="_zha98LiLEeWWm9XFT5-RTg" aggregation="composite" association="_rYUI0LiLEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rYV-ALiLEeWWm9XFT5-RTg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rYV-AbiLEeWWm9XFT5-RTg" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_OfzP8LiMEeWWm9XFT5-RTg" name="e" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_XOqdgLiMEeWWm9XFT5-RTg" name="complementray" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lozL0LiMEeWWm9XFT5-RTg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lozL0biMEeWWm9XFT5-RTg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_jH6qELf1EeWWm9XFT5-RTg" name="HartleyMeasure">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_FYWYsLiLEeWWm9XFT5-RTg" annotatedElement="_jH6qELf1EeWWm9XFT5-RTg">
+          <body>&lt;p>HartleyMeasure characterizes the ambiguity involved in the selection of one element from a set of possible alternatives. It is based on the assumption that possible alternatives are distinguished, within a given universe of discourse, from those which are not possible.&lt;/p></body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_RpP3sLiNEeWWm9XFT5-RTg" name="h" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Lu1q0Lf1EeWWm9XFT5-RTg" name="PignisticDistribution">
+        <generalization xmi:type="uml:Generalization" xmi:id="_3J5ZILiOEeWWm9XFT5-RTg" general="_vY2esLiOEeWWm9XFT5-RTg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zlPqELfzEeWWm9XFT5-RTg" name="Plausibility">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_HojysLiJEeWWm9XFT5-RTg" name="degree" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_673doLiIEeWWm9XFT5-RTg" name="PossibleDistribution">
+        <generalization xmi:type="uml:Generalization" xmi:id="_2rBEwLiOEeWWm9XFT5-RTg" general="_vY2esLiOEeWWm9XFT5-RTg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_hQRMsLiJEeWWm9XFT5-RTg" name="U_Uncertainty">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Ld86cLiKEeWWm9XFT5-RTg" annotatedElement="_hQRMsLiJEeWWm9XFT5-RTg">
+          <body>&lt;p>Yager measure&lt;/p></body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Sf2vkLiNEeWWm9XFT5-RTg" name="u" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_rYUI0LiLEeWWm9XFT5-RTg" memberEnd="_rYVW8LiLEeWWm9XFT5-RTg _rYWlELiLEeWWm9XFT5-RTg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_rYWlELiLEeWWm9XFT5-RTg" name="" visibility="private" type="_d8F0QLiLEeWWm9XFT5-RTg" association="_rYUI0LiLEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rYXMILiLEeWWm9XFT5-RTg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rYXzMLiLEeWWm9XFT5-RTg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_AnjtwLiMEeWWm9XFT5-RTg" memberEnd="_Ank74LiMEeWWm9XFT5-RTg _AnmKALiMEeWWm9XFT5-RTg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_AnmKALiMEeWWm9XFT5-RTg" name="" visibility="private" type="_zha98LiLEeWWm9XFT5-RTg" association="_AnjtwLiMEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AnnYILiMEeWWm9XFT5-RTg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AnnYIbiMEeWWm9XFT5-RTg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-EX_ULiLEeWWm9XFT5-RTg" memberEnd="_-EZNcLiLEeWWm9XFT5-RTg _-EabkLiLEeWWm9XFT5-RTg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_-EabkLiLEeWWm9XFT5-RTg" name="" visibility="private" type="_zha98LiLEeWWm9XFT5-RTg" association="_-EX_ULiLEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-EbCoLiLEeWWm9XFT5-RTg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-EbCobiLEeWWm9XFT5-RTg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_6L3KYLhDEeWWm9XFT5-RTg" memberEnd="_6L3xcLhDEeWWm9XFT5-RTg _6L5moLhDEeWWm9XFT5-RTg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_6L5moLhDEeWWm9XFT5-RTg" name="" visibility="private" type="_0xfzcLhDEeWWm9XFT5-RTg" association="_6L3KYLhDEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6L6NsLhDEeWWm9XFT5-RTg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6L60wLhDEeWWm9XFT5-RTg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5iOXgLhDEeWWm9XFT5-RTg" memberEnd="_5iO-kLhDEeWWm9XFT5-RTg _5iQzwLhDEeWWm9XFT5-RTg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_5iQzwLhDEeWWm9XFT5-RTg" name="" visibility="private" type="_0xfzcLhDEeWWm9XFT5-RTg" association="_5iOXgLhDEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5iRa0LhDEeWWm9XFT5-RTg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5iRa0bhDEeWWm9XFT5-RTg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_x_DvILOwEeW6hra-QKy9fw" name="Vaguness">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_vY2esLiOEeWWm9XFT5-RTg" name="Distribution" isAbstract="true"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_HsJRELU6EeW6F6X1iCgrUw" name="MembershipDegree">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_-GFq4LU7EeW6F6X1iCgrUw" annotatedElement="_HsJRELU6EeW6F6X1iCgrUw">
+          <body>&lt;p>[Def from https://en.wikipedia.org/wiki/Membership_function_(mathematics)]&lt;/p>&lt;p>The &lt;b>membership function&lt;/b> of a fuzzy set is a generalization of the indicator function in classical sets. In fuzzy logic, it represents the degree of truth as an extension of valuation. Degrees of truth are often confused with probabilities, although they are conceptually distinct, because fuzzy truth represents membership in vaguely defined sets, not likelihood of some event or condition. Membership functions were introduced by Zadeh in the first paper on fuzzy sets (1965). Zadeh, in his theory of fuzzy sets, proposed using a membership function (with a range covering the interval (0,1)) operating on the domain of all possible values.&lt;/p></body>
+        </ownedComment>
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_Qkz64LU6EeW6F6X1iCgrUw" constrainedElement="_HsJRELU6EeW6F6X1iCgrUw">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="_Qk0h8LU6EeW6F6X1iCgrUw">
+            <language>OCL</language>
+            <body>self.value &lt; 1.0 and self.value > 0.0</body>
+          </specification>
+        </ownedRule>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_L1GDcLU6EeW6F6X1iCgrUw" name="value" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_txCjgLVFEeW6F6X1iCgrUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_txCjgbVFEeW6F6X1iCgrUw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-wjVcLVBEeW6F6X1iCgrUw" name="hedge" visibility="public" type="_BitJcLVBEeW6F6X1iCgrUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BeI9ELVCEeW6F6X1iCgrUw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BeJkILVCEeW6F6X1iCgrUw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_nrjL8LVFEeW6F6X1iCgrUw" name="element" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qcvhMLVFEeW6F6X1iCgrUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qcvhMbVFEeW6F6X1iCgrUw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_BitJcLVBEeW6F6X1iCgrUw" name="HedgeKind">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_pq-p4LVBEeW6F6X1iCgrUw" name="A_Little"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_vfQVoLVBEeW6F6X1iCgrUw" name="Slightly"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_w722gLVBEeW6F6X1iCgrUw" name="Very"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_xyXAsLVBEeW6F6X1iCgrUw" name="Extremely"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_z4kfQLVBEeW6F6X1iCgrUw" name="Very_Very"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_2bVW8LVBEeW6F6X1iCgrUw" name="More_or_Less"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_31_XELVBEeW6F6X1iCgrUw" name="Somewhat"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_5Uul8LVBEeW6F6X1iCgrUw" name="Indeed"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_0A5YALVFEeW6F6X1iCgrUw" name="FuzzySet">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ssA_sLVGEeW6F6X1iCgrUw" name="items" visibility="public" type="_HsJRELU6EeW6F6X1iCgrUw" aggregation="composite" association="_ssAYoLVGEeW6F6X1iCgrUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ssBmwLVGEeW6F6X1iCgrUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ssCN0LVGEeW6F6X1iCgrUw" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_cV3tULfbEeWWm9XFT5-RTg" name="fuzziness" visibility="public" type="_Y6lh8LfKEeWWm9XFT5-RTg" aggregation="composite" association="_cV2fMLfbEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cV4UYLfbEeWWm9XFT5-RTg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cV4UYbfbEeWWm9XFT5-RTg" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_G7O9cLfrEeWWm9XFT5-RTg" name="fuzzyEntropy" visibility="public" type="_2OViULfqEeWWm9XFT5-RTg" aggregation="composite" association="_G7OWYLfrEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_G7PkgLfrEeWWm9XFT5-RTg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_G7PkgbfrEeWWm9XFT5-RTg" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_egXywLibEeWM4tS_zOHsFg" name="roughness" visibility="public" type="_c5v_wLiGEeWWm9XFT5-RTg" aggregation="composite" association="_egRsILibEeWM4tS_zOHsFg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_egbdILibEeWM4tS_zOHsFg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_egcEMLibEeWM4tS_zOHsFg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_ssAYoLVGEeW6F6X1iCgrUw" memberEnd="_ssA_sLVGEeW6F6X1iCgrUw _ssC04LVGEeW6F6X1iCgrUw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ssC04LVGEeW6F6X1iCgrUw" name="" visibility="private" type="_0A5YALVFEeW6F6X1iCgrUw" association="_ssAYoLVGEeW6F6X1iCgrUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ssDb8LVGEeW6F6X1iCgrUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ssDb8bVGEeW6F6X1iCgrUw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_ehB38LfIEeWWm9XFT5-RTg" name="FuzzySetCut">
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_yC-NkLfIEeWWm9XFT5-RTg" constrainedElement="_ehB38LfIEeWWm9XFT5-RTg">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="_yC_bsLfIEeWWm9XFT5-RTg">
+            <language>OCL</language>
+            <body>self.lambda &lt;= 1.0 and self.lambda =>0.0</body>
+          </specification>
+        </ownedRule>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hf4OsLfIEeWWm9XFT5-RTg" name="lambda" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aQvagDaPEdy8NoXj6Y5Thw?MARTE_Library/MARTE_PrimitiveTypes/Real?"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Etqs8LfbEeWWm9XFT5-RTg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Etqs8bfbEeWWm9XFT5-RTg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_pAzpgLfIEeWWm9XFT5-RTg" name="fuzzySet" visibility="public" type="_0A5YALVFEeW6F6X1iCgrUw" association="_pAybYLfIEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pA03oLfIEeWWm9XFT5-RTg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pA03obfIEeWWm9XFT5-RTg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_3ZYRkLfIEeWWm9XFT5-RTg" name="isStrong" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FZzaMLfbEeWWm9XFT5-RTg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FZzaMbfbEeWWm9XFT5-RTg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Hpzt8LfbEeWWm9XFT5-RTg" name="kind" visibility="public" type="_7S-7MLfaEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LVxCULfbEeWWm9XFT5-RTg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LVxCUbfbEeWWm9XFT5-RTg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_pAybYLfIEeWWm9XFT5-RTg" memberEnd="_pAzpgLfIEeWWm9XFT5-RTg _pA2FwLfIEeWWm9XFT5-RTg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_pA2FwLfIEeWWm9XFT5-RTg" name="" visibility="private" type="_ehB38LfIEeWWm9XFT5-RTg" association="_pAybYLfIEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pA2s0LfIEeWWm9XFT5-RTg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pA3T4LfIEeWWm9XFT5-RTg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Pu7DoLfKEeWWm9XFT5-RTg" name="MinkowskiFuzziness">
+        <generalization xmi:type="uml:Generalization" xmi:id="_bnyvELfKEeWWm9XFT5-RTg" general="_Y6lh8LfKEeWWm9XFT5-RTg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_UHJoILfKEeWWm9XFT5-RTg" name="HammingFuzziness">
+        <generalization xmi:type="uml:Generalization" xmi:id="_cGgrYLfKEeWWm9XFT5-RTg" general="_Y6lh8LfKEeWWm9XFT5-RTg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_VDCooLfKEeWWm9XFT5-RTg" name="EuclidFuzziness">
+        <generalization xmi:type="uml:Generalization" xmi:id="_dMZ8cLfKEeWWm9XFT5-RTg" general="_Y6lh8LfKEeWWm9XFT5-RTg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Y6lh8LfKEeWWm9XFT5-RTg" name="Fuzziness" isAbstract="true">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_DtI3ULfLEeWWm9XFT5-RTg" annotatedElement="_Y6lh8LfKEeWWm9XFT5-RTg">
+          <body>&lt;p>&lt;img height=&quot;93&quot; src=&quot;file:/Users/manzhang/Google%20Drive/Profile/UMF%20Model%20Library/SRL-CPS-Uncertainty-Profiles/img/fuzzines.jpg&quot; width=&quot;277&quot;>&lt;/img>&lt;/p>&lt;p>if p &amp;gt; 0 Minkowski ; if p = 1, Hamming or Kaufmann; if p=2, Euclid&lt;/p>&lt;p>&lt;/p>&lt;p>The fuzziness of a fuzzy set describes the degree of fuzziness of a fuzzy set&lt;/p></body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_7S-7MLfaEeWWm9XFT5-RTg" name="FuzzySetCutKind">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-lfNwLfaEeWWm9XFT5-RTg" name="Supp"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="__cz3ULfaEeWWm9XFT5-RTg" name="Ker"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_AI0BsLfbEeWWm9XFT5-RTg" name="Bd"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_cV2fMLfbEeWWm9XFT5-RTg" memberEnd="_cV3tULfbEeWWm9XFT5-RTg _cV47cLfbEeWWm9XFT5-RTg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_cV47cLfbEeWWm9XFT5-RTg" name="" visibility="private" type="_0A5YALVFEeW6F6X1iCgrUw" association="_cV2fMLfbEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cV5igLfbEeWWm9XFT5-RTg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cV5igbfbEeWWm9XFT5-RTg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_HcfKALfjEeWWm9XFT5-RTg" name="IntuitionisticFuzzySet">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_O5zdoLiHEeWWm9XFT5-RTg" annotatedElement="_HcfKALfjEeWWm9XFT5-RTg">
+          <body>&lt;p>http://ifigenia.org/wiki/Intuitionistic_fuzzy_sets&lt;/p></body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_WoXB0LfkEeWWm9XFT5-RTg" general="_0A5YALVFEeW6F6X1iCgrUw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_QZJGgLfkEeWWm9XFT5-RTg" name="IntervalValuedFuzzySet">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_bp9WYLiHEeWWm9XFT5-RTg" annotatedElement="_QZJGgLfkEeWWm9XFT5-RTg">
+          <body>&lt;p>The concept of a linguistic variable and its application to approximate reasoningI, Inform&lt;/p></body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_XIfTYLfkEeWWm9XFT5-RTg" general="_0A5YALVFEeW6F6X1iCgrUw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Sv6JkLfkEeWWm9XFT5-RTg" name="VagueSet">
+        <generalization xmi:type="uml:Generalization" xmi:id="_XpnDcLfkEeWWm9XFT5-RTg" general="_0A5YALVFEeW6F6X1iCgrUw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_y9S3ELfkEeWWm9XFT5-RTg" name="RoughSet">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_F-wgYLfmEeWWm9XFT5-RTg" annotatedElement="_y9S3ELfkEeWWm9XFT5-RTg">
+          <body>&lt;p>https://en.wikipedia.org/wiki/Rough_set&lt;/p></body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_GIxYALfmEeWWm9XFT5-RTg" name="FuzzyLogic">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_wareMLiFEeWWm9XFT5-RTg" annotatedElement="_GIxYALfmEeWWm9XFT5-RTg">
+          <body>&lt;p>extension of Boolean&lt;/p></body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_2OViULfqEeWWm9XFT5-RTg" name="FuzzyEntropy"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_G7OWYLfrEeWWm9XFT5-RTg" memberEnd="_G7O9cLfrEeWWm9XFT5-RTg _G7QLkLfrEeWWm9XFT5-RTg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_G7QLkLfrEeWWm9XFT5-RTg" name="" visibility="private" type="_0A5YALVFEeW6F6X1iCgrUw" association="_G7OWYLfrEeWWm9XFT5-RTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_G7QyoLfrEeWWm9XFT5-RTg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_G7QyobfrEeWWm9XFT5-RTg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_ru-8oLfsEeWWm9XFT5-RTg" name="FuzzyNumber"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_dYQ5QLftEeWWm9XFT5-RTg" name="FuzzyInterval"/>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_WZHgYLfuEeWWm9XFT5-RTg" name="FuzzySetOperationKind">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XDaakLfuEeWWm9XFT5-RTg" name="Union"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XcGAULfuEeWWm9XFT5-RTg" name="Intersection"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XzJ1cLfuEeWWm9XFT5-RTg" name="Complement"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zENsQLiFEeWWm9XFT5-RTg" name="Sharpness"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_c5v_wLiGEeWWm9XFT5-RTg" name="Roughness">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_HGYkoLiHEeWWm9XFT5-RTg" annotatedElement="_c5v_wLiGEeWWm9XFT5-RTg">
+          <body>&lt;p>It is inversely proportional to the lower approximation, and proportional to the upper approximation&lt;/p></body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_ouSS4LiIEeWWm9XFT5-RTg" name="LFuzzySet">
+        <generalization xmi:type="uml:Generalization" xmi:id="_qvPeALiIEeWWm9XFT5-RTg" general="_0A5YALVFEeW6F6X1iCgrUw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_egRsILibEeWM4tS_zOHsFg" memberEnd="_egXywLibEeWM4tS_zOHsFg _egcrQLibEeWM4tS_zOHsFg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_egcrQLibEeWM4tS_zOHsFg" name="" visibility="private" type="_0A5YALVFEeW6F6X1iCgrUw" association="_egRsILibEeWM4tS_zOHsFg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_egd5YLibEeWM4tS_zOHsFg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_egd5YbibEeWM4tS_zOHsFg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_pyJYFrOwEeW6hra-QKy9fw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pyJYF7OwEeW6hra-QKy9fw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_pyJYGLOwEeW6hra-QKy9fw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pyJYGbOwEeW6hra-QKy9fw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/documentation#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_DOCUMENTATION/Papyrus.profile.uml#_H9068AEYEeCIz8iAxBJnfA"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_pyJYGrOwEeW6hra-QKy9fw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pyJYG7OwEeW6hra-QKy9fw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_4OVBUD0TEeKt-L0gyEptgQ?Deployment/Deployment?"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_vjbuwOvHEdiDX5bji0iVSA?Deployment?"/>
+    </profileApplication>
+  </uml:Package>
+  <standard:ModelLibrary xmi:id="_1vsIILOwEeW6hra-QKy9fw" base_Package="_v26W4LOwEeW6hra-QKy9fw"/>
+  <standard:ModelLibrary xmi:id="_2gX-MLOwEeW6hra-QKy9fw" base_Package="_toU_cLOwEeW6hra-QKy9fw"/>
+  <standard:ModelLibrary xmi:id="_3eXQcLOwEeW6hra-QKy9fw" base_Package="_x_DvILOwEeW6hra-QKy9fw"/>
+  <standard:ModelLibrary xmi:id="_AQ2ZwLOxEeW6hra-QKy9fw" base_Package="_pyJYErOwEeW6hra-QKy9fw"/>
+  <Documentation:Documentation xmi:id="_kbffgAiXEeeszorbFLOmmA" base_Comment="_-GFq4LU7EeW6F6X1iCgrUw"/>
+  <Documentation:Documentation xmi:id="_kbffgQiXEeeszorbFLOmmA" base_Comment="_XP5W0Ld_EeWWm9XFT5-RTg"/>
+  <Documentation:Documentation xmi:id="_kbffggiXEeeszorbFLOmmA" base_Comment="_DtI3ULfLEeWWm9XFT5-RTg"/>
+  <Documentation:Documentation xmi:id="_kbffgwiXEeeszorbFLOmmA" base_Comment="_F-wgYLfmEeWWm9XFT5-RTg"/>
+  <Documentation:Documentation xmi:id="_kbffhAiXEeeszorbFLOmmA" base_Comment="_0XFvYLhDEeWWm9XFT5-RTg"/>
+  <Documentation:Documentation xmi:id="_kbffhQiXEeeszorbFLOmmA" base_Comment="_wareMLiFEeWWm9XFT5-RTg"/>
+  <Documentation:Documentation xmi:id="_kbffhgiXEeeszorbFLOmmA" base_Comment="_HGYkoLiHEeWWm9XFT5-RTg"/>
+  <Documentation:Documentation xmi:id="_kbffhwiXEeeszorbFLOmmA" base_Comment="_O5zdoLiHEeWWm9XFT5-RTg"/>
+  <Documentation:Documentation xmi:id="_kbffiAiXEeeszorbFLOmmA" base_Comment="_bp9WYLiHEeWWm9XFT5-RTg"/>
+  <Documentation:Documentation xmi:id="_kbffiQiXEeeszorbFLOmmA" base_Comment="_Ld86cLiKEeWWm9XFT5-RTg"/>
+  <Documentation:Documentation xmi:id="_kbffigiXEeeszorbFLOmmA" base_Comment="_FYWYsLiLEeWWm9XFT5-RTg"/>
+  <Documentation:Documentation xmi:id="_kbffiwiXEeeszorbFLOmmA" base_Comment="_-JGKcLiPEeWWm9XFT5-RTg"/>
+</xmi:XMI>
