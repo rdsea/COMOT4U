@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: TU4UME
+Bundle-Name: Tools
 Bundle-SymbolicName: at.ac.tuwien.dsg.epsilon.tools;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: at.ac.tuwien.dsg.epsilon.tools.Activator
@@ -9,7 +9,10 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.epsilon.common.dt;bundle-version="1.4.0",
  org.eclipse.uml2;bundle-version="5.0.0",
  org.eclipse.uml2.uml;bundle-version="5.1.2",
- com.google.gson;bundle-version="2.2.4"
+ com.google.gson;bundle-version="2.2.4",
+ org.eclipse.uml2.uml.resources;bundle-version="5.1.0",
+ org.apache.log4j,
+ org.slf4j.api
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: at.ac.tuwien.dsg.epsilon.tools
