@@ -29,11 +29,12 @@ It is worth noting that the design rationales TU4UME are
 Alternative, existing solution (e.g., EMF2JSON https://github.com/emfjson/emfjson-jackson), that serialize EMF-based Java Objects, generate a complex JSON structure resulting in very limited customization and reuse of the resulting JSON output.
 
 Transformation Workflow Overview:
-![N|Solid](https://github.com/tuwiendsg/COMOT4U/blob/master/docs/figures/example_fig1.PNG)
+![N|Solid](https://github.com/tuwiendsg/COMOT4U/blob/master/docs/figures/platform.PNG)
 
 Technology Overview:
 ![N|Solid](https://github.com/tuwiendsg/COMOT4U/blob/master/docs/figures/process.png)
 
 Example
-![N|Solid](https://github.com/tuwiendsg/COMOT4U/blob/master/docs/figures/platform.PNG)
+![N|Solid](https://github.com/tuwiendsg/COMOT4U/blob/master/docs/figures/example_fig1.PNG)
+
 
