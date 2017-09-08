@@ -1,0 +1,573 @@
+
+import "../../../../../eol/library/element.eol";
+
+/*
+Returns a Sequence of Element annotated with CommunicationConfiguration.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package CommunicationConfigurationsAsSequence() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isCommunicationConfiguration()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+
+/*
+Returns a Sequence of Class annotated with CommunicationConfiguration.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package CommunicationConfigurationsAsSequenceOfClass() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isClassCommunicationConfiguration()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with CommunicationConfiguration.
+ 
+operation isClassCommunicationConfiguration(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isCommunicationConfiguration() : Boolean in CommunicationConfiguration.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "Class"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of Class annotated with CommunicationConfiguration.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONCommunicationConfigurationsAsSequenceOfClass() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isClassCommunicationConfiguration()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Class from the applied Stereotype CommunicationConfiguration
+
+operation CommunicationConfiguration getBaseClassOfCommunicationConfiguration() : Class{
+	var baseClass = new CommunicationConfiguration;
+	baseClass = self.base_Class;
+	return baseClass;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Class from the applied Stereotype CommunicationConfiguration
+
+operation CommunicationConfiguration JSONgetBaseClassOfCommunicationConfiguration() : String {
+	var baseClass = new CommunicationConfiguration;
+	baseClass = self.base_Class;
+	
+	var baseClass_string = baseClass.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClass_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype CommunicationConfiguration using native objects.
+ 
+operation Class toJsonCommunicationConfiguration() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+/*
+Returns a Sequence of InstanceSpecification annotated with CommunicationConfiguration.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package CommunicationConfigurationsAsSequenceOfInstanceSpecification() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInstanceSpecificationCommunicationConfiguration()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with CommunicationConfiguration.
+ 
+operation isInstanceSpecificationCommunicationConfiguration(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isCommunicationConfiguration() : Boolean in CommunicationConfiguration.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "InstanceSpecification"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of InstanceSpecification annotated with CommunicationConfiguration.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONCommunicationConfigurationsAsSequenceOfInstanceSpecification() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInstanceSpecificationCommunicationConfiguration()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type InstanceSpecification from the applied Stereotype CommunicationConfiguration
+
+operation CommunicationConfiguration getBaseInstanceSpecificationOfCommunicationConfiguration() : InstanceSpecification{
+	var baseInstanceSpecification = new CommunicationConfiguration;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	return baseInstanceSpecification;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type InstanceSpecification from the applied Stereotype CommunicationConfiguration
+
+operation CommunicationConfiguration JSONgetBaseInstanceSpecificationOfCommunicationConfiguration() : String {
+	var baseInstanceSpecification = new CommunicationConfiguration;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	
+	var baseInstanceSpecification_string = baseInstanceSpecification.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseInstanceSpecification_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype CommunicationConfiguration using native objects.
+ 
+operation InstanceSpecification toJsonCommunicationConfiguration() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype CommunicationConfiguration
+ 
+operation CommunicationConfiguration getBaseElementOfCommunicationConfigurationDeprecated() : Element{
+	var baseElement = new CommunicationConfiguration;
+
+	
+	if(not self.base_Class.isUndefined()){
+		baseElement = self.base_Class;
+	}
+	
+	if(not self.base_InstanceSpecification.isUndefined()){
+		baseElement = self.base_InstanceSpecification;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype CommunicationConfiguration using UMLUtil native object
+*/ 
+operation CommunicationConfiguration getBaseElementOfCommunicationConfiguration() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype CommunicationConfiguration using UMLUtil native object
+ 
+//operation CommunicationConfiguration toJsonCommunicationConfiguration() : String {
+operation toJsonCommunicationConfiguration() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+*/
+
+/*
+Check if the element is annotated with CommunicationConfiguration.
+*/ 
+operation Element isCommunicationConfiguration() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isCommunicationConfiguration() : Boolean in CommunicationConfiguration.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "CommunicationConfiguration");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in CommunicationConfiguration.
+*/ 
+operation CommunicationConfiguration getAllAttributesOfCommunicationConfiguration() : Sequence(Property){
+	var stereotypeAttr = CommunicationConfiguration.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of protocolType of stereotype CommunicationConfiguration.
+*/ 
+operation Element getProtocolTypeOfCommunicationConfigurationAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "protocolType");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of clientID of stereotype CommunicationConfiguration.
+*/ 
+operation Element getClientIDOfCommunicationConfigurationAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "clientID");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of serverIP of stereotype CommunicationConfiguration.
+*/ 
+operation Element getServerIPOfCommunicationConfigurationAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "serverIP");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of portNumber of stereotype CommunicationConfiguration.
+*/ 
+operation Element getPortNumberOfCommunicationConfigurationAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "portNumber");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of topics of stereotype CommunicationConfiguration.
+*/ 
+operation Element getTopicsOfCommunicationConfigurationAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "topics");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of qosLevel of stereotype CommunicationConfiguration.
+*/ 
+operation Element getQosLevelOfCommunicationConfigurationAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "qosLevel");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of keepAlive of stereotype CommunicationConfiguration.
+*/ 
+operation Element getKeepAliveOfCommunicationConfigurationAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "keepAlive");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of description of stereotype CommunicationConfiguration.
+*/ 
+operation Element getDescriptionOfCommunicationConfigurationAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of id of stereotype CommunicationConfiguration.
+*/ 
+operation Element getIdOfCommunicationConfigurationAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of protocolType of stereotype CommunicationConfiguration is empty.
+*/ 
+operation Element isProtocolTypeOfCommunicationConfigurationEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "protocolType");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of clientID of stereotype CommunicationConfiguration is empty.
+*/ 
+operation Element isClientIDOfCommunicationConfigurationEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "clientID");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of serverIP of stereotype CommunicationConfiguration is empty.
+*/ 
+operation Element isServerIPOfCommunicationConfigurationEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "serverIP");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of portNumber of stereotype CommunicationConfiguration is empty.
+*/ 
+operation Element isPortNumberOfCommunicationConfigurationEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "portNumber");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of topics of stereotype CommunicationConfiguration is empty.
+*/ 
+operation Element isTopicsOfCommunicationConfigurationEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "topics");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of qosLevel of stereotype CommunicationConfiguration is empty.
+*/ 
+operation Element isQosLevelOfCommunicationConfigurationEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "qosLevel");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of keepAlive of stereotype CommunicationConfiguration is empty.
+*/ 
+operation Element isKeepAliveOfCommunicationConfigurationEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "keepAlive");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of description of stereotype CommunicationConfiguration is empty.
+*/ 
+operation Element isDescriptionOfCommunicationConfigurationEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of id of stereotype CommunicationConfiguration is empty.
+*/ 
+operation Element isIdOfCommunicationConfigurationEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("CommunicationConfiguration"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+
+
+operation Stereotype getProtocolTypeProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var protocolTypeProperty = allAttributes.selectOne(s|s.name = "protocolType");
+	return protocolTypeProperty;
+}
+
+
+operation Stereotype getClientIDProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var clientIDProperty = allAttributes.selectOne(s|s.name = "clientID");
+	return clientIDProperty;
+}
+
+
+operation Stereotype getServerIPProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var serverIPProperty = allAttributes.selectOne(s|s.name = "serverIP");
+	return serverIPProperty;
+}
+
+
+operation Stereotype getPortNumberProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var portNumberProperty = allAttributes.selectOne(s|s.name = "portNumber");
+	return portNumberProperty;
+}
+
+
+operation Stereotype getTopicsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var topicsProperty = allAttributes.selectOne(s|s.name = "topics");
+	return topicsProperty;
+}
+
+
+operation Stereotype getQosLevelProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var qosLevelProperty = allAttributes.selectOne(s|s.name = "qosLevel");
+	return qosLevelProperty;
+}
+
+
+operation Stereotype getKeepAliveProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var keepAliveProperty = allAttributes.selectOne(s|s.name = "keepAlive");
+	return keepAliveProperty;
+}
+
+
+operation Stereotype getDescriptionProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var descriptionProperty = allAttributes.selectOne(s|s.name = "description");
+	return descriptionProperty;
+}
+
+
+operation Stereotype getIdProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var idProperty = allAttributes.selectOne(s|s.name = "id");
+	return idProperty;
+}
+

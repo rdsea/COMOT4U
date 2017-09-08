@@ -1,0 +1,26 @@
+[%
+var literals = enum.getOwnedLiterals() ;
+var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");
+var plugin_id = "at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool";
+var UMLUtil = plugin.getUMLUtil();
+
+%]
+import "../../../element.eol";
+
+[%
+for (literal in literals) { 
+
+	if(not literal.name.startsWith("base_"))
+	{ 
+%]
+operation [%=enum.name%] get[%=literal.name%]() : String {
+	var [%=literal.name%] = "[%=literal.name%]";
+	return [%=literal.name%];
+}
+[%
+	}
+}
+%]
+
+
+

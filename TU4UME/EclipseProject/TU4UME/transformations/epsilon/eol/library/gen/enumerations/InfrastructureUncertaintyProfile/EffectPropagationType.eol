@@ -1,0 +1,13 @@
+import "../../../element.eol";
+
+operation EffectPropagationType getapplication() : String {
+	var application = "application";
+	return application;
+}
+operation EffectPropagationType getphysical_environment() : String {
+	var physical_environment = "physical_environment";
+	return physical_environment;
+}
+
+
+

@@ -1,0 +1,902 @@
+[%
+//*************************************************
+// This template generate a JSON representation of the IoT Clound infrastructure architecture
+// The template uses EOL libraries. We have distinct libraries for each stereotype of the applied profiles.
+// UML Model elements can be managed by Eclipse UML API. Therefore operations not defined in EOL libraries
+// are native operations from the Eclipse UML API.
+//*************************************************
+
+//*****************COMMMENTS**********************
+// We plan to generate the EGL file automatically with higher order transformations,
+// i.e., a EGL file that generate the this EGL template by acccessing the generated EOL library for stereotypes.
+//*************************************************
+
+//*****************COMMMENTS**********************
+// We plan to reuse the GSON library to as JSON emitter. It can be done by setting up a pretty printer using
+// GSON API. However, this choice can further complicate the emitter template with additional statements that
+// are in contrast with the declarative nature of a EPSILON EGL templates.
+// Indeed GSON can be directly invoked only at finest grain. 
+// Invoking GSON on bigger variables. For example, the second statement below
+//
+// var virtual_gateways = aPackage.VirtualGatewaysAsSequenceOfClass();
+// var virtual_gateways_json = aPackage.JSONVirtualGatewaysAsSequenceOfClass();
+//
+// generate only the EPSILON interal string representation of a Sequence 
+// (see stereotype library generation template)
+// 
+// while we need to further elaborate data obtained from EPSILON execution within EGL files
+// that can be considered pretty printer templates.
+// Therefore using EGL and GSON API at the finest grain are alternative solutions. 
+//*************************************************
+
+
+//****************EOL LIBRARIES*********************
+//Libraries from /gen folder are generated via EGL templates that generate EOL files.
+//Operations from utestlibrary.eol are deprecated but still necessary
+//Libraries connect to native objects from external APIs like EclipseUML and Google GSON
+//*************************************************
+
+import "../eol/utest/utestlibrary.eol";
+import "../eol/library/gen/profiles/InfrastructureCPSProfile.eol";
+import "../eol/library/gen/stereotypes/VirtualSensor.eol";
+import "../eol/library/gen/stereotypes/VirtualActuator.eol";
+import "../eol/library/gen/stereotypes/VirtualGateway.eol";
+import "../eol/library/gen/stereotypes/Communication.eol";
+import "../eol/library/gen/stereotypes/VirtualUnit.eol";
+import "../eol/library/gen/stereotypes/Unit.eol";
+import "../eol/library/gen/stereotypes/SoftwareDefinedCapability.eol";
+import "../eol/library/gen/stereotypes/CloudService.eol";
+import "../eol/library/gen/stereotypes/StorageConfiguration.eol";
+import "../eol/library/gen/stereotypes/ComputingConfiguration.eol";
+import "../eol/library/gen/stereotypes/CommunicationConfiguration.eol";
+import "../eol/library/gen/stereotypes/CloudProvider.eol";
+import "../eol/library/gen/stereotypes/TestConfiguration.eol";
+import "../eol/library/gen/stereotypes/Actuator.eol";
+import "../eol/library/gen/stereotypes/Sensor.eol";
+//*************************************************
+
+//*************************************************
+// Global variables
+//*************************************************
+var showEmpty = true;
+
+var virtual_units = aPackage.VirtualUnitsAsSequenceOfClass();
+if (virtual_units.isEmpty()) {
+	("VirtualUnitsAsSequenceOfClass is empty").println();
+}
+
+//only of type VirtualActuator no supertypes or subtypes
+var virtual_actuators = aPackage.VirtualActuatorsAsSequenceOfClass();
+var virtual_actuators_json = aPackage.JSONVirtualActuatorsAsSequenceOfClass();
+
+//only of type Actuator no supertypes or subtypes
+var actuators = aPackage.ActuatorsAsSequenceOfClass();
+var actuators_json = aPackage.JSONActuatorsAsSequenceOfClass();
+
+//only of type VirtualSensor no supertypes or subtypes	
+var virtual_sensors = aPackage.VirtualSensorsAsSequenceOfClass();
+var virtual_sensors_json = aPackage.JSONVirtualSensorsAsSequenceOfClass();
+
+//only of type Sensor no supertypes	or subtypes
+var sensors = aPackage.SensorsAsSequenceOfClass();
+var sensors_json = aPackage.JSONSensorsAsSequenceOfClass();
+
+//only of type VirtualGateway no supertypes	or subtypes
+var virtual_gateways = aPackage.VirtualGatewaysAsSequenceOfClass();
+var virtual_gateways_json = aPackage.JSONVirtualGatewaysAsSequenceOfClass();
+
+//only of type Communication no supertypes or subtypes
+var communications = aPackage.CommunicationsAsSequenceOfAssociation();
+var communications_json = aPackage.JSONCommunicationsAsSequenceOfAssociation();
+
+//only of type CloudService no supertypes or subtypes
+var cloud_services = aPackage.CloudServicesAsSequenceOfClass();
+var cloud_services_json = aPackage.JSONCloudServicesAsSequenceOfClass();
+
+//only of type Test Configurations no supertypes or subtypes
+var test_configurations = aPackage.TestConfigurationsAsSequenceOfClass();
+var test_configurations_json = aPackage.JSONTestConfigurationsAsSequenceOfClass();
+
+//only of type Communication Configurations no supertypes or subtypes
+var communication_configurations = aPackage.CommunicationConfigurationsAsSequenceOfClass();
+var communication_configurations_json = aPackage.JSONCommunicationConfigurationsAsSequenceOfClass();
+
+//only of type Storage Configurations no supertypes or subtypes
+var storage_configurations = aPackage.StorageConfigurationsAsSequenceOfClass();
+var storage_configurations_json = aPackage.JSONStorageConfigurationsAsSequenceOfClass();
+
+//only of type Computing Configurations no supertypesor subtypes
+var computing_configurations = aPackage.ComputingConfigurationsAsSequenceOfClass();
+var computing_configurations_json = aPackage.JSONComputingConfigurationsAsSequenceOfClass();
+
+//all units	of any type as Set then no duplicates, not ordered
+//deprecated
+var allUnits = Unit.all.asSet();
+	
+//*************************************************
+//The whole infrastructure architecture
+//*************************************************	
+%]
+{
+    "containedUnits": [
+[% 	    
+    //*************************************************
+    //Virtual Sensors
+    //*************************************************
+    for(vut in virtual_sensors){ 
+    //name is a string
+    //id is a integer
+%]
+		{
+            "name": "[%=vut.name%]",
+            "id": [%="\""+vut.id+"\""%],
+[% 	
+		var swCapabilities = vut.getSwCapabilitiesOfVirtualSensorAsSequence();
+		var swCapabilitiesNames = new Sequence;
+		var tempOperation = null;
+
+		if (not vut.isSwCapabilitiesOfVirtualSensorEmpty()) {
+			for (capability in swCapabilities){
+				tempOperation = capability.getBaseElementOfSoftwareDefinedCapability();
+				swCapabilitiesNames.add("\""+tempOperation.getName()+"\"");
+			}
+			// swCapabilities is an array of strings
+		%]
+			"swCapabilities": [%=swCapabilitiesNames%],
+		[%				
+		}
+		else{
+			if (showEmpty) {
+			// swCapabilities is an empty array of strings 
+		%]
+			"swCapabilities": [],
+		[%					
+			}
+		}			
+
+		var swMetrics = vut.getSwMetricsOfVirtualSensorAsSequence();
+		var swMetricsNames = new Sequence;
+		var tempMetric = null;		
+		if (not vut.isSwMetricsOfVirtualSensorEmpty()) {
+			for (metric in swMetrics){
+				tempMetric = metric.base_Operation;
+				swMetricsNames.add("\""+tempMetric.name+"\"");
+			}
+		%]
+			"swMetrics": [%=swMetricsNames%],
+		[%				
+		}
+		else{
+			if (showEmpty) {
+		%]
+			"swMetrics": [],
+		[%					
+			}
+		}			
+
+		var virtualActuators = vut.getVirtualActuatorsOfVirtualSensorAsSequence();
+		var virtualActuatorsNames = new Sequence;		
+
+		if (not vut.isVirtualActuatorsOfVirtualSensorEmpty()) {
+			for (va_stereo in virtualActuators){
+				var va = va_stereo.getBaseElementOfVirtualActuator();
+				virtualActuatorsNames.add("\""+va.name+"\"");
+			}
+		%]
+			"virtualActuators": [%=virtualActuatorsNames%],
+		[%				
+		}	
+		else{
+			if (showEmpty) {
+		%]
+			"virtualActuators": [],
+		[%					
+			}
+		}			
+
+		var ownedVirtualUnits = vut.getOwnedVirtualUnitsOfVirtualSensorAsSequence();
+		var ownedVirtualUnitsNames = new Sequence;		
+
+		if (not vut.isOwnedVirtualUnitsOfVirtualSensorEmpty()) {
+			for (stereo in ownedVirtualUnits){
+				var elem = stereo.getBaseElementOfVirtualUnit();
+				ownedVirtualUnitsNames.add("\""+elem.name+"\"");
+			}
+		%]
+			"ownedVirtualUnits": [%=ownedVirtualUnitsNames%],
+		[%				
+		}	
+		
+		else{
+			if (showEmpty) {
+		%]
+			"ownedVirtualUnits": [],
+		[%					
+			}
+		}	
+		
+		var locations = vut.getLocationOfVirtualSensorAsSequence();
+		var locationNames = new Sequence;		
+		if (not vut.isLocationOfVirtualSensorEmpty()) {
+			for (location in locations){
+				locationNames.add("\""+location+"\"");
+			}		
+		%]
+			"locations": [%=locationNames%],
+		[%				
+		}
+		else{
+			if (showEmpty) {
+		%]
+			"locations": [],
+		[%					
+			}
+		}			
+
+		var descriptions = vut.getDescriptionOfVirtualSensorAsSequence();
+		var descriptionNames = new Sequence;				
+		if (not vut.isDescriptionOfVirtualSensorEmpty()) {
+			for (descrition in descriptions){
+				var value = "\""+descrition+"\"";
+				descriptionNames.add(value);
+			}	
+		%]
+			"descriptions": [%=descriptionNames%],
+		[%				
+		}
+		else{
+			if (showEmpty) {
+		%]
+			"descriptions": [],
+		[%					
+			}
+		}			
+
+		var ownedUnits = vut.getOwnedUnitsOfVirtualSensorAsSequence();
+		var ownedUnitsNames = new Sequence;		
+
+		if (not vut.isOwnedUnitsOfVirtualSensorEmpty()) {
+			for (stereo in ownedUnits){
+				var elem = stereo.getBaseElementOfUnit();
+				ownedUnitsNames.add("\""+elem.name+"\"");
+			}
+		%]
+			"ownedUnits": [%=ownedUnitsNames%],
+		[%				
+		}	
+		
+		else{
+			if (showEmpty) {
+		%]
+			"ownedVirtualUnits": [],
+		[%					
+			}
+		}			
+
+		var hasTimestampMechanisms = vut.getHasTimestampMechanismOfVirtualSensorAsSequence();
+		if (not vut.isHasTimestampMechanismOfVirtualSensorEmpty()) {
+		%]
+			"hasTimestampMechanism": [%=hasTimestampMechanisms%],
+		[%				
+		}
+		else{
+			if (showEmpty) {
+		%]
+			"hasTimestampMechanism": [],
+		[%					
+			}
+		}		
+			
+		var timestampMaxLatency = vut.getTimestampMaxLatencyOfVirtualSensorAsSequence();
+		var timestampMaxLatencyValues = new Sequence;				
+		
+		if (not vut.isTimestampMaxLatencyOfVirtualSensorEmpty()) {
+			var elem = timestampMaxLatency.first();
+			if(elem=""){
+		%]
+			"timestampMaxLatency": [],
+		[%				
+			}
+			else {
+		%]
+			"timestampMaxLatency": [%="\""+elem+"\""%],
+		[%				
+			}
+		}
+		else{
+			if (showEmpty) {
+		%]
+			"timestampMaxLatency": [],
+		[%					
+			}
+		}
+					
+		var isSafetyCritical = vut.getIsSafetyCriticalOfVirtualSensorAsSequence();
+		if (not vut.isIsSafetyCriticalOfVirtualSensorEmpty()) {
+		%]
+			"isSafetyCritical": [%=isSafetyCritical%],
+		[%				
+		}
+		else{
+			if (showEmpty) {
+		%]
+			"isSafetyCritical": [],
+		[%					
+			}
+		}
+					
+		var deployedOn = vut.getDeployedOnOfVirtualSensorAsSequence();
+		var deployedOnNames = new Sequence;		
+
+		if (not vut.isDeployedOnOfVirtualSensorEmpty()) {
+			for (stereo in deployedOn){
+				var elem = stereo.getBaseElementOfUnit();
+				deployedOnNames.add("\""+elem.name+"\"");
+			}
+		%]
+			"ownedVirtualUnits": [%=deployedOnNames%],
+		[%				
+		}	
+		
+		else{
+			if (showEmpty) {
+		%]
+			"ownedVirtualUnits": [],
+		[%					
+			}
+		}	
+		
+%]
+            "type": "VirtualSensor"
+		},    
+[% 	
+    }
+
+//*************************************************
+//Cloud Service
+//imperative manner, without declarative part for each attribute
+//*************************************************
+
+//************COMMENT*****************************
+//Candidate template for the higher order EGL template.
+//*************************************************
+    
+    for(vut in cloud_services){
+		var name_value = null;
+		var id_value = null;
+		
+		var cloudprovider_stereo_applications = new Sequence; 
+		var serviceType_stereo_applications = new Sequence; 
+		var dataProvider_stereo_applications = new Sequence; 
+		var computingConfigs_stereo_applications = new Sequence; 
+		var storageConfigs_stereo_applications = new Sequence; 
+		var communicationConfigs_stereo_applications = new Sequence;  
+		
+		var cloudprovider_value = new Sequence; 
+		var serviceType_value = new Sequence; 
+		var dataProvider_value = new Sequence; 
+		var computingConfigs_value = new Sequence; 
+		var storageConfigs_value = new Sequence; 
+		var communicationConfigs_value = new Sequence;  
+	
+		var cloudprovider_baseElement = null; 
+		var serviceType_baseElement = null; 
+		var dataProvider_baseElement = null; 
+		var computingConfigs_baseElement = null; 
+		var storageConfigs_baseElement = null; 
+		var communicationConfigs_baseElement = null; 
+		
+		     
+    	name_value = vut.name; 
+		id_value = vut.id; 
+		
+    	cloudprovider_stereo_applications = vut.getCloudProviderOfCloudServiceAsSequence();
+		serviceType_stereo_applications = vut.getServiceTypeOfCloudServiceAsSequence();
+		dataProvider_stereo_applications = vut.getDataProviderOfCloudServiceAsSequence();
+		
+		computingConfigs_stereo_applications = vut.getComputingConfigsOfCloudServiceAsSequence();
+		storageConfigs_stereo_applications = vut.getStorageConfigsOfCloudServiceAsSequence();
+		communicationConfigs_stereo_applications = vut.getCommunicationConfigsOfCloudServiceAsSequence(); 
+		
+	
+		if (not vut.isCommunicationConfigsOfCloudServiceEmpty()) {
+			for (stereo_app in communicationConfigs_stereo_applications){
+				communicationConfigs_baseElement = stereo_app.getBaseElementOfCommunicationConfiguration();
+				communicationConfigs_value.add("\""+communicationConfigs_baseElement.getName()+"\"");
+			}				
+		}
+		
+		if (not vut.isStorageConfigsOfCloudServiceEmpty()) {
+			for (stereo_app in storageConfigs_stereo_applications){
+				storageConfigs_baseElement = stereo_app.getBaseElementOfStorageConfiguration();
+				storageConfigs_value.add("\""+storageConfigs_baseElement.getName()+"\"");
+			}				
+		}
+		if (not vut.isComputingConfigsOfCloudServiceEmpty()) {
+			for (stereo_app in computingConfigs_stereo_applications){
+				(stereo_app).println();			
+				computingConfigs_baseElement = stereo_app.getBaseElementOfComputingConfiguration();
+				computingConfigs_value.add("\""+computingConfigs_baseElement.getName().toString()+"\"");
+			}				
+		}
+		
+		if (not vut.isCloudProviderOfCloudServiceEmpty()) {
+			for (stereo_app in cloudprovider_stereo_applications){
+				(stereo_app).println();
+//				cloudprovider_baseElement = stereo_app.getBaseElementOfCloudProvider();
+//				cloudprovider_value.add("\""+cloudprovider_baseElement.getName()+"\"");
+			}				
+		}
+		
+		if (not vut.isServiceTypeOfCloudServiceEmpty()) {
+			for (stereo_app in serviceType_stereo_applications){
+				//serviceType_value.add("TODO");
+			}				
+		}
+				    
+    %]
+		{
+            "name": "[%=name_value%]",
+            "id": "[%=id_value%]",
+			"cloudProvider": [%=cloudprovider_value%], 
+			"serviceType": [%=serviceType_value%], 
+			"dataProvider": [%=dataProvider_value%], 
+			"computingConfigs": [%=computingConfigs_value%], 
+			"storageConfigs": [%=storageConfigs_value%], 
+			"communicationConfigs": [%=communicationConfigs_value%], 
+            "type": "CloudService"
+		},    
+    [% 	
+	}
+
+
+    
+    //*************************************************
+    //Virtual Actuators
+    //*************************************************
+    for(vut in virtual_actuators){ 
+    
+%]
+		{
+            "name": "[%=vut.name%]",
+            "id": "[%=vut.id%]",
+[% 	
+		var swCapabilities = vut.getSwCapabilitiesOfVirtualActuatorAsSequence();
+		var swCapabilityNames = new Sequence;
+		if (not vut.isSwCapabilitiesOfVirtualActuatorEmpty()) {		
+		%]
+			"swCapabilities": [],
+		[%				
+		}
+		else{
+		%]
+			"swCapabilities": [],
+		[%		
+		}			
+
+		var swMetrics = vut.getSwMetricsOfVirtualActuatorAsSequence();
+		if (not vut.isSwMetricsOfVirtualActuatorEmpty()) {
+		%]
+			"swMetrics": [%=swMetrics%]
+		[%				
+		}
+		else{
+		%]
+			"swMetrics": [],
+		[%		
+		}			
+
+		var virtualActuators = vut.getVirtualActuatorsOfVirtualActuatorAsSequence();
+		if (not vut.isVirtualActuatorsOfVirtualActuatorEmpty()) {
+		%]
+			"virtualActuators": "[%=virtualActuators%]"
+		[%				
+		}
+		else{
+		%]
+			"virtualActuators": [],
+		[%		
+		}			
+
+		var virtualSensors = vut.getVirtualSensorsOfVirtualActuatorAsSequence();
+		if (not vut.isVirtualSensorsOfVirtualActuatorEmpty()) {
+		%]
+			"virtualSensors": [%=virtualSensors%],
+		[%				
+		}
+		else{
+		%]
+			"virtualSensors": [],
+		[%		
+		}			
+
+		var ownedVirtualUnits = vut.getOwnedVirtualUnitsOfVirtualActuatorAsSequence();
+		if (not vut.isOwnedVirtualUnitsOfVirtualActuatorEmpty()) {
+		%]
+			"ownedVirtualUnits": [%=ownedVirtualUnits%],
+		[%				
+		}
+		else{
+		%]
+			"ownedVirtualUnits": [],
+		[%		
+		}			
+
+		var locations = vut.getLocationOfVirtualActuatorAsSequence();
+		if (not vut.isLocationOfVirtualActuatorEmpty()) {
+		%]
+			"locations": [%=locations%],
+		[%				
+		}
+		else{
+		%]
+			"locations": [],
+		[%		
+		}			
+
+		var descriptions = vut.getDescriptionOfVirtualActuatorAsSequence();
+		if (not vut.isDescriptionOfVirtualActuatorEmpty()) {
+		%]
+			"descriptions": [%=descriptions%],
+		[%				
+		}
+		else{
+		%]
+			"descriptions": [],
+		[%		
+		}			
+
+		var ownedUnits = vut.getOwnedUnitsOfVirtualActuatorAsSequence();
+		if (not vut.isOwnedVirtualUnitsOfVirtualActuatorEmpty()) {
+		%]
+			"ownedUnits": [%=ownedUnits%],
+		[%				
+		}
+		else{
+		%]
+			"ownedUnits": [],
+		[%		
+		}			
+
+		var hasTimestampMechanisms = vut.getHasTimestampMechanismOfVirtualActuatorAsSequence();
+		if (not vut.isHasTimestampMechanismOfVirtualActuatorEmpty()) {
+		%]
+			"hasTimestampMechanism": [%=hasTimestampMechanisms%],
+		[%				
+		}
+		else{
+		%]
+			"hasTimestampMechanism": [],
+		[%		
+		}		
+			
+		var timestampMaxLatency = vut.getTimestampMaxLatencyOfVirtualActuatorAsSequence();
+		if (not vut.isTimestampMaxLatencyOfVirtualActuatorEmpty()) {
+		%]
+			"timestampMaxLatency": [%=timestampMaxLatency%],
+		[%				
+		}
+		else{
+		%]
+			"timestampMaxLatency": [],
+		[%		
+		}
+					
+		var isSafetyCritical = vut.getIsSafetyCriticalOfVirtualActuatorAsSequence();
+		if (not vut.isIsSafetyCriticalOfVirtualActuatorEmpty()) {
+		%]
+			"isSafetyCritical": [%=isSafetyCritical%],
+		[%				
+		}
+		else{
+		%]
+			"isSafetyCritical": [],
+		[%		
+		}			
+%]
+            "type": "VirtualActuator"
+		},    
+[% 	    		
+	}			
+ 
+    //*************************************************
+    //Actuators
+    //imperative manner, without declarative part for each attribute
+    //*************************************************
+    for(vut in actuators){    
+%]
+		{
+            "name": "[%=vut.name%]",
+            "id": "[%=vut.id%]",
+[% 	
+		    var stereotype = vut.getStereotype("Actuator");
+		    for(attr in vut.getStereotypeAttributes(stereotype)){
+%]
+			"[%=attr.getName()%]": [%=vut.getValue(stereotype, attr.getName())%], 
+[%
+		    }    
+%]      
+            "type": "Actuator"
+		},
+[% 	    		
+	}			
+ 
+    //*************************************************
+    //Virtual Gateways
+    //imperative manner, without declarative part for each attribute
+    //*************************************************
+    for(vut in virtual_gateways){    
+%]
+		{
+            "name": "[%=vut.name%]",
+            "id": "[%=vut.id%]",
+[% 	
+		    var stereotype = vut.getStereotype("VirtualGateway");
+		    for(attr in vut.getStereotypeAttributes(stereotype)){
+		    	var value = vut.getValue(stereotype, attr.getName());
+		    	if (not value.isDefined()){
+		    		value = "[]";// empty array
+		    	}
+%]
+			"[%=attr.getName()%]": [%=value%], 
+[%
+		    }    
+%]          "type": "VirtualGateway"
+		},    
+    
+[% 	
+    }	
+    //*************************************************
+    //Sensor
+    //imperative manner, without declarative part for each attribute
+    //*************************************************
+    for(vut in sensors){    
+    %]
+		{
+            "name": "[%=vut.name%]",
+            "id": "[%=vut.id%]",
+[% 	
+		    var stereotype = vut.getStereotype("Sensor");
+		    for(attr in vut.getStereotypeAttributes(stereotype)){
+		    	var value = vut.getValue(stereotype, attr.getName());
+		    	if (not value.isDefined()){
+		    		value = "[]";// empty array
+		    	}
+%]
+			"[%=attr.getName()%]": [%=value%], 
+[%
+		    }    
+%]			"type": "Sensor"
+		},    
+    [% 	
+	}
+
+    //*************************************************
+    //Communication
+    //imperative manner, without declarative part for each attribute
+    //*************************************************
+    for(vut in communications){    
+    %]
+		{
+            "name": "[%=vut.generateAssociationName(vut)%]",
+            "id": "[%=vut.id%]",
+[% 	
+			var memberends = vut.getCommunicationEnds();
+%]
+			"connection end types": [%=memberends%], 
+[%				
+		    var stereotype = vut.getStereotype("Communication");
+		    
+			//*************************************************
+		    //Communication Configurations
+		    //nested in Configuration generation 
+		    //declarative manner
+		    //It does not use the /gen library for Communication stereotype but EOL lib
+		    //*************************************************
+		    
+		    for(attr in vut.getStereotypeAttributes(stereotype)){
+		    	//(attr.getName()).println();
+			    if (attr.getName() <> "communicationConfigs") {
+%]
+			"[%=attr.getName()%]": [%=vut.getValue(stereotype, attr.getName())%], 
+[%				
+				}
+				else{
+%]
+			"[%=attr.getName()%]": 
+[%					
+					var configs= vut.getCommunicationConfigurations();
+					for (config in configs) { 						
+%]
+						"[%=config.base_Class.name%]":, 
+							"protocolType": [%="\""+config.protocolType+"\""%], 
+							"clientID": [%="\""+config.clientID+"\""%], 
+							"serverIP": [%="\""+config.serverIP+"\""%], 
+							"portNumber": [%="\""+config.portNumber+"\""%], 
+							"topics": [%="["+config.topics.concat(",")+"]"%], 
+							"qosLevel": [%="\""+config.qosLevel+"\""%], 
+							"keepAlive": [%="\""+config.keepAlive+"\""%], 
+[%						
+					}			
+				}
+		    }    
+%]      
+            "type": "Communication"
+		},    
+    [% 	
+	}
+	
+    //*************************************************
+    //Test Configuration
+    //imperative manner, without declarative part for each attribute
+    //*************************************************
+    for(vut in test_configurations){    
+    %]
+		{
+            "name": "[%=vut.name%]",
+            "id": "[%=vut.id%]",
+[% 	
+		    var stereotype = vut.getStereotype("TestConfiguration");
+		    for(attr in vut.getStereotypeAttributes(stereotype)){
+		    	var value = vut.getValue(stereotype, attr.getName());
+		    	if (not value.isDefined()){
+		    		value = "[]";// empty array
+		    	}
+%]
+			"[%=attr.getName()%]": [%=value%], 
+[%
+		    }    
+%]			"type": "TestConfiguration"
+		},    
+    [% 	
+	}	
+	
+    //*************************************************
+    //Test Configuration
+    //imperative manner, without declarative part for each attribute
+    //*************************************************
+    for(vut in test_configurations){    
+    %]
+		{
+            "name": "[%=vut.name%]",
+            "id": "[%=vut.id%]",
+[% 	
+		    var stereotype = vut.getStereotype("TestConfiguration");
+		    for(attr in vut.getStereotypeAttributes(stereotype)){
+		    	var value = vut.getValue(stereotype, attr.getName());
+		    	if (not value.isDefined()){
+		    		value = "[]";// empty array
+		    	}
+%]
+			"[%=attr.getName()%]": [%=value%], 
+[%
+		    }    
+%]			"type": "TestConfiguration"
+		},    
+    [% 	
+	}	
+
+    //*************************************************
+    //Communication Configuration
+    //imperative manner, without declarative part for each attribute
+    //*************************************************
+    for(vut in communication_configurations){    
+    %]
+		{
+            "name": "[%=vut.name%]",
+            "id": "[%=vut.id%]",
+[% 	
+		    var stereotype = vut.getStereotype("CommunicationConfiguration");
+		    for(attr in vut.getStereotypeAttributes(stereotype)){
+		    	var value = vut.getValue(stereotype, attr.getName());
+		    	if (not value.isDefined()){
+		    		value = "[]";// empty array
+		    	}
+%]
+			"[%=attr.getName()%]": [%=value%], 
+[%
+		    }    
+%]			"type": "CommunicationConfiguration"
+		},    
+    [% 	
+	}	
+
+    //*************************************************
+    //Storage Configuration
+    //imperative manner, without declarative part for each attribute
+    //*************************************************
+    for(vut in storage_configurations){    
+    %]
+		{
+            "name": "[%=vut.name%]",
+            "id": "[%=vut.id%]",
+[% 	
+		    var stereotype = vut.getStereotype("StorageConfiguration");
+		    for(attr in vut.getStereotypeAttributes(stereotype)){
+		    	var value = vut.getValue(stereotype, attr.getName());
+		    	if (not value.isDefined()){
+		    		value = "[]";// empty array
+		    	}
+%]
+			"[%=attr.getName()%]": [%=value%], 
+[%
+		    }    
+%]			"type": "StorageConfiguration"
+		},    
+    [% 	
+	}	
+
+    //*************************************************
+    //Computing Configuration
+    //imperative manner, without declarative part for each attribute
+    //*************************************************
+    for(vut in computing_configurations){    
+    %]
+		{
+            "name": "[%=vut.name%]",
+            "id": "[%=vut.id%]",
+[% 	
+		    var stereotype = vut.getStereotype("ComputingConfiguration");
+		    for(attr in vut.getStereotypeAttributes(stereotype)){
+		    	var value = vut.getValue(stereotype, attr.getName());
+		    	if (not value.isDefined()){
+		    		value = "[]";// empty array
+		    	}
+%]
+			"[%=attr.getName()%]": [%=value%], 
+[%
+		    }    
+%]			"type": "ComputingConfiguration"
+		},    
+    [% 	
+	}	
+
+	
+    %]		
+    ],    
+    "name": "[%=aPackage.name%]"
+}
+
+
+[%
+
+%]
+
+//only of type VirtualActuator no supertypes or subtypes
+[%=virtual_actuators_json%]
+
+//only of type Actuator no supertypes or subtypes
+[%=actuators_json%]
+
+//only of type VirtualSensor no supertypes or subtypes	
+[%=virtual_sensors_json%]
+
+//only of type Sensor no supertypes	or subtypes
+[%=sensors_json%]
+
+//only of type VirtualGateway no supertypes	or subtypes
+[%=virtual_gateways_json%]
+
+//only of type Communication no supertypes or subtypes
+var communications = aPackage.CommunicationsAsSequenceOfAssociation();
+var communications_json = aPackage.JSONCommunicationsAsSequenceOfAssociation();
+
+//only of type CloudService no supertypes or subtypes
+var cloud_services = aPackage.CloudServicesAsSequenceOfClass();
+var cloud_services_json = aPackage.JSONCloudServicesAsSequenceOfClass();
+
+//only of type Test Configurations no supertypes or subtypes
+var test_configurations = aPackage.TestConfigurationsAsSequenceOfClass();
+var test_configurations_json = aPackage.JSONTestConfigurationsAsSequenceOfClass();
+
+//only of type Communication Configurations no supertypes or subtypes
+var communication_configurations = aPackage.CommunicationConfigurationsAsSequenceOfClass();
+var communication_configurations_json = aPackage.JSONCommunicationConfigurationsAsSequenceOfClass();
+
+//only of type Storage Configurations no supertypes or subtypes
+var storage_configurations = aPackage.StorageConfigurationsAsSequenceOfClass();
+var storage_configurations_json = aPackage.JSONStorageConfigurationsAsSequenceOfClass();
+
+//only of type Computing Configurations no supertypesor subtypes
+var computing_configurations = aPackage.ComputingConfigurationsAsSequenceOfClass();
+var computing_configurations_json = aPackage.JSONComputingConfigurationsAsSequenceOfClass();

@@ -1,0 +1,106 @@
+[%
+var stereotypes = aProfile.getOwnedStereotypes();
+%]
+import "../../element.eol";
+
+//stereotype libraries
+[%
+for (elem in stereotypes) {
+%]
+import	"../stereotypes/[%=aProfile.getName()%]/[%=elem.getName()%].eol";
+[%	
+}
+%]
+
+
+//stereotype operations
+[%
+for (elem in stereotypes) {
+%]
+
+operation Profile get[%=elem.getName()%]Stereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var [%=elem.getName().firstToLowerCase()%]Stereotype = ownedStereotypes.selectOne(s|s.name = "[%=elem.getName()%]");
+	return [%=elem.getName().firstToLowerCase()%]Stereotype;
+}
+
+operation Profile get[%=elem.getName()%]() : [%=elem.getName()%] {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var [%=elem.getName().firstToLowerCase()%]Stereotype = ownedStereotypes.selectOne(s|s.name = "[%=elem.getName()%]");
+	return [%=elem.getName().firstToLowerCase()%]Stereotype;
+}
+
+[%	
+}
+%]
+
+
+[%
+for (stereo in stereotypes) { 
+	var metaclasses = stereo.getAllExtendedMetaclasses();
+	for (metaclass in metaclasses) { 
+%]
+/*
+Returns a Sequence of [%=metaclass.name%] annotated with [%=stereo.name%].
+*/ 
+operation Package [%=stereo.name%]sAsSequenceOf[%=metaclass.name%]() : Sequence([%=metaclass.name%]){
+	var returnValue = new Sequence([%=metaclass.name%]);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("[%=stereo.name%]")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+[%
+	}
+}
+%]
+/*
+Returns a Sequence of Property defined by the given stereotype.
+*/ 
+operation Element getStereotypeAttributes(stereotype : Stereotype) : Sequence(Property){
+	var stereotypeAttr = stereotype.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Check the type of the base element.
+*/ 
+operation Element isInstanceSpecification() : Boolean {
+
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isInstanceOfMetaclass() : Boolean");
+	}
+	var eclass_name = self.type.name;
+	if (eclass_name = "InstanceSpecification"){
+		return true;
+	}
+	return false;
+}
+/*
+Check the type of the base element.
+*/ 
+operation Element isClass() : Boolean {
+
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isInstanceOfMetaclass() : Boolean");
+	}
+	var eclass_name = self.type.name;
+	if (eclass_name = "Class"){
+		return true;
+	}
+	return false;
+}
+

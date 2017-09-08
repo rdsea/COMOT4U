@@ -1,0 +1,46 @@
+rule Profile2Library
+
+//generate EOL library to manage a Profile
+	transform aProfile : Profile {
+	
+		//guard : not aPackage.base_Class.isUndefined()
+		//guard : aPackage.hasStereotype("Infrastructure")
+		
+		template : "../egl/EOL_ProfileGenTemplate.egl"
+		target : "../eol/library/gen/profiles/" + aProfile.name + ".eol"
+	}
+
+//generate EOL library to manage a single Stereotype
+rule Stereotype2Library	
+	transform stereo : Stereotype {
+	
+		//guard : not aPackage.base_Class.isUndefined()
+		//guard : aPackage.hasStereotype("Infrastructure")
+		
+		template : "../egl/EOL_StereotypeGenTemplate.egl"
+		target : "../eol/library/gen/stereotypes/"+stereo.getProfile().getName()+"/" + stereo.name + ".eol"
+	}
+
+rule Enumeration2Library	
+	transform enum : Enumeration {
+	
+		//guard : not aPackage.base_Class.isUndefined()
+		//guard : aPackage.hasStereotype("Infrastructure")
+		
+		template : "../egl/EOL_EnumerationGenTemplate.egl"
+		target : "../eol/library/gen/enumerations/"+enum.getOwner().getName()+"/"+ enum.name + ".eol"
+	}
+
+
+
+/*
+rule Stereotype2LibraryTest	
+	transform stereo : Stereotype {
+	
+		//guard : not aPackage.base_Class.isUndefined()
+		//guard : aPackage.hasStereotype("Infrastructure")
+		
+		template : "../egl/EOL4StereotypeLibraryTestGenTemplate.egl"
+		target : "../eol/library/gen/stereotypes/" + stereo.name + "_test.eol"
+	}
+*/

@@ -1,0 +1,423 @@
+
+import "../../../../../eol/library/element.eol";
+
+/*
+Returns a Sequence of Element annotated with IntegrationElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package IntegrationElementsAsSequence() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isIntegrationElement()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+
+/*
+Returns a Sequence of Class annotated with IntegrationElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package IntegrationElementsAsSequenceOfClass() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isClassIntegrationElement()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with IntegrationElement.
+ 
+operation isClassIntegrationElement(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isIntegrationElement() : Boolean in IntegrationElement.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "Class"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of Class annotated with IntegrationElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONIntegrationElementsAsSequenceOfClass() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isClassIntegrationElement()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Class from the applied Stereotype IntegrationElement
+
+operation IntegrationElement getBaseClassOfIntegrationElement() : Class{
+	var baseClass = new IntegrationElement;
+	baseClass = self.base_Class;
+	return baseClass;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Class from the applied Stereotype IntegrationElement
+
+operation IntegrationElement JSONgetBaseClassOfIntegrationElement() : String {
+	var baseClass = new IntegrationElement;
+	baseClass = self.base_Class;
+	
+	var baseClass_string = baseClass.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClass_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype IntegrationElement using native objects.
+ 
+operation Class toJsonIntegrationElement() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+/*
+Returns a Sequence of Node annotated with IntegrationElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package IntegrationElementsAsSequenceOfNode() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isNodeIntegrationElement()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with IntegrationElement.
+ 
+operation isNodeIntegrationElement(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isIntegrationElement() : Boolean in IntegrationElement.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "Node"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of Node annotated with IntegrationElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONIntegrationElementsAsSequenceOfNode() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isNodeIntegrationElement()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Node from the applied Stereotype IntegrationElement
+
+operation IntegrationElement getBaseNodeOfIntegrationElement() : Node{
+	var baseNode = new IntegrationElement;
+	baseNode = self.base_Node;
+	return baseNode;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Node from the applied Stereotype IntegrationElement
+
+operation IntegrationElement JSONgetBaseNodeOfIntegrationElement() : String {
+	var baseNode = new IntegrationElement;
+	baseNode = self.base_Node;
+	
+	var baseNode_string = baseNode.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseNode_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype IntegrationElement using native objects.
+ 
+operation Node toJsonIntegrationElement() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+/*
+Returns a Sequence of InstanceSpecification annotated with IntegrationElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package IntegrationElementsAsSequenceOfInstanceSpecification() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInstanceSpecificationIntegrationElement()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with IntegrationElement.
+ 
+operation isInstanceSpecificationIntegrationElement(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isIntegrationElement() : Boolean in IntegrationElement.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "InstanceSpecification"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of InstanceSpecification annotated with IntegrationElement.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONIntegrationElementsAsSequenceOfInstanceSpecification() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInstanceSpecificationIntegrationElement()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type InstanceSpecification from the applied Stereotype IntegrationElement
+
+operation IntegrationElement getBaseInstanceSpecificationOfIntegrationElement() : InstanceSpecification{
+	var baseInstanceSpecification = new IntegrationElement;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	return baseInstanceSpecification;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type InstanceSpecification from the applied Stereotype IntegrationElement
+
+operation IntegrationElement JSONgetBaseInstanceSpecificationOfIntegrationElement() : String {
+	var baseInstanceSpecification = new IntegrationElement;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	
+	var baseInstanceSpecification_string = baseInstanceSpecification.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseInstanceSpecification_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype IntegrationElement using native objects.
+ 
+operation InstanceSpecification toJsonIntegrationElement() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype IntegrationElement
+ 
+operation IntegrationElement getBaseElementOfIntegrationElementDeprecated() : Element{
+	var baseElement = new IntegrationElement;
+
+	
+	if(not self.base_Class.isUndefined()){
+		baseElement = self.base_Class;
+	}
+	
+	if(not self.base_Node.isUndefined()){
+		baseElement = self.base_Node;
+	}
+	
+	if(not self.base_InstanceSpecification.isUndefined()){
+		baseElement = self.base_InstanceSpecification;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype IntegrationElement using UMLUtil native object
+*/ 
+operation IntegrationElement getBaseElementOfIntegrationElement() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype IntegrationElement using UMLUtil native object
+ 
+//operation IntegrationElement toJsonIntegrationElement() : String {
+operation toJsonIntegrationElement() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+*/
+
+/*
+Check if the element is annotated with IntegrationElement.
+*/ 
+operation Element isIntegrationElement() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isIntegrationElement() : Boolean in IntegrationElement.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "IntegrationElement");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in IntegrationElement.
+*/ 
+operation IntegrationElement getAllAttributesOfIntegrationElement() : Sequence(Property){
+	var stereotypeAttr = IntegrationElement.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of integrationInterfaces of stereotype IntegrationElement.
+*/ 
+operation Element getIntegrationInterfacesOfIntegrationElementAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("IntegrationElement"), "integrationInterfaces");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of integrationInterfaces of stereotype IntegrationElement is empty.
+*/ 
+operation Element isIntegrationInterfacesOfIntegrationElementEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("IntegrationElement"), "integrationInterfaces");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+
+
+operation Stereotype getIntegrationInterfacesProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var integrationInterfacesProperty = allAttributes.selectOne(s|s.name = "integrationInterfaces");
+	return integrationInterfacesProperty;
+}
+

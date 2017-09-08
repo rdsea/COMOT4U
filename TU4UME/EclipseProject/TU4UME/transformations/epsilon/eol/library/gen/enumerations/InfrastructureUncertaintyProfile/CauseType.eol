@@ -1,0 +1,17 @@
+import "../../../element.eol";
+
+operation CauseType gettechnological() : String {
+	var technological = "technological";
+	return technological;
+}
+operation CauseType getnatural_phenomenon() : String {
+	var natural_phenomenon = "natural_phenomenon";
+	return natural_phenomenon;
+}
+operation CauseType gethuman_action() : String {
+	var human_action = "human_action";
+	return human_action;
+}
+
+
+

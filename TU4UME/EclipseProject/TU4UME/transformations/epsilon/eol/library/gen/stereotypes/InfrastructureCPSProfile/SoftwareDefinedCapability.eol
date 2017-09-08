@@ -1,0 +1,583 @@
+
+import "../../../../../eol/library/element.eol";
+
+/*
+Returns a Sequence of Element annotated with SoftwareDefinedCapability.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package SoftwareDefinedCapabilitysAsSequence() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isSoftwareDefinedCapability()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+
+/*
+Returns a Sequence of Class annotated with SoftwareDefinedCapability.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package SoftwareDefinedCapabilitysAsSequenceOfClass() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isClassSoftwareDefinedCapability()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with SoftwareDefinedCapability.
+ 
+operation isClassSoftwareDefinedCapability(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isSoftwareDefinedCapability() : Boolean in SoftwareDefinedCapability.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "Class"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of Class annotated with SoftwareDefinedCapability.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONSoftwareDefinedCapabilitysAsSequenceOfClass() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isClassSoftwareDefinedCapability()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Class from the applied Stereotype SoftwareDefinedCapability
+
+operation SoftwareDefinedCapability getBaseClassOfSoftwareDefinedCapability() : Class{
+	var baseClass = new SoftwareDefinedCapability;
+	baseClass = self.base_Class;
+	return baseClass;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Class from the applied Stereotype SoftwareDefinedCapability
+
+operation SoftwareDefinedCapability JSONgetBaseClassOfSoftwareDefinedCapability() : String {
+	var baseClass = new SoftwareDefinedCapability;
+	baseClass = self.base_Class;
+	
+	var baseClass_string = baseClass.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClass_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype SoftwareDefinedCapability using native objects.
+ 
+operation Class toJsonSoftwareDefinedCapability() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+/*
+Returns a Sequence of UseCase annotated with SoftwareDefinedCapability.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package SoftwareDefinedCapabilitysAsSequenceOfUseCase() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isUseCaseSoftwareDefinedCapability()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with SoftwareDefinedCapability.
+ 
+operation isUseCaseSoftwareDefinedCapability(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isSoftwareDefinedCapability() : Boolean in SoftwareDefinedCapability.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "UseCase"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of UseCase annotated with SoftwareDefinedCapability.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONSoftwareDefinedCapabilitysAsSequenceOfUseCase() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isUseCaseSoftwareDefinedCapability()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type UseCase from the applied Stereotype SoftwareDefinedCapability
+
+operation SoftwareDefinedCapability getBaseUseCaseOfSoftwareDefinedCapability() : UseCase{
+	var baseUseCase = new SoftwareDefinedCapability;
+	baseUseCase = self.base_UseCase;
+	return baseUseCase;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type UseCase from the applied Stereotype SoftwareDefinedCapability
+
+operation SoftwareDefinedCapability JSONgetBaseUseCaseOfSoftwareDefinedCapability() : String {
+	var baseUseCase = new SoftwareDefinedCapability;
+	baseUseCase = self.base_UseCase;
+	
+	var baseUseCase_string = baseUseCase.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseUseCase_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype SoftwareDefinedCapability using native objects.
+ 
+operation UseCase toJsonSoftwareDefinedCapability() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+/*
+Returns a Sequence of Operation annotated with SoftwareDefinedCapability.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package SoftwareDefinedCapabilitysAsSequenceOfOperation() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isOperationSoftwareDefinedCapability()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with SoftwareDefinedCapability.
+ 
+operation isOperationSoftwareDefinedCapability(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isSoftwareDefinedCapability() : Boolean in SoftwareDefinedCapability.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "Operation"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of Operation annotated with SoftwareDefinedCapability.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONSoftwareDefinedCapabilitysAsSequenceOfOperation() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isOperationSoftwareDefinedCapability()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Operation from the applied Stereotype SoftwareDefinedCapability
+
+operation SoftwareDefinedCapability getBaseOperationOfSoftwareDefinedCapability() : Operation{
+	var baseOperation = new SoftwareDefinedCapability;
+	baseOperation = self.base_Operation;
+	return baseOperation;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Operation from the applied Stereotype SoftwareDefinedCapability
+
+operation SoftwareDefinedCapability JSONgetBaseOperationOfSoftwareDefinedCapability() : String {
+	var baseOperation = new SoftwareDefinedCapability;
+	baseOperation = self.base_Operation;
+	
+	var baseOperation_string = baseOperation.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseOperation_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype SoftwareDefinedCapability using native objects.
+ 
+operation Operation toJsonSoftwareDefinedCapability() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+/*
+Returns a Sequence of InstanceSpecification annotated with SoftwareDefinedCapability.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package SoftwareDefinedCapabilitysAsSequenceOfInstanceSpecification() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInstanceSpecificationSoftwareDefinedCapability()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with SoftwareDefinedCapability.
+ 
+operation isInstanceSpecificationSoftwareDefinedCapability(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isSoftwareDefinedCapability() : Boolean in SoftwareDefinedCapability.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "InstanceSpecification"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of InstanceSpecification annotated with SoftwareDefinedCapability.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONSoftwareDefinedCapabilitysAsSequenceOfInstanceSpecification() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInstanceSpecificationSoftwareDefinedCapability()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type InstanceSpecification from the applied Stereotype SoftwareDefinedCapability
+
+operation SoftwareDefinedCapability getBaseInstanceSpecificationOfSoftwareDefinedCapability() : InstanceSpecification{
+	var baseInstanceSpecification = new SoftwareDefinedCapability;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	return baseInstanceSpecification;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type InstanceSpecification from the applied Stereotype SoftwareDefinedCapability
+
+operation SoftwareDefinedCapability JSONgetBaseInstanceSpecificationOfSoftwareDefinedCapability() : String {
+	var baseInstanceSpecification = new SoftwareDefinedCapability;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	
+	var baseInstanceSpecification_string = baseInstanceSpecification.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseInstanceSpecification_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype SoftwareDefinedCapability using native objects.
+ 
+operation InstanceSpecification toJsonSoftwareDefinedCapability() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype SoftwareDefinedCapability
+ 
+operation SoftwareDefinedCapability getBaseElementOfSoftwareDefinedCapabilityDeprecated() : Element{
+	var baseElement = new SoftwareDefinedCapability;
+
+	
+	if(not self.base_Class.isUndefined()){
+		baseElement = self.base_Class;
+	}
+	
+	if(not self.base_UseCase.isUndefined()){
+		baseElement = self.base_UseCase;
+	}
+	
+	if(not self.base_Operation.isUndefined()){
+		baseElement = self.base_Operation;
+	}
+	
+	if(not self.base_InstanceSpecification.isUndefined()){
+		baseElement = self.base_InstanceSpecification;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype SoftwareDefinedCapability using UMLUtil native object
+*/ 
+operation SoftwareDefinedCapability getBaseElementOfSoftwareDefinedCapability() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype SoftwareDefinedCapability using UMLUtil native object
+ 
+//operation SoftwareDefinedCapability toJsonSoftwareDefinedCapability() : String {
+operation toJsonSoftwareDefinedCapability() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+*/
+
+/*
+Check if the element is annotated with SoftwareDefinedCapability.
+*/ 
+operation Element isSoftwareDefinedCapability() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isSoftwareDefinedCapability() : Boolean in SoftwareDefinedCapability.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "SoftwareDefinedCapability");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in SoftwareDefinedCapability.
+*/ 
+operation SoftwareDefinedCapability getAllAttributesOfSoftwareDefinedCapability() : Sequence(Property){
+	var stereotypeAttr = SoftwareDefinedCapability.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of mechanism of stereotype SoftwareDefinedCapability.
+*/ 
+operation Element getMechanismOfSoftwareDefinedCapabilityAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedCapability"), "mechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of enforcementProtocol of stereotype SoftwareDefinedCapability.
+*/ 
+operation Element getEnforcementProtocolOfSoftwareDefinedCapabilityAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedCapability"), "enforcementProtocol");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of endpoint of stereotype SoftwareDefinedCapability.
+*/ 
+operation Element getEndpointOfSoftwareDefinedCapabilityAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedCapability"), "endpoint");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of mechanism of stereotype SoftwareDefinedCapability is empty.
+*/ 
+operation Element isMechanismOfSoftwareDefinedCapabilityEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedCapability"), "mechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of enforcementProtocol of stereotype SoftwareDefinedCapability is empty.
+*/ 
+operation Element isEnforcementProtocolOfSoftwareDefinedCapabilityEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedCapability"), "enforcementProtocol");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of endpoint of stereotype SoftwareDefinedCapability is empty.
+*/ 
+operation Element isEndpointOfSoftwareDefinedCapabilityEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("SoftwareDefinedCapability"), "endpoint");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+
+
+operation Stereotype getMechanismProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var mechanismProperty = allAttributes.selectOne(s|s.name = "mechanism");
+	return mechanismProperty;
+}
+
+
+operation Stereotype getEnforcementProtocolProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var enforcementProtocolProperty = allAttributes.selectOne(s|s.name = "enforcementProtocol");
+	return enforcementProtocolProperty;
+}
+
+
+operation Stereotype getEndpointProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var endpointProperty = allAttributes.selectOne(s|s.name = "endpoint");
+	return endpointProperty;
+}
+

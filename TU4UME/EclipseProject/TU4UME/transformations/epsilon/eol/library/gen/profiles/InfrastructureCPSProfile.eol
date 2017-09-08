@@ -1,0 +1,2059 @@
+import "../../element.eol";
+
+//stereotype libraries
+import	"../stereotypes/InfrastructureCPSProfile/Configuration.eol";
+import	"../stereotypes/InfrastructureCPSProfile/ComputingConfiguration.eol";
+import	"../stereotypes/InfrastructureCPSProfile/StorageConfiguration.eol";
+import	"../stereotypes/InfrastructureCPSProfile/VirtualActuator.eol";
+import	"../stereotypes/InfrastructureCPSProfile/VirtualComponent.eol";
+import	"../stereotypes/InfrastructureCPSProfile/VirtualGateway.eol";
+import	"../stereotypes/InfrastructureCPSProfile/VirtualSensor.eol";
+import	"../stereotypes/InfrastructureCPSProfile/VirtualUnit.eol";
+import	"../stereotypes/InfrastructureCPSProfile/SoftwareDefinedCapability.eol";
+import	"../stereotypes/InfrastructureCPSProfile/SoftwareDefinedMetric.eol";
+import	"../stereotypes/InfrastructureCPSProfile/Communication.eol";
+import	"../stereotypes/InfrastructureCPSProfile/CommunicationConfiguration.eol";
+import	"../stereotypes/InfrastructureCPSProfile/Actuator.eol";
+import	"../stereotypes/InfrastructureCPSProfile/IODevice.eol";
+import	"../stereotypes/InfrastructureCPSProfile/NetworkDevice.eol";
+import	"../stereotypes/InfrastructureCPSProfile/PhysicalCapability.eol";
+import	"../stereotypes/InfrastructureCPSProfile/PhysicalMetric.eol";
+import	"../stereotypes/InfrastructureCPSProfile/PhysicalUnit.eol";
+import	"../stereotypes/InfrastructureCPSProfile/Sensor.eol";
+import	"../stereotypes/InfrastructureCPSProfile/ApplicationElement.eol";
+import	"../stereotypes/InfrastructureCPSProfile/ApplicationInterface.eol";
+import	"../stereotypes/InfrastructureCPSProfile/Capability.eol";
+import	"../stereotypes/InfrastructureCPSProfile/Container.eol";
+import	"../stereotypes/InfrastructureCPSProfile/InfrastructureElement.eol";
+import	"../stereotypes/InfrastructureCPSProfile/InfrastructureInterface.eol";
+import	"../stereotypes/InfrastructureCPSProfile/IntegrationElement.eol";
+import	"../stereotypes/InfrastructureCPSProfile/IntegrationInterface.eol";
+import	"../stereotypes/InfrastructureCPSProfile/Metric.eol";
+import	"../stereotypes/InfrastructureCPSProfile/Unit.eol";
+import	"../stereotypes/InfrastructureCPSProfile/Infrastructure.eol";
+import	"../stereotypes/InfrastructureCPSProfile/CloudService.eol";
+import	"../stereotypes/InfrastructureCPSProfile/IoTProvider.eol";
+import	"../stereotypes/InfrastructureCPSProfile/IoTService.eol";
+import	"../stereotypes/InfrastructureCPSProfile/CloudProvider.eol";
+import	"../stereotypes/InfrastructureCPSProfile/EventTrigger.eol";
+import	"../stereotypes/InfrastructureCPSProfile/PeriodicTrigger.eol";
+import	"../stereotypes/InfrastructureCPSProfile/TestConfiguration.eol";
+import	"../stereotypes/InfrastructureCPSProfile/TestExecutor.eol";
+import	"../stereotypes/InfrastructureCPSProfile/TestTrigger.eol";
+import	"../stereotypes/InfrastructureCPSProfile/Observation.eol";
+import	"../stereotypes/InfrastructureCPSProfile/Test.eol";
+
+
+//stereotype operations
+
+operation Profile getConfigurationStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var configurationStereotype = ownedStereotypes.selectOne(s|s.name = "Configuration");
+	return configurationStereotype;
+}
+
+operation Profile getConfiguration() : Configuration {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var configurationStereotype = ownedStereotypes.selectOne(s|s.name = "Configuration");
+	return configurationStereotype;
+}
+
+
+operation Profile getComputingConfigurationStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var computingConfigurationStereotype = ownedStereotypes.selectOne(s|s.name = "ComputingConfiguration");
+	return computingConfigurationStereotype;
+}
+
+operation Profile getComputingConfiguration() : ComputingConfiguration {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var computingConfigurationStereotype = ownedStereotypes.selectOne(s|s.name = "ComputingConfiguration");
+	return computingConfigurationStereotype;
+}
+
+
+operation Profile getStorageConfigurationStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var storageConfigurationStereotype = ownedStereotypes.selectOne(s|s.name = "StorageConfiguration");
+	return storageConfigurationStereotype;
+}
+
+operation Profile getStorageConfiguration() : StorageConfiguration {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var storageConfigurationStereotype = ownedStereotypes.selectOne(s|s.name = "StorageConfiguration");
+	return storageConfigurationStereotype;
+}
+
+
+operation Profile getVirtualActuatorStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var virtualActuatorStereotype = ownedStereotypes.selectOne(s|s.name = "VirtualActuator");
+	return virtualActuatorStereotype;
+}
+
+operation Profile getVirtualActuator() : VirtualActuator {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var virtualActuatorStereotype = ownedStereotypes.selectOne(s|s.name = "VirtualActuator");
+	return virtualActuatorStereotype;
+}
+
+
+operation Profile getVirtualComponentStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var virtualComponentStereotype = ownedStereotypes.selectOne(s|s.name = "VirtualComponent");
+	return virtualComponentStereotype;
+}
+
+operation Profile getVirtualComponent() : VirtualComponent {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var virtualComponentStereotype = ownedStereotypes.selectOne(s|s.name = "VirtualComponent");
+	return virtualComponentStereotype;
+}
+
+
+operation Profile getVirtualGatewayStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var virtualGatewayStereotype = ownedStereotypes.selectOne(s|s.name = "VirtualGateway");
+	return virtualGatewayStereotype;
+}
+
+operation Profile getVirtualGateway() : VirtualGateway {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var virtualGatewayStereotype = ownedStereotypes.selectOne(s|s.name = "VirtualGateway");
+	return virtualGatewayStereotype;
+}
+
+
+operation Profile getVirtualSensorStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var virtualSensorStereotype = ownedStereotypes.selectOne(s|s.name = "VirtualSensor");
+	return virtualSensorStereotype;
+}
+
+operation Profile getVirtualSensor() : VirtualSensor {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var virtualSensorStereotype = ownedStereotypes.selectOne(s|s.name = "VirtualSensor");
+	return virtualSensorStereotype;
+}
+
+
+operation Profile getVirtualUnitStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var virtualUnitStereotype = ownedStereotypes.selectOne(s|s.name = "VirtualUnit");
+	return virtualUnitStereotype;
+}
+
+operation Profile getVirtualUnit() : VirtualUnit {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var virtualUnitStereotype = ownedStereotypes.selectOne(s|s.name = "VirtualUnit");
+	return virtualUnitStereotype;
+}
+
+
+operation Profile getSoftwareDefinedCapabilityStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var softwareDefinedCapabilityStereotype = ownedStereotypes.selectOne(s|s.name = "SoftwareDefinedCapability");
+	return softwareDefinedCapabilityStereotype;
+}
+
+operation Profile getSoftwareDefinedCapability() : SoftwareDefinedCapability {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var softwareDefinedCapabilityStereotype = ownedStereotypes.selectOne(s|s.name = "SoftwareDefinedCapability");
+	return softwareDefinedCapabilityStereotype;
+}
+
+
+operation Profile getSoftwareDefinedMetricStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var softwareDefinedMetricStereotype = ownedStereotypes.selectOne(s|s.name = "SoftwareDefinedMetric");
+	return softwareDefinedMetricStereotype;
+}
+
+operation Profile getSoftwareDefinedMetric() : SoftwareDefinedMetric {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var softwareDefinedMetricStereotype = ownedStereotypes.selectOne(s|s.name = "SoftwareDefinedMetric");
+	return softwareDefinedMetricStereotype;
+}
+
+
+operation Profile getCommunicationStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var communicationStereotype = ownedStereotypes.selectOne(s|s.name = "Communication");
+	return communicationStereotype;
+}
+
+operation Profile getCommunication() : Communication {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var communicationStereotype = ownedStereotypes.selectOne(s|s.name = "Communication");
+	return communicationStereotype;
+}
+
+
+operation Profile getCommunicationConfigurationStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var communicationConfigurationStereotype = ownedStereotypes.selectOne(s|s.name = "CommunicationConfiguration");
+	return communicationConfigurationStereotype;
+}
+
+operation Profile getCommunicationConfiguration() : CommunicationConfiguration {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var communicationConfigurationStereotype = ownedStereotypes.selectOne(s|s.name = "CommunicationConfiguration");
+	return communicationConfigurationStereotype;
+}
+
+
+operation Profile getActuatorStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var actuatorStereotype = ownedStereotypes.selectOne(s|s.name = "Actuator");
+	return actuatorStereotype;
+}
+
+operation Profile getActuator() : Actuator {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var actuatorStereotype = ownedStereotypes.selectOne(s|s.name = "Actuator");
+	return actuatorStereotype;
+}
+
+
+operation Profile getIODeviceStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var iODeviceStereotype = ownedStereotypes.selectOne(s|s.name = "IODevice");
+	return iODeviceStereotype;
+}
+
+operation Profile getIODevice() : IODevice {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var iODeviceStereotype = ownedStereotypes.selectOne(s|s.name = "IODevice");
+	return iODeviceStereotype;
+}
+
+
+operation Profile getNetworkDeviceStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var networkDeviceStereotype = ownedStereotypes.selectOne(s|s.name = "NetworkDevice");
+	return networkDeviceStereotype;
+}
+
+operation Profile getNetworkDevice() : NetworkDevice {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var networkDeviceStereotype = ownedStereotypes.selectOne(s|s.name = "NetworkDevice");
+	return networkDeviceStereotype;
+}
+
+
+operation Profile getPhysicalCapabilityStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var physicalCapabilityStereotype = ownedStereotypes.selectOne(s|s.name = "PhysicalCapability");
+	return physicalCapabilityStereotype;
+}
+
+operation Profile getPhysicalCapability() : PhysicalCapability {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var physicalCapabilityStereotype = ownedStereotypes.selectOne(s|s.name = "PhysicalCapability");
+	return physicalCapabilityStereotype;
+}
+
+
+operation Profile getPhysicalMetricStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var physicalMetricStereotype = ownedStereotypes.selectOne(s|s.name = "PhysicalMetric");
+	return physicalMetricStereotype;
+}
+
+operation Profile getPhysicalMetric() : PhysicalMetric {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var physicalMetricStereotype = ownedStereotypes.selectOne(s|s.name = "PhysicalMetric");
+	return physicalMetricStereotype;
+}
+
+
+operation Profile getPhysicalUnitStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var physicalUnitStereotype = ownedStereotypes.selectOne(s|s.name = "PhysicalUnit");
+	return physicalUnitStereotype;
+}
+
+operation Profile getPhysicalUnit() : PhysicalUnit {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var physicalUnitStereotype = ownedStereotypes.selectOne(s|s.name = "PhysicalUnit");
+	return physicalUnitStereotype;
+}
+
+
+operation Profile getSensorStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var sensorStereotype = ownedStereotypes.selectOne(s|s.name = "Sensor");
+	return sensorStereotype;
+}
+
+operation Profile getSensor() : Sensor {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var sensorStereotype = ownedStereotypes.selectOne(s|s.name = "Sensor");
+	return sensorStereotype;
+}
+
+
+operation Profile getApplicationElementStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var applicationElementStereotype = ownedStereotypes.selectOne(s|s.name = "ApplicationElement");
+	return applicationElementStereotype;
+}
+
+operation Profile getApplicationElement() : ApplicationElement {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var applicationElementStereotype = ownedStereotypes.selectOne(s|s.name = "ApplicationElement");
+	return applicationElementStereotype;
+}
+
+
+operation Profile getApplicationInterfaceStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var applicationInterfaceStereotype = ownedStereotypes.selectOne(s|s.name = "ApplicationInterface");
+	return applicationInterfaceStereotype;
+}
+
+operation Profile getApplicationInterface() : ApplicationInterface {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var applicationInterfaceStereotype = ownedStereotypes.selectOne(s|s.name = "ApplicationInterface");
+	return applicationInterfaceStereotype;
+}
+
+
+operation Profile getCapabilityStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var capabilityStereotype = ownedStereotypes.selectOne(s|s.name = "Capability");
+	return capabilityStereotype;
+}
+
+operation Profile getCapability() : Capability {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var capabilityStereotype = ownedStereotypes.selectOne(s|s.name = "Capability");
+	return capabilityStereotype;
+}
+
+
+operation Profile getContainerStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var containerStereotype = ownedStereotypes.selectOne(s|s.name = "Container");
+	return containerStereotype;
+}
+
+operation Profile getContainer() : Container {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var containerStereotype = ownedStereotypes.selectOne(s|s.name = "Container");
+	return containerStereotype;
+}
+
+
+operation Profile getInfrastructureElementStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var infrastructureElementStereotype = ownedStereotypes.selectOne(s|s.name = "InfrastructureElement");
+	return infrastructureElementStereotype;
+}
+
+operation Profile getInfrastructureElement() : InfrastructureElement {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var infrastructureElementStereotype = ownedStereotypes.selectOne(s|s.name = "InfrastructureElement");
+	return infrastructureElementStereotype;
+}
+
+
+operation Profile getInfrastructureInterfaceStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var infrastructureInterfaceStereotype = ownedStereotypes.selectOne(s|s.name = "InfrastructureInterface");
+	return infrastructureInterfaceStereotype;
+}
+
+operation Profile getInfrastructureInterface() : InfrastructureInterface {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var infrastructureInterfaceStereotype = ownedStereotypes.selectOne(s|s.name = "InfrastructureInterface");
+	return infrastructureInterfaceStereotype;
+}
+
+
+operation Profile getIntegrationElementStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var integrationElementStereotype = ownedStereotypes.selectOne(s|s.name = "IntegrationElement");
+	return integrationElementStereotype;
+}
+
+operation Profile getIntegrationElement() : IntegrationElement {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var integrationElementStereotype = ownedStereotypes.selectOne(s|s.name = "IntegrationElement");
+	return integrationElementStereotype;
+}
+
+
+operation Profile getIntegrationInterfaceStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var integrationInterfaceStereotype = ownedStereotypes.selectOne(s|s.name = "IntegrationInterface");
+	return integrationInterfaceStereotype;
+}
+
+operation Profile getIntegrationInterface() : IntegrationInterface {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var integrationInterfaceStereotype = ownedStereotypes.selectOne(s|s.name = "IntegrationInterface");
+	return integrationInterfaceStereotype;
+}
+
+
+operation Profile getMetricStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var metricStereotype = ownedStereotypes.selectOne(s|s.name = "Metric");
+	return metricStereotype;
+}
+
+operation Profile getMetric() : Metric {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var metricStereotype = ownedStereotypes.selectOne(s|s.name = "Metric");
+	return metricStereotype;
+}
+
+
+operation Profile getUnitStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var unitStereotype = ownedStereotypes.selectOne(s|s.name = "Unit");
+	return unitStereotype;
+}
+
+operation Profile getUnit() : Unit {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var unitStereotype = ownedStereotypes.selectOne(s|s.name = "Unit");
+	return unitStereotype;
+}
+
+
+operation Profile getInfrastructureStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var infrastructureStereotype = ownedStereotypes.selectOne(s|s.name = "Infrastructure");
+	return infrastructureStereotype;
+}
+
+operation Profile getInfrastructure() : Infrastructure {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var infrastructureStereotype = ownedStereotypes.selectOne(s|s.name = "Infrastructure");
+	return infrastructureStereotype;
+}
+
+
+operation Profile getCloudServiceStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var cloudServiceStereotype = ownedStereotypes.selectOne(s|s.name = "CloudService");
+	return cloudServiceStereotype;
+}
+
+operation Profile getCloudService() : CloudService {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var cloudServiceStereotype = ownedStereotypes.selectOne(s|s.name = "CloudService");
+	return cloudServiceStereotype;
+}
+
+
+operation Profile getIoTProviderStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var ioTProviderStereotype = ownedStereotypes.selectOne(s|s.name = "IoTProvider");
+	return ioTProviderStereotype;
+}
+
+operation Profile getIoTProvider() : IoTProvider {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var ioTProviderStereotype = ownedStereotypes.selectOne(s|s.name = "IoTProvider");
+	return ioTProviderStereotype;
+}
+
+
+operation Profile getIoTServiceStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var ioTServiceStereotype = ownedStereotypes.selectOne(s|s.name = "IoTService");
+	return ioTServiceStereotype;
+}
+
+operation Profile getIoTService() : IoTService {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var ioTServiceStereotype = ownedStereotypes.selectOne(s|s.name = "IoTService");
+	return ioTServiceStereotype;
+}
+
+
+operation Profile getCloudProviderStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var cloudProviderStereotype = ownedStereotypes.selectOne(s|s.name = "CloudProvider");
+	return cloudProviderStereotype;
+}
+
+operation Profile getCloudProvider() : CloudProvider {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var cloudProviderStereotype = ownedStereotypes.selectOne(s|s.name = "CloudProvider");
+	return cloudProviderStereotype;
+}
+
+
+operation Profile getEventTriggerStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var eventTriggerStereotype = ownedStereotypes.selectOne(s|s.name = "EventTrigger");
+	return eventTriggerStereotype;
+}
+
+operation Profile getEventTrigger() : EventTrigger {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var eventTriggerStereotype = ownedStereotypes.selectOne(s|s.name = "EventTrigger");
+	return eventTriggerStereotype;
+}
+
+
+operation Profile getPeriodicTriggerStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var periodicTriggerStereotype = ownedStereotypes.selectOne(s|s.name = "PeriodicTrigger");
+	return periodicTriggerStereotype;
+}
+
+operation Profile getPeriodicTrigger() : PeriodicTrigger {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var periodicTriggerStereotype = ownedStereotypes.selectOne(s|s.name = "PeriodicTrigger");
+	return periodicTriggerStereotype;
+}
+
+
+operation Profile getTestConfigurationStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var testConfigurationStereotype = ownedStereotypes.selectOne(s|s.name = "TestConfiguration");
+	return testConfigurationStereotype;
+}
+
+operation Profile getTestConfiguration() : TestConfiguration {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var testConfigurationStereotype = ownedStereotypes.selectOne(s|s.name = "TestConfiguration");
+	return testConfigurationStereotype;
+}
+
+
+operation Profile getTestExecutorStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var testExecutorStereotype = ownedStereotypes.selectOne(s|s.name = "TestExecutor");
+	return testExecutorStereotype;
+}
+
+operation Profile getTestExecutor() : TestExecutor {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var testExecutorStereotype = ownedStereotypes.selectOne(s|s.name = "TestExecutor");
+	return testExecutorStereotype;
+}
+
+
+operation Profile getTestTriggerStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var testTriggerStereotype = ownedStereotypes.selectOne(s|s.name = "TestTrigger");
+	return testTriggerStereotype;
+}
+
+operation Profile getTestTrigger() : TestTrigger {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var testTriggerStereotype = ownedStereotypes.selectOne(s|s.name = "TestTrigger");
+	return testTriggerStereotype;
+}
+
+
+operation Profile getObservationStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var observationStereotype = ownedStereotypes.selectOne(s|s.name = "Observation");
+	return observationStereotype;
+}
+
+operation Profile getObservation() : Observation {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var observationStereotype = ownedStereotypes.selectOne(s|s.name = "Observation");
+	return observationStereotype;
+}
+
+
+operation Profile getTestStereotype() : Stereotype {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var testStereotype = ownedStereotypes.selectOne(s|s.name = "Test");
+	return testStereotype;
+}
+
+operation Profile getTest() : Test {
+	var ownedStereotypes = self.getOwnedStereotypes();
+	var testStereotype = ownedStereotypes.selectOne(s|s.name = "Test");
+	return testStereotype;
+}
+
+
+
+/*
+Returns a Sequence of Class annotated with Configuration.
+*/ 
+operation Package ConfigurationsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Configuration")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with ComputingConfiguration.
+*/ 
+operation Package ComputingConfigurationsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("ComputingConfiguration")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with ComputingConfiguration.
+*/ 
+operation Package ComputingConfigurationsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("ComputingConfiguration")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with StorageConfiguration.
+*/ 
+operation Package StorageConfigurationsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("StorageConfiguration")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with StorageConfiguration.
+*/ 
+operation Package StorageConfigurationsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("StorageConfiguration")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with VirtualActuator.
+*/ 
+operation Package VirtualActuatorsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualActuator")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with VirtualActuator.
+*/ 
+operation Package VirtualActuatorsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualActuator")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with VirtualActuator.
+*/ 
+operation Package VirtualActuatorsAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualActuator")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with VirtualComponent.
+*/ 
+operation Package VirtualComponentsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualComponent")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with VirtualComponent.
+*/ 
+operation Package VirtualComponentsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualComponent")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with VirtualComponent.
+*/ 
+operation Package VirtualComponentsAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualComponent")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with VirtualGateway.
+*/ 
+operation Package VirtualGatewaysAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualGateway")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with VirtualGateway.
+*/ 
+operation Package VirtualGatewaysAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualGateway")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with VirtualGateway.
+*/ 
+operation Package VirtualGatewaysAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualGateway")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with VirtualSensor.
+*/ 
+operation Package VirtualSensorsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualSensor")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with VirtualSensor.
+*/ 
+operation Package VirtualSensorsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualSensor")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with VirtualSensor.
+*/ 
+operation Package VirtualSensorsAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualSensor")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with VirtualUnit.
+*/ 
+operation Package VirtualUnitsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualUnit")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with VirtualUnit.
+*/ 
+operation Package VirtualUnitsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualUnit")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with VirtualUnit.
+*/ 
+operation Package VirtualUnitsAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("VirtualUnit")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with SoftwareDefinedCapability.
+*/ 
+operation Package SoftwareDefinedCapabilitysAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("SoftwareDefinedCapability")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of UseCase annotated with SoftwareDefinedCapability.
+*/ 
+operation Package SoftwareDefinedCapabilitysAsSequenceOfUseCase() : Sequence(UseCase){
+	var returnValue = new Sequence(UseCase);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("SoftwareDefinedCapability")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Operation annotated with SoftwareDefinedCapability.
+*/ 
+operation Package SoftwareDefinedCapabilitysAsSequenceOfOperation() : Sequence(Operation){
+	var returnValue = new Sequence(Operation);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("SoftwareDefinedCapability")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with SoftwareDefinedCapability.
+*/ 
+operation Package SoftwareDefinedCapabilitysAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("SoftwareDefinedCapability")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with SoftwareDefinedMetric.
+*/ 
+operation Package SoftwareDefinedMetricsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("SoftwareDefinedMetric")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with SoftwareDefinedMetric.
+*/ 
+operation Package SoftwareDefinedMetricsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("SoftwareDefinedMetric")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Operation annotated with SoftwareDefinedMetric.
+*/ 
+operation Package SoftwareDefinedMetricsAsSequenceOfOperation() : Sequence(Operation){
+	var returnValue = new Sequence(Operation);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("SoftwareDefinedMetric")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with Communication.
+*/ 
+operation Package CommunicationsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Communication")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of AssociationClass annotated with Communication.
+*/ 
+operation Package CommunicationsAsSequenceOfAssociationClass() : Sequence(AssociationClass){
+	var returnValue = new Sequence(AssociationClass);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Communication")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Association annotated with Communication.
+*/ 
+operation Package CommunicationsAsSequenceOfAssociation() : Sequence(Association){
+	var returnValue = new Sequence(Association);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Communication")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with Communication.
+*/ 
+operation Package CommunicationsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Communication")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with Communication.
+*/ 
+operation Package CommunicationsAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Communication")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with CommunicationConfiguration.
+*/ 
+operation Package CommunicationConfigurationsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("CommunicationConfiguration")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with CommunicationConfiguration.
+*/ 
+operation Package CommunicationConfigurationsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("CommunicationConfiguration")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with Actuator.
+*/ 
+operation Package ActuatorsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Actuator")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with Actuator.
+*/ 
+operation Package ActuatorsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Actuator")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with Actuator.
+*/ 
+operation Package ActuatorsAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Actuator")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with IODevice.
+*/ 
+operation Package IODevicesAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("IODevice")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with IODevice.
+*/ 
+operation Package IODevicesAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("IODevice")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with IODevice.
+*/ 
+operation Package IODevicesAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("IODevice")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with NetworkDevice.
+*/ 
+operation Package NetworkDevicesAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("NetworkDevice")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with NetworkDevice.
+*/ 
+operation Package NetworkDevicesAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("NetworkDevice")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with NetworkDevice.
+*/ 
+operation Package NetworkDevicesAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("NetworkDevice")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Operation annotated with PhysicalCapability.
+*/ 
+operation Package PhysicalCapabilitysAsSequenceOfOperation() : Sequence(Operation){
+	var returnValue = new Sequence(Operation);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("PhysicalCapability")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with PhysicalCapability.
+*/ 
+operation Package PhysicalCapabilitysAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("PhysicalCapability")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with PhysicalCapability.
+*/ 
+operation Package PhysicalCapabilitysAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("PhysicalCapability")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with PhysicalMetric.
+*/ 
+operation Package PhysicalMetricsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("PhysicalMetric")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with PhysicalMetric.
+*/ 
+operation Package PhysicalMetricsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("PhysicalMetric")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Operation annotated with PhysicalMetric.
+*/ 
+operation Package PhysicalMetricsAsSequenceOfOperation() : Sequence(Operation){
+	var returnValue = new Sequence(Operation);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("PhysicalMetric")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with PhysicalUnit.
+*/ 
+operation Package PhysicalUnitsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("PhysicalUnit")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with PhysicalUnit.
+*/ 
+operation Package PhysicalUnitsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("PhysicalUnit")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with PhysicalUnit.
+*/ 
+operation Package PhysicalUnitsAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("PhysicalUnit")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with Sensor.
+*/ 
+operation Package SensorsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Sensor")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with Sensor.
+*/ 
+operation Package SensorsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Sensor")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with Sensor.
+*/ 
+operation Package SensorsAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Sensor")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with ApplicationElement.
+*/ 
+operation Package ApplicationElementsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("ApplicationElement")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with ApplicationElement.
+*/ 
+operation Package ApplicationElementsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("ApplicationElement")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Interface annotated with ApplicationInterface.
+*/ 
+operation Package ApplicationInterfacesAsSequenceOfInterface() : Sequence(Interface){
+	var returnValue = new Sequence(Interface);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("ApplicationInterface")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with ApplicationInterface.
+*/ 
+operation Package ApplicationInterfacesAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("ApplicationInterface")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with ApplicationInterface.
+*/ 
+operation Package ApplicationInterfacesAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("ApplicationInterface")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Operation annotated with Capability.
+*/ 
+operation Package CapabilitysAsSequenceOfOperation() : Sequence(Operation){
+	var returnValue = new Sequence(Operation);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Capability")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with Capability.
+*/ 
+operation Package CapabilitysAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Capability")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with Capability.
+*/ 
+operation Package CapabilitysAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Capability")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Classifier annotated with Container.
+*/ 
+operation Package ContainersAsSequenceOfClassifier() : Sequence(Classifier){
+	var returnValue = new Sequence(Classifier);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Container")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with Container.
+*/ 
+operation Package ContainersAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Container")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with InfrastructureElement.
+*/ 
+operation Package InfrastructureElementsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("InfrastructureElement")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with InfrastructureElement.
+*/ 
+operation Package InfrastructureElementsAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("InfrastructureElement")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with InfrastructureElement.
+*/ 
+operation Package InfrastructureElementsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("InfrastructureElement")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Interface annotated with InfrastructureInterface.
+*/ 
+operation Package InfrastructureInterfacesAsSequenceOfInterface() : Sequence(Interface){
+	var returnValue = new Sequence(Interface);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("InfrastructureInterface")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with InfrastructureInterface.
+*/ 
+operation Package InfrastructureInterfacesAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("InfrastructureInterface")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with InfrastructureInterface.
+*/ 
+operation Package InfrastructureInterfacesAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("InfrastructureInterface")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with InfrastructureInterface.
+*/ 
+operation Package InfrastructureInterfacesAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("InfrastructureInterface")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with IntegrationElement.
+*/ 
+operation Package IntegrationElementsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("IntegrationElement")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with IntegrationElement.
+*/ 
+operation Package IntegrationElementsAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("IntegrationElement")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with IntegrationElement.
+*/ 
+operation Package IntegrationElementsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("IntegrationElement")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Interface annotated with IntegrationInterface.
+*/ 
+operation Package IntegrationInterfacesAsSequenceOfInterface() : Sequence(Interface){
+	var returnValue = new Sequence(Interface);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("IntegrationInterface")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with IntegrationInterface.
+*/ 
+operation Package IntegrationInterfacesAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("IntegrationInterface")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with IntegrationInterface.
+*/ 
+operation Package IntegrationInterfacesAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("IntegrationInterface")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with Metric.
+*/ 
+operation Package MetricsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Metric")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with Metric.
+*/ 
+operation Package MetricsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Metric")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Operation annotated with Metric.
+*/ 
+operation Package MetricsAsSequenceOfOperation() : Sequence(Operation){
+	var returnValue = new Sequence(Operation);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Metric")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with Unit.
+*/ 
+operation Package UnitsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Unit")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with Unit.
+*/ 
+operation Package UnitsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Unit")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with Unit.
+*/ 
+operation Package UnitsAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Unit")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with Infrastructure.
+*/ 
+operation Package InfrastructuresAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Infrastructure")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Package annotated with Infrastructure.
+*/ 
+operation Package InfrastructuresAsSequenceOfPackage() : Sequence(Package){
+	var returnValue = new Sequence(Package);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Infrastructure")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Classifier annotated with CloudService.
+*/ 
+operation Package CloudServicesAsSequenceOfClassifier() : Sequence(Classifier){
+	var returnValue = new Sequence(Classifier);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("CloudService")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with CloudService.
+*/ 
+operation Package CloudServicesAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("CloudService")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with CloudService.
+*/ 
+operation Package CloudServicesAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("CloudService")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with IoTProvider.
+*/ 
+operation Package IoTProvidersAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("IoTProvider")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with IoTProvider.
+*/ 
+operation Package IoTProvidersAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("IoTProvider")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with IoTService.
+*/ 
+operation Package IoTServicesAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("IoTService")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with IoTService.
+*/ 
+operation Package IoTServicesAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("IoTService")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with CloudProvider.
+*/ 
+operation Package CloudProvidersAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("CloudProvider")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with CloudProvider.
+*/ 
+operation Package CloudProvidersAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("CloudProvider")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Trigger annotated with EventTrigger.
+*/ 
+operation Package EventTriggersAsSequenceOfTrigger() : Sequence(Trigger){
+	var returnValue = new Sequence(Trigger);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("EventTrigger")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with EventTrigger.
+*/ 
+operation Package EventTriggersAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("EventTrigger")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with EventTrigger.
+*/ 
+operation Package EventTriggersAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("EventTrigger")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Trigger annotated with PeriodicTrigger.
+*/ 
+operation Package PeriodicTriggersAsSequenceOfTrigger() : Sequence(Trigger){
+	var returnValue = new Sequence(Trigger);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("PeriodicTrigger")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with PeriodicTrigger.
+*/ 
+operation Package PeriodicTriggersAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("PeriodicTrigger")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with PeriodicTrigger.
+*/ 
+operation Package PeriodicTriggersAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("PeriodicTrigger")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with TestConfiguration.
+*/ 
+operation Package TestConfigurationsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("TestConfiguration")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with TestConfiguration.
+*/ 
+operation Package TestConfigurationsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("TestConfiguration")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with TestExecutor.
+*/ 
+operation Package TestExecutorsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("TestExecutor")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Node annotated with TestExecutor.
+*/ 
+operation Package TestExecutorsAsSequenceOfNode() : Sequence(Node){
+	var returnValue = new Sequence(Node);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("TestExecutor")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with TestExecutor.
+*/ 
+operation Package TestExecutorsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("TestExecutor")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Trigger annotated with TestTrigger.
+*/ 
+operation Package TestTriggersAsSequenceOfTrigger() : Sequence(Trigger){
+	var returnValue = new Sequence(Trigger);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("TestTrigger")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with TestTrigger.
+*/ 
+operation Package TestTriggersAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("TestTrigger")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Class annotated with Test.
+*/ 
+operation Package TestsAsSequenceOfClass() : Sequence(Class){
+	var returnValue = new Sequence(Class);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Test")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of InstanceSpecification annotated with Test.
+*/ 
+operation Package TestsAsSequenceOfInstanceSpecification() : Sequence(InstanceSpecification){
+	var returnValue = new Sequence(InstanceSpecification);
+	for(son in self.getPackagedElements()){
+		if(son.hasStereotype("Test")){
+			returnValue.add(son);
+		}
+	}
+	return returnValue;
+}
+
+/*
+Returns a Sequence of Property defined by the given stereotype.
+*/ 
+operation Element getStereotypeAttributes(stereotype : Stereotype) : Sequence(Property){
+	var stereotypeAttr = stereotype.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Check the type of the base element.
+*/ 
+operation Element isInstanceSpecification() : Boolean {
+
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isInstanceOfMetaclass() : Boolean");
+	}
+	var eclass_name = self.type.name;
+	if (eclass_name = "InstanceSpecification"){
+		return true;
+	}
+	return false;
+}
+/*
+Check the type of the base element.
+*/ 
+operation Element isClass() : Boolean {
+
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isInstanceOfMetaclass() : Boolean");
+	}
+	var eclass_name = self.type.name;
+	if (eclass_name = "Class"){
+		return true;
+	}
+	return false;
+}
+

@@ -1,0 +1,275 @@
+[%
+var metaclasses = stereo.getAllExtendedMetaclasses();
+var attributes = stereo.getAllAttributes();
+var plugin_id = "at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool";
+
+var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");
+var UMLUtil = plugin.getUMLUtil();
+
+%]
+
+import "../../../../../eol/library/element.eol";
+
+/*
+Returns a Sequence of Element annotated with [%=stereo.name%].
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package [%=stereo.name%]sAsSequence() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.is[%=stereo.name%]()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+
+[%
+for (metaclass in metaclasses) { 
+%]
+/*
+Returns a Sequence of [%=metaclass.name%] annotated with [%=stereo.name%].
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package [%=stereo.name%]sAsSequenceOf[%=metaclass.name%]() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.is[%=metaclass.name%][%=stereo.name%]()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with [%=stereo.name%].
+ 
+operation is[%=metaclass.name%][%=stereo.name%](elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: is[%=stereo.name%]() : Boolean in [%=stereo.name%].eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "[%=metaclass.name%]"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of [%=metaclass.name%] annotated with [%=stereo.name%].
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSON[%=stereo.name%]sAsSequenceOf[%=metaclass.name%]() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.is[%=metaclass.name%][%=stereo.name%]()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("[%=plugin_id%]");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type [%=metaclass.name%] from the applied Stereotype [%=stereo.name%]
+
+operation [%=stereo.name%] getBase[%=metaclass.name%]Of[%=stereo.name%]() : [%=metaclass.name%]{
+	var base[%=metaclass.name%] = new [%=stereo.name%];
+	base[%=metaclass.name%] = self.base_[%=metaclass.name%];
+	return base[%=metaclass.name%];
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type [%=metaclass.name%] from the applied Stereotype [%=stereo.name%]
+
+operation [%=stereo.name%] JSONgetBase[%=metaclass.name%]Of[%=stereo.name%]() : String {
+	var base[%=metaclass.name%] = new [%=stereo.name%];
+	base[%=metaclass.name%] = self.base_[%=metaclass.name%];
+	
+	var base[%=metaclass.name%]_string = base[%=metaclass.name%].asString();
+	var plugin : new Native("[%=plugin_id%]");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(base[%=metaclass.name%]_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype [%=stereo.name%] using native objects.
+ 
+operation [%=metaclass.name%] toJson[%=stereo.name%]() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("[%=plugin_id%]");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+[%
+}
+%]
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype [%=stereo.name%]
+ 
+operation [%=stereo.name%] getBaseElementOf[%=stereo.name%]Deprecated() : Element{
+	var baseElement = new [%=stereo.name%];
+
+[%
+for (metaclass in metaclasses) { 
+%]	
+	if(not self.base_[%=metaclass.name%].isUndefined()){
+		baseElement = self.base_[%=metaclass.name%];
+	}
+[%
+}
+%]	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype [%=stereo.name%] using UMLUtil native object
+*/ 
+operation [%=stereo.name%] getBaseElementOf[%=stereo.name%]() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("[%=plugin_id%]");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype [%=stereo.name%] using UMLUtil native object
+ 
+//operation [%=stereo.name%] toJson[%=stereo.name%]() : String {
+operation toJson[%=stereo.name%]() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("[%=plugin_id%]");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+*/
+
+/*
+Check if the element is annotated with [%=stereo.name%].
+*/ 
+operation Element is[%=stereo.name%]() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: is[%=stereo.name%]() : Boolean in [%=stereo.name%].eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "[%=stereo.name%]");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in [%=stereo.name%].
+*/ 
+operation [%=stereo.name%] getAllAttributesOf[%=stereo.name%]() : Sequence(Property){
+	var stereotypeAttr = [%=stereo.name%].allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+[%
+for (attribute in attributes) { 
+
+	if(not attribute.name.startsWith("base_"))
+	{ 
+%]
+/*
+Returns a Sequence of [%=attribute.name%] of stereotype [%=stereo.name%].
+*/ 
+operation Element get[%=(attribute.name).firstToUpperCase()%]Of[%=stereo.name%]AsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("[%=stereo.name%]"), "[%=attribute.name%]");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+[%
+	}
+}
+%]
+
+[%
+for (attribute in attributes) { 
+
+	if(not attribute.name.startsWith("base_"))
+	{ 
+%]
+/*
+Check if a Sequence of [%=attribute.name%] of stereotype [%=stereo.name%] is empty.
+*/ 
+operation Element is[%=(attribute.name).firstToUpperCase()%]Of[%=stereo.name%]Empty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("[%=stereo.name%]"), "[%=attribute.name%]");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+[%
+	}
+}
+%]
+
+[%
+	for (attr in attributes) { 
+		if (not attr.getName().startsWith("base_")) {
+%]
+
+operation Stereotype get[%=attr.getName().firstToUpperCase()%]Property() : Property {
+	var allAttributes = self.getAllAttributes();
+	var [%=attr.getName().firstToLowerCase()%]Property = allAttributes.selectOne(s|s.name = "[%=attr.getName()%]");
+	return [%=attr.getName().firstToLowerCase()%]Property;
+}
+
+[%				
+		}
+	}
+
+%]

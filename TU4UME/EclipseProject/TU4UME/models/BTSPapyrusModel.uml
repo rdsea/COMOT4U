@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CoreProfile="http:///schemas/CoreProfile/_b0We8FKjEeed76oMGqCQiQ/12" xmlns:GQAM="http://www.eclipse.org/papyrus/GQAM/1" xmlns:GRM="http://www.eclipse.org/papyrus/GRM/1" xmlns:HwComputing="http://www.eclipse.org/papyrus/HwComputing/1" xmlns:HwDevice="http://www.eclipse.org/papyrus/HwDevice/1" xmlns:HwMemory="http://www.eclipse.org/papyrus/HwMemory/1" xmlns:InfrastructureCPSProfile="http://www.u-test.eu/infrastructurecpsprofile/" xmlns:InfrastructureUncertaintyProfile="http://www.u-test.eu/infrastructureuncertaintyprofile/" xmlns:InternalUProfileLibrary="http:///schemas/InternalUProfileLibrary/_ueoigBVHEeev2_sZ3ngp-w/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/CoreProfile/_b0We8FKjEeed76oMGqCQiQ/12 ../profiles/U-Profile.profile.uml http://www.eclipse.org/papyrus/GQAM/1 http://www.eclipse.org/papyrus/MARTE/1#//GQAM http://www.eclipse.org/papyrus/GRM/1 http://www.eclipse.org/papyrus/MARTE/1#//GRM http://www.eclipse.org/papyrus/HwComputing/1 http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwComputing http://www.eclipse.org/papyrus/HwDevice/1 http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwDevice http://www.eclipse.org/papyrus/HwMemory/1 http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwStorage/HwMemory http://www.u-test.eu/infrastructurecpsprofile/ ../profiles/InfrastructureCPSProfile.profile.uml http://www.u-test.eu/infrastructureuncertaintyprofile/ ../profiles/InfrastructureUncertaintyProfile.profile.uml http:///schemas/InternalUProfileLibrary/_ueoigBVHEeev2_sZ3ngp-w/0 ../profiles/Internal%20U-Profile%20Library.profile.uml">
+  <uml:Model xmi:id="_eMKxAA7uEee6wqcj8Y2-lg" name="BTSModel">
+    <packageImport xmi:id="_eWOE4A7uEee6wqcj8Y2-lg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_lYIzoERQEeeXpvCVjWTYeA" name="TelcoBaseTransceiverStation">
+      <ownedComment xmi:id="_DptVwEXzEeeNrMhg6pDppw" annotatedElement="_2GTaEERQEeeXpvCVjWTYeA _plYu0EReEeeXpvCVjWTYeA">
+        <body>resMult=$m2</body>
+      </ownedComment>
+      <ownedComment xmi:id="_67TeYEX2EeeNrMhg6pDppw" annotatedElement="_lYIzoERQEeeXpvCVjWTYeA">
+        <body>resMult = $m2</body>
+      </ownedComment>
+      <ownedComment xmi:id="__tHAgEX2EeeNrMhg6pDppw">
+        <body>resMult = $m3</body>
+      </ownedComment>
+      <ownedComment xmi:id="_d_zWEEdvEee5F8b1qsyZMA" annotatedElement="_wuSp8EUIEeebuPNq01--pQ">
+        <body>communicationProtocols=[MQTTConfigClient]</body>
+      </ownedComment>
+      <ownedComment xmi:id="_XhBDAEeWEee5F8b1qsyZMA" annotatedElement="_juHaYEUXEeeNrMhg6pDppw">
+        <body>&lt;&lt;TestConfiguration>>&#xD;
+configurations= {MQTTConfig1Server, MQTTConfig2Client, CassandraConfig1, GoogleBigQueryConfig1}</body>
+      </ownedComment>
+      <ownedComment xmi:id="_aG2aYE0IEeen7K41utM1aw" annotatedElement="_WsMMYEXsEeeNrMhg6pDppw">
+        <body>resMult=1, speed factor = 0.2</body>
+      </ownedComment>
+      <ownedComment xmi:id="_h0mJME0IEeen7K41utM1aw" annotatedElement="_azh1MEXsEeeNrMhg6pDppw">
+        <body>resMult = 1,&#xD;
+memorySize =(0.6, GB)</body>
+      </ownedComment>
+      <ownedComment xmi:id="_uP1h4E0IEeen7K41utM1aw" annotatedElement="_gJhpgEXsEeeNrMhg6pDppw">
+        <body>resMult = 4,&#xD;
+memorySize = (3, TB)</body>
+      </ownedComment>
+      <ownedComment xmi:id="_W_AHME9OEee-m7qAtQ_W2A">
+        <body>Please select some config params. we left them undefined so that this &#xD;
+StorageConfiguration will be also a IndeterminacySource for Uncertainty caused by missing information </body>
+      </ownedComment>
+      <ownedComment xmi:id="_lkHWcE9OEee-m7qAtQ_W2A">
+        <body>Please select some config params. we left them undefined so that this &#xD;
+StorageConfiguration will be also a IndeterminacySource for Uncertainty caused by missing information </body>
+      </ownedComment>
+      <ownedComment xmi:id="_yEqq0FDsEeeBaKpUcWLICA">
+        <body>Please select some config params. we left them undefined so that this &#xD;
+ComputingConfiguration will be also a IndeterminacySource for Uncertainty caused by missing information </body>
+      </ownedComment>
+      <ownedComment xmi:id="_6fKp8F15Eeel-tS9I1vO3w" annotatedElement="_8V-5EEdpEee5F8b1qsyZMA">
+        <body>{&#xD;
+protocolType= MQTT,&#xD;
+qosLevel,&#xD;
+keepAlive = 210,&#xD;
+}</body>
+      </ownedComment>
+      <ownedComment xmi:id="_m1cb4F16Eeel-tS9I1vO3w">
+        <body>{&#xD;
+protocolType = MQTT,&#xD;
+clientID = &quot;&quot;,&#xD;
+serverIP = &quot;&quot;,&#xD;
+portNumber = 1883,&#xD;
+topics = &quot;gateway/electricity&quot;,&#xD;
+qosLevel = 2&#xD;
+}</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Class" xmi:id="_2GTaEERQEeeXpvCVjWTYeA" name="HwTemperatureSensor"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_WqOYQERREeeXpvCVjWTYeA" name="TemperatureSensor">
+        <ownedAttribute xmi:id="_QQDfQERTEeeXpvCVjWTYeA" name="hw_temperature_sensor" type="_2GTaEERQEeeXpvCVjWTYeA" association="_QQC4MERTEeeXpvCVjWTYeA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_G8o_wEXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_G8o_wUXrEeeNrMhg6pDppw" value="*"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_bxViEHkBEeeF4q95eCsWQA" name="TemperatureSensor_statemachine">
+          <region xmi:id="_bxWwMHkBEeeF4q95eCsWQA" name="TemperatureSensor_statemachine_region">
+            <transition xmi:id="_bxaakHkBEeeF4q95eCsWQA" name="Init_UncertaintyAffectedState" source="_bxXXQHkBEeeF4q95eCsWQA" target="_bxYlYHkBEeeF4q95eCsWQA"/>
+            <transition xmi:id="_bxi9cHkBEeeF4q95eCsWQA" name="UncertaintyAffectedState_End" source="_bxYlYHkBEeeF4q95eCsWQA" target="_bxX-UHkBEeeF4q95eCsWQA"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_bxXXQHkBEeeF4q95eCsWQA" name="Init"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_bxX-UHkBEeeF4q95eCsWQA" name="End" kind="terminate"/>
+            <subvertex xmi:type="uml:State" xmi:id="_bxYlYHkBEeeF4q95eCsWQA" name="UncertaintyAffectedState"/>
+          </region>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_TbBc4FyxEee3fP2vaOmJjA" name="getProtocol"/>
+        <ownedOperation xmi:id="_TbCrAFyxEee3fP2vaOmJjA" name="getRate"/>
+        <ownedOperation xmi:id="_TbD5IFyxEee3fP2vaOmJjA" name="setProtocol"/>
+        <ownedOperation xmi:id="_TbD5IVyxEee3fP2vaOmJjA" name="setRate"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_YSRUIERREeeXpvCVjWTYeA" name="BTSBroker">
+        <ownedAttribute xmi:id="_Xcl-ckRTEeeXpvCVjWTYeA" name="ingestion_client" type="_wgQJgE0BEeedg6nzD0_JBg" association="_XclXYERTEeeXpvCVjWTYeA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UUi1AEXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UUi1AUXrEeeNrMhg6pDppw" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_hrJa4kUIEeebuPNq01--pQ" name="iot_gateway" type="_plYu0EReEeeXpvCVjWTYeA" association="_hrIz0EUIEeebuPNq01--pQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PpI10EXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PpO8cEXrEeeNrMhg6pDppw" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5-2t4JJNEeeeSL7FBGSdJA" name="localprovider" type="_-mtjkF14Eeel-tS9I1vO3w" association="_5-yccJJNEeeeSL7FBGSdJA"/>
+        <ownedAttribute xmi:id="_7YEjkZJNEeeeSL7FBGSdJA" name="googleprovider" type="_k85bUF15Eeel-tS9I1vO3w" association="_7YD8gJJNEeeeSL7FBGSdJA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_QQC4MERTEeeXpvCVjWTYeA" name="HwTemperatureSensorToTemperatureSensor" memberEnd="_QQDfQERTEeeXpvCVjWTYeA _QQDfQURTEeeXpvCVjWTYeA" navigableOwnedEnd="_QQDfQURTEeeXpvCVjWTYeA">
+        <eAnnotations xmi:id="_QQC4MURTEeeXpvCVjWTYeA" source="org.eclipse.papyrus">
+          <details xmi:id="_QQC4MkRTEeeXpvCVjWTYeA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_QQDfQURTEeeXpvCVjWTYeA" name="temperature_sensor" type="_WqOYQERREeeXpvCVjWTYeA" association="_QQC4MERTEeeXpvCVjWTYeA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GXVTQEXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GXXIcEXrEeeNrMhg6pDppw" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_XclXYERTEeeXpvCVjWTYeA" name="BTSBroker_IngestionClient" memberEnd="_Xcl-ckRTEeeXpvCVjWTYeA _Xcl-c0RTEeeXpvCVjWTYeA" navigableOwnedEnd="_Xcl-c0RTEeeXpvCVjWTYeA">
+        <eAnnotations xmi:id="_Xcl-cERTEeeXpvCVjWTYeA" source="org.eclipse.papyrus">
+          <details xmi:id="_Xcl-cURTEeeXpvCVjWTYeA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_Xcl-c0RTEeeXpvCVjWTYeA" name="bts_broker" type="_YSRUIERREeeXpvCVjWTYeA" association="_XclXYERTEeeXpvCVjWTYeA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UqTpoEXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UqTpoUXrEeeNrMhg6pDppw" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_OyNLwERUEeeXpvCVjWTYeA" name="BTS Monitor">
+        <ownedAttribute xmi:id="_gHfckkRUEeeXpvCVjWTYeA" name="bts_broker" type="_YSRUIERREeeXpvCVjWTYeA" association="_gHe1gERUEeeXpvCVjWTYeA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gHe1gERUEeeXpvCVjWTYeA" name="BTSBrokerToBTSMonitor" memberEnd="_gHfckkRUEeeXpvCVjWTYeA _gHhRwERUEeeXpvCVjWTYeA" navigableOwnedEnd="_gHhRwERUEeeXpvCVjWTYeA">
+        <eAnnotations xmi:id="_gHfckERUEeeXpvCVjWTYeA" source="org.eclipse.papyrus">
+          <details xmi:id="_gHfckURUEeeXpvCVjWTYeA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_gHhRwERUEeeXpvCVjWTYeA" name="bts_monitor" type="_OyNLwERUEeeXpvCVjWTYeA" association="_gHe1gERUEeeXpvCVjWTYeA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Ucis0EReEeeXpvCVjWTYeA" name="HwElectricitySensor"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_iSyq8EReEeeXpvCVjWTYeA" name="HwAirConditioningSensor"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_plYu0EReEeeXpvCVjWTYeA" name="IoTGateway">
+        <ownedAttribute xmi:id="_pOfQgkUIEeebuPNq01--pQ" name="temperature_sensor" type="_WqOYQERREeeXpvCVjWTYeA" association="_pOepcEUIEeebuPNq01--pQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_H_La0EXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_H_La0UXrEeeNrMhg6pDppw" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_wuTRAUUIEeebuPNq01--pQ" name="electricity_sensor" type="_TonUQEUIEeebuPNq01--pQ" association="_wuSp8EUIEeebuPNq01--pQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Lql8oEXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LqsDQEXrEeeNrMhg6pDppw" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_N0e9AkUJEeebuPNq01--pQ" name="airconditioning_sensor" type="_Hxgt8EUJEeebuPNq01--pQ" association="_N0eV8EUJEeebuPNq01--pQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JYR7wEXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JYR7wUXrEeeNrMhg6pDppw" value="*"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_obW2EE9eEee-m7qAtQ_W2A" name="getDataService"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TonUQEUIEeebuPNq01--pQ" name="ElectricitySensor">
+        <ownedAttribute xmi:id="_Y0dHAkUIEeebuPNq01--pQ" name="hw_electricity_sensor" type="_Ucis0EReEeeXpvCVjWTYeA" association="_Y0cf8EUIEeebuPNq01--pQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Dm1hkEXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Dm7oMEXrEeeNrMhg6pDppw" value="*"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_bVQqEHkBEeeF4q95eCsWQA" name="ElectricitySensor_statemachine">
+          <region xmi:id="_bVVikHkBEeeF4q95eCsWQA" name="ElectricitySensor_statemachine_region">
+            <transition xmi:id="_bVukIHkBEeeF4q95eCsWQA" name="Init_UncertaintyAffectedState" source="_bVghsHkBEeeF4q95eCsWQA" target="_bVmoUHkBEeeF4q95eCsWQA"/>
+            <transition xmi:id="_bV0qwHkBEeeF4q95eCsWQA" name="UncertaintyAffectedState_End" source="_bVmoUHkBEeeF4q95eCsWQA" target="_bVi98HkBEeeF4q95eCsWQA"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_bVghsHkBEeeF4q95eCsWQA" name="Init"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_bVi98HkBEeeF4q95eCsWQA" name="End" kind="terminate"/>
+            <subvertex xmi:type="uml:State" xmi:id="_bVmoUHkBEeeF4q95eCsWQA" name="UncertaintyAffectedState"/>
+          </region>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_sfuCUE28EeeW8tmPVB892Q" name="setRate"/>
+        <ownedOperation xmi:id="_utoEUE28EeeW8tmPVB892Q" name="getRate"/>
+        <ownedOperation xmi:id="_1BPN8E9dEee-m7qAtQ_W2A" name="setProtocol"/>
+        <ownedOperation xmi:id="_1PJuIE9dEee-m7qAtQ_W2A" name="getProtocol"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Y0cf8EUIEeebuPNq01--pQ" name="HwElectricitySensorToElectricitySensor" memberEnd="_Y0dHAkUIEeebuPNq01--pQ _Y0e8MEUIEeebuPNq01--pQ" navigableOwnedEnd="_Y0e8MEUIEeebuPNq01--pQ">
+        <eAnnotations xmi:id="_Y0dHAEUIEeebuPNq01--pQ" source="org.eclipse.papyrus">
+          <details xmi:id="_Y0dHAUUIEeebuPNq01--pQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_Y0e8MEUIEeebuPNq01--pQ" name="electricity_sensor" type="_TonUQEUIEeebuPNq01--pQ" association="_Y0cf8EUIEeebuPNq01--pQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D_bnwEXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D_bnwUXrEeeNrMhg6pDppw" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_hrIz0EUIEeebuPNq01--pQ" name="BTSBroker_IotGateway" memberEnd="_hrJa4kUIEeebuPNq01--pQ _hrKpAEUIEeebuPNq01--pQ" navigableOwnedEnd="_hrKpAEUIEeebuPNq01--pQ">
+        <eAnnotations xmi:id="_hrJa4EUIEeebuPNq01--pQ" source="org.eclipse.papyrus">
+          <details xmi:id="_hrJa4UUIEeebuPNq01--pQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_hrKpAEUIEeebuPNq01--pQ" name="bts_broker" type="_YSRUIERREeeXpvCVjWTYeA" association="_hrIz0EUIEeebuPNq01--pQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QC4ykEXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QC4ykUXrEeeNrMhg6pDppw" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_pOepcEUIEeebuPNq01--pQ" name="IoTGateway_TemperatureSensor" memberEnd="_pOfQgkUIEeebuPNq01--pQ _pOf3kEUIEeebuPNq01--pQ" navigableOwnedEnd="_pOf3kEUIEeebuPNq01--pQ">
+        <eAnnotations xmi:id="_pOfQgEUIEeebuPNq01--pQ" source="org.eclipse.papyrus">
+          <details xmi:id="_pOfQgUUIEeebuPNq01--pQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_pOf3kEUIEeebuPNq01--pQ" name="iot_gateway" type="_plYu0EReEeeXpvCVjWTYeA" association="_pOepcEUIEeebuPNq01--pQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IhPmEEXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IhPmEUXrEeeNrMhg6pDppw" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_wuSp8EUIEeebuPNq01--pQ" name="CommElectricitySensorIoTGateway1" memberEnd="_wuTRAUUIEeebuPNq01--pQ _wuT4EEUIEeebuPNq01--pQ" navigableOwnedEnd="_wuT4EEUIEeebuPNq01--pQ">
+        <eAnnotations xmi:id="_wuSp8UUIEeebuPNq01--pQ" source="org.eclipse.papyrus">
+          <details xmi:id="_wuTRAEUIEeebuPNq01--pQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_wuT4EEUIEeebuPNq01--pQ" name="iot_gateway" type="_plYu0EReEeeXpvCVjWTYeA" association="_wuSp8EUIEeebuPNq01--pQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LW0FAEXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LW6LoEXrEeeNrMhg6pDppw" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Hxgt8EUJEeebuPNq01--pQ" name="AirConditioningSensor">
+        <ownedAttribute xmi:id="_QvxCYkUJEeebuPNq01--pQ" name="hw_airconditioning_sensor" type="_iSyq8EReEeeXpvCVjWTYeA" association="_QvwbUEUJEeebuPNq01--pQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_B-iHAEXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_B-iHAUXrEeeNrMhg6pDppw" value="*"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_aVhEUHkBEeeF4q95eCsWQA" name="AirConditioningSensor_statemachine">
+          <region xmi:id="_aVpAIHkBEeeF4q95eCsWQA" name="AirConditioningSensor_statemachine_region">
+            <transition xmi:id="_aV77EHkBEeeF4q95eCsWQA" name="Init_UncertaintyAffectedState" source="_aVtRkHkBEeeF4q95eCsWQA" target="_aVz_QHkBEeeF4q95eCsWQA"/>
+            <transition xmi:id="_aV--YHkBEeeF4q95eCsWQA" name="UncertaintyAffectedState_End" source="_aVz_QHkBEeeF4q95eCsWQA" target="_aVufsHkBEeeF4q95eCsWQA"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_aVtRkHkBEeeF4q95eCsWQA" name="Init"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_aVufsHkBEeeF4q95eCsWQA" name="End" kind="terminate"/>
+            <subvertex xmi:type="uml:State" xmi:id="_aVz_QHkBEeeF4q95eCsWQA" name="UncertaintyAffectedState"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="__G6LgJFKEeeg7I_dc5cOWQ" name="AirConditioningSensor_statemachine">
+          <region xmi:id="__G8AsJFKEeeg7I_dc5cOWQ" name="AirConditioningSensor_statemachine_region">
+            <transition xmi:id="__HHm4JFKEeeg7I_dc5cOWQ" name="Init_UncertaintyAffectedState" source="__G9O0JFKEeeg7I_dc5cOWQ" target="__HCHUJFKEeeg7I_dc5cOWQ"/>
+            <transition xmi:id="__HLRQJFKEeeg7I_dc5cOWQ" name="UncertaintyAffectedState_End" source="__HCHUJFKEeeg7I_dc5cOWQ" target="__G-c8JFKEeeg7I_dc5cOWQ"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="__G9O0JFKEeeg7I_dc5cOWQ" name="Init"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="__G-c8JFKEeeg7I_dc5cOWQ" name="End" kind="terminate"/>
+            <subvertex xmi:type="uml:State" xmi:id="__HCHUJFKEeeg7I_dc5cOWQ" name="UncertaintyAffectedState"/>
+          </region>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_P5dskFyvEee3fP2vaOmJjA" name="getProtocol"/>
+        <ownedOperation xmi:id="_P5gv4FyvEee3fP2vaOmJjA" name="getRate"/>
+        <ownedOperation xmi:id="_P5h-AFyvEee3fP2vaOmJjA" name="setProtocol"/>
+        <ownedOperation xmi:id="_P5ilEFyvEee3fP2vaOmJjA" name="setRate"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_N0eV8EUJEeebuPNq01--pQ" name="IoTGateway_AirConditioningSensor" memberEnd="_N0e9AkUJEeebuPNq01--pQ _N0gLIEUJEeebuPNq01--pQ" navigableOwnedEnd="_N0gLIEUJEeebuPNq01--pQ">
+        <eAnnotations xmi:id="_N0e9AEUJEeebuPNq01--pQ" source="org.eclipse.papyrus">
+          <details xmi:id="_N0e9AUUJEeebuPNq01--pQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_N0gLIEUJEeebuPNq01--pQ" name="iotgateway" type="_plYu0EReEeeXpvCVjWTYeA" association="_N0eV8EUJEeebuPNq01--pQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JwsbwEXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JwyiYEXrEeeNrMhg6pDppw" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_QvwbUEUJEeebuPNq01--pQ" name="HwAirConditioningSensorToAirConditioningSensor" memberEnd="_QvxCYkUJEeebuPNq01--pQ _QvxpcEUJEeebuPNq01--pQ" navigableOwnedEnd="_QvxpcEUJEeebuPNq01--pQ">
+        <eAnnotations xmi:id="_QvxCYEUJEeebuPNq01--pQ" source="org.eclipse.papyrus">
+          <details xmi:id="_QvxCYUUJEeebuPNq01--pQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_QvxpcEUJEeebuPNq01--pQ" name="airconditioning_sensor" type="_Hxgt8EUJEeebuPNq01--pQ" association="_QvwbUEUJEeebuPNq01--pQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CgSwQEXrEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CgY24EXrEeeNrMhg6pDppw" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_juHaYEUXEeeNrMhg6pDppw" name="Test001"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_RcAFIEXsEeeNrMhg6pDppw" name="F1MicroMachine">
+        <ownedAttribute xmi:id="_tlBv4kXtEeeNrMhg6pDppw" name="virtual_cpu" type="_WsMMYEXsEeeNrMhg6pDppw" aggregation="composite" association="_tk7pQEXtEeeNrMhg6pDppw"/>
+        <ownedAttribute xmi:id="_7cHmE0XuEeeNrMhg6pDppw" name="memory" type="_azh1MEXsEeeNrMhg6pDppw" aggregation="composite" association="_7cHmEEXuEeeNrMhg6pDppw"/>
+        <ownedAttribute xmi:id="_91kJs0XuEeeNrMhg6pDppw" name="persistent_disk" type="_gJhpgEXsEeeNrMhg6pDppw" aggregation="composite" association="_91kJsEXuEeeNrMhg6pDppw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VTDLAEXzEeeNrMhg6pDppw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VTDLAUXzEeeNrMhg6pDppw" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_WsMMYEXsEeeNrMhg6pDppw" name="VirtualCPU"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_azh1MEXsEeeNrMhg6pDppw" name="Memory"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gJhpgEXsEeeNrMhg6pDppw" name="PersistentDisk"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_tk7pQEXtEeeNrMhg6pDppw" memberEnd="_tlBv4kXtEeeNrMhg6pDppw _tlBv40XtEeeNrMhg6pDppw">
+        <eAnnotations xmi:id="_tlBv4EXtEeeNrMhg6pDppw" source="org.eclipse.papyrus">
+          <details xmi:id="_tlBv4UXtEeeNrMhg6pDppw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_tlBv40XtEeeNrMhg6pDppw" name="f1_micro_machine" type="_RcAFIEXsEeeNrMhg6pDppw" association="_tk7pQEXtEeeNrMhg6pDppw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_7cHmEEXuEeeNrMhg6pDppw" memberEnd="_7cHmE0XuEeeNrMhg6pDppw _7cHmFEXuEeeNrMhg6pDppw">
+        <eAnnotations xmi:id="_7cHmEUXuEeeNrMhg6pDppw" source="org.eclipse.papyrus">
+          <details xmi:id="_7cHmEkXuEeeNrMhg6pDppw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_7cHmFEXuEeeNrMhg6pDppw" name="f1_micro_machine" type="_RcAFIEXsEeeNrMhg6pDppw" association="_7cHmEEXuEeeNrMhg6pDppw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_91kJsEXuEeeNrMhg6pDppw" memberEnd="_91kJs0XuEeeNrMhg6pDppw _91kJtEXuEeeNrMhg6pDppw">
+        <eAnnotations xmi:id="_91kJsUXuEeeNrMhg6pDppw" source="org.eclipse.papyrus">
+          <details xmi:id="_91kJskXuEeeNrMhg6pDppw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_91kJtEXuEeeNrMhg6pDppw" name="f1_micro_machine" type="_RcAFIEXsEeeNrMhg6pDppw" association="_91kJsEXuEeeNrMhg6pDppw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_8V-5EEdpEee5F8b1qsyZMA" name="MQTTConfigServer"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Jif5QEqBEeemwObUvM0ZZA" name="GenericTestExecutor"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Z4yLMEqBEeemwObUvM0ZZA" name="GenericPhysicalMetric"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_U4jccEqKEeemwObUvM0ZZA" name="MQTTConfigClient"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_wgQJgE0BEeedg6nzD0_JBg" name="IngestionClient">
+        <ownedAttribute xmi:id="_Eu1is00CEeedg6nzD0_JBg" name="bts_monitoring_data_service" type="_-WXkwE0BEeedg6nzD0_JBg" association="_Eu1isE0CEeedg6nzD0_JBg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JnYmAE0CEeedg6nzD0_JBg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JnbpUE0CEeedg6nzD0_JBg" value="*"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_E8nFgE9eEee-m7qAtQ_W2A" name="getDataService"/>
+        <ownedOperation xmi:id="_IXbmkE9eEee-m7qAtQ_W2A" name="setDataService"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_-WXkwE0BEeedg6nzD0_JBg" name="BTSMonitoringDataService"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Eu1isE0CEeedg6nzD0_JBg" name="IngestionClient_BTSMonitoringDataService" memberEnd="_Eu1is00CEeedg6nzD0_JBg _Eu2JwE0CEeedg6nzD0_JBg" navigableOwnedEnd="_Eu2JwE0CEeedg6nzD0_JBg">
+        <eAnnotations xmi:id="_Eu1isU0CEeedg6nzD0_JBg" source="org.eclipse.papyrus">
+          <details xmi:id="_Eu1isk0CEeedg6nzD0_JBg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_Eu2JwE0CEeedg6nzD0_JBg" name="ingestion_client" type="_wgQJgE0BEeedg6nzD0_JBg" association="_Eu1isE0CEeedg6nzD0_JBg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KDPbkE0CEeedg6nzD0_JBg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KDRQwE0CEeedg6nzD0_JBg" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_YFToIE0CEeedg6nzD0_JBg" name="CassandraConfig1"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_airpgE0CEeedg6nzD0_JBg" name="GoogleBigQueryConfig1"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_5-LIME9AEee-m7qAtQ_W2A" name="BTSUncertainty">
+        <ownedComment xmi:id="_bHB-cE9MEee-m7qAtQ_W2A" annotatedElement="_sf5kME9LEee-m7qAtQ_W2A">
+          <body>indeterminacySource = MQTTConfig001&#xD;
+description = &quot;Missing QoS Level specification.&quot;</body>
+        </ownedComment>
+        <ownedComment xmi:id="_M-hWME9NEee-m7qAtQ_W2A" annotatedElement="_rB2ZME9IEee-m7qAtQ_W2A">
+          <body>measureinDT = Integer&#xD;
+measure = Probability</body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Class" xmi:id="_MlpZoE9BEee-m7qAtQ_W2A" name="MQTT QoS Uncertainty">
+          <ownedAttribute xmi:id="_7gt4AE9LEee-m7qAtQ_W2A" name="mqtt data delivery uncertainty" type="_sf5kME9LEee-m7qAtQ_W2A" association="_7gtQ8E9LEee-m7qAtQ_W2A"/>
+          <ownedAttribute xmi:id="__A8dg09LEee-m7qAtQ_W2A" name="mqtt datadeliveryuncertainty measurement" type="_rB2ZME9IEee-m7qAtQ_W2A" association="__A8dgE9LEee-m7qAtQ_W2A"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_rB2ZME9IEee-m7qAtQ_W2A" name="MQTT DataDeliveryUncertainty Measurement"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_sf5kME9LEee-m7qAtQ_W2A" name="MQTT Data Delivery Uncertainty"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_7gtQ8E9LEee-m7qAtQ_W2A" memberEnd="_7gt4AE9LEee-m7qAtQ_W2A _7gt4AU9LEee-m7qAtQ_W2A">
+          <eAnnotations xmi:id="_7gtQ8U9LEee-m7qAtQ_W2A" source="org.eclipse.papyrus">
+            <details xmi:id="_7gtQ8k9LEee-m7qAtQ_W2A" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="_7gt4AU9LEee-m7qAtQ_W2A" name="mqtt qos uncertainty" type="_MlpZoE9BEee-m7qAtQ_W2A" association="_7gtQ8E9LEee-m7qAtQ_W2A"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="__A8dgE9LEee-m7qAtQ_W2A" memberEnd="__A8dg09LEee-m7qAtQ_W2A __A8dhE9LEee-m7qAtQ_W2A">
+          <eAnnotations xmi:id="__A8dgU9LEee-m7qAtQ_W2A" source="org.eclipse.papyrus">
+            <details xmi:id="__A8dgk9LEee-m7qAtQ_W2A" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:id="__A8dhE9LEee-m7qAtQ_W2A" name="mqtt qos uncertainty" type="_MlpZoE9BEee-m7qAtQ_W2A" association="__A8dgE9LEee-m7qAtQ_W2A"/>
+        </packagedElement>
+        <profileApplication xmi:id="_CuixoE9BEee-m7qAtQ_W2A">
+          <eAnnotations xmi:id="_e7xHFVZtEee76uo3JJGiSg" source="PapyrusVersion">
+            <details xmi:id="_e7xHFlZtEee76uo3JJGiSg" key="Version" value="0.0.13"/>
+            <details xmi:id="_e7xHF1ZtEee76uo3JJGiSg" key="Comment" value=""/>
+            <details xmi:id="_e7xHGFZtEee76uo3JJGiSg" key="Copyright" value=""/>
+            <details xmi:id="_e7xHGVZtEee76uo3JJGiSg" key="Date" value="2017-06-16"/>
+            <details xmi:id="_e7xHGlZtEee76uo3JJGiSg" key="Author" value=""/>
+          </eAnnotations>
+          <eAnnotations xmi:id="_Cuj_wE9BEee-m7qAtQ_W2A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <references xmi:type="ecore:EPackage" href="../profiles/U-Profile.profile.uml#_b0Y7MFKjEeed76oMGqCQiQ"/>
+          </eAnnotations>
+          <appliedProfile href="../profiles/U-Profile.profile.uml#_SFfNUJQmEeWVWKdOybk1ZQ"/>
+        </profileApplication>
+        <profileApplication xmi:id="_Cukm0E9BEee-m7qAtQ_W2A">
+          <eAnnotations xmi:id="_2fEKMHXmEeejaaLU6EnJWw" source="PapyrusVersion">
+            <details xmi:id="_2fEKMXXmEeejaaLU6EnJWw" key="Version" value="0.0.55"/>
+            <details xmi:id="_2fEKMnXmEeejaaLU6EnJWw" key="Comment" value=""/>
+            <details xmi:id="_2fEKM3XmEeejaaLU6EnJWw" key="Copyright" value=""/>
+            <details xmi:id="_2fEKNHXmEeejaaLU6EnJWw" key="Date" value="2017-07-31"/>
+            <details xmi:id="_2fEKNXXmEeejaaLU6EnJWw" key="Author" value=""/>
+          </eAnnotations>
+          <eAnnotations xmi:id="_CulN4E9BEee-m7qAtQ_W2A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_RjE_kHXmEeejaaLU6EnJWw"/>
+          </eAnnotations>
+          <appliedProfile href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_cCy_MAfnEeeZEbTOKh85Qw"/>
+        </profileApplication>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TKc1YFDsEeeBaKpUcWLICA" name="GoogleComputeEngineConfig1"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_wv53EFZtEee76uo3JJGiSg" name="BTS_TestExecutor_001"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_6vtsAFgWEeeeTquJkarvqA" name="BigQuery">
+        <generalization xmi:id="_7a_doFgWEeeeTquJkarvqA" general="_-WXkwE0BEeedg6nzD0_JBg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Jwm4UFgXEeeeTquJkarvqA" name="CassandraComputingConfiguration1"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3mxn4F12Eeel-tS9I1vO3w" name="MQTTBrokerLocal">
+        <generalization xmi:id="_Gq8KoF13Eeel-tS9I1vO3w" general="_YSRUIERREeeXpvCVjWTYeA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_I9-kQF13Eeel-tS9I1vO3w" name="MQTTBroker2Google">
+        <generalization xmi:id="_ySxFsF14Eeel-tS9I1vO3w" general="_YSRUIERREeeXpvCVjWTYeA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_-mtjkF14Eeel-tS9I1vO3w" name="LocalProvider"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_k85bUF15Eeel-tS9I1vO3w" name="GoogleProvider"/>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_vz9ukJJKEeeeSL7FBGSdJA" name="TemperatureSensor1" classifier="_WqOYQERREeeXpvCVjWTYeA">
+        <slot xmi:id="_2PSzQJJKEeeeSL7FBGSdJA" definingFeature="_QQDfQERTEeeXpvCVjWTYeA"/>
+        <slot xmi:id="_ZCa-gZJMEeeeSL7FBGSdJA" definingFeature="_QQDfQERTEeeXpvCVjWTYeA">
+          <value xmi:type="uml:InstanceValue" xmi:id="_ZCa-gpJMEeeeSL7FBGSdJA" name="InstanceValue1" type="_2GTaEERQEeeXpvCVjWTYeA" instance="_VUWxUJJMEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_7dxDQJJKEeeeSL7FBGSdJA" name="ElectricitySensor1" classifier="_TonUQEUIEeebuPNq01--pQ">
+        <slot xmi:id="_8FCeoJJKEeeeSL7FBGSdJA" definingFeature="_Y0dHAkUIEeebuPNq01--pQ"/>
+        <slot xmi:id="_Ol6jYZJMEeeeSL7FBGSdJA" definingFeature="_Y0dHAkUIEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_Ol8_oJJMEeeeSL7FBGSdJA" name="InstanceValue1" type="_Ucis0EReEeeXpvCVjWTYeA" instance="_KJNukJJMEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_8jQrsJJKEeeeSL7FBGSdJA" name="AirConditioningSensor1" classifier="_Hxgt8EUJEeebuPNq01--pQ">
+        <slot xmi:id="_9NRSAJJKEeeeSL7FBGSdJA" definingFeature="_QvxCYkUJEeebuPNq01--pQ"/>
+        <slot xmi:id="_nfMKEZJMEeeeSL7FBGSdJA" definingFeature="_QvxCYkUJEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_nfMxIJJMEeeeSL7FBGSdJA" name="InstanceValue1" type="_iSyq8EReEeeXpvCVjWTYeA" instance="_UCjyQJJMEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_Jf79gJJLEeeeSL7FBGSdJA" name="IoTGateway1" classifier="_plYu0EReEeeXpvCVjWTYeA">
+        <slot xmi:id="_KQIrYJJLEeeeSL7FBGSdJA" definingFeature="_pOfQgkUIEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_fdy78JJLEeeeSL7FBGSdJA" instance="_vz9ukJJKEeeeSL7FBGSdJA"/>
+        </slot>
+        <slot xmi:id="_KQKgkJJLEeeeSL7FBGSdJA" definingFeature="_wuTRAUUIEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_s965EJJLEeeeSL7FBGSdJA" instance="_7dxDQJJKEeeeSL7FBGSdJA"/>
+        </slot>
+        <slot xmi:id="_KQLusJJLEeeeSL7FBGSdJA" definingFeature="_N0e9AkUJEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_ylEu0JJLEeeeSL7FBGSdJA" instance="_8jQrsJJKEeeeSL7FBGSdJA"/>
+        </slot>
+        <slot xmi:id="_-ouG4JJLEeeeSL7FBGSdJA" definingFeature="_pOfQgkUIEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_-out8JJLEeeeSL7FBGSdJA" name="InstanceValue1" type="_WqOYQERREeeXpvCVjWTYeA" instance="_vz9ukJJKEeeeSL7FBGSdJA"/>
+        </slot>
+        <slot xmi:id="_Aet_MZJMEeeeSL7FBGSdJA" definingFeature="_N0e9AkUJEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_AeumQJJMEeeeSL7FBGSdJA" name="InstanceValue1" type="_Hxgt8EUJEeebuPNq01--pQ" instance="_8jQrsJJKEeeeSL7FBGSdJA"/>
+        </slot>
+        <slot xmi:id="_Cj14oZJMEeeeSL7FBGSdJA" definingFeature="_wuTRAUUIEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_Cj2fsJJMEeeeSL7FBGSdJA" name="InstanceValue1" type="_TonUQEUIEeebuPNq01--pQ" instance="_7dxDQJJKEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_-AAhEJJLEeeeSL7FBGSdJA" name="IoTGateway1ToTemperatureSensor1" classifier="_pOepcEUIEeebuPNq01--pQ">
+        <eAnnotations xmi:id="_-otf0JJLEeeeSL7FBGSdJA" source="InstanceEnd" references="_vz9ukJJKEeeeSL7FBGSdJA _Jf79gJJLEeeeSL7FBGSdJA"/>
+        <slot xmi:id="_-ovVAJJLEeeeSL7FBGSdJA" definingFeature="_pOf3kEUIEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_-ovVAZJLEeeeSL7FBGSdJA" name="InstanceValue1" type="_plYu0EReEeeXpvCVjWTYeA" instance="_Jf79gJJLEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_AGfscJJMEeeeSL7FBGSdJA" name="IoTGateway1ToAirConditioningSensor1" classifier="_N0eV8EUJEeebuPNq01--pQ">
+        <eAnnotations xmi:id="_Aet_MJJMEeeeSL7FBGSdJA" source="InstanceEnd" references="_8jQrsJJKEeeeSL7FBGSdJA _Jf79gJJLEeeeSL7FBGSdJA"/>
+        <slot xmi:id="_AeumQZJMEeeeSL7FBGSdJA" definingFeature="_N0gLIEUJEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_AeumQpJMEeeeSL7FBGSdJA" name="InstanceValue1" type="_plYu0EReEeeXpvCVjWTYeA" instance="_Jf79gJJLEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_CGAGEJJMEeeeSL7FBGSdJA" name="IOTGateway1ToElectricitySensor1" classifier="_wuSp8EUIEeebuPNq01--pQ">
+        <eAnnotations xmi:id="_Cj14oJJMEeeeSL7FBGSdJA" source="InstanceEnd" references="_7dxDQJJKEeeeSL7FBGSdJA _Jf79gJJLEeeeSL7FBGSdJA"/>
+        <slot xmi:id="_Cj3GwJJMEeeeSL7FBGSdJA" definingFeature="_wuT4EEUIEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_Cj3t0JJMEeeeSL7FBGSdJA" name="InstanceValue1" type="_plYu0EReEeeXpvCVjWTYeA" instance="_Jf79gJJLEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_KJNukJJMEeeeSL7FBGSdJA" name="HardwareElectricitySensor1" classifier="_Ucis0EReEeeXpvCVjWTYeA"/>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_ORw4UJJMEeeeSL7FBGSdJA" name="ElectricitySensor1ToHardwareElectricitySensor1" classifier="_Y0cf8EUIEeebuPNq01--pQ">
+        <eAnnotations xmi:id="_Ol6jYJJMEeeeSL7FBGSdJA" source="InstanceEnd" references="_KJNukJJMEeeeSL7FBGSdJA _7dxDQJJKEeeeSL7FBGSdJA"/>
+        <slot xmi:id="_Ol9msJJMEeeeSL7FBGSdJA" definingFeature="_Y0e8MEUIEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_Ol9msZJMEeeeSL7FBGSdJA" name="InstanceValue1" type="_TonUQEUIEeebuPNq01--pQ" instance="_7dxDQJJKEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_UCjyQJJMEeeeSL7FBGSdJA" name="HwAirConditioningSensor1" classifier="_iSyq8EReEeeXpvCVjWTYeA"/>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_VUWxUJJMEeeeSL7FBGSdJA" name="HwTemperatureSensor1" classifier="_2GTaEERQEeeXpvCVjWTYeA"/>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nIh9kJJMEeeeSL7FBGSdJA" name="AirConditioningSensor1ToHwAirConditioningSensor1" classifier="_QvwbUEUJEeebuPNq01--pQ">
+        <eAnnotations xmi:id="_nfMKEJJMEeeeSL7FBGSdJA" source="InstanceEnd" references="_UCjyQJJMEeeeSL7FBGSdJA _8jQrsJJKEeeeSL7FBGSdJA"/>
+        <slot xmi:id="_nfMxIZJMEeeeSL7FBGSdJA" definingFeature="_QvxpcEUJEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_nfMxIpJMEeeeSL7FBGSdJA" name="InstanceValue1" type="_Hxgt8EUJEeebuPNq01--pQ" instance="_8jQrsJJKEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_oLrcoJJMEeeeSL7FBGSdJA" name="TemperatureSensor1ToHwTemperatureSensor1"/>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_vPmLUJJMEeeeSL7FBGSdJA" name="BTSBroker1Local" classifier="_YSRUIERREeeXpvCVjWTYeA">
+        <slot xmi:id="_x16GQJJMEeeeSL7FBGSdJA" definingFeature="_Xcl-ckRTEeeXpvCVjWTYeA"/>
+        <slot xmi:id="_x17UYpJMEeeeSL7FBGSdJA" definingFeature="_hrJa4kUIEeebuPNq01--pQ"/>
+        <slot xmi:id="_KfGpkZJNEeeeSL7FBGSdJA" definingFeature="_hrJa4kUIEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_KfHQoJJNEeeeSL7FBGSdJA" name="InstanceValue1" type="_plYu0EReEeeXpvCVjWTYeA" instance="_Jf79gJJLEeeeSL7FBGSdJA"/>
+        </slot>
+        <slot xmi:id="_DVXKQZJOEeeeSL7FBGSdJA" definingFeature="_5-2t4JJNEeeeSL7FBGSdJA">
+          <value xmi:type="uml:InstanceValue" xmi:id="_DVXxUJJOEeeeSL7FBGSdJA" name="InstanceValue1" type="_-mtjkF14Eeel-tS9I1vO3w" instance="_imoqQJJNEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_CmlOIJJNEeeeSL7FBGSdJA" name="BTSBroker2Google" classifier="_YSRUIERREeeXpvCVjWTYeA">
+        <slot xmi:id="_ERURoJJNEeeeSL7FBGSdJA" definingFeature="_Xcl-ckRTEeeXpvCVjWTYeA"/>
+        <slot xmi:id="_ERVfwJJNEeeeSL7FBGSdJA" definingFeature="_hrJa4kUIEeebuPNq01--pQ"/>
+        <slot xmi:id="_LxrrwZJNEeeeSL7FBGSdJA" definingFeature="_hrJa4kUIEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_LxrrwpJNEeeeSL7FBGSdJA" name="InstanceValue1" type="_plYu0EReEeeXpvCVjWTYeA" instance="_Jf79gJJLEeeeSL7FBGSdJA"/>
+        </slot>
+        <slot xmi:id="_EcqwkZJOEeeeSL7FBGSdJA" definingFeature="_7YEjkZJNEeeeSL7FBGSdJA">
+          <value xmi:type="uml:InstanceValue" xmi:id="_EcrXoJJOEeeeSL7FBGSdJA" name="InstanceValue1" type="_k85bUF15Eeel-tS9I1vO3w" instance="_S2hngJJNEeeeSL7FBGSdJA"/>
+        </slot>
+        <slot xmi:id="_PhSUkZJOEeeeSL7FBGSdJA" definingFeature="_Xcl-ckRTEeeXpvCVjWTYeA">
+          <value xmi:type="uml:InstanceValue" xmi:id="_PhSUkpJOEeeeSL7FBGSdJA" name="InstanceValue1" type="_wgQJgE0BEeedg6nzD0_JBg" instance="_JH37cJJOEeeeSL7FBGSdJA"/>
+        </slot>
+        <slot xmi:id="_zbACgZJREeeeSL7FBGSdJA" definingFeature="_7YEjkZJNEeeeSL7FBGSdJA">
+          <value xmi:type="uml:InstanceValue" xmi:id="_zbApkJJREeeeSL7FBGSdJA" name="InstanceValue1" type="_k85bUF15Eeel-tS9I1vO3w" instance="_S2hngJJNEeeeSL7FBGSdJA"/>
+        </slot>
+        <slot xmi:id="_HDP0cZJSEeeeSL7FBGSdJA" definingFeature="_Xcl-ckRTEeeXpvCVjWTYeA">
+          <value xmi:type="uml:InstanceValue" xmi:id="_HDQbgJJSEeeeSL7FBGSdJA" name="InstanceValue1" type="_wgQJgE0BEeedg6nzD0_JBg" instance="_JH37cJJOEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_KDpcoJJNEeeeSL7FBGSdJA" name="IotGateway1ToBTSBroker1Local" classifier="_hrIz0EUIEeebuPNq01--pQ">
+        <eAnnotations xmi:id="_KfGpkJJNEeeeSL7FBGSdJA" source="InstanceEnd" references="_Jf79gJJLEeeeSL7FBGSdJA _vPmLUJJMEeeeSL7FBGSdJA"/>
+        <slot xmi:id="_KfHQoZJNEeeeSL7FBGSdJA" definingFeature="_hrKpAEUIEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_KfHQopJNEeeeSL7FBGSdJA" name="InstanceValue1" type="_YSRUIERREeeXpvCVjWTYeA" instance="_vPmLUJJMEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_LXN9UJJNEeeeSL7FBGSdJA" name="IoTGatewayToBTSBroker2Google" classifier="_hrIz0EUIEeebuPNq01--pQ">
+        <eAnnotations xmi:id="_LxrrwJJNEeeeSL7FBGSdJA" source="InstanceEnd" references="_Jf79gJJLEeeeSL7FBGSdJA _CmlOIJJNEeeeSL7FBGSdJA"/>
+        <slot xmi:id="_Lxrrw5JNEeeeSL7FBGSdJA" definingFeature="_hrKpAEUIEeebuPNq01--pQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_LxrrxJJNEeeeSL7FBGSdJA" name="InstanceValue1" type="_YSRUIERREeeXpvCVjWTYeA" instance="_CmlOIJJNEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_S2hngJJNEeeeSL7FBGSdJA" name="Google1" classifier="_k85bUF15Eeel-tS9I1vO3w"/>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_imoqQJJNEeeeSL7FBGSdJA" name="LocalProvider1" classifier="_-mtjkF14Eeel-tS9I1vO3w"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5-yccJJNEeeeSL7FBGSdJA" memberEnd="_5-2t4JJNEeeeSL7FBGSdJA _5-2t4ZJNEeeeSL7FBGSdJA">
+        <eAnnotations xmi:id="_5-zqkJJNEeeeSL7FBGSdJA" source="org.eclipse.papyrus">
+          <details xmi:id="_5-zqkZJNEeeeSL7FBGSdJA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_5-2t4ZJNEeeeSL7FBGSdJA" name="btsbroker" type="_YSRUIERREeeXpvCVjWTYeA" association="_5-yccJJNEeeeSL7FBGSdJA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_7YD8gJJNEeeeSL7FBGSdJA" memberEnd="_7YEjkZJNEeeeSL7FBGSdJA _7YFxsJJNEeeeSL7FBGSdJA">
+        <eAnnotations xmi:id="_7YD8gZJNEeeeSL7FBGSdJA" source="org.eclipse.papyrus">
+          <details xmi:id="_7YEjkJJNEeeeSL7FBGSdJA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_7YFxsJJNEeeeSL7FBGSdJA" name="btsbroker" type="_YSRUIERREeeXpvCVjWTYeA" association="_7YD8gJJNEeeeSL7FBGSdJA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_C3JkQJJOEeeeSL7FBGSdJA" name="BTSBroker1LocalToLocalProvider1" classifier="_5-yccJJNEeeeSL7FBGSdJA">
+        <eAnnotations xmi:id="_DVXKQJJOEeeeSL7FBGSdJA" source="InstanceEnd" references="_imoqQJJNEeeeSL7FBGSdJA _vPmLUJJMEeeeSL7FBGSdJA"/>
+        <slot xmi:id="_DVXxUZJOEeeeSL7FBGSdJA" definingFeature="_5-2t4ZJNEeeeSL7FBGSdJA">
+          <value xmi:type="uml:InstanceValue" xmi:id="_DVXxUpJOEeeeSL7FBGSdJA" name="InstanceValue1" type="_YSRUIERREeeXpvCVjWTYeA" instance="_vPmLUJJMEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_JH37cJJOEeeeSL7FBGSdJA" name="IngestionClient1" classifier="_wgQJgE0BEeedg6nzD0_JBg">
+        <slot xmi:id="_LgtbEJJOEeeeSL7FBGSdJA" definingFeature="_Eu1is00CEeedg6nzD0_JBg"/>
+        <slot xmi:id="_Mi0tcZJQEeeeSL7FBGSdJA" definingFeature="_Eu1is00CEeedg6nzD0_JBg">
+          <value xmi:type="uml:InstanceValue" xmi:id="_Mi0tcpJQEeeeSL7FBGSdJA" name="InstanceValue1" type="_-WXkwE0BEeedg6nzD0_JBg" instance="_t_NaIJJPEeeeSL7FBGSdJA"/>
+        </slot>
+        <slot xmi:id="_NqZZgZJQEeeeSL7FBGSdJA" definingFeature="_Eu1is00CEeedg6nzD0_JBg">
+          <value xmi:type="uml:InstanceValue" xmi:id="_NqaAkJJQEeeeSL7FBGSdJA" name="InstanceValue1" type="_-WXkwE0BEeedg6nzD0_JBg" instance="_ylvgYJJPEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_t_NaIJJPEeeeSL7FBGSdJA" name="BTSMonitoringDataService1" classifier="_6vtsAFgWEeeeTquJkarvqA"/>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_ylvgYJJPEeeeSL7FBGSdJA" name="BTSMonitoringDataService2" classifier="_6-Kj4JJPEeeeSL7FBGSdJA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_6-Kj4JJPEeeeSL7FBGSdJA" name="Cassandra">
+        <generalization xmi:id="_9zEUcJJPEeeeSL7FBGSdJA" general="_-WXkwE0BEeedg6nzD0_JBg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_MQ-vgJJQEeeeSL7FBGSdJA" name="IngestionClient1ToBTSMonitoringDataService1" classifier="_Eu1isE0CEeedg6nzD0_JBg">
+        <eAnnotations xmi:id="_Mi0tcJJQEeeeSL7FBGSdJA" source="InstanceEnd" references="_t_NaIJJPEeeeSL7FBGSdJA _JH37cJJOEeeeSL7FBGSdJA"/>
+        <slot xmi:id="_Mi0tc5JQEeeeSL7FBGSdJA" definingFeature="_Eu2JwE0CEeedg6nzD0_JBg">
+          <value xmi:type="uml:InstanceValue" xmi:id="_Mi0tdJJQEeeeSL7FBGSdJA" name="InstanceValue1" type="_wgQJgE0BEeedg6nzD0_JBg" instance="_JH37cJJOEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_NXSQQJJQEeeeSL7FBGSdJA" name="IngestionClient1ToBTSMonitoringDataService2" classifier="_Eu1isE0CEeedg6nzD0_JBg">
+        <eAnnotations xmi:id="_NqZZgJJQEeeeSL7FBGSdJA" source="InstanceEnd" references="_ylvgYJJPEeeeSL7FBGSdJA _JH37cJJOEeeeSL7FBGSdJA"/>
+        <slot xmi:id="_NqaAkZJQEeeeSL7FBGSdJA" definingFeature="_Eu2JwE0CEeedg6nzD0_JBg">
+          <value xmi:type="uml:InstanceValue" xmi:id="_NqaAkpJQEeeeSL7FBGSdJA" name="InstanceValue1" type="_wgQJgE0BEeedg6nzD0_JBg" instance="_JH37cJJOEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_ReZ2oJJQEeeeSL7FBGSdJA" name="MQTTConfig1" classifier="_8V-5EEdpEee5F8b1qsyZMA"/>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_Yr3i4JJQEeeeSL7FBGSdJA" name="MQTTConfig2" classifier="_U4jccEqKEeemwObUvM0ZZA"/>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_zKp5YJJREeeeSL7FBGSdJA" name="BTSBroker2GoogleToGoogle1" classifier="_7YD8gJJNEeeeSL7FBGSdJA">
+        <eAnnotations xmi:id="_zbACgJJREeeeSL7FBGSdJA" source="InstanceEnd" references="_S2hngJJNEeeeSL7FBGSdJA _CmlOIJJNEeeeSL7FBGSdJA"/>
+        <slot xmi:id="_zbApkZJREeeeSL7FBGSdJA" definingFeature="_7YFxsJJNEeeeSL7FBGSdJA">
+          <value xmi:type="uml:InstanceValue" xmi:id="_zbApkpJREeeeSL7FBGSdJA" name="InstanceValue1" type="_YSRUIERREeeXpvCVjWTYeA" instance="_CmlOIJJNEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_Gss8sJJSEeeeSL7FBGSdJA" name="BTSBroker2GoogleToIngestionClient1" classifier="_XclXYERTEeeXpvCVjWTYeA">
+        <eAnnotations xmi:id="_HDP0cJJSEeeeSL7FBGSdJA" source="InstanceEnd" references="_JH37cJJOEeeeSL7FBGSdJA _CmlOIJJNEeeeSL7FBGSdJA"/>
+        <slot xmi:id="_HDRCkJJSEeeeSL7FBGSdJA" definingFeature="_Xcl-c0RTEeeXpvCVjWTYeA">
+          <value xmi:type="uml:InstanceValue" xmi:id="_HDRCkZJSEeeeSL7FBGSdJA" name="InstanceValue1" type="_YSRUIERREeeXpvCVjWTYeA" instance="_CmlOIJJNEeeeSL7FBGSdJA"/>
+        </slot>
+      </packagedElement>
+      <profileApplication xmi:id="_veqYME9HEee-m7qAtQ_W2A">
+        <eAnnotations xmi:id="_2fXFIHXmEeejaaLU6EnJWw" source="PapyrusVersion">
+          <details xmi:id="_2fXFIXXmEeejaaLU6EnJWw" key="Version" value="0.0.55"/>
+          <details xmi:id="_2fXFInXmEeejaaLU6EnJWw" key="Comment" value=""/>
+          <details xmi:id="_2fXFI3XmEeejaaLU6EnJWw" key="Copyright" value=""/>
+          <details xmi:id="_2fXFJHXmEeejaaLU6EnJWw" key="Date" value="2017-07-31"/>
+          <details xmi:id="_2fXFJXXmEeejaaLU6EnJWw" key="Author" value=""/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_vermUE9HEee-m7qAtQ_W2A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_RjE_kHXmEeejaaLU6EnJWw"/>
+        </eAnnotations>
+        <appliedProfile href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_cCy_MAfnEeeZEbTOKh85Qw"/>
+      </profileApplication>
+      <profileApplication xmi:id="_xEcqQE9HEee-m7qAtQ_W2A">
+        <eAnnotations xmi:id="_e5J3-FZtEee76uo3JJGiSg" source="PapyrusVersion">
+          <details xmi:id="_e5J3-VZtEee76uo3JJGiSg" key="Version" value="0.0.13"/>
+          <details xmi:id="_e5J3-lZtEee76uo3JJGiSg" key="Comment" value=""/>
+          <details xmi:id="_e5J3-1ZtEee76uo3JJGiSg" key="Copyright" value=""/>
+          <details xmi:id="_e5J3_FZtEee76uo3JJGiSg" key="Date" value="2017-06-16"/>
+          <details xmi:id="_e5J3_VZtEee76uo3JJGiSg" key="Author" value=""/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_xEcqQU9HEee-m7qAtQ_W2A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../profiles/U-Profile.profile.uml#_b0Y7MFKjEeed76oMGqCQiQ"/>
+        </eAnnotations>
+        <appliedProfile href="../profiles/U-Profile.profile.uml#_SFfNUJQmEeWVWKdOybk1ZQ"/>
+      </profileApplication>
+      <profileApplication xmi:id="_Oqeb8HYAEeeo94v8rkBTgA">
+        <eAnnotations xmi:id="_B5ShsJL6EeewvI_4uoLsHw" source="PapyrusVersion">
+          <details xmi:id="_B5ShsZL6EeewvI_4uoLsHw" key="Version" value="0.0.206"/>
+          <details xmi:id="_B5ShspL6EeewvI_4uoLsHw" key="Comment" value=""/>
+          <details xmi:id="_B5Shs5L6EeewvI_4uoLsHw" key="Copyright" value=""/>
+          <details xmi:id="_B5ShtJL6EeewvI_4uoLsHw" key="Date" value="2017-09-06"/>
+          <details xmi:id="_B5ShtZL6EeewvI_4uoLsHw" key="Author" value=""/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_OqfDAHYAEeeo94v8rkBTgA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureCPSProfile.profile.uml#_95vi8JL5EeewvI_4uoLsHw"/>
+        </eAnnotations>
+        <appliedProfile href="../profiles/InfrastructureCPSProfile.profile.uml#_gJjV8PUfEeaI5-4OrfiDWg"/>
+      </profileApplication>
+    </packagedElement>
+    <profileApplication xmi:id="_rJP24BVOEeev2_sZ3ngp-w">
+      <eAnnotations xmi:id="_B4U4YJL6EeewvI_4uoLsHw" source="PapyrusVersion">
+        <details xmi:id="_B4U4YZL6EeewvI_4uoLsHw" key="Version" value="0.0.206"/>
+        <details xmi:id="_B4U4YpL6EeewvI_4uoLsHw" key="Comment" value=""/>
+        <details xmi:id="_B4U4Y5L6EeewvI_4uoLsHw" key="Copyright" value=""/>
+        <details xmi:id="_B4U4ZJL6EeewvI_4uoLsHw" key="Date" value="2017-09-06"/>
+        <details xmi:id="_B4U4ZZL6EeewvI_4uoLsHw" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:id="_rJQd8BVOEeev2_sZ3ngp-w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureCPSProfile.profile.uml#_95vi8JL5EeewvI_4uoLsHw"/>
+      </eAnnotations>
+      <appliedProfile href="../profiles/InfrastructureCPSProfile.profile.uml#_gJjV8PUfEeaI5-4OrfiDWg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_rJSTIBVOEeev2_sZ3ngp-w">
+      <eAnnotations xmi:id="_j2JfUHaLEeeo94v8rkBTgA" source="PapyrusVersion">
+        <details xmi:id="_j2JfUXaLEeeo94v8rkBTgA" key="Version" value="0.0.3"/>
+        <details xmi:id="_j2JfUnaLEeeo94v8rkBTgA" key="Comment" value=""/>
+        <details xmi:id="_j2JfU3aLEeeo94v8rkBTgA" key="Copyright" value=""/>
+        <details xmi:id="_j2JfVHaLEeeo94v8rkBTgA" key="Date" value="2017-08-01"/>
+        <details xmi:id="_j2JfVXaLEeeo94v8rkBTgA" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:id="_rJSTIRVOEeev2_sZ3ngp-w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profiles/Internal%20U-Profile%20Library.profile.uml#_UEztgHaLEeeo94v8rkBTgA"/>
+      </eAnnotations>
+      <appliedProfile href="../profiles/Internal%20U-Profile%20Library.profile.uml#_k1AzAK1KEeWCop0vWwuZNg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDPBoCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDPosCQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//GRM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_XVWGUAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDQPwCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDQPwSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//NFPs"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_U_GAoAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDQ20CQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDQ20SQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//Time"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_WStkoAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDRd4CQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDRd4SQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//Alloc"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_ar8OsAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDSE8CQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDSE8SQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//CoreElements"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_-wEewECLEd6UTJZnztgOLw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDSsACQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDSsASQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HLAM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_yNSZIAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDSsAiQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDTTECQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_2dtsgAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDTTESQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDTTEiQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_P80EcBJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDT6ICQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDT6ISQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwComputing"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_aMhZsBJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDUhMCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDUhMSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwCommunication"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_bmL7UBJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDVIQCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDVIQSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwTiming"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_dG2c0BJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDVvUCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDVvUSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwDevice"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_ja8REBJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDW9cCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDW9cSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwStorage"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_ZJjPoEIbEd6dmI2dd6jVFQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDXkgCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDYLkCQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwStorage/HwMemory"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_gHI-ABJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDYLkSQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDYyoCQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwStorage/HwStorageManager"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_hst0sBJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDZZsCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDZZsSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwPhysical"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_R7sL8BJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDaAwCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDaAwSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwPhysical/HwLayout"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_uAf6gBJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDan0CQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDan0SQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwPhysical/HwPower"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_vrbyUBJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDbO4CQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDbO4SQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwGeneral"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_WGZ44BJwEdygQ5HMNSpiZw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDb18CQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDcdACQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//SRM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_3VS0wAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDdEECQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDdEESQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//SRM/SW_ResourceCore"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_-1fcUBJdEdy3Td9UhuLFPg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDdrICQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDdrISQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//SRM/SW_Concurrency"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_A_vtYBJeEdy3Td9UhuLFPg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDeSMCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDeSMSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//SRM/SW_Brokering"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_Cf874BJeEdy3Td9UhuLFPg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDe5QCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDfgUCQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//SRM/SW_Interaction"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_EIfnABJeEdy3Td9UhuLFPg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDgHYCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDgHYSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//GCM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_YgAioAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDgucCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDgucSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//GQAM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_4bV20APMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDhVgCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDhVgSQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//SAM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_5ZCOIAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_DDh8kCQzEeeEbt5FCAmS1w">
+      <eAnnotations xmi:id="_DDijoCQzEeeEbt5FCAmS1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/MARTE/1#//PAM"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://Papyrus_PROFILES/MARTE.profile.uml#_6c2bkAPMEdyuUt-4qHuVvQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_b-TvAEO3EeeTNbOHCbo_Mw">
+      <eAnnotations xmi:id="_2gS5QHXmEeejaaLU6EnJWw" source="PapyrusVersion">
+        <details xmi:id="_2gS5QXXmEeejaaLU6EnJWw" key="Version" value="0.0.55"/>
+        <details xmi:id="_2gS5QnXmEeejaaLU6EnJWw" key="Comment" value=""/>
+        <details xmi:id="_2gS5Q3XmEeejaaLU6EnJWw" key="Copyright" value=""/>
+        <details xmi:id="_2gS5RHXmEeejaaLU6EnJWw" key="Date" value="2017-07-31"/>
+        <details xmi:id="_2gS5RXXmEeejaaLU6EnJWw" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:id="_b-U9IEO3EeeTNbOHCbo_Mw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_RjE_kHXmEeejaaLU6EnJWw"/>
+      </eAnnotations>
+      <appliedProfile href="../profiles/InfrastructureUncertaintyProfile.profile.uml#_cCy_MAfnEeeZEbTOKh85Qw"/>
+    </profileApplication>
+  </uml:Model>
+  <InfrastructureCPSProfile:VirtualSensor xmi:id="_WqVtAERREeeXpvCVjWTYeA" base_Class="_WqOYQERREeeXpvCVjWTYeA" id="1" location="this is the location" description="this is the description" timestampMaxLatency="string value for the latency" swCapabilities="_TbFHQFyxEee3fP2vaOmJjA _TbFuUFyxEee3fP2vaOmJjA _TbGVYFyxEee3fP2vaOmJjA _TbGVYVyxEee3fP2vaOmJjA"/>
+  <InfrastructureCPSProfile:CloudService xmi:id="_YSUXcERREeeXpvCVjWTYeA" cloudProvider="_ClOAgF15Eeel-tS9I1vO3w" base_Classifier="_YSRUIERREeeXpvCVjWTYeA" computingConfigs="_o0zB8FDsEeeBaKpUcWLICA" storageConfigs="_8o_AcE0CEeedg6nzD0_JBg _-cciIE0CEeedg6nzD0_JBg" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Class="_YSRUIERREeeXpvCVjWTYeA"/>
+  <GRM:Resource xmi:id="_zTHN0ERdEeeXpvCVjWTYeA" base_Classifier="_OyNLwERUEeeXpvCVjWTYeA"/>
+  <GRM:Resource xmi:id="_1ho64ERdEeeXpvCVjWTYeA" base_Classifier="_YSRUIERREeeXpvCVjWTYeA"/>
+  <GRM:Resource xmi:id="_3drw0ERdEeeXpvCVjWTYeA" base_Classifier="_WqOYQERREeeXpvCVjWTYeA"/>
+  <GRM:Resource xmi:id="_90EEEERdEeeXpvCVjWTYeA" resMult="23" base_Classifier="_2GTaEERQEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:VirtualGateway xmi:id="_plakAEReEeeXpvCVjWTYeA" base_Class="_plYu0EReEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:VirtualSensor xmi:id="_Toy6cEUIEeebuPNq01--pQ" base_Class="_TonUQEUIEeebuPNq01--pQ" location="string value for location" description="string value for the description" swCapabilities="_sfv3gE28EeeW8tmPVB892Q _utqgkE28EeeW8tmPVB892Q _1BRDIE9dEee-m7qAtQ_W2A _1PMKYE9dEee-m7qAtQ_W2A"/>
+  <InfrastructureCPSProfile:VirtualSensor xmi:id="_HxmNgEUJEeebuPNq01--pQ" base_Class="_Hxgt8EUJEeebuPNq01--pQ" location="string value for the location" description="string value for the description" swCapabilities="_P5pSwFyvEee3fP2vaOmJjA _P5wngFyvEee3fP2vaOmJjA _P5x1oFyvEee3fP2vaOmJjA _P53VMFyvEee3fP2vaOmJjA"/>
+  <HwDevice:HWSensor xmi:id="_JZHckEUXEeeNrMhg6pDppw" base_Classifier="_Ucis0EReEeeXpvCVjWTYeA" frequency=""/>
+  <InfrastructureCPSProfile:TestConfiguration xmi:id="_nG9lgEUXEeeNrMhg6pDppw" description="This is the description of Test Configuration Test001." testExecutors="_Jimm8EqBEeemwObUvM0ZZA" base_Class="_juHaYEUXEeeNrMhg6pDppw" configurations="_-k4ZkEdpEee5F8b1qsyZMA _8o_AcE0CEeedg6nzD0_JBg _-cciIE0CEeedg6nzD0_JBg _U4mfwEqKEeemwObUvM0ZZA _o0zB8FDsEeeBaKpUcWLICA"/>
+  <GRM:Resource xmi:id="_DVdHYEXPEeeNrMhg6pDppw" base_Classifier="_iSyq8EReEeeXpvCVjWTYeA"/>
+  <GRM:Resource xmi:id="_qdGLEEXsEeeNrMhg6pDppw" base_Classifier="_RcAFIEXsEeeNrMhg6pDppw"/>
+  <HwMemory:HwRAM xmi:id="_7-a3UEXtEeeNrMhg6pDppw" base_Classifier="_azh1MEXsEeeNrMhg6pDppw" frequency="" elementSize="" memorySize="(0.6, GB)" throughput="" isSynchronous="" isNonVolatile="" repl_Policy="undef" writePolicy="undef"/>
+  <HwMemory:HwMemory xmi:id="_O8cnkEXuEeeNrMhg6pDppw" resMult="4" base_Classifier="_gJhpgEXsEeeNrMhg6pDppw" description="" frequency="" elementSize="" memorySize="(3, TB)"/>
+  <HwComputing:HwProcessor xmi:id="_k32ScEXvEeeNrMhg6pDppw" base_Classifier="_WsMMYEXsEeeNrMhg6pDppw" description="" speedFactor="0.2" nbCores=""/>
+  <GQAM:GaAnalysisContext xmi:id="_z8k5EEXzEeeNrMhg6pDppw" base_StructuredClassifier="_juHaYEUXEeeNrMhg6pDppw" base_NamedElement="_juHaYEUXEeeNrMhg6pDppw"/>
+  <InfrastructureCPSProfile:Communication xmi:id="_irMV4EdpEee5F8b1qsyZMA" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" virtualUnits="_plakAEReEeeXpvCVjWTYeA" base_Association="_hrIz0EUIEeebuPNq01--pQ"/>
+  <InfrastructureCPSProfile:CommunicationConfiguration xmi:id="_-k4ZkEdpEee5F8b1qsyZMA" base_Class="_8V-5EEdpEee5F8b1qsyZMA" id="-1" clientID="Jolla" serverIP="192.168.11.11" portNumber="1883" qosLevel="" keepAlive="210">
+    <topics xmi:id="_H_tucJScEee2Meey2I_6aw">topic001</topics>
+    <topics xmi:id="_H_uVgJScEee2Meey2I_6aw">topic002</topics>
+  </InfrastructureCPSProfile:CommunicationConfiguration>
+  <InfrastructureCPSProfile:Communication xmi:id="_O5SC4EdvEee5F8b1qsyZMA" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Association="_XclXYERTEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:Communication xmi:id="_PVIKAEdyEee5F8b1qsyZMA" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Association="_pOepcEUIEeebuPNq01--pQ"/>
+  <InfrastructureCPSProfile:Communication xmi:id="_Wm0O8EdyEee5F8b1qsyZMA" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Association="_N0eV8EUJEeebuPNq01--pQ"/>
+  <InfrastructureCPSProfile:Communication xmi:id="_bOMCsEdyEee5F8b1qsyZMA" communicationConfigs="_U4mfwEqKEeemwObUvM0ZZA" base_Association="_wuSp8EUIEeebuPNq01--pQ"/>
+  <GRM:Resource xmi:id="_TVNpYEd0Eee5F8b1qsyZMA" base_Classifier="_TonUQEUIEeebuPNq01--pQ"/>
+  <GRM:Resource xmi:id="_VT8m8Ed0Eee5F8b1qsyZMA" base_Classifier="_Hxgt8EUJEeebuPNq01--pQ"/>
+  <GRM:Resource xmi:id="_X3ZbIEd0Eee5F8b1qsyZMA" base_Classifier="_plYu0EReEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:CloudService xmi:id="_HvaygEeWEee5F8b1qsyZMA" base_Classifier="_RcAFIEXsEeeNrMhg6pDppw" base_Class="_RcAFIEXsEeeNrMhg6pDppw"/>
+  <InfrastructureCPSProfile:TestExecutor xmi:id="_Jimm8EqBEeemwObUvM0ZZA" base_Class="_Jif5QEqBEeemwObUvM0ZZA">
+    <strategy xmi:id="_H_uVgZScEee2Meey2I_6aw">all_path_strategy</strategy>
+  </InfrastructureCPSProfile:TestExecutor>
+  <InfrastructureCPSProfile:CommunicationConfiguration xmi:id="_U4mfwEqKEeemwObUvM0ZZA" base_Class="_U4jccEqKEeemwObUvM0ZZA" clientID="" serverIP="35.189.187.208" portNumber="1883" qosLevel="2" keepAlive="undef">
+    <topics xmi:id="_H_u8kJScEee2Meey2I_6aw">gateway/electricity</topics>
+  </InfrastructureCPSProfile:CommunicationConfiguration>
+  <InfrastructureCPSProfile:CloudService xmi:id="_xr75gE0BEeedg6nzD0_JBg" base_Classifier="_wgQJgE0BEeedg6nzD0_JBg" computingConfigs="_o0zB8FDsEeeBaKpUcWLICA" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Class="_wgQJgE0BEeedg6nzD0_JBg"/>
+  <InfrastructureCPSProfile:CloudService xmi:id="_DOETgE0CEeedg6nzD0_JBg" base_Classifier="_-WXkwE0BEeedg6nzD0_JBg" computingConfigs="_o0zB8FDsEeeBaKpUcWLICA" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Class="_-WXkwE0BEeedg6nzD0_JBg"/>
+  <InfrastructureCPSProfile:Communication xmi:id="_NGS84E0CEeedg6nzD0_JBg" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Association="_Eu1isE0CEeedg6nzD0_JBg"/>
+  <InfrastructureCPSProfile:StorageConfiguration xmi:id="_8o_AcE0CEeedg6nzD0_JBg" base_Class="_YFToIE0CEeedg6nzD0_JBg"/>
+  <InfrastructureCPSProfile:StorageConfiguration xmi:id="_-cciIE0CEeedg6nzD0_JBg" base_Class="_airpgE0CEeedg6nzD0_JBg"/>
+  <InfrastructureCPSProfile:InfrastructureElement xmi:id="_Os1VgE0FEeeP5PgJmqSIEQ" base_Class="_OyNLwERUEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:Infrastructure xmi:id="_10K-kE0fEeen7K41utM1aw" base_Package="_lYIzoERQEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_sfv3gE28EeeW8tmPVB892Q" base_Operation="_sfuCUE28EeeW8tmPVB892Q" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_utqgkE28EeeW8tmPVB892Q" base_Operation="_utoEUE28EeeW8tmPVB892Q" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <CoreProfile:BeliefAgent xmi:id="_EPZgYE9BEee-m7qAtQ_W2A" base_Package="_5-LIME9AEee-m7qAtQ_W2A"/>
+  <CoreProfile:BeliefElement xmi:id="_bfMAwE9BEee-m7qAtQ_W2A" base_Classifier="_MlpZoE9BEee-m7qAtQ_W2A" agent="_EPZgYE9BEee-m7qAtQ_W2A"/>
+  <CoreProfile:IndeterminacySource xmi:id="_1UNPQE9HEee-m7qAtQ_W2A" nature="Unclassified" base_Classifier="_8V-5EEdpEee5F8b1qsyZMA" description="Different QoS level affect the data delivery process. Check the qosLevel configuration value."/>
+  <CoreProfile:Measurement xmi:id="_ZpSVcE9JEee-m7qAtQ_W2A" measurement="" base_Element="_rB2ZME9IEee-m7qAtQ_W2A">
+    <measure xmi:type="InternalUProfileLibrary:Probability" xmi:id="_Is6-IE9NEee-m7qAtQ_W2A"/>
+    <measureInDT xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </CoreProfile:Measurement>
+  <InfrastructureUncertaintyProfile:DataDeliveryUncertainty xmi:id="_v-bgkE9LEee-m7qAtQ_W2A" base_Classifier="_sf5kME9LEee-m7qAtQ_W2A" base_Element="_sf5kME9LEee-m7qAtQ_W2A">
+    <description xmi:id="_H_xY0JScEee2Meey2I_6aw">This uncertainty is related to the required QoS configuration of the MQTT protocol used for communication among virtual units. </description>
+  </InfrastructureUncertaintyProfile:DataDeliveryUncertainty>
+  <CoreProfile:IndeterminacySource xmi:id="_uG1lcE9OEee-m7qAtQ_W2A" base_Classifier="_YFToIE0CEeedg6nzD0_JBg"/>
+  <CoreProfile:IndeterminacySource xmi:id="_xoqGYE9OEee-m7qAtQ_W2A" base_Classifier="_airpgE0CEeedg6nzD0_JBg"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_1BRDIE9dEee-m7qAtQ_W2A" base_Operation="_1BPN8E9dEee-m7qAtQ_W2A" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_1PMKYE9dEee-m7qAtQ_W2A" base_Operation="_1PJuIE9dEee-m7qAtQ_W2A" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_E8o6sE9eEee-m7qAtQ_W2A" base_Operation="_E8nFgE9eEee-m7qAtQ_W2A" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_IXdbwE9eEee-m7qAtQ_W2A" base_Operation="_IXbmkE9eEee-m7qAtQ_W2A" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_obYrQE9eEee-m7qAtQ_W2A" base_Operation="_obW2EE9eEee-m7qAtQ_W2A" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:ComputingConfiguration xmi:id="_o0zB8FDsEeeBaKpUcWLICA" base_Class="_TKc1YFDsEeeBaKpUcWLICA"/>
+  <CoreProfile:IndeterminacySource xmi:id="_t44m4FDsEeeBaKpUcWLICA" base_Classifier="_TKc1YFDsEeeBaKpUcWLICA"/>
+  <InfrastructureCPSProfile:TestExecutor xmi:id="_ywOwEFZtEee76uo3JJGiSg" base_Class="_wv53EFZtEee76uo3JJGiSg">
+    <strategy xmi:id="_H_xY0ZScEee2Meey2I_6aw">all_path_strategy</strategy>
+  </InfrastructureCPSProfile:TestExecutor>
+  <InfrastructureCPSProfile:CloudService xmi:id="_CVZrAFgXEeeeTquJkarvqA" base_Classifier="_6vtsAFgWEeeeTquJkarvqA" base_Class="_6vtsAFgWEeeeTquJkarvqA"/>
+  <InfrastructureCPSProfile:ComputingConfiguration xmi:id="_LZ6YcFgXEeeeTquJkarvqA" base_Class="_Jwm4UFgXEeeeTquJkarvqA"/>
+  <CoreProfile:IndeterminacySource xmi:id="_wncJwFquEeesiqa0zE-GKg" base_Classifier="_Jwm4UFgXEeeeTquJkarvqA"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_P5pSwFyvEee3fP2vaOmJjA" base_Operation="_P5dskFyvEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_P5wngFyvEee3fP2vaOmJjA" base_Operation="_P5gv4FyvEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_P5x1oFyvEee3fP2vaOmJjA" base_Operation="_P5h-AFyvEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_P53VMFyvEee3fP2vaOmJjA" base_Operation="_P5ilEFyvEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_TbFHQFyxEee3fP2vaOmJjA" base_Operation="_TbBc4FyxEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_TbFuUFyxEee3fP2vaOmJjA" base_Operation="_TbCrAFyxEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_TbGVYFyxEee3fP2vaOmJjA" base_Operation="_TbD5IFyxEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:SoftwareDefinedCapability xmi:id="_TbGVYVyxEee3fP2vaOmJjA" base_Operation="_TbD5IVyxEee3fP2vaOmJjA" mechanism="mechanism_string" enforcementProtocol="enforcement_protocol_string" endpoint="endpoint_string"/>
+  <InfrastructureCPSProfile:CloudService xmi:id="_ILewUF13Eeel-tS9I1vO3w" base_Classifier="_3mxn4F12Eeel-tS9I1vO3w" communicationConfigs="_-k4ZkEdpEee5F8b1qsyZMA" base_Class="_3mxn4F12Eeel-tS9I1vO3w"/>
+  <InfrastructureCPSProfile:CloudService xmi:id="_p4NUMF14Eeel-tS9I1vO3w" cloudProvider="_o3JDUF15Eeel-tS9I1vO3w" base_Classifier="_I9-kQF13Eeel-tS9I1vO3w" base_Class="_I9-kQF13Eeel-tS9I1vO3w"/>
+  <GRM:Resource xmi:id="_p4qAIF14Eeel-tS9I1vO3w" base_Classifier="_I9-kQF13Eeel-tS9I1vO3w"/>
+  <GRM:Resource xmi:id="_saYWAF14Eeel-tS9I1vO3w" base_Classifier="_3mxn4F12Eeel-tS9I1vO3w"/>
+  <InfrastructureCPSProfile:CloudProvider xmi:id="_ClOAgF15Eeel-tS9I1vO3w" base_Class="_-mtjkF14Eeel-tS9I1vO3w"/>
+  <CoreProfile:IndeterminacySource xmi:id="_VndiYF15Eeel-tS9I1vO3w" base_Classifier="_U4jccEqKEeemwObUvM0ZZA"/>
+  <InfrastructureCPSProfile:CloudProvider xmi:id="_o3JDUF15Eeel-tS9I1vO3w" base_Class="_k85bUF15Eeel-tS9I1vO3w"/>
+  <InfrastructureCPSProfile:Sensor xmi:id="_aqjioHYAEeeo94v8rkBTgA" base_Class="_Ucis0EReEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:Sensor xmi:id="_dm6mEHYAEeeo94v8rkBTgA" base_Class="_2GTaEERQEeeXpvCVjWTYeA"/>
+  <InfrastructureCPSProfile:Sensor xmi:id="_hwHQEHYAEeeo94v8rkBTgA" base_Class="_iSyq8EReEeeXpvCVjWTYeA"/>
+  <CoreProfile:IndeterminacySource xmi:id="_MeMFMHheEeejYaoXzpI5Mw" nature="MissingInfo" base_Classifier="_Hxgt8EUJEeebuPNq01--pQ"/>
+  <CoreProfile:IndeterminacySource xmi:id="_NvOPQHheEeejYaoXzpI5Mw" base_Classifier="_TonUQEUIEeebuPNq01--pQ"/>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_aXRX0HkBEeeF4q95eCsWQA" base_Element="_aVz_QHkBEeeF4q95eCsWQA"/>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_bV48MHkBEeeF4q95eCsWQA" base_Element="_bVmoUHkBEeeF4q95eCsWQA"/>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="_bxnO4HkBEeeF4q95eCsWQA" base_Element="_bxYlYHkBEeeF4q95eCsWQA"/>
+  <CoreProfile:IndeterminacySource xmi:id="_bxq5QHkBEeeF4q95eCsWQA" base_Classifier="_WqOYQERREeeXpvCVjWTYeA"/>
+  <InfrastructureUncertaintyProfile:InfrastructureLevelUncertainty xmi:id="__Ik_cJFKEeeg7I_dc5cOWQ" base_Element="__HCHUJFKEeeg7I_dc5cOWQ"/>
+  <InfrastructureCPSProfile:CloudService xmi:id="__oSJoJJPEeeeSL7FBGSdJA" base_Classifier="_6-Kj4JJPEeeeSL7FBGSdJA" base_Class="_6-Kj4JJPEeeeSL7FBGSdJA"/>
+  <InfrastructureCPSProfile:Sensor xmi:id="_hz9v0JJQEeeeSL7FBGSdJA" base_InstanceSpecification="_VUWxUJJMEeeeSL7FBGSdJA"/>
+  <InfrastructureCPSProfile:Sensor xmi:id="_jpfHAJJQEeeeSL7FBGSdJA" base_InstanceSpecification="_UCjyQJJMEeeeSL7FBGSdJA"/>
+  <InfrastructureCPSProfile:Sensor xmi:id="_lhWAgJJQEeeeSL7FBGSdJA" base_InstanceSpecification="_KJNukJJMEeeeSL7FBGSdJA"/>
+  <InfrastructureCPSProfile:VirtualSensor xmi:id="_nU96QJJQEeeeSL7FBGSdJA" base_InstanceSpecification="_vz9ukJJKEeeeSL7FBGSdJA"/>
+  <InfrastructureCPSProfile:VirtualSensor xmi:id="_omhowJJQEeeeSL7FBGSdJA" base_InstanceSpecification="_8jQrsJJKEeeeSL7FBGSdJA"/>
+  <InfrastructureCPSProfile:VirtualSensor xmi:id="_qyKZ4JJQEeeeSL7FBGSdJA" base_InstanceSpecification="_7dxDQJJKEeeeSL7FBGSdJA"/>
+  <InfrastructureCPSProfile:VirtualGateway xmi:id="_tQzmkJJQEeeeSL7FBGSdJA" base_InstanceSpecification="_Jf79gJJLEeeeSL7FBGSdJA"/>
+  <InfrastructureCPSProfile:CloudService xmi:id="_xQE4gJJQEeeeSL7FBGSdJA" base_InstanceSpecification="_CmlOIJJNEeeeSL7FBGSdJA"/>
+  <InfrastructureCPSProfile:CloudService xmi:id="_0QIwMJJQEeeeSL7FBGSdJA" base_InstanceSpecification="_vPmLUJJMEeeeSL7FBGSdJA"/>
+  <InfrastructureCPSProfile:CloudProvider xmi:id="_ESrKQJJSEeeeSL7FBGSdJA" base_InstanceSpecification="_imoqQJJNEeeeSL7FBGSdJA"/>
+  <InfrastructureCPSProfile:CloudProvider xmi:id="_Fj3FUJJSEeeeSL7FBGSdJA" base_InstanceSpecification="_S2hngJJNEeeeSL7FBGSdJA"/>
+</xmi:XMI>

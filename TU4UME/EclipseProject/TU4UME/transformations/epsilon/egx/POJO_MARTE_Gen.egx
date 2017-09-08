@@ -1,0 +1,14 @@
+//generate Java POJO classes for each stereotype
+rule Stereotype2POJO	
+	transform stereo : Stereotype {
+	
+		template : "../egl/POJO_MARTE_Stereotype_GenTemplate.egl"
+		target : "../../../../TU4UME/src/at/ac/tuwien/dsg/uml/profiles/marte/stereotypes/pojos/" + stereo.name + ".java"
+	}
+	
+rule Enum2POJO	
+	transform enum : Enumeration {
+	
+		template : "../egl/POJO_MARTE_Enumeration_GenTemplate.egl"
+		target : "../../../../TU4UME/src/at/ac/tuwien/dsg/uml/profiles/marte/enumerations/pojos/" + enum.name + ".java"
+	}	

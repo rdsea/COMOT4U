@@ -1,0 +1,919 @@
+
+import "../../../../../eol/library/element.eol";
+
+/*
+Returns a Sequence of Element annotated with Sensor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package SensorsAsSequence() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isSensor()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+
+/*
+Returns a Sequence of Class annotated with Sensor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package SensorsAsSequenceOfClass() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isClassSensor()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with Sensor.
+ 
+operation isClassSensor(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isSensor() : Boolean in Sensor.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "Class"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of Class annotated with Sensor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONSensorsAsSequenceOfClass() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isClassSensor()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Class from the applied Stereotype Sensor
+
+operation Sensor getBaseClassOfSensor() : Class{
+	var baseClass = new Sensor;
+	baseClass = self.base_Class;
+	return baseClass;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Class from the applied Stereotype Sensor
+
+operation Sensor JSONgetBaseClassOfSensor() : String {
+	var baseClass = new Sensor;
+	baseClass = self.base_Class;
+	
+	var baseClass_string = baseClass.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClass_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype Sensor using native objects.
+ 
+operation Class toJsonSensor() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+/*
+Returns a Sequence of InstanceSpecification annotated with Sensor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package SensorsAsSequenceOfInstanceSpecification() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInstanceSpecificationSensor()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with Sensor.
+ 
+operation isInstanceSpecificationSensor(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isSensor() : Boolean in Sensor.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "InstanceSpecification"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of InstanceSpecification annotated with Sensor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONSensorsAsSequenceOfInstanceSpecification() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInstanceSpecificationSensor()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type InstanceSpecification from the applied Stereotype Sensor
+
+operation Sensor getBaseInstanceSpecificationOfSensor() : InstanceSpecification{
+	var baseInstanceSpecification = new Sensor;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	return baseInstanceSpecification;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type InstanceSpecification from the applied Stereotype Sensor
+
+operation Sensor JSONgetBaseInstanceSpecificationOfSensor() : String {
+	var baseInstanceSpecification = new Sensor;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	
+	var baseInstanceSpecification_string = baseInstanceSpecification.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseInstanceSpecification_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype Sensor using native objects.
+ 
+operation InstanceSpecification toJsonSensor() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+/*
+Returns a Sequence of Node annotated with Sensor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package SensorsAsSequenceOfNode() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isNodeSensor()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with Sensor.
+ 
+operation isNodeSensor(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isSensor() : Boolean in Sensor.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "Node"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of Node annotated with Sensor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONSensorsAsSequenceOfNode() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isNodeSensor()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Node from the applied Stereotype Sensor
+
+operation Sensor getBaseNodeOfSensor() : Node{
+	var baseNode = new Sensor;
+	baseNode = self.base_Node;
+	return baseNode;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Node from the applied Stereotype Sensor
+
+operation Sensor JSONgetBaseNodeOfSensor() : String {
+	var baseNode = new Sensor;
+	baseNode = self.base_Node;
+	
+	var baseNode_string = baseNode.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseNode_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype Sensor using native objects.
+ 
+operation Node toJsonSensor() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype Sensor
+ 
+operation Sensor getBaseElementOfSensorDeprecated() : Element{
+	var baseElement = new Sensor;
+
+	
+	if(not self.base_Class.isUndefined()){
+		baseElement = self.base_Class;
+	}
+	
+	if(not self.base_InstanceSpecification.isUndefined()){
+		baseElement = self.base_InstanceSpecification;
+	}
+	
+	if(not self.base_Node.isUndefined()){
+		baseElement = self.base_Node;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype Sensor using UMLUtil native object
+*/ 
+operation Sensor getBaseElementOfSensor() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype Sensor using UMLUtil native object
+ 
+//operation Sensor toJsonSensor() : String {
+operation toJsonSensor() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+*/
+
+/*
+Check if the element is annotated with Sensor.
+*/ 
+operation Element isSensor() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isSensor() : Boolean in Sensor.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "Sensor");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in Sensor.
+*/ 
+operation Sensor getAllAttributesOfSensor() : Sequence(Property){
+	var stereotypeAttr = Sensor.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of phyMetrics of stereotype Sensor.
+*/ 
+operation Element getPhyMetricsOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "phyMetrics");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of minValue of stereotype Sensor.
+*/ 
+operation Element getMinValueOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "minValue");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of maxValue of stereotype Sensor.
+*/ 
+operation Element getMaxValueOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "maxValue");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of value of stereotype Sensor.
+*/ 
+operation Element getValueOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "value");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of phyCapabilities of stereotype Sensor.
+*/ 
+operation Element getPhyCapabilitiesOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "phyCapabilities");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of sensors of stereotype Sensor.
+*/ 
+operation Element getSensorsOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "sensors");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of actuators of stereotype Sensor.
+*/ 
+operation Element getActuatorsOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "actuators");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of ownedPhysicalUnits of stereotype Sensor.
+*/ 
+operation Element getOwnedPhysicalUnitsOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "ownedPhysicalUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of ioDevices of stereotype Sensor.
+*/ 
+operation Element getIoDevicesOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "ioDevices");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of id of stereotype Sensor.
+*/ 
+operation Element getIdOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of location of stereotype Sensor.
+*/ 
+operation Element getLocationOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "location");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of description of stereotype Sensor.
+*/ 
+operation Element getDescriptionOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of ownedUnits of stereotype Sensor.
+*/ 
+operation Element getOwnedUnitsOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "ownedUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of hasTimestampMechanism of stereotype Sensor.
+*/ 
+operation Element getHasTimestampMechanismOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "hasTimestampMechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of timestampMaxLatency of stereotype Sensor.
+*/ 
+operation Element getTimestampMaxLatencyOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "timestampMaxLatency");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of isSafetyCritical of stereotype Sensor.
+*/ 
+operation Element getIsSafetyCriticalOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "isSafetyCritical");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of infrastructureInterface of stereotype Sensor.
+*/ 
+operation Element getInfrastructureInterfaceOfSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "infrastructureInterface");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of phyMetrics of stereotype Sensor is empty.
+*/ 
+operation Element isPhyMetricsOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "phyMetrics");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of minValue of stereotype Sensor is empty.
+*/ 
+operation Element isMinValueOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "minValue");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of maxValue of stereotype Sensor is empty.
+*/ 
+operation Element isMaxValueOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "maxValue");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of value of stereotype Sensor is empty.
+*/ 
+operation Element isValueOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "value");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of phyCapabilities of stereotype Sensor is empty.
+*/ 
+operation Element isPhyCapabilitiesOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "phyCapabilities");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of sensors of stereotype Sensor is empty.
+*/ 
+operation Element isSensorsOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "sensors");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of actuators of stereotype Sensor is empty.
+*/ 
+operation Element isActuatorsOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "actuators");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of ownedPhysicalUnits of stereotype Sensor is empty.
+*/ 
+operation Element isOwnedPhysicalUnitsOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "ownedPhysicalUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of ioDevices of stereotype Sensor is empty.
+*/ 
+operation Element isIoDevicesOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "ioDevices");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of id of stereotype Sensor is empty.
+*/ 
+operation Element isIdOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of location of stereotype Sensor is empty.
+*/ 
+operation Element isLocationOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "location");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of description of stereotype Sensor is empty.
+*/ 
+operation Element isDescriptionOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of ownedUnits of stereotype Sensor is empty.
+*/ 
+operation Element isOwnedUnitsOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "ownedUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of hasTimestampMechanism of stereotype Sensor is empty.
+*/ 
+operation Element isHasTimestampMechanismOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "hasTimestampMechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of timestampMaxLatency of stereotype Sensor is empty.
+*/ 
+operation Element isTimestampMaxLatencyOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "timestampMaxLatency");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of isSafetyCritical of stereotype Sensor is empty.
+*/ 
+operation Element isIsSafetyCriticalOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "isSafetyCritical");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of infrastructureInterface of stereotype Sensor is empty.
+*/ 
+operation Element isInfrastructureInterfaceOfSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("Sensor"), "infrastructureInterface");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+
+
+operation Stereotype getPhyMetricsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var phyMetricsProperty = allAttributes.selectOne(s|s.name = "phyMetrics");
+	return phyMetricsProperty;
+}
+
+
+operation Stereotype getMinValueProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var minValueProperty = allAttributes.selectOne(s|s.name = "minValue");
+	return minValueProperty;
+}
+
+
+operation Stereotype getMaxValueProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var maxValueProperty = allAttributes.selectOne(s|s.name = "maxValue");
+	return maxValueProperty;
+}
+
+
+operation Stereotype getValueProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var valueProperty = allAttributes.selectOne(s|s.name = "value");
+	return valueProperty;
+}
+
+
+operation Stereotype getPhyCapabilitiesProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var phyCapabilitiesProperty = allAttributes.selectOne(s|s.name = "phyCapabilities");
+	return phyCapabilitiesProperty;
+}
+
+
+operation Stereotype getSensorsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var sensorsProperty = allAttributes.selectOne(s|s.name = "sensors");
+	return sensorsProperty;
+}
+
+
+operation Stereotype getActuatorsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var actuatorsProperty = allAttributes.selectOne(s|s.name = "actuators");
+	return actuatorsProperty;
+}
+
+
+operation Stereotype getOwnedPhysicalUnitsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var ownedPhysicalUnitsProperty = allAttributes.selectOne(s|s.name = "ownedPhysicalUnits");
+	return ownedPhysicalUnitsProperty;
+}
+
+
+operation Stereotype getIoDevicesProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var ioDevicesProperty = allAttributes.selectOne(s|s.name = "ioDevices");
+	return ioDevicesProperty;
+}
+
+
+operation Stereotype getIdProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var idProperty = allAttributes.selectOne(s|s.name = "id");
+	return idProperty;
+}
+
+
+operation Stereotype getLocationProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var locationProperty = allAttributes.selectOne(s|s.name = "location");
+	return locationProperty;
+}
+
+
+operation Stereotype getDescriptionProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var descriptionProperty = allAttributes.selectOne(s|s.name = "description");
+	return descriptionProperty;
+}
+
+
+operation Stereotype getOwnedUnitsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var ownedUnitsProperty = allAttributes.selectOne(s|s.name = "ownedUnits");
+	return ownedUnitsProperty;
+}
+
+
+operation Stereotype getHasTimestampMechanismProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var hasTimestampMechanismProperty = allAttributes.selectOne(s|s.name = "hasTimestampMechanism");
+	return hasTimestampMechanismProperty;
+}
+
+
+operation Stereotype getTimestampMaxLatencyProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var timestampMaxLatencyProperty = allAttributes.selectOne(s|s.name = "timestampMaxLatency");
+	return timestampMaxLatencyProperty;
+}
+
+
+operation Stereotype getIsSafetyCriticalProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var isSafetyCriticalProperty = allAttributes.selectOne(s|s.name = "isSafetyCritical");
+	return isSafetyCriticalProperty;
+}
+
+
+operation Stereotype getInfrastructureInterfaceProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var infrastructureInterfaceProperty = allAttributes.selectOne(s|s.name = "infrastructureInterface");
+	return infrastructureInterfaceProperty;
+}
+

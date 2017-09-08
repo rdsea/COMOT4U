@@ -1,0 +1,826 @@
+
+import "../../../../../eol/library/element.eol";
+
+/*
+Returns a Sequence of Element annotated with VirtualSensor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package VirtualSensorsAsSequence() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isVirtualSensor()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+
+/*
+Returns a Sequence of Class annotated with VirtualSensor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package VirtualSensorsAsSequenceOfClass() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isClassVirtualSensor()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with VirtualSensor.
+ 
+operation isClassVirtualSensor(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isVirtualSensor() : Boolean in VirtualSensor.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "Class"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of Class annotated with VirtualSensor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONVirtualSensorsAsSequenceOfClass() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isClassVirtualSensor()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Class from the applied Stereotype VirtualSensor
+
+operation VirtualSensor getBaseClassOfVirtualSensor() : Class{
+	var baseClass = new VirtualSensor;
+	baseClass = self.base_Class;
+	return baseClass;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Class from the applied Stereotype VirtualSensor
+
+operation VirtualSensor JSONgetBaseClassOfVirtualSensor() : String {
+	var baseClass = new VirtualSensor;
+	baseClass = self.base_Class;
+	
+	var baseClass_string = baseClass.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClass_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype VirtualSensor using native objects.
+ 
+operation Class toJsonVirtualSensor() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+/*
+Returns a Sequence of InstanceSpecification annotated with VirtualSensor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package VirtualSensorsAsSequenceOfInstanceSpecification() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInstanceSpecificationVirtualSensor()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with VirtualSensor.
+ 
+operation isInstanceSpecificationVirtualSensor(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isVirtualSensor() : Boolean in VirtualSensor.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "InstanceSpecification"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of InstanceSpecification annotated with VirtualSensor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONVirtualSensorsAsSequenceOfInstanceSpecification() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInstanceSpecificationVirtualSensor()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type InstanceSpecification from the applied Stereotype VirtualSensor
+
+operation VirtualSensor getBaseInstanceSpecificationOfVirtualSensor() : InstanceSpecification{
+	var baseInstanceSpecification = new VirtualSensor;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	return baseInstanceSpecification;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type InstanceSpecification from the applied Stereotype VirtualSensor
+
+operation VirtualSensor JSONgetBaseInstanceSpecificationOfVirtualSensor() : String {
+	var baseInstanceSpecification = new VirtualSensor;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	
+	var baseInstanceSpecification_string = baseInstanceSpecification.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseInstanceSpecification_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype VirtualSensor using native objects.
+ 
+operation InstanceSpecification toJsonVirtualSensor() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+/*
+Returns a Sequence of Node annotated with VirtualSensor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package VirtualSensorsAsSequenceOfNode() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isNodeVirtualSensor()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with VirtualSensor.
+ 
+operation isNodeVirtualSensor(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isVirtualSensor() : Boolean in VirtualSensor.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "Node"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of Node annotated with VirtualSensor.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONVirtualSensorsAsSequenceOfNode() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isNodeVirtualSensor()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Node from the applied Stereotype VirtualSensor
+
+operation VirtualSensor getBaseNodeOfVirtualSensor() : Node{
+	var baseNode = new VirtualSensor;
+	baseNode = self.base_Node;
+	return baseNode;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Node from the applied Stereotype VirtualSensor
+
+operation VirtualSensor JSONgetBaseNodeOfVirtualSensor() : String {
+	var baseNode = new VirtualSensor;
+	baseNode = self.base_Node;
+	
+	var baseNode_string = baseNode.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseNode_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype VirtualSensor using native objects.
+ 
+operation Node toJsonVirtualSensor() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype VirtualSensor
+ 
+operation VirtualSensor getBaseElementOfVirtualSensorDeprecated() : Element{
+	var baseElement = new VirtualSensor;
+
+	
+	if(not self.base_Class.isUndefined()){
+		baseElement = self.base_Class;
+	}
+	
+	if(not self.base_InstanceSpecification.isUndefined()){
+		baseElement = self.base_InstanceSpecification;
+	}
+	
+	if(not self.base_Node.isUndefined()){
+		baseElement = self.base_Node;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype VirtualSensor using UMLUtil native object
+*/ 
+operation VirtualSensor getBaseElementOfVirtualSensor() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype VirtualSensor using UMLUtil native object
+ 
+//operation VirtualSensor toJsonVirtualSensor() : String {
+operation toJsonVirtualSensor() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+*/
+
+/*
+Check if the element is annotated with VirtualSensor.
+*/ 
+operation Element isVirtualSensor() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isVirtualSensor() : Boolean in VirtualSensor.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "VirtualSensor");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in VirtualSensor.
+*/ 
+operation VirtualSensor getAllAttributesOfVirtualSensor() : Sequence(Property){
+	var stereotypeAttr = VirtualSensor.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of swMetrics of stereotype VirtualSensor.
+*/ 
+operation Element getSwMetricsOfVirtualSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "swMetrics");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of swCapabilities of stereotype VirtualSensor.
+*/ 
+operation Element getSwCapabilitiesOfVirtualSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "swCapabilities");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of virtualActuators of stereotype VirtualSensor.
+*/ 
+operation Element getVirtualActuatorsOfVirtualSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "virtualActuators");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of virtualSensors of stereotype VirtualSensor.
+*/ 
+operation Element getVirtualSensorsOfVirtualSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "virtualSensors");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of ownedVirtualUnits of stereotype VirtualSensor.
+*/ 
+operation Element getOwnedVirtualUnitsOfVirtualSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "ownedVirtualUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of deployedOn of stereotype VirtualSensor.
+*/ 
+operation Element getDeployedOnOfVirtualSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "deployedOn");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of id of stereotype VirtualSensor.
+*/ 
+operation Element getIdOfVirtualSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of location of stereotype VirtualSensor.
+*/ 
+operation Element getLocationOfVirtualSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "location");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of description of stereotype VirtualSensor.
+*/ 
+operation Element getDescriptionOfVirtualSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of ownedUnits of stereotype VirtualSensor.
+*/ 
+operation Element getOwnedUnitsOfVirtualSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "ownedUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of hasTimestampMechanism of stereotype VirtualSensor.
+*/ 
+operation Element getHasTimestampMechanismOfVirtualSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "hasTimestampMechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of timestampMaxLatency of stereotype VirtualSensor.
+*/ 
+operation Element getTimestampMaxLatencyOfVirtualSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "timestampMaxLatency");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of isSafetyCritical of stereotype VirtualSensor.
+*/ 
+operation Element getIsSafetyCriticalOfVirtualSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "isSafetyCritical");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of infrastructureInterface of stereotype VirtualSensor.
+*/ 
+operation Element getInfrastructureInterfaceOfVirtualSensorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "infrastructureInterface");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of swMetrics of stereotype VirtualSensor is empty.
+*/ 
+operation Element isSwMetricsOfVirtualSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "swMetrics");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of swCapabilities of stereotype VirtualSensor is empty.
+*/ 
+operation Element isSwCapabilitiesOfVirtualSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "swCapabilities");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of virtualActuators of stereotype VirtualSensor is empty.
+*/ 
+operation Element isVirtualActuatorsOfVirtualSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "virtualActuators");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of virtualSensors of stereotype VirtualSensor is empty.
+*/ 
+operation Element isVirtualSensorsOfVirtualSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "virtualSensors");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of ownedVirtualUnits of stereotype VirtualSensor is empty.
+*/ 
+operation Element isOwnedVirtualUnitsOfVirtualSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "ownedVirtualUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of deployedOn of stereotype VirtualSensor is empty.
+*/ 
+operation Element isDeployedOnOfVirtualSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "deployedOn");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of id of stereotype VirtualSensor is empty.
+*/ 
+operation Element isIdOfVirtualSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of location of stereotype VirtualSensor is empty.
+*/ 
+operation Element isLocationOfVirtualSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "location");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of description of stereotype VirtualSensor is empty.
+*/ 
+operation Element isDescriptionOfVirtualSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of ownedUnits of stereotype VirtualSensor is empty.
+*/ 
+operation Element isOwnedUnitsOfVirtualSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "ownedUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of hasTimestampMechanism of stereotype VirtualSensor is empty.
+*/ 
+operation Element isHasTimestampMechanismOfVirtualSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "hasTimestampMechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of timestampMaxLatency of stereotype VirtualSensor is empty.
+*/ 
+operation Element isTimestampMaxLatencyOfVirtualSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "timestampMaxLatency");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of isSafetyCritical of stereotype VirtualSensor is empty.
+*/ 
+operation Element isIsSafetyCriticalOfVirtualSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "isSafetyCritical");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of infrastructureInterface of stereotype VirtualSensor is empty.
+*/ 
+operation Element isInfrastructureInterfaceOfVirtualSensorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualSensor"), "infrastructureInterface");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+
+
+operation Stereotype getSwMetricsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var swMetricsProperty = allAttributes.selectOne(s|s.name = "swMetrics");
+	return swMetricsProperty;
+}
+
+
+operation Stereotype getSwCapabilitiesProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var swCapabilitiesProperty = allAttributes.selectOne(s|s.name = "swCapabilities");
+	return swCapabilitiesProperty;
+}
+
+
+operation Stereotype getVirtualActuatorsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var virtualActuatorsProperty = allAttributes.selectOne(s|s.name = "virtualActuators");
+	return virtualActuatorsProperty;
+}
+
+
+operation Stereotype getVirtualSensorsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var virtualSensorsProperty = allAttributes.selectOne(s|s.name = "virtualSensors");
+	return virtualSensorsProperty;
+}
+
+
+operation Stereotype getOwnedVirtualUnitsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var ownedVirtualUnitsProperty = allAttributes.selectOne(s|s.name = "ownedVirtualUnits");
+	return ownedVirtualUnitsProperty;
+}
+
+
+operation Stereotype getDeployedOnProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var deployedOnProperty = allAttributes.selectOne(s|s.name = "deployedOn");
+	return deployedOnProperty;
+}
+
+
+operation Stereotype getIdProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var idProperty = allAttributes.selectOne(s|s.name = "id");
+	return idProperty;
+}
+
+
+operation Stereotype getLocationProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var locationProperty = allAttributes.selectOne(s|s.name = "location");
+	return locationProperty;
+}
+
+
+operation Stereotype getDescriptionProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var descriptionProperty = allAttributes.selectOne(s|s.name = "description");
+	return descriptionProperty;
+}
+
+
+operation Stereotype getOwnedUnitsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var ownedUnitsProperty = allAttributes.selectOne(s|s.name = "ownedUnits");
+	return ownedUnitsProperty;
+}
+
+
+operation Stereotype getHasTimestampMechanismProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var hasTimestampMechanismProperty = allAttributes.selectOne(s|s.name = "hasTimestampMechanism");
+	return hasTimestampMechanismProperty;
+}
+
+
+operation Stereotype getTimestampMaxLatencyProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var timestampMaxLatencyProperty = allAttributes.selectOne(s|s.name = "timestampMaxLatency");
+	return timestampMaxLatencyProperty;
+}
+
+
+operation Stereotype getIsSafetyCriticalProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var isSafetyCriticalProperty = allAttributes.selectOne(s|s.name = "isSafetyCritical");
+	return isSafetyCriticalProperty;
+}
+
+
+operation Stereotype getInfrastructureInterfaceProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var infrastructureInterfaceProperty = allAttributes.selectOne(s|s.name = "infrastructureInterface");
+	return infrastructureInterfaceProperty;
+}
+

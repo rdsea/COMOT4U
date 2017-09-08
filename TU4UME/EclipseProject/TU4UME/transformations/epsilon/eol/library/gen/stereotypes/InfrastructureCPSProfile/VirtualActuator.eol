@@ -1,0 +1,826 @@
+
+import "../../../../../eol/library/element.eol";
+
+/*
+Returns a Sequence of Element annotated with VirtualActuator.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+*/ 
+
+operation Package VirtualActuatorsAsSequence() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isVirtualActuator()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+
+/*
+Returns a Sequence of Class annotated with VirtualActuator.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package VirtualActuatorsAsSequenceOfClass() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isClassVirtualActuator()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with VirtualActuator.
+ 
+operation isClassVirtualActuator(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isVirtualActuator() : Boolean in VirtualActuator.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "Class"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of Class annotated with VirtualActuator.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONVirtualActuatorsAsSequenceOfClass() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isClassVirtualActuator()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Class from the applied Stereotype VirtualActuator
+
+operation VirtualActuator getBaseClassOfVirtualActuator() : Class{
+	var baseClass = new VirtualActuator;
+	baseClass = self.base_Class;
+	return baseClass;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Class from the applied Stereotype VirtualActuator
+
+operation VirtualActuator JSONgetBaseClassOfVirtualActuator() : String {
+	var baseClass = new VirtualActuator;
+	baseClass = self.base_Class;
+	
+	var baseClass_string = baseClass.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseClass_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype VirtualActuator using native objects.
+ 
+operation Class toJsonVirtualActuator() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+/*
+Returns a Sequence of InstanceSpecification annotated with VirtualActuator.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package VirtualActuatorsAsSequenceOfInstanceSpecification() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInstanceSpecificationVirtualActuator()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with VirtualActuator.
+ 
+operation isInstanceSpecificationVirtualActuator(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isVirtualActuator() : Boolean in VirtualActuator.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "InstanceSpecification"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of InstanceSpecification annotated with VirtualActuator.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONVirtualActuatorsAsSequenceOfInstanceSpecification() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isInstanceSpecificationVirtualActuator()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type InstanceSpecification from the applied Stereotype VirtualActuator
+
+operation VirtualActuator getBaseInstanceSpecificationOfVirtualActuator() : InstanceSpecification{
+	var baseInstanceSpecification = new VirtualActuator;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	return baseInstanceSpecification;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type InstanceSpecification from the applied Stereotype VirtualActuator
+
+operation VirtualActuator JSONgetBaseInstanceSpecificationOfVirtualActuator() : String {
+	var baseInstanceSpecification = new VirtualActuator;
+	baseInstanceSpecification = self.base_InstanceSpecification;
+	
+	var baseInstanceSpecification_string = baseInstanceSpecification.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseInstanceSpecification_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype VirtualActuator using native objects.
+ 
+operation InstanceSpecification toJsonVirtualActuator() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+/*
+Returns a Sequence of Node annotated with VirtualActuator.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+
+
+operation Package VirtualActuatorsAsSequenceOfNode() : Sequence {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isNodeVirtualActuator()){
+			returnValue.add(son);
+		}
+	} 
+	return returnValue;
+}
+
+*/ 
+/*
+NEW NEW NEW Check if the element is annotated with VirtualActuator.
+ 
+operation isNodeVirtualActuator(elem : Element) : Boolean {
+
+	if(elem.isUndefined() or elem.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isVirtualActuator() : Boolean in VirtualActuator.eol");
+	}
+	var eclass_name = elem.type.name;
+	if (eclass_name = "Node"){
+		return true;
+	}
+	return false;
+}
+*/
+/*
+Returns the JSON representation of a Sequence of Node annotated with VirtualActuator.
+TODO: Currently the method does not distinguish between different UML Model Elements. All the methods SequenceOf* are equal.
+ 
+operation Package JSONVirtualActuatorsAsSequenceOfNode() : String {
+	var returnValue = new Sequence;
+	for(son in self.getPackagedElements()){
+		if(son.isNodeVirtualActuator()){
+			returnValue.add(son);
+		}
+	} 
+	
+	var return_value_string = returnValue.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(return_value_string);	
+	
+	return jsonOutput;	
+}
+*/
+/* DEPRECATED THEN COMMENTED
+Return the BaseElement of type Node from the applied Stereotype VirtualActuator
+
+operation VirtualActuator getBaseNodeOfVirtualActuator() : Node{
+	var baseNode = new VirtualActuator;
+	baseNode = self.base_Node;
+	return baseNode;
+}
+*/ 
+/* DEPRECATED THEN COMMENTED
+Return the JSON representation of the BaseElement of type Node from the applied Stereotype VirtualActuator
+
+operation VirtualActuator JSONgetBaseNodeOfVirtualActuator() : String {
+	var baseNode = new VirtualActuator;
+	baseNode = self.base_Node;
+	
+	var baseNode_string = baseNode.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(baseNode_string);	
+	
+	return jsonOutput;
+}
+*/ 
+
+/*
+Return the JSON String of the base element of the applied Stereotype VirtualActuator using native objects.
+ 
+operation Node toJsonVirtualActuator() : String {
+	var baseElement = null;
+	
+	var self_string = self.asString();
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");	
+	var gson = plugin.getGsonBuilder();
+	var prettyprinter = gson.setPrettyPrinting().create();
+	var jsonOutput = prettyprinter.toJson(self_string);	
+	(jsonOutput).println();
+	return jsonOutput;
+}
+*/
+
+
+
+/*DEPRECATED THEN COMMENTED
+Return the BaseElement from the applied Stereotype VirtualActuator
+ 
+operation VirtualActuator getBaseElementOfVirtualActuatorDeprecated() : Element{
+	var baseElement = new VirtualActuator;
+
+	
+	if(not self.base_Class.isUndefined()){
+		baseElement = self.base_Class;
+	}
+	
+	if(not self.base_InstanceSpecification.isUndefined()){
+		baseElement = self.base_InstanceSpecification;
+	}
+	
+	if(not self.base_Node.isUndefined()){
+		baseElement = self.base_Node;
+	}
+	
+	
+	return baseElement;
+}
+*/
+
+/*
+Return the BaseElement from the applied Stereotype VirtualActuator using UMLUtil native object
+*/ 
+operation VirtualActuator getBaseElementOfVirtualActuator() : Element{
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	return baseElement;
+}
+
+/*
+Return the JSON String from the applied Stereotype VirtualActuator using UMLUtil native object
+ 
+//operation VirtualActuator toJsonVirtualActuator() : String {
+operation toJsonVirtualActuator() : String {
+
+	var baseElement = null;
+
+	var plugin : new Native("at.ac.tuwien.dsg.tu4ume.epsilon.externaltools.SampleTool");
+	var UMLUtil = plugin.getUMLUtil();
+	baseElement =UMLUtil.getBaseElement(self);
+	
+	var baseElement_string = baseElement.asString();
+	var gson = plugin.getGson();
+	gson = new GsonBuilder().setPrettyPrinting().create();
+	var jsonOutput = gson.toJson(baseElement_string);	
+	
+	return jsonOutput;
+}
+*/
+
+/*
+Check if the element is annotated with VirtualActuator.
+*/ 
+operation Element isVirtualActuator() : Boolean {
+	if(self.isUndefined() or self.getAppliedStereotypes().isUndefined() ){
+		("the element is undefined").println();
+		showError("Method: isVirtualActuator() : Boolean in VirtualActuator.eol");
+	}
+	return self.getAppliedStereotypes()->exists(s | s.name = "VirtualActuator");
+}
+
+
+
+/*
+Returns a Sequence of Property defined in VirtualActuator.
+*/ 
+operation VirtualActuator getAllAttributesOfVirtualActuator() : Sequence(Property){
+	var stereotypeAttr = VirtualActuator.allAttributes();
+	var returnValue : Sequence(Property) = new Sequence(Property);
+	
+	for(attr in stereotypeAttr){
+		if(not attr.name.startsWith("base_"))
+		{ 
+			returnValue.add(attr);
+		}
+	}
+	return returnValue;	
+}
+
+/*
+Returns a Sequence of swMetrics of stereotype VirtualActuator.
+*/ 
+operation Element getSwMetricsOfVirtualActuatorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "swMetrics");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of swCapabilities of stereotype VirtualActuator.
+*/ 
+operation Element getSwCapabilitiesOfVirtualActuatorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "swCapabilities");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of virtualActuators of stereotype VirtualActuator.
+*/ 
+operation Element getVirtualActuatorsOfVirtualActuatorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "virtualActuators");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of virtualSensors of stereotype VirtualActuator.
+*/ 
+operation Element getVirtualSensorsOfVirtualActuatorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "virtualSensors");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of ownedVirtualUnits of stereotype VirtualActuator.
+*/ 
+operation Element getOwnedVirtualUnitsOfVirtualActuatorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "ownedVirtualUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of deployedOn of stereotype VirtualActuator.
+*/ 
+operation Element getDeployedOnOfVirtualActuatorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "deployedOn");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of id of stereotype VirtualActuator.
+*/ 
+operation Element getIdOfVirtualActuatorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of location of stereotype VirtualActuator.
+*/ 
+operation Element getLocationOfVirtualActuatorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "location");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of description of stereotype VirtualActuator.
+*/ 
+operation Element getDescriptionOfVirtualActuatorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of ownedUnits of stereotype VirtualActuator.
+*/ 
+operation Element getOwnedUnitsOfVirtualActuatorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "ownedUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of hasTimestampMechanism of stereotype VirtualActuator.
+*/ 
+operation Element getHasTimestampMechanismOfVirtualActuatorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "hasTimestampMechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of timestampMaxLatency of stereotype VirtualActuator.
+*/ 
+operation Element getTimestampMaxLatencyOfVirtualActuatorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "timestampMaxLatency");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of isSafetyCritical of stereotype VirtualActuator.
+*/ 
+operation Element getIsSafetyCriticalOfVirtualActuatorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "isSafetyCritical");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+/*
+Returns a Sequence of infrastructureInterface of stereotype VirtualActuator.
+*/ 
+operation Element getInfrastructureInterfaceOfVirtualActuatorAsSequence() : Sequence{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "infrastructureInterface");
+	for(value in values){
+		returnValues.add(value);
+	}
+	return returnValues;
+}
+
+
+/*
+Check if a Sequence of swMetrics of stereotype VirtualActuator is empty.
+*/ 
+operation Element isSwMetricsOfVirtualActuatorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "swMetrics");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of swCapabilities of stereotype VirtualActuator is empty.
+*/ 
+operation Element isSwCapabilitiesOfVirtualActuatorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "swCapabilities");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of virtualActuators of stereotype VirtualActuator is empty.
+*/ 
+operation Element isVirtualActuatorsOfVirtualActuatorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "virtualActuators");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of virtualSensors of stereotype VirtualActuator is empty.
+*/ 
+operation Element isVirtualSensorsOfVirtualActuatorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "virtualSensors");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of ownedVirtualUnits of stereotype VirtualActuator is empty.
+*/ 
+operation Element isOwnedVirtualUnitsOfVirtualActuatorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "ownedVirtualUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of deployedOn of stereotype VirtualActuator is empty.
+*/ 
+operation Element isDeployedOnOfVirtualActuatorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "deployedOn");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of id of stereotype VirtualActuator is empty.
+*/ 
+operation Element isIdOfVirtualActuatorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "id");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of location of stereotype VirtualActuator is empty.
+*/ 
+operation Element isLocationOfVirtualActuatorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "location");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of description of stereotype VirtualActuator is empty.
+*/ 
+operation Element isDescriptionOfVirtualActuatorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "description");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of ownedUnits of stereotype VirtualActuator is empty.
+*/ 
+operation Element isOwnedUnitsOfVirtualActuatorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "ownedUnits");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of hasTimestampMechanism of stereotype VirtualActuator is empty.
+*/ 
+operation Element isHasTimestampMechanismOfVirtualActuatorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "hasTimestampMechanism");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of timestampMaxLatency of stereotype VirtualActuator is empty.
+*/ 
+operation Element isTimestampMaxLatencyOfVirtualActuatorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "timestampMaxLatency");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of isSafetyCritical of stereotype VirtualActuator is empty.
+*/ 
+operation Element isIsSafetyCriticalOfVirtualActuatorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "isSafetyCritical");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+/*
+Check if a Sequence of infrastructureInterface of stereotype VirtualActuator is empty.
+*/ 
+operation Element isInfrastructureInterfaceOfVirtualActuatorEmpty() : Boolean{
+	var returnValues = new Sequence;
+	var values = self.getValue(self.getStereotype("VirtualActuator"), "infrastructureInterface");
+	for(value in values){
+		returnValues.add(value);
+	}
+	var empty = returnValues.isEmpty();
+	return empty;
+}
+
+
+operation Stereotype getSwMetricsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var swMetricsProperty = allAttributes.selectOne(s|s.name = "swMetrics");
+	return swMetricsProperty;
+}
+
+
+operation Stereotype getSwCapabilitiesProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var swCapabilitiesProperty = allAttributes.selectOne(s|s.name = "swCapabilities");
+	return swCapabilitiesProperty;
+}
+
+
+operation Stereotype getVirtualActuatorsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var virtualActuatorsProperty = allAttributes.selectOne(s|s.name = "virtualActuators");
+	return virtualActuatorsProperty;
+}
+
+
+operation Stereotype getVirtualSensorsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var virtualSensorsProperty = allAttributes.selectOne(s|s.name = "virtualSensors");
+	return virtualSensorsProperty;
+}
+
+
+operation Stereotype getOwnedVirtualUnitsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var ownedVirtualUnitsProperty = allAttributes.selectOne(s|s.name = "ownedVirtualUnits");
+	return ownedVirtualUnitsProperty;
+}
+
+
+operation Stereotype getDeployedOnProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var deployedOnProperty = allAttributes.selectOne(s|s.name = "deployedOn");
+	return deployedOnProperty;
+}
+
+
+operation Stereotype getIdProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var idProperty = allAttributes.selectOne(s|s.name = "id");
+	return idProperty;
+}
+
+
+operation Stereotype getLocationProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var locationProperty = allAttributes.selectOne(s|s.name = "location");
+	return locationProperty;
+}
+
+
+operation Stereotype getDescriptionProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var descriptionProperty = allAttributes.selectOne(s|s.name = "description");
+	return descriptionProperty;
+}
+
+
+operation Stereotype getOwnedUnitsProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var ownedUnitsProperty = allAttributes.selectOne(s|s.name = "ownedUnits");
+	return ownedUnitsProperty;
+}
+
+
+operation Stereotype getHasTimestampMechanismProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var hasTimestampMechanismProperty = allAttributes.selectOne(s|s.name = "hasTimestampMechanism");
+	return hasTimestampMechanismProperty;
+}
+
+
+operation Stereotype getTimestampMaxLatencyProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var timestampMaxLatencyProperty = allAttributes.selectOne(s|s.name = "timestampMaxLatency");
+	return timestampMaxLatencyProperty;
+}
+
+
+operation Stereotype getIsSafetyCriticalProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var isSafetyCriticalProperty = allAttributes.selectOne(s|s.name = "isSafetyCritical");
+	return isSafetyCriticalProperty;
+}
+
+
+operation Stereotype getInfrastructureInterfaceProperty() : Property {
+	var allAttributes = self.getAllAttributes();
+	var infrastructureInterfaceProperty = allAttributes.selectOne(s|s.name = "infrastructureInterface");
+	return infrastructureInterfaceProperty;
+}
+

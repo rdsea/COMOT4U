@@ -1,0 +1,13 @@
+import "../../../element.eol";
+
+operation DataManagementMechanism getNone() : String {
+	var None = "None";
+	return None;
+}
+operation DataManagementMechanism getBuffering() : String {
+	var Buffering = "Buffering";
+	return Buffering;
+}
+
+
+
