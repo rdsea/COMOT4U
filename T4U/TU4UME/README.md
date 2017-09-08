@@ -32,8 +32,8 @@ Transformation Workflow Overview:
 ![N|Solid](https://github.com/tuwiendsg/COMOT4U/blob/master/docs/figures/example_fig1.PNG)
 
 Technology Overview:
-![N|Solid](https://github.com/tuwiendsg/COMOT4U/blob/master/docs/figures/example_fig1.PNG)
+![N|Solid](https://github.com/tuwiendsg/COMOT4U/blob/master/docs/figures/process.png)
 
 Example
-![N|Solid](https://github.com/tuwiendsg/COMOT4U/blob/master/docs/figures/example_fig1.PNG)
+![N|Solid](https://github.com/tuwiendsg/COMOT4U/blob/master/docs/figures/platform.PNG)
 
